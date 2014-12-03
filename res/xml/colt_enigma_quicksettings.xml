@@ -19,6 +19,14 @@
 
         android:title="@string/quick_settings_general_category_title">
 
+        <ListPreference
+            android:key="smart_pulldown"
+            android:title="@string/smart_pulldown_title"
+            android:summary="%s"
+            android:entries="@array/smart_pulldown_entries"
+            android:entryValues="@array/smart_pulldown_values"
+            android:persistent="false" />
+
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="quick_settings_tiles_vibrate"
             android:title="@string/quick_settings_vibrate_title"
