@@ -116,6 +116,13 @@
     <string name="lockscreen_battery_info_title">Charging info</string>
     <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lock screen while charging</string>
 
+    <!-- QuickSettings general category -->
+    <string name="quick_settings_general_category_title">General</string>
+
+    <!-- QuickSettings haptic feedback -->
+    <string name="quick_settings_vibrate_title">Vibrate on touch</string>
+    <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>
+
     <!-- QS tiles animations category -->
     <string name="qs_tile_animation_category_title">QS tiles</string>
 
@@ -625,9 +632,6 @@
 
     <!-- Radio Info -->
     <string name="radio_info_title">Radio info</string>
-
-    <!-- QuickSettings general category -->
-    <string name="quick_settings_general_category_title">General</string>
 
     <!-- QS tiles title -->
     <string name="qs_tile_title_visibility_title">Show QS tiles title</string>
