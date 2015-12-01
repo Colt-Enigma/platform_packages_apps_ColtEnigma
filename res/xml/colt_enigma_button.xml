@@ -15,4 +15,15 @@
         android:title="@string/button_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+   <PreferenceCategory
+        android:key="volume_category"
+        android:title="@string/volume_category">
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="volume_rocker_wake"
+        android:summary="@string/volume_rocker_wake_summary"
+        android:title="@string/volume_rocker_wake_title"
+        android:defaultValue="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
