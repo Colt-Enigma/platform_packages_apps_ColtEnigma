@@ -20,6 +20,13 @@
         android:title="@string/volume_category">
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
+	android:key="volume_button_music_control"
+        android:summary="@string/volume_rocker_music_controls_summary"
+        android:title="@string/volume_rocker_music_controls_title"
+        android:defaultValue="false"
+        android:dependency="volume_rocker_wake" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="volume_rocker_wake"
         android:summary="@string/volume_rocker_wake_summary"
         android:title="@string/volume_rocker_wake_title"
