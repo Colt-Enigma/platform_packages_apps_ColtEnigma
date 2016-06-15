@@ -127,6 +127,17 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         mTorchPowerButton.setOnPreferenceChangeListener(this);
     }
 
+    @Override
+    protected boolean usesExtendedActionsList() {
+        return true;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
 
