@@ -35,6 +35,12 @@
 	    android:icon="@drawable/ic_miscellaneous_background"
             android:title="@string/status_bar_clock_title" />
 
+	<!-- Battery Bar -->
+	<com.colt.enigma.preference.CategoryColtPreference
+           android:key="battery_bar_category"
+           android:fragment="com.colt.enigma.fragments.BatteryBar"
+           android:icon="@drawable/ic_battery_bar"
+           android:title="@string/battery_bar_title" />
 
         <!-- Quick Settings -->
         <com.colt.enigma.preference.CategoryColtPreference

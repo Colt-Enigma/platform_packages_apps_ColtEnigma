@@ -218,16 +218,16 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
                     mTorchPowerButtonValue);
             return true;
         } else if (preference == mHwKeyDisable) {
-            boolean value = (Boolean) objValue;
+            boolean value = (Boolean) newValue;
             Settings.System.putInt(getContentResolver(), Settings.System.HARDWARE_KEYS_DISABLE,
                     value ? 1 : 0);
             setActionPreferencesEnabled(!value);
         } else if (preference == mButtonTimoutBar) {
-            int buttonTimeout = (Integer) objValue;
+            int buttonTimeout = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.BUTTON_BACKLIGHT_TIMEOUT, buttonTimeout);
         } else if (preference == mManualButtonBrightness) {
-            int buttonBrightness = (Integer) objValue;
+            int buttonBrightness = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.CUSTOM_BUTTON_BRIGHTNESS, buttonBrightness);
         } else {

@@ -18,11 +18,21 @@ package com.colt.enigma.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.Resources;
 import android.os.Bundle;
 import com.android.settings.R;
-import com.android.internal.util.aospextended.COLTUtils;
+import com.android.internal.util.colt.ColtUtils;
 
 import com.android.settings.SettingsPreferenceFragment;
+
+import androidx.preference.ListPreference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
 
 public class NotificationSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
@@ -37,10 +47,21 @@ public class NotificationSettings extends SettingsPreferenceFragment implements 
         final PreferenceScreen prefSet = getPreferenceScreen();
 
         PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
-        if (!COLTUtils.isVoiceCapable(getActivity())) {
+        if (!ColtUtils.isVoiceCapable(getActivity())) {
                 prefSet.removePreference(incallVibCategory);
         }
     }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        return false;
+    }
+
 
     @Override
     public int getMetricsCategory() {
