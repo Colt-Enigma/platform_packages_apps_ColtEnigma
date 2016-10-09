@@ -25,6 +25,12 @@
             android:fragment="com.colt.enigma.fragments.StatusbarClockDateSettings" />
 
         <Preference
+            android:key="battery_bar_category"
+            android:title="@string/battery_bar_title"
+            android:summary="@string/battery_bar_summary"
+            android:fragment="com.colt.enigma.fragments.BatteryBarSettings" />
+
+        <Preference
             android:title="@string/status_bar_carrier_label_title"
             android:summary="@string/status_bar_carrier_label_summary"
             android:fragment="com.colt.enigma.fragments.StatusbarCarrierLabelSettings" />
