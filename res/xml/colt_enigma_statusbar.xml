@@ -85,6 +85,12 @@
             android:summary="@string/use_old_mobiletype_summary"
             android:defaultValue="false" />       
 
+	<com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="bluetooth_show_battery"
+            android:title="@string/bluetooth_battery_title"
+            android:summary="@string/bluetooth_battery_summary"
+            android:defaultValue="true"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory
