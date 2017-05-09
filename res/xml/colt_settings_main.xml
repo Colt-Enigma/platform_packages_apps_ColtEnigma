@@ -20,5 +20,15 @@
 	xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
 	android:title="@string/colt_settings_title" >
 
+    <PreferenceCategory
+        android:key="colt_interface"
+        android:title="@string/colt_interface">
+
+	<PreferenceScreen
+            android:fragment="com.colt.settings.fragments.LockScreenSettings"
+            android:key="colt_lockscreen_settings"
+            android:title="@string/lockscreen_settings_title"/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

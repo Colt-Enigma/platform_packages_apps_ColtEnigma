@@ -14,6 +14,11 @@
       limitations under the License.
  -->
  <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
- 
+
+  <!-- Categories -->
+  <string name="colt_interface">Colt's Hub</string>
+  
+  <!-- Lockscreen Fragment -->
+  <string name="lockscreen_settings_title">Lockscreen</string>
 
  </resources>
