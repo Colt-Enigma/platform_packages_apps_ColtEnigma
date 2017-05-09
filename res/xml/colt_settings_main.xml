@@ -25,6 +25,11 @@
         android:title="@string/colt_interface">
 
 	<PreferenceScreen
+            android:fragment="com.colt.settings.fragments.StatusBarSettings"
+            android:key="colt_statusbar_settings"
+            android:title="@string/statusbar_settings_title"/>
+
+	<PreferenceScreen
             android:fragment="com.colt.settings.fragments.LockScreenSettings"
             android:key="colt_lockscreen_settings"
             android:title="@string/lockscreen_settings_title"/>
