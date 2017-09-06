@@ -35,6 +35,12 @@
         android:summary="@string/qs_footer_text_string_summary"
         android:dependency="omni_footer_text_show"
         android:defaultValue="ColtOS" />
+ 
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_warnings"
+            android:title="@string/qs_footer_warnings_title"
+            android:summary="@string/qs_footer_warnings_summary"
+            android:defaultValue="true" />
 
     <Preference
          android:key="category_custom_header"
