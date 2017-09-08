@@ -104,4 +104,8 @@
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navigation buttons</string>
     <string name="navbar_tuner_summary">Navigation buttons Options</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
+    <string name="lockscreen_tuner_summary">Lockscreen shortcuts customization</string>
 </resources>
