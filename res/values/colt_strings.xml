@@ -121,4 +121,8 @@
     <string name="xd_about">About ColtOS</string>
 
     <string name="system_navigation_summary">Configure navigation menus</string>
+
+    <!-- Statusbar Tuner -->
+    <string name="status_bar_system_icons_title">System icons</string>
+    <string name="status_bar_system_icons_summary">Control which status bar icons are shown</string>
 </resources>
