@@ -97,4 +97,7 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar items</string>
+    <string name="statusbar_items_summary">Various Statubar icons</string>
 </resources>
