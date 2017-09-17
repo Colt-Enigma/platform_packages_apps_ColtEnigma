@@ -23,6 +23,11 @@
             android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
     </Preference>
 
+    <Preference
+        android:key="traffic"
+        android:fragment="com.colt.enigma.fragments.Traffic"
+        android:title="@string/traffic_title" />
+
     <PreferenceCategory
         android:key="misc_icons_category"
         android:title="@string/icons_category">
