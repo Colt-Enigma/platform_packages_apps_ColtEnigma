@@ -1,5 +1,9 @@
 /*
+<<<<<<< HEAD
  * Copyright (C) 2020 ColtOS Project
+=======
+ * Copyright (C) 2017 AospExtended ROM Project
+>>>>>>> 3deac8b7 (Pimp the power menu out [2/2])
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,10 +50,10 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
 
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-        addPreferencesFromResource(R.xml.colt_enigma_power);
+	addPreferencesFromResource(R.xml.colt_enigma_power);
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
