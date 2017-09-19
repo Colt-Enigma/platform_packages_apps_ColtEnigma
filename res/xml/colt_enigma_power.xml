@@ -85,4 +85,9 @@
             android:title="@string/powermenu_logout"
             android:defaultValue="false" />
 
+         <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="powermenu_torch"
+            android:title="@string/powermenu_torch"
+            android:persistent="false" />
+
 </PreferenceScreen>
