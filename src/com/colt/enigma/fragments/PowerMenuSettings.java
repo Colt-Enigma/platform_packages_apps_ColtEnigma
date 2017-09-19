@@ -1,9 +1,5 @@
 /*
-<<<<<<< HEAD
  * Copyright (C) 2020 ColtOS Project
-=======
- * Copyright (C) 2017 AospExtended ROM Project
->>>>>>> 3deac8b7 (Pimp the power menu out [2/2])
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,10 +40,14 @@ import java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.android.internal.util.colt.ColtUtils;
 
 public class PowerMenuSettings extends SettingsPreferenceFragment
                 implements Preference.OnPreferenceChangeListener {
 
+    private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
+
+    private SwitchPreference mPowermenuTorch;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,11 +58,24 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
+        mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
+        mPowermenuTorch.setOnPreferenceChangeListener(this);
+        if (!ColtUtils.deviceHasFlashlight(getActivity())) {
+            prefScreen.removePreference(mPowermenuTorch);
+        } else {
+        mPowermenuTorch.setChecked((Settings.System.getInt(resolver,
+                Settings.System.POWERMENU_TORCH, 0) == 1));
+        }
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
+        if (preference == mPowermenuTorch) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.POWERMENU_TORCH, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
