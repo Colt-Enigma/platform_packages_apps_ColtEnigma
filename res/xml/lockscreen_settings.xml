@@ -20,6 +20,17 @@
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
 
+        <!-- Ambient Display -->
+        <Preference
+            android:key="ambient_display_custom"
+            android:persistent="false"
+            android:title="@string/ambient_display_custom_title" >
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.custom.ambient.display"
+                android:targetClass="com.custom.ambient.display.DozeSettings" />
+        </Preference>
+
 <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
@@ -93,15 +104,9 @@
             android:summary="@string/fp_unlock_keystore_summary"
             android:defaultValue="false" />
 
-        <!-- Ambient Display -->
-        <Preference
-            android:key="ambient_display_custom"
-            android:persistent="false"
-            android:title="@string/ambient_display_custom_title" >
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.custom.ambient.display"
-                android:targetClass="com.custom.ambient.display.DozeSettings" />
-        </Preference>
-
+	<SwitchPreference
+	    android:key="fingerprint_success_vib"
+            android:title="@string/fprint_sucess_vib_title"
+            android:summary="@string/fprint_sucess_vib_summary"
+            android:persistent="false" />
 </PreferenceScreen>
