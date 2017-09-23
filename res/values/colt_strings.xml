@@ -28,6 +28,7 @@
     <string name="animations_summary">Animations options</string>
     <string name="button_title">Buttons</string>
     <string name="buttonsettings_summary">Perform custom button actions</string>
+    <string name="fingerprint_category">Fingerprint</string>
     <string name="gestures_title">Gestures</string>
     <string name="gesture_summary">Gesture Customizations</string>
     <string name="icons_category">Icons</string>
@@ -339,5 +340,12 @@
     <string name="lockscreen_media_blur_title">Media art blur level</string>
     <string name="show_lockscreen_media_art_title">Show media art</string>
     <string name="lockscreen_media_art_options_title">Lockscreen media art</string>
+
+    <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Fingerprint success vibration</string>
+    <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
+    <string name="fprint_error_vib_title">Fingerprint error vibration</string>
+    <string name="fprint_error_vib_summary">Vibrate on failed fingerprint authentication</string>
+
 </resources>
 
