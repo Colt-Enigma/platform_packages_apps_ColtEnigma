@@ -38,6 +38,13 @@
 
    </PreferenceCategory>
 
+    <!-- Heads up -->
+    <Preference
+        android:key="heads_up_settings"
+        android:title="@string/heads_up_notifications"
+        android:summary="@string/heads_up_notifications_summary"
+        android:fragment="com.colt.enigma.fragments.HeadsUpSettings" />
+
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="toast_icon"
             android:title="@string/toast_icon_title"
