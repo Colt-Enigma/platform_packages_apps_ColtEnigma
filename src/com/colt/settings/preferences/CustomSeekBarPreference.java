@@ -140,7 +140,7 @@ public class CustomSeekBarPreference extends Preference implements SeekBar.OnSee
             mStatusText.setText(mDefaultText);
         } else {
             mStatusText.setText(String.valueOf(mCurrentValue) + mUnits);
-        } 
+        }
         mSeekBar.setProgress(mCurrentValue - mMin);
         mTitle = (TextView) view.findViewById(android.R.id.title);
 
