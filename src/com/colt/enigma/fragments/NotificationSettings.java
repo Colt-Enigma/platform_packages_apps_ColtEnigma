@@ -20,16 +20,26 @@ import com.android.internal.logging.nano.MetricsProto;
 
 import android.os.Bundle;
 import com.android.settings.R;
+import com.android.internal.util.aospextended.COLTUtils;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class NotificationSettings extends SettingsPreferenceFragment {
+public class NotificationSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+
+    private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.colt_enigma_notifications);
+	final ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefSet = getPreferenceScreen();
+
+        PreferenceCategory incallVibCategory = (PreferenceCategory) findPreference(INCALL_VIB_OPTIONS);
+        if (!COLTUtils.isVoiceCapable(getActivity())) {
+                prefSet.removePreference(incallVibCategory);
+        }
     }
 
     @Override
