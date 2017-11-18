@@ -26,7 +26,7 @@ import androidx.preference.Preference;
 import com.android.internal.logging.nano.MetricsProto;
 
 import com.android.settings.SettingsPreferenceFragment;
-import com.android.settings.Utils;
+import com.colt.settings.utils.Utils;
 
 import com.colt.settings.R;
 
@@ -43,8 +43,15 @@ public class ColtSettings extends SettingsPreferenceFragment {
 
    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+	final String KEY_DEVICE_PART = "device_part";
+        final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
 
 	addPreferencesFromResource(R.xml.colt_settings_main);
+
+	// DeviceParts
+        if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
+        }
 
     }
 }

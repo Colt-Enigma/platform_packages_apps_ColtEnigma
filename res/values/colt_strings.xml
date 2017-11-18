@@ -24,6 +24,9 @@
   <!-- Lockscreen Fragment -->
   <string name="lockscreen_settings_title">Lockscreen</string>
 
+  <!-- Device Feature -->
+  <string name="device_part_title">OnePlus Settings</string>
+
   <!-- Lockscreen battery info indicator  -->
   <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
   <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
@@ -41,5 +44,6 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+   
 
  </resources>
