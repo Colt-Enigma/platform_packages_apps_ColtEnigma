@@ -24,6 +24,18 @@
     </Preference>
 
     <PreferenceCategory
+        android:key="misc_icons_category"
+        android:title="@string/icons_category">
+
+         <com.colt.enigma.preference.SystemSettingSwitchPreference
+             android:key="show_fourg_icon"
+             android:title="@string/show_fourg_icon_title"
+             android:summary="@string/show_fourg_icon_summary"
+             android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="sb_gestures_title"
         android:title="@string/gestures_title">
 

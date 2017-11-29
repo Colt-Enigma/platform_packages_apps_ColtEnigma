@@ -30,6 +30,7 @@
     <string name="buttonsettings_summary">Perform custom button actions</string>
     <string name="gestures_title">Gestures</string>
     <string name="gesture_summary">Gesture Customizations</string>
+    <string name="icons_category">Icons</string>
     <string name="lockscreen_title">LockScreen</string>
     <string name="lockscreen_summary">Various options for lockscreen</string>
     <string name="misc_title">Miscellaneous</string>
@@ -168,4 +169,8 @@
     <!-- Double tap-to-sleep -->
     <string name="double_tap_to_sleep_title">Status bar</string>
     <string name="double_tap_to_sleep_summary">Double-tap status bar to put the device to sleep</string>    
+
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G icon</string>
+    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
 </resources>
