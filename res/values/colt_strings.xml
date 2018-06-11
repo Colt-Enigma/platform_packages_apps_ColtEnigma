@@ -146,4 +146,7 @@
     <!-- Navbar options -->
     <string name="navbar_invert_layout_title">Invert layout</string>
 
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe three fingers to take screenshot</string>
 </resources>
