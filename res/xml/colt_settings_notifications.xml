@@ -60,6 +60,13 @@
         android:key="notification_messages"
         android:title="@string/notification_messages">
 
+	<com.colt.settings.preference.SystemSettingListPreference
+            android:key="flashlight_on_call"
+            android:title="@string/flashlight_on_call_title"
+            android:entries="@array/flashlight_on_call_entries"
+            android:entryValues="@array/flashlight_on_call_values"
+            android:defaultValue="0" />
+
         <com.colt.settings.preference.SystemSettingSwitchPreference  
             android:key="enable_fc_notifications" 
             android:title="@string/enable_fc_notifications_title" 
