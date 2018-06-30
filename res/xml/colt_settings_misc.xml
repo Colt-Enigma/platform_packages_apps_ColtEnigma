@@ -60,5 +60,31 @@
                  android:targetPackage="com.oneplus.shit.settings"
                  android:targetClass="com.oneplus.shit.settings.ShitPanelSettings"/>
         </Preference>
+
+	<PreferenceCategory
+        android:key="aspect_ratio_category"
+        android:title="@string/aspect_ratio_category_title">
+        <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="aspect_ratio_apps_enabled"
+            android:title="@string/aspect_ratio_apps_enabled_title"
+            android:summary="@string/aspect_ratio_apps_enabled_summary"
+            android:defaultValue="false" />
+        <com.colt.settings.preference.AppMultiSelectListPreference
+            android:dependency="aspect_ratio_apps_enabled"
+            android:summary="@string/aspect_ratio_apps_list_summary"
+            android:title="@string/aspect_ratio_apps_list_title"
+            android:key="aspect_ratio_apps_list"
+            android:persistent="false" />
+        <com.colt.settings.preference.ScrollAppsViewPreference
+            android:dependency="aspect_ratio_apps_enabled"
+            android:key="aspect_ratio_apps_list_scroller"
+            android:persistent="false"
+            android:selectable="false" />
+        <Preference
+            android:dependency="aspect_ratio_apps_enabled"
+            android:persistent="false"
+            android:summary="@string/aspect_ratio_apps_info" />
+
+    </PreferenceCategory>
  
 </PreferenceScreen>

@@ -26,4 +26,6 @@
     <dimen name="ambient_light_preview_paddingHorizontal">50dp</dimen>
     <dimen name="ambient_light_preview_paddingVertical">30dp</dimen>
 
+    <dimen name="floating_widget_view_padding">10dp</dimen>
+    <dimen name="floating_widget_window_padding">10dp</dimen>
 </resources>
