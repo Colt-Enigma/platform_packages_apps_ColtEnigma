@@ -105,4 +105,16 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- Frags -->
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_shortcuts">Lockscreen Shortcuts</string>
+
+    <!-- Lockscreen icons -->
+    <string name="lockscreen_tuner_title">Lockscreen Shortcuts</string>
+
+    <!-- Lockscreen general category -->
+    <string name="general_category">General</string>
+
+    <!-- Statusbar Iten -->
+    <string name="statusbar_items_category">Statusbar Items</string>
 </resources>
