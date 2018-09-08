@@ -12,10 +12,7 @@
    limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-        android:key="about_colt"
-        android:title="@string/about_coltos_screen_title">
-
+        xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
         <com.android.settings.applications.LayoutPreference
             android:key="about_coltos"
