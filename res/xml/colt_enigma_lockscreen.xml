@@ -48,6 +48,12 @@
             settings:interval="5"
             android:defaultValue="0" />
 
+    <Preference
+        android:key="omnijaws_settings"
+        android:title="@string/weather_title"
+        android:summary="@string/weather_summary"
+        android:fragment="com.colt.enigma.fragments.OmniJawsSettings" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
