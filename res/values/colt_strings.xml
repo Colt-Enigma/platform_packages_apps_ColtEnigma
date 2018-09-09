@@ -514,4 +514,8 @@
     <string name="status_bar_battery_percentage_text_inside">Inside the icon</string>
     <string name="status_bar_battery_percentage_text_next">Next to the icon</string>  
 
+    <!-- AOSP Gestures -->
+    <string name="aosp_gesture_preference">System settings</string>
+    <string name="aosp_gesture_summary">Stock gestures included with AOSP</string>
+
 </resources>
