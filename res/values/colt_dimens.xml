@@ -27,4 +27,8 @@
 
     <!-- Where the category icon will start (from the left) -->
     <dimen name="colt_cat_icon_image_inset">6dp</dimen>
+
+    <!-- Shortcut picker -->
+    <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
 </resources>
