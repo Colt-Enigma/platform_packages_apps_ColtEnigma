@@ -22,11 +22,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
 
+import android.os.SystemProperties;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
+import android.widget.Toast;
 
 import com.android.internal.logging.nano.MetricsProto; 
 import com.android.settings.SettingsPreferenceFragment;
@@ -56,9 +58,11 @@ public class Animations extends SettingsPreferenceFragment
     private static final String WALLPAPER_CLOSE = "wallpaper_close";
     private static final String WALLPAPER_INTRA_OPEN = "wallpaper_intra_open";
     private static final String WALLPAPER_INTRA_CLOSE = "wallpaper_intra_close";
+    private static final String KEY_TOAST_ANIMATION = "toast_animation";
 
     private ListPreference mScreenOffAnimation;
     private CustomSeekBarPreference mAnimDuration;
+    private ListPreference mToastAnimation;
     ListPreference mActivityOpenPref;
     ListPreference mActivityClosePref;
     ListPreference mTaskOpenPref;
@@ -74,14 +78,15 @@ public class Animations extends SettingsPreferenceFragment
     private int[] mAnimations;
     private String[] mAnimationsStrings;
     private String[] mAnimationsNum;
+    private Context mContext;
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.colt_settings_animations);
-
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefs = getPreferenceScreen();
+	mContext = getActivity();
 
         mScreenOffAnimation = (ListPreference) findPreference(KEY_SCREEN_OFF_ANIMATION);
         int screenOffAnimation = Settings.System.getInt(getContentResolver(),
@@ -171,6 +176,13 @@ public class Animations extends SettingsPreferenceFragment
         mWallpaperIntraClose.setEntries(mAnimationsStrings);
         mWallpaperIntraClose.setEntryValues(mAnimationsNum);
         mWallpaperIntraClose.setOnPreferenceChangeListener(this);
+
+        mToastAnimation = (ListPreference) findPreference(KEY_TOAST_ANIMATION);
+        mToastAnimation.setSummary(mToastAnimation.getEntry());
+        int CurrentToastAnimation = Settings.Global.getInt(getContentResolver(), Settings.Global.TOAST_ANIMATION, 1);
+        mToastAnimation.setValueIndex(CurrentToastAnimation); //set to index of default value
+        mToastAnimation.setSummary(mToastAnimation.getEntries()[CurrentToastAnimation]);
+        mToastAnimation.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -252,6 +264,12 @@ public class Animations extends SettingsPreferenceFragment
             Settings.Global.putInt(resolver,
                     Settings.Global.ACTIVITY_ANIMATION_CONTROLS[10], val);
             preference.setSummary(getProperSummary(preference));
+            return true;
+        } else if (preference == mToastAnimation) {
+            int index = mToastAnimation.findIndexOfValue((String) newValue);
+            Settings.Global.putString(getContentResolver(), Settings.Global.TOAST_ANIMATION, (String) newValue);
+            mToastAnimation.setSummary(mToastAnimation.getEntries()[index]);
+            Toast.makeText(mContext, "Toast Test", Toast.LENGTH_SHORT).show();
             return true;
         }
         return false;
