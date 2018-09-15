@@ -32,6 +32,11 @@
             android:summary="@string/status_bar_clock_date_summary"
             android:fragment="com.colt.enigma.fragments.StatusbarClockDateSettings" />
 
+        <Preference
+            android:title="@string/status_bar_carrier_label_title"
+            android:summary="@string/status_bar_carrier_label_summary"
+            android:fragment="com.colt.enigma.fragments.StatusbarCarrierLabelSettings" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
