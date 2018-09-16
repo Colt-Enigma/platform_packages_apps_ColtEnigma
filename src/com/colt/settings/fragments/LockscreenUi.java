@@ -53,6 +53,7 @@ public class LockscreenUi extends SettingsPreferenceFragment implements
     private static final String DATE_FONT_SIZE  = "lockdate_font_size";
     private static final String LOCK_OWNERINFO_FONTS = "lock_ownerinfo_fonts";
     private static final String LOCKOWNER_FONT_SIZE = "lockowner_font_size";
+    private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
 
     private ListPreference mLockClockFonts;
     private ListPreference mLockDateFonts;
@@ -60,6 +61,7 @@ public class LockscreenUi extends SettingsPreferenceFragment implements
     private CustomSeekBarPreference mClockFontSize;
     private CustomSeekBarPreference mDateFontSize;
     private CustomSeekBarPreference mOwnerInfoFontSize;
+    private CustomSeekBarPreference mMaxKeyguardNotifConfig;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -108,6 +110,12 @@ public class LockscreenUi extends SettingsPreferenceFragment implements
         mOwnerInfoFontSize.setValue(Settings.System.getInt(getContentResolver(),
                 Settings.System.LOCKOWNER_FONT_SIZE,18));
         mOwnerInfoFontSize.setOnPreferenceChangeListener(this);
+
+        mMaxKeyguardNotifConfig = (CustomSeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
+        int kgconf = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 3);
+        mMaxKeyguardNotifConfig.setValue(kgconf);
+        mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -145,6 +153,11 @@ public class LockscreenUi extends SettingsPreferenceFragment implements
             int top = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.LOCKOWNER_FONT_SIZE, top*1);
+            return true;
+        } else if (preference == mMaxKeyguardNotifConfig) {
+            int kgconf = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
             return true;
         }
         return false;
