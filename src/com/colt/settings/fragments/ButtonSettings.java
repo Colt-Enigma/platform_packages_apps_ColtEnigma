@@ -41,6 +41,8 @@ import com.android.internal.util.hwkeys.ActionUtils;
 import com.colt.settings.preference.CustomSeekBarPreference;
 import com.colt.settings.preference.ActionFragment;
 
+import com.colt.settings.preference.SystemSettingSwitchPreference;
+
 public class ButtonSettings extends ActionFragment implements OnPreferenceChangeListener {
 
     //Keys
@@ -48,6 +50,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private static final String KEY_BUTTON_BRIGHTNESS_SW = "button_brightness_sw";
     private static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
     private static final String HWKEY_DISABLE = "hardware_keys_disable";
+    private static final String KEY_BUTTON_SWAP_KEYS = "swap_navigation_keys";
 
     // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
@@ -73,6 +76,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private CustomSeekBarPreference mButtonBrightness;
     private SwitchPreference mButtonBrightness_sw;
     private SwitchPreference mHwKeyDisable;
+    private SystemSettingSwitchPreference mSwapKeysPreference;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -94,6 +98,9 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
                     UserHandle.USER_CURRENT);
             mHwKeyDisable.setChecked(keysDisabled != 0);
             mHwKeyDisable.setOnPreferenceChangeListener(this);
+
+        mSwapKeysPreference = (SystemSettingSwitchPreference) prefScreen.findPreference(
+                KEY_BUTTON_SWAP_KEYS);
 
             final boolean variableBrightness = getResources().getBoolean(
                     com.android.internal.R.bool.config_deviceHasVariableButtonBrightness);
