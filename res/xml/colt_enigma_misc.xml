@@ -29,6 +29,13 @@
             android:summary="@string/gaming_title_summary"
             android:fragment="com.colt.enigma.fragments.GamingModeSettings" />
 
+	<com.colt.enigma.preference.GlobalSettingSwitchPreference
+            android:key="allow_signature_fake"
+            settings:iconSpaceReserved="false"
+            android:title="@string/allow_signature_fake"
+            android:summary="@string/allow_signature_fake_summary"
+            android:defaultValue="false" />
+
 	<!-- Aggressive Battery -->
         <Preference
             android:key="aggressive_battery"
