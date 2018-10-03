@@ -22,6 +22,12 @@
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="three_finger_gesture"
+        android:title="@string/three_finger_gesture"
+        android:summary="@string/three_finger_gesture_summary"
+        android:defaultValue="false" /> 
+
     <PreferenceCategory
 
          android:title="@string/double_tap_category_title" >
