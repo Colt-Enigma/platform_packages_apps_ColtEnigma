@@ -20,5 +20,4 @@
         android:title="@string/quicksettings_title">
 
 
-
 </PreferenceScreen>
