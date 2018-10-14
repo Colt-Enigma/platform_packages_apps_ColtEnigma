@@ -23,12 +23,6 @@
         android:key="lockscreen_weather"
         android:title="@string/lockscreen_weather_category" />
 
-        <com.colt.settings.preference.SystemSettingSwitchPreference
-            android:key="lockscreen_weather_enabled"
-            android:title="@string/lockscreen_weather_enabled_title"
-            android:summary="@string/lockscreen_weather_enabled_summary"
-            android:defaultValue="false" />
-
         <com.colt.settings.preference.SystemSettingListPreference
             android:key="lockscreen_weather_style"
             android:title="@string/lockscreen_weather_style_title"
