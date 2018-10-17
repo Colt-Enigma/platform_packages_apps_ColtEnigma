@@ -81,6 +81,13 @@
         android:key="qs_category"
         android:title="@string/qs_themes_category_title" >
 
+        <ListPreference
+            android:key="qs_tile_style"
+            android:title="@string/qs_tile_style_title"
+            android:persistent="false"
+            android:entries="@array/qs_selector_entries"
+            android:entryValues="@array/qs_selector_values" />
+
         <com.colt.enigma.preference.SystemSettingListPreference
             android:key="qs_panel_bg_use_new_tint"
             android:title="@string/qs_bg_use_new_tint"
