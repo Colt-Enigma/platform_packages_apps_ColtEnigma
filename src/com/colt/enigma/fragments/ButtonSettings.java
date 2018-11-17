@@ -41,12 +41,14 @@ import com.android.internal.logging.nano.MetricsProto;
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener{
 
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.colt_enigma_button);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
