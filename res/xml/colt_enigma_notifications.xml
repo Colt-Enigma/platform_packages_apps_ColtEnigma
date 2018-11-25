@@ -15,7 +15,18 @@
 	android:title="@string/notifications_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
- <PreferenceCategory
+    <PreferenceCategory
+           android:key="notifications_general_category"
+           android:title="@string/general_category">
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+           android:key="notification_guts_kill_app_button"
+           android:title="@string/notification_guts_kill_app_button_title"
+           android:summary="@string/notification_guts_kill_app_button_summary"
+           android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="headsup_notifications_category"
         android:title="@string/headsup_category">
 
@@ -33,7 +44,7 @@
 
     </PreferenceCategory>
 
-        <PreferenceCategory
+   <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
 
@@ -53,5 +64,4 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
-
 </PreferenceScreen>
