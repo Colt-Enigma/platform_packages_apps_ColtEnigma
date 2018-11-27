@@ -255,4 +255,10 @@
     <string name="profile_choose_app">Choose app</string>
     <string name="dialog_delete_title">Delete</string>
     <string name="dialog_delete_message">Remove selected item?</string>
+
+    <!-- Team Info -->
+    <string name="about_team_title">About ColtOS Team</string>
+    <string name="about_team_summary">Lets see who all are there :)</string>
+    <string name="colt_team_title">Meet Our ColtOS Team</string>
+
 </resources>
