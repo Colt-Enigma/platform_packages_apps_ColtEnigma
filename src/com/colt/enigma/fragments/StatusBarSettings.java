@@ -53,6 +53,10 @@ import java.util.Collections;
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+    private static final String KEY_STATUS_BAR_LOGO = "status_bar_logo";
+
+    private SwitchPreference mShowColtLogo;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -61,11 +65,21 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
         PreferenceScreen prefSet = getPreferenceScreen();
 
+	    mShowColtLogo = (SwitchPreference) findPreference(KEY_STATUS_BAR_LOGO);
+        mShowColtLogo.setChecked((Settings.System.getInt(getContentResolver(),
+             Settings.System.STATUS_BAR_LOGO, 0) == 1));
+        mShowColtLogo.setOnPreferenceChangeListener(this);
+
     }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-
+	if  (preference == mShowColtLogo) {
+            boolean value = (Boolean) objValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_LOGO, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 

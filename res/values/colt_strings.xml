@@ -281,5 +281,9 @@
     <string name="qs_edit_title">Edit Icon</string>
     <string name="qs_edit_summary">Enable the tile edit icon in the footer</string>
 
+    <!-- ColtOS logo -->
+    <string name="colt_logo_title">ColtOS logo</string>
+    <string name="colt_logo_summary">Let everyone know that you\'re using ColtOS when they see your screen</string>
+
 </resources>
 
