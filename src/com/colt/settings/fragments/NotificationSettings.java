@@ -15,7 +15,8 @@ import com.colt.settings.preference.SystemSettingMasterSwitchPreference;
 
 import com.colt.settings.utils.Utils;
 
-public class NotificationSettings extends SettingsPreferenceFragment {
+public class NotificationSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
 
