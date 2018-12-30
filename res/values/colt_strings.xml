@@ -1220,6 +1220,12 @@
     <!-- QS Running Services Icon -->
     <string name="qs_running_services_title">Running Services Icon</string>
     <string name="qs_running_services_summary">Disable the tile running services icon in the footer</string>
-       
+
+    <!-- Switch styles -->
+    <string name="switch_style_title">Switch appearance</string>
+    <string name="switch_default">Default</string>
+    <string name="switch_oneplus">OnePlus</string>
+    <string name="switch_narrow">Narrow</string>
+    <string name="switch_contained">Contained</string>
 </resources>
 

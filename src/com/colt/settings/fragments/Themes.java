@@ -50,6 +50,8 @@ public class Themes extends SettingsPreferenceFragment implements
 
     private static final String CUSTOM_THEME_BROWSE = "theme_select_activity";
 
+    private static final String SWITCH_STYLE = "switch_style";
+
     private Preference mThemeBrowse;
     private ListPreference mAccentPreset;
     private IOverlayManager mOverlayService;
@@ -57,6 +59,7 @@ public class Themes extends SettingsPreferenceFragment implements
 
     private ColorPickerPreference mThemeColor;
     private ListPreference mThemeSwitch;
+    private ListPreference mSwitchStyle;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -67,6 +70,14 @@ public class Themes extends SettingsPreferenceFragment implements
     mThemeBrowse.setEnabled(isBrowseThemesAvailable());
 
     mUiModeManager = getContext().getSystemService(UiModeManager.class);
+
+    mSwitchStyle = (ListPreference) findPreference(SWITCH_STYLE);
+        int switchStyle = Settings.System.getInt(mContext.getContentResolver(),
+                Settings.System.SWITCH_STYLE, 1);
+        int valueIndex = mSwitchStyle.findIndexOfValue(String.valueOf(switchStyle));
+        mSwitchStyle.setValueIndex(valueIndex >= 0 ? valueIndex : 0);
+        mSwitchStyle.setSummary(mSwitchStyle.getEntry());
+        mSwitchStyle.setOnPreferenceChangeListener(this);
 
     mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
@@ -189,7 +200,12 @@ public class Themes extends SettingsPreferenceFragment implements
                  mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
              } catch (RemoteException ignored) {
              }
-        }
+        } else if (preference == mSwitchStyle) {
+                String value = (String) objValue;
+                Settings.System.putInt(mContext.getContentResolver(), Settings.System.SWITCH_STYLE, Integer.valueOf(value));
+                int valueIndex = mSwitchStyle.findIndexOfValue(value);
+                mSwitchStyle.setSummary(mSwitchStyle.getEntries()[valueIndex]);
+	}
         return true;
     }
 
