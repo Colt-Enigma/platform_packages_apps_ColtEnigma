@@ -19,6 +19,7 @@ package com.colt.enigma.fragments;
 import com.android.internal.logging.nano.MetricsProto;
 
 import android.os.Bundle;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
@@ -80,6 +81,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             return true;
 	}
         return false;
+    }
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.SHOW_QS_CLOCK, 1, UserHandle.USER_CURRENT);
     }
 
     @Override
