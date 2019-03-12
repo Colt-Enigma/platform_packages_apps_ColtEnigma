@@ -28,6 +28,12 @@
             android:persistent="false" />
     </PreferenceCategory>
 
+    <Preference
+         android:key="category_custom_header"
+         android:title="@string/statusbar_header_category_title"
+         android:summary="@string/statusbar_header_category_summary"
+         android:fragment="com.colt.settings.fragments.StatusbarHeader" />
+
     <ListPreference
         android:key="quick_pulldown" 
         android:title="@string/quick_pulldown_title" 
