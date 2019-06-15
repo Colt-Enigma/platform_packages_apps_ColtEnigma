@@ -1070,4 +1070,9 @@
     <string name="slim_recents_enter_exit_animation_title">Animation</string>
     <string name="slim_recents_enter_exit_animation_translate">Translate</string>
     <string name="slim_recents_enter_exit_animation_fade">Fade</string>
+
+    <!-- Charging animation -->
+    <string name="lockscreen_charging_animation_title">LS Charging animation</string>
+    <string name="lockscreen_charging_animation_summary">Display a Lottie animation when the device is charging</string>
+
 </resources>
