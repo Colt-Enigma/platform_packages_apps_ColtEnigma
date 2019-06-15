@@ -15,14 +15,6 @@
     android:title="@string/lockscreen_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-            android:title="@string/lockscreen_tuner_title"
-            android:summary="@string/lockscreen_tuner_summary" >
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
-    </Preference>
-
     <PreferenceCategory
 
         android:title="@string/lock_screen_elements_category_title">
@@ -57,7 +49,7 @@
             android:summary="@string/fp_unlock_keystore_summary"
             android:defaultValue="false" />
 
-    </PreferenceCategory>
+    </PreferenceCategory>.
 
     <PreferenceCategory
 
@@ -74,6 +66,20 @@
             android:title="@string/smart_space_title"
             android:summary="@string/smart_space_summary"
             android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_charging_animation"
+            android:title="@string/lockscreen_charging_animation_title"
+            android:summary="@string/lockscreen_charging_animation_summary"
+            android:defaultValue="true" />
+
+        <Preference
+                android:title="@string/lockscreen_tuner_title"
+                android:summary="@string/lockscreen_tuner_summary" >
+                <intent android:action="android.intent.action.MAIN"
+                     android:targetPackage="com.android.systemui"
+                      android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
+        </Preference>
 
     </PreferenceCategory>
 
