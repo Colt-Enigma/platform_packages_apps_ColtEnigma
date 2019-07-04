@@ -106,9 +106,9 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object objValue) {
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
 	if (preference == mAspectRatioAppsSelect) {
-        Collection<String> valueList = (Collection<String>) objValue;
+        Collection<String> valueList = (Collection<String>) newValue;
         mAspectRatioApps.setVisible(false);
         if (valueList != null) {
           Settings.System.putString(getContentResolver(),
