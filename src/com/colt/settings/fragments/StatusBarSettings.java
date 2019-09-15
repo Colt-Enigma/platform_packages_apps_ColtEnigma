@@ -21,30 +21,37 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.development.DevelopmentSettings;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.colt.settings.R;
+import com.android.settings.R;
 
-public class StatusBarSettings extends SettingsPreferenceFragment {
-
-    public static final String TAG = "StatusBarSettings";
+public class StatusBarSettings extends SettingsPreferenceFragment implements
+        OnPreferenceChangeListener {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.statusbar_settings));
+        addPreferencesFromResource(R.xml.statusbar_settings);
+        PreferenceScreen prefSet = getPreferenceScreen(); 
+
+   }
+
+ @Override
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+
+        return false;
     }
- 
+
+
 @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;

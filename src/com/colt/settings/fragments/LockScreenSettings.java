@@ -21,34 +21,45 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 import android.provider.Settings;
+import android.content.res.Resources;
+import android.hardware.fingerprint.FingerprintManager;
+import android.app.WallpaperManager;
+import android.net.Uri;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.settings.development.DevelopmentSettings;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.colt.settings.R;
+import com.android.settings.R;
 
-public class LockScreenSettings extends SettingsPreferenceFragment {
-
-	public static final String TAG = "LockScreenSettings";
-
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-    	    super.onCreate(savedInstanceState);
-
-        Context mContext = getActivity().getApplicationContext();
-
-        addPreferencesFromResource(R.xml.lockscreen_settings);
-	}
+public class LockScreenSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     @Override
-    protected int getMetricsCategory() {
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+
+        addPreferencesFromResource(R.xml.lockscreen_settings);
+
+	ContentResolver resolver = getActivity().getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+        Resources resources = getResources();
+
+	}
+
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+
+        return false;
+    }
+
+    @Override
+    public int getMetricsCategory() {
 	return MetricsProto.MetricsEvent.COLT;
     }
 }
