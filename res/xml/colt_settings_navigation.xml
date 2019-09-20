@@ -12,14 +12,14 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/navbar_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings" >
 
-    <Preference
-            android:title="@string/navbar_tuner_title" >
-            <intent android:action="android.intent.action.MAIN"
-                android:targetPackage="com.android.systemui"
-                android:targetClass="com.android.systemui.tuner.NavBarActivity" />
-    </Preference>
+    <com.colt.settings.preference.SecureSettingSwitchPreference
+            android:key="sysui_nav_bar_inverse"
+            android:title="@string/navbar_invert_layout_title"
+            android:defaultValue="false" />
 
 </PreferenceScreen>
