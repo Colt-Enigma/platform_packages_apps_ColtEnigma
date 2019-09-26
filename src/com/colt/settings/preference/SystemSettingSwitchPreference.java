@@ -13,23 +13,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.colt.settings.preferences;
+package com.colt.settings.preference;
 
 import android.content.Context;
 import android.provider.Settings;
 import androidx.preference.SwitchPreference;
 import android.util.AttributeSet;
 
-public class SecureSettingSwitchPreference extends SwitchPreference {
-    public SecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+public class SystemSettingSwitchPreference extends SwitchPreference {
+    public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
 
-    public SecureSettingSwitchPreference(Context context, AttributeSet attrs) {
+    public SystemSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public SecureSettingSwitchPreference(Context context) {
+    public SystemSettingSwitchPreference(Context context) {
         super(context, null);
     }
 
@@ -40,7 +40,7 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
                 // It's already there, so the same as persisting
                 return true;
             }
-            Settings.Secure.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
+            Settings.System.putInt(getContext().getContentResolver(), getKey(), value ? 1 : 0);
             return true;
         }
         return false;
@@ -51,13 +51,13 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
         if (!shouldPersist()) {
             return defaultReturnValue;
         }
-        return Settings.Secure.getInt(getContext().getContentResolver(),
+        return Settings.System.getInt(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0) != 0;
     }
 
     @Override
     protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        setChecked(Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
+        setChecked(Settings.System.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
                 : (Boolean) defaultValue);
     }
 }
