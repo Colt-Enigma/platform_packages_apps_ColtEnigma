@@ -24,6 +24,13 @@
   <!-- Lockscreen Fragment -->
   <string name="lockscreen_settings_title">Lockscreen</string>
 
+  <string name="button_title">Buttons</string>
+  <string name="gestures_title">Gestures</string>
+  <string name="navbar_title">Navigation bar</string>
+  <string name="powermenu_title">Power menu</string>
+  <string name="quicksettings_title">Quick Settings</string>
+  <string name="volume_title">Volume rockers</string>
+
   <!-- Device Feature -->
   <string name="device_part_title">OnePlus Settings</string>
 
@@ -44,6 +51,11 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+  <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
    
 
  </resources>
