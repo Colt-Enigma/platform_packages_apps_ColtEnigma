@@ -33,10 +33,11 @@
   <!-- Colt Tabs Main  -->
   <string name="colt_title">The PandoraBox</string>
 
-  <!-- Colt Tab -->
+  <!-- Colt Tabs -->
   <string name="status_bar_tab">Statusbar</string>
   <string name="system_tab">System</string>
   <string name="lockscreen_tab">Lockscreen</string>
+  <string name="buttons_tab">Buttons</string>
   <string name="about_tab">About</string>
 
   <!-- Colt Settings -->

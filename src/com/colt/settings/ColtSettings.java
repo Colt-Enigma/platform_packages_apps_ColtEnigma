@@ -38,15 +38,11 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.colt.settings.customtab.IconTitleIndicator;
 import com.colt.settings.customtab.Indicatorable;
-import com.colt.settings.fragments.StatusBarSettings;
-import com.colt.settings.fragments.QuickSettings;
-import com.colt.settings.fragments.ButtonSettings;
-import com.colt.settings.fragments.GestureSettings;
-import com.colt.settings.fragments.LockScreenSettings;
-import com.colt.settings.fragments.NavbarSettings;
-import com.colt.settings.fragments.PowerMenuSettings;
-import com.colt.settings.fragments.System;
-import com.colt.settings.fragments.About;
+import com.colt.settings.tabs.Statusbar;
+import com.colt.settings.tabs.Buttons;
+import com.colt.settings.tabs.Lockscreen;
+import com.colt.settings.tabs.System;
+import com.colt.settings.tabs.About;
 
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -88,15 +84,11 @@ public class ColtSettings extends SettingsPreferenceFragment {
 
         public MyAdapter(FragmentManager fm) {
             super(fm);
-	    frags[0] = new StatusBarSettings();
-	    frags[1] = new QuickSettings();
-	    frags[2] = new ButtonSettings();
-	    frags[3] = new GestureSettings();
-	    frags[4] = new LockScreenSettings();
-            frags[5] = new NavbarSettings();
-	    frags[6] = new PowerMenuSettings();
-            frags[7] = new System();
-            frags[8] = new About();
+	    frags[0] = new Statusbar();
+            frags[1] = new Buttons();
+            frags[2] = new Lockscreen();
+            frags[3] = new System();
+            frags[4] = new About();
         }
 
         @Override
@@ -123,26 +115,18 @@ public class ColtSettings extends SettingsPreferenceFragment {
     private String[] getTitles() {
         String titleString[];
         titleString = new String[]{
-            getString(R.string.statusbar_settings_title),
-            getString(R.string.quicksettings_title),
+            getString(R.string.status_bar_tab),
             getString(R.string.button_title),
-	    getString(R.string.gestures_title),
-	    getString(R.string.lockscreen_settings_title),
-	    getString(R.string.navbar_title),
-	    getString(R.string.powermenu_title),
+	    getString(R.string.lockscreen_tab),
             getString(R.string.system_tab),
             getString(R.string.about_tab)};
         return titleString;
     }
 
     private int icons[] = {
-            R.drawable.statusbar_tab,
-	    R.drawable.quickSettings_tab,
-	    R.drawable.buttons_tab,
-	    R.drawable.gestures_tab,
-	    R.drawable.lockscreen_tab,
-	    R.drawable.navbar_tab,
-            R.drawable.power_tab,
+	    R.drawable.statusbar_tab,
+            R.drawable.buttons_tab,
+            R.drawable.lockscreen_tab,
             R.drawable.system_tab,
             R.drawable.about_tab};
 
