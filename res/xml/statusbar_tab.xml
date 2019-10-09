@@ -18,6 +18,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+	<com.colt.settings.preference.CategoryColtPreference
+		android:key="colt_statusbar_settings"
+	        android:title="@string/statusbar_settings_title"
+        	android:fragment="com.colt.settings.fragments.StatusBarSettings"
+		android:summary="@string/statusbar_summary" />
 
 
 </PreferenceScreen>
