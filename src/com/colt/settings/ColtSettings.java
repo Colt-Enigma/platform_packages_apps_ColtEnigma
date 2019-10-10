@@ -31,6 +31,8 @@ import androidx.viewpager.widget.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Menu;
+import android.view.MenuInflater;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.R;
@@ -67,11 +69,16 @@ public class ColtSettings extends SettingsPreferenceFragment {
         mViewpager.setAdapter(new MyAdapter(getFragmentManager()));
         init1();
 
+	setHasOptionsMenu(true);
 		return view;
     }
 
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+    }
+
     private void init1() {
-        mIndicator.setTextSize(12);
+        mIndicator.setTextSize(11);
         mIndicator.setTextColorResId(R.color.selector_tab);
         mIndicator.setIconWidthHeight(50);
         mIndicator.setItemPaddingTop(15);
