@@ -48,6 +48,10 @@
   <string name="buttonsettings_title">Buttons</string>
   <string name="buttonsettings_summary">Perform custom button actions</string>
   <string name="statusbar_summary">Statusbar Customizations</string>
+  <string name="lockscreen_summary">Various options for lockscreen</string>
+  <string name="navbar_summary">Various options for Navbar</string>
+  <string name="powermenu_summary">PowerMenu Customizations</string>
+  <string name="gesture_summary">Gesture Customizations</string>
 
   <!-- Device Feature -->
   <string name="device_part_title">OnePlus Settings</string>

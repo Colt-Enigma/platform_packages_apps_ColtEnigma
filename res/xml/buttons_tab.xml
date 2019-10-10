@@ -18,7 +18,33 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+	<!-- Buttons -->
+        <Preference
+            android:key="buttonsettings_category"
+            android:title="@string/button_title"
+	    android:summary="@string/buttonsettings_summary"
+            android:fragment="com.colt.settings.fragments.ButtonSettings" />
 
+	<!-- Navigation Bar -->
+        <Preference
+            android:key="navigationbar_category"
+            android:title="@string/navbar_title" 
+	    android:summary="@string/navbar_summary"
+            android:fragment="com.colt.settings.fragments.NavbarSettings" />
+
+	<!-- Power Menu -->
+        <Preference
+            android:key="powermenu_category"
+            android:title="@string/powermenu_title" 
+	    android:summary="@string/powermenu_summary"
+            android:fragment="com.colt.settings.fragments.PowerMenuSettings" />
+
+	<!-- Gestures -->
+        <Preference
+            android:key="gestures_category"
+            android:title="@string/gestures_title" 
+	    android:summary="@string/gesture_summary"
+            android:fragment="com.colt.settings.fragments.GestureSettings" />
 
 </PreferenceScreen>
 

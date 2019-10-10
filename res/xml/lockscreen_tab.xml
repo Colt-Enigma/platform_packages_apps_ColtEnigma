@@ -18,7 +18,12 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-
+	<!-- Lock Screen -->
+	<com.colt.settings.preference.CategoryColtPreference
+            android:fragment="com.colt.settings.fragments.LockScreenSettings"
+            android:key="colt_lockscreen_settings"
+	    android:summary="@string/lockscreen_summary"	    
+            android:title="@string/lockscreen_settings_title"/>
 
 </PreferenceScreen>
 
