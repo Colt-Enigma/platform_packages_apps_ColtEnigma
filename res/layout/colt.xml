@@ -47,9 +47,9 @@
             android:background="@drawable/logobuttonshape"
             android:gravity="center"
             android:paddingTop="8dp"
-            android:text="Its ColtOS"
+            android:text="It's Colt OS"
             android:textColor="@*android:color/accent_device_default_light"
-            android:textSize="20dp"
+            android:textSize="18dp"
             android:textStyle="bold|italic" />
 
     </RelativeLayout>
