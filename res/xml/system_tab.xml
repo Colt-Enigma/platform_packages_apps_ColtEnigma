@@ -23,6 +23,13 @@
 	    android:key="notifications_category"
             android:title="@string/notifications_title"
 	    android:summary="@string/notifications_summary"
-            android:fragment="com.colt.settings.fragments.NotificationSettings"
+            android:fragment="com.colt.settings.fragments.NotificationSettings" />
+
+	<!-- Misc -->
+	<com.colt.settings.preference.CategoryColtPreference
+            android:key="misc_category"
+            android:title="@string/misc_title" 
+	    android:summary="@string/misc_summary"
+            android:fragment="com.colt.settings.fragments.MiscSettings" />
 
 </PreferenceScreen>

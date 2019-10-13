@@ -30,6 +30,7 @@
   <string name="navbar_title">Navigation bar</string>
   <string name="powermenu_title">Power menu</string>
   <string name="volume_title">Volume rockers</string>
+  <string name="misc_title">Miscellaneous</string>
 
   <!-- Colt Tabs Main  -->
   <string name="colt_title">The PandoraBox</string>
@@ -54,6 +55,7 @@
   <string name="powermenu_summary">PowerMenu Customizations</string>
   <string name="gesture_summary">Gesture Customizations</string>
   <string name="notifications_title">Notifications and Incall settings</string>
+  <string name="misc_summary">Miscellaneous things to be checked here</string>
 
   <!-- Device Feature -->
   <string name="device_part_title">OnePlus Settings</string>
@@ -261,4 +263,7 @@
     <string name="about_team_summary">Lets see who all are there :)</string>
     <string name="colt_team_title">Meet Our ColtOS Team</string>
 
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Sensor block per-package</string>
+    <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery.</string>
 </resources>
