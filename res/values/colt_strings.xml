@@ -54,7 +54,7 @@
   <string name="navbar_summary">Various options for Navbar</string>
   <string name="powermenu_summary">PowerMenu Customizations</string>
   <string name="gesture_summary">Gesture Customizations</string>
-  <string name="notifications_title">Notifications and Incall settings</string>
+  <string name="notifications_summary">Notifications and Incall settings</string>
   <string name="misc_summary">Miscellaneous things to be checked here</string>
 
   <!-- Device Feature -->
@@ -204,8 +204,6 @@
     <string name="qs_panel_alpha_summary">Configure opacity of background</string>
 
     <!-- PowerMenu -->
-    <string name="powermenu_title">Powermenu</string>
-    <string name="powermenu_summary">Powermenu customization</string>
     <string name="powermenu_screenshot">Screenshot</string>
     <string name="powermenu_power">Power</string>
     <string name="powermenu_restart">Restart</string>
@@ -262,6 +260,8 @@
     <string name="about_team_title">About ColtOS Team</string>
     <string name="about_team_summary">Lets see who all are there :)</string>
     <string name="colt_team_title">Meet Our ColtOS Team</string>
+    <string name="about_coltos_title">So From Where ColtOS Arrived...</string>
+    <string name="coltos_about_summary">ColtOS was started by me (Rakesh Batra), Nitin, Nikhil and Debojit in early 2017 and it was a small but an effective group also and we all were in learning stage that\'s why Colt as a name arrived means a Learner. To start with ColtOS was based on LOS but now we have moved to aosp base and now in ColtOS Team we still have a team with some new members also and is just like a family to me, i would still like to mention the name of each and every member in ColtOS Team, 1. Rakesh Batra 2. Nitinkumar Chobhe 3. Roger.T 4.Debojit Deb, 5. Vinoth, 6. Santosh (SuperdroidBond), 7. Mukesh, 8. Athul, 9. Nikhil, 10. Meet Gohil, 11. Saurabh Hooda and 12. Anupam D Moran, that\'s the wonderfull team we have!!</string>
 
     <!-- Sensor block per-package -->
     <string name="sensor_block_title">Sensor block per-package</string>
