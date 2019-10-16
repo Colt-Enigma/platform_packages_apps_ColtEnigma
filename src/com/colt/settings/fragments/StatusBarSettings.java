@@ -21,6 +21,7 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.Intent;
+import android.os.UserHandle;
 import android.os.Bundle;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
@@ -40,7 +41,7 @@ import com.android.settings.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener, Indexable {
+public class StatusBarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private CustomSeekBarPreference mThreshold;
     private SystemSettingSwitchPreference mNetMonitor;

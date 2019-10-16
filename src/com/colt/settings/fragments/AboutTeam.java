@@ -46,7 +46,7 @@ import com.colt.settings.fragments.common.AboutTeamAdapter.OnClickListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class About extends SettingsPreferenceFragment {
+public class AboutTeam extends SettingsPreferenceFragment {
 
 	private List<AboutTeamAdapter.About> list = new ArrayList<>();
 

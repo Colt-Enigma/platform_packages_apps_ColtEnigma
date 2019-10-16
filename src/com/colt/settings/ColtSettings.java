@@ -44,7 +44,7 @@ import com.colt.settings.tabs.Statusbar;
 import com.colt.settings.tabs.Buttons;
 import com.colt.settings.tabs.Lockscreen;
 import com.colt.settings.tabs.System;
-import com.colt.settings.tabs.About;
+import com.colt.settings.fragments.AboutTeam;
 
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -95,7 +95,7 @@ public class ColtSettings extends SettingsPreferenceFragment {
             frags[1] = new Buttons();
             frags[2] = new Lockscreen();
             frags[3] = new System();
-            frags[4] = new About();
+            frags[4] = new AboutTeam();
         }
 
         @Override

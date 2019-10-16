@@ -23,7 +23,7 @@
 
 	<!-- Colt Team -->
         <PreferenceScreen
-          android:fragment="com.colt.settings.fragments.About"
+          android:fragment="com.colt.settings.fragments.AboutTeam"
           android:icon="@drawable/ic_about_team"
           android:key="about_team"
           android:summary="@string/about_team_summary"
