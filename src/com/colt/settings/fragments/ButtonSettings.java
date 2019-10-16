@@ -80,6 +80,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private SwitchPreference mHwKeyDisable;
     private SystemSettingSwitchPreference mSwapKeysPreference;
     private SwitchPreference mDisableNavigationKeys;
+    private boolean mIsNavSwitchingMode = false;
     private Handler mHandler;
 
     @Override
@@ -96,6 +97,8 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
 
         // Only visible on devices that does not have a navigation bar already
         if (ActionUtils.isHWKeysSupported(getActivity())) {
+            mDisableNavigationKeys.setOnPreferenceChangeListener(this);
+            mHandler = new Handler();
             // Remove keys that can be provided by the navbar
             updateDisableNavkeysOption();
             updateDisableNavkeysCategories(mDisableNavigationKeys.isChecked());
@@ -214,6 +217,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         setActionPreferencesEnabled(keysDisabled == 0);
     }
 
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mBacklightTimeout) {
@@ -241,6 +245,23 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
                     value ? 1 : 0);
             setActionPreferencesEnabled(!value);
+            return true;
+        } else if (preference == mDisableNavigationKeys) {
+            if (mIsNavSwitchingMode) {
+                return false;
+            }
+            mIsNavSwitchingMode = true;
+            boolean isChecked = ((Boolean) newValue);
+            mDisableNavigationKeys.setEnabled(false);
+            writeDisableNavkeysOption(isChecked);
+            updateDisableNavkeysOption();
+            updateDisableNavkeysCategories(true);
+            mHandler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    mIsNavSwitchingMode = false;
+                }
+            }, 1500);
             return true;
         }
         return false;
@@ -288,27 +309,6 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         if (appSwitchCategory != null) {
             appSwitchCategory.setEnabled(!navbarEnabled);
         }
-    }
-
-    @Override
-    public boolean onPreferenceTreeClick(Preference preference) {
-        if (preference == mDisableNavigationKeys) {
-            mDisableNavigationKeys.setEnabled(false);
-            writeDisableNavkeysOption(mDisableNavigationKeys.isChecked());
-            updateDisableNavkeysOption();
-            updateDisableNavkeysCategories(true);
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        mDisableNavigationKeys.setEnabled(true);
-                        updateDisableNavkeysCategories(mDisableNavigationKeys.isChecked());
-                    }catch(Exception e){
-                    }
-                }
-            }, 1000);
-        }
-        return super.onPreferenceTreeClick(preference);
     }
 
     @Override
