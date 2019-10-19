@@ -30,4 +30,11 @@
         android:title="@string/lockscreen_hide_shortcuts_title"
         android:summary="@string/lockscreen_hide_shortcuts_summary"
         android:defaultValue="false" />
+
+<com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="fp_unlock_keystore"
+            android:title="@string/fp_unlock_keystore_title"
+            android:summary="@string/fp_unlock_keystore_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
