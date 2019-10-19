@@ -651,4 +651,8 @@
     <string name="lockscreen_media_category">Music</string>
     <string name="media_art_title">Media cover art</string>
     <string name="media_art_summary">Enable media cover art on the lockscreen</string>
+
+    <!-- Lock screen media blur -->
+    <string name="lockscreen_media_blur_title">Media artwork blur level</string>
+
 </resources>
