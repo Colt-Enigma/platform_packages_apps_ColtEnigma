@@ -368,4 +368,11 @@
     <string name="power_menu_animation_translucent_top">Translucent (top)</string>
     <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
+    <!-- Lockscreen elements category -->
+    <string name="lock_screen_elements_category_title">Lock screen elements</string>
+
+    <!-- Hide Lockscreen shortcuts on secure Lockscreen -->
+    <string name="lockscreen_hide_shortcuts_title">Hide bottom shortcuts</string>
+    <string name="lockscreen_hide_shortcuts_summary">Hide left-right shortcuts on secure lock screens</string>
+
 </resources>
