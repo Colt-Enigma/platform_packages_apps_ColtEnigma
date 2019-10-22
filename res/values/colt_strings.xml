@@ -381,4 +381,7 @@
     <string name="quick_pulldown_right">Right</string>
     <string name="quick_pulldown_always">Always</string>
 
+    <!-- Hide Lockscreen shortcuts on secure Lockscreen -->
+    <string name="lockscreen_hide_shortcuts_title">Hide Bottom Shortcuts</string>
+    <string name="lockscreen_hide_shortcuts_summary">Hide Left-Right Shortcuts on secure lock screens</string>
 </resources>
