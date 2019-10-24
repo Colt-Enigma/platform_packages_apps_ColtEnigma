@@ -633,4 +633,7 @@
     <string name="volte_icon_android1hd">Android One HD Icon</string>
     <string name="volte_icon_oos">OOS VoLTE Icon</string>
 
+    <!-- Lock screen visualizer -->
+    <string name="lockscreen_visualizer_enable">Music Visualizer</string>
+    <string name="lockscreen_visualizer_enable_summary">Show visualizer bars while playing music</string>
 </resources>
