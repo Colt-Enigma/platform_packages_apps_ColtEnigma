@@ -31,8 +31,9 @@
             android:summary="@string/lockscreen_show_status_bar_summary"
             android:defaultValue="true" />
 
-<com.colt.settings.preference.SecureSettingSwitchPreference
+<com.colt.settings.preference.SecureSettingMasterSwitchPreference
             android:key="lockscreen_visualizer_enabled"
+	    android:fragment="com.colt.settings.fragments.Visualizer"
             android:title="@string/lockscreen_visualizer_enable"
             android:summary="@string/lockscreen_visualizer_enable_summary"
             android:defaultValue="false" />
