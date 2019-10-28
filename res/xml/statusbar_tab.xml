@@ -39,6 +39,13 @@
             android:summary="@string/clock_style_category_summary"
             android:fragment="com.colt.settings.fragments.ClockSettings" />
 
+	<!-- Status Bar Battery -->
+        <com.colt.settings.preference.CategoryColtPreference
+            android:key="battery_mode"
+            android:title="@string/battery_mode_title"
+            android:summary="@string/battery_mode_summary"
+            android:fragment="com.colt.settings.fragments.BatteryMode" />
+
 </PreferenceScreen>
 
 
