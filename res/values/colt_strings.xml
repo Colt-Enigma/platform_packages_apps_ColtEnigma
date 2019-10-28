@@ -393,4 +393,12 @@
     <!-- Buttons - Enable navbar -->
     <string name="disable_navkeys_title">Enable on-screen nav bar</string>
     <string name="disable_navkeys_summary">Enable on-screen navigation bar and disable hardware buttons</string>
+
+    <!-- QS SystemInfo -->
+    <string name="qs_system_info_title">System Info</string>
+    <string name="qs_system_info_off">Off</string>
+    <string name="qs_system_info_cpu_temp">CPU temperature</string>
+    <string name="qs_system_info_battery_temp">Battery temperature</string>
+    <string name="qs_system_info_gpu_clock">GPU frequency</string>
+    <string name="qs_system_info_gpu_busy">GPU utilization</string>
 </resources>
