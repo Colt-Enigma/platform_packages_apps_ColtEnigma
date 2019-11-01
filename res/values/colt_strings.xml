@@ -52,7 +52,7 @@
   <string name="statusbar_summary">Statusbar Customizations</string>
   <string name="lockscreen_summary">Various options for lockscreen</string>
   <string name="navbar_summary">Various options for Navbar</string>
-  <string name="powermenu_summary">PowerMenu Customizations</string>
+  <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
   <string name="gesture_summary">Gesture Customizations</string>
   <string name="notifications_summary">Notifications and Incall settings</string>
   <string name="misc_summary">Miscellaneous things to be checked here</string>
@@ -425,4 +425,11 @@
     <string name="status_bar_battery_style_q">Q style</string>
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
+
+    <!-- Power Menu -->
+    <string name="hardware_keys_power_category">Power Button</string>
+    <string name="powermenu_reboot_title">Reboot</string>
+    <string name="powermenu_advanced_reboot_title">Advanced Reboot</string>
+    <string name="powermenu_lockdown">Lockdown</string>
+    <string name="powermenu_screenshot_title">Screenshot</string>
 </resources>
