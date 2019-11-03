@@ -30,6 +30,13 @@
         android:summary="@string/network_traffic_state_summary"
         android:defaultValue="true" />
 
+     <com.colt.settings.preference.SystemSettingSwitchPreference
+        android:key="network_traffic_arrow"
+        android:title="@string/network_traffic_arrow_title"
+        android:summary="@string/network_traffic_arrow_summary"
+        android:defaultValue="true"
+        android:dependency="network_traffic_state" />
+
     <com.colt.settings.preference.CustomSeekBarPreference
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold_title"
@@ -39,12 +46,7 @@
         settings:units="KB/s"
         android:dependency="network_traffic_state" />
 
-     <com.colt.settings.preference.SystemSettingSwitchPreference
-        android:key="network_traffic_hidearrow"
-        android:title="@string/network_traffic_hidearrow"
-        android:summary="@string/network_traffic_hidearrow_summary"
-        android:dependency="network_traffic_state"
-        android:defaultValue="false" />
+     </PreferenceCategory>
 
      <com.colt.settings.preference.SystemSettingSwitchPreference
          android:key="show_fourg_icon"

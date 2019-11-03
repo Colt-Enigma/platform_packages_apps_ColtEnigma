@@ -210,7 +210,6 @@
     <string name="powermenu_restart">Restart</string>
     <string name="powermenu_airplane">Airplane</string>
     <string name="powermenu_settings">Settings</string>
-    <string name="powermenu_lockdown">Lock Down</string>
     <string name="powermenu_users">Users</string>
     <string name="powermenu_logout">Logout</string>
     <string name="powermenu_torch">Flashlight</string>
@@ -226,8 +225,8 @@
     <string name="network_traffic_state_title">Network traffic</string>
     <string name="network_traffic_state_summary">Show net activity in statusbar</string>
     <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
-    <string name="network_traffic_hidearrow">Hide arrows</string>
-    <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
+    <string name="network_traffic_arrow_title">Activity arrows</string>
+    <string name="network_traffic_arrow_summary">Show the network traffic indicator arrows</string>
 
     <!-- Double Tap -->
     <string name="dtts_category_header">Double tap to sleep</string>

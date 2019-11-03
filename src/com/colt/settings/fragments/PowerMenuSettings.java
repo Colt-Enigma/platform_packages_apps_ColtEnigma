@@ -42,8 +42,10 @@ import java.util.List;
 
 import com.colt.settings.utils.Utils;
 
-public class PowerMenuSettings extends SettingsPreferenceFragment 
-                    implements Preference.OnPreferenceChangeListener{
+public class PowerMenu extends SettingsPreferenceFragment     
+                implements Preference.OnPreferenceChangeListener {
+
+    public static final String TAG = "PowerMenu";
 
     private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
     private static final String KEY_POWERMENU_LOCKSCREEN = "powermenu_lockscreen";
@@ -60,15 +62,15 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
     private SwitchPreference mPowerMenuLSTorch;
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.colt_settings_power);
 
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
 
-	mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
+        mPowermenuTorch = (SwitchPreference) findPreference(KEY_POWERMENU_TORCH);
         mPowermenuTorch.setOnPreferenceChangeListener(this);
         if (!Utils.deviceSupportsFlashLight(getActivity())) {
             prefScreen.removePreference(mPowermenuTorch);
@@ -107,9 +109,9 @@ public class PowerMenuSettings extends SettingsPreferenceFragment
     }
 
     @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
-	if (preference == mPowermenuTorch) {
-            boolean value = (Boolean) newValue;
+    public boolean onPreferenceChange(Preference preference, Object objValue) {
+        if (preference == mPowermenuTorch) {
+            boolean value = (Boolean) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.POWERMENU_TORCH, value ? 1 : 0);
             return true;
