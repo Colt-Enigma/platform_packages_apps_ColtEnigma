@@ -42,10 +42,10 @@ import java.util.List;
 
 import com.colt.settings.utils.Utils;
 
-public class PowerMenu extends SettingsPreferenceFragment     
+public class PowerMenuSettings extends SettingsPreferenceFragment     
                 implements Preference.OnPreferenceChangeListener {
 
-    public static final String TAG = "PowerMenu";
+    public static final String TAG = "PowerMenuSettings";
 
     private static final String KEY_POWERMENU_TORCH = "powermenu_torch";
     private static final String KEY_POWERMENU_LOCKSCREEN = "powermenu_lockscreen";

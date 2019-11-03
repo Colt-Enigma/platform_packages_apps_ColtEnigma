@@ -34,7 +34,7 @@
 
 	<!-- Power Menu -->
 	<com.colt.settings.preference.CategoryColtPreference
-	    android:key="power_menu"
+	    android:key="powermenu__category"
             android:title="@string/powermenu_title"
             android:summary="@string/powermenu_summary"
             android:fragment="com.colt.settings.fragments.PowerMenuSettings" />
