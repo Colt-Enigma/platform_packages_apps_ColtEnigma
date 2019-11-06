@@ -15,6 +15,18 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+
+        android:title="@string/battery_saving">
+
+        <Preference
+            android:key="suspend_actions"
+            android:fragment="com.colt.enigma.fragments.ScreenStateToggles"
+            android:title="@string/screen_state_toggles_title"
+            android:summary="@string/screen_state_toggles_summary" />
+
+    </PreferenceCategory>
+
         <com.colt.enigma.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
