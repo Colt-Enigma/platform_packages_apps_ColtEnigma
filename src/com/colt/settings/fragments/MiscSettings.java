@@ -21,6 +21,7 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
+import com.colt.settings.utils.Utils;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -34,7 +35,15 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+        final String KEY_DEVICE_PART = "device_part";
+        final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
+
         addPreferencesFromResource(R.xml.colt_settings_misc);
+
+        // DeviceParts
+        if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
+            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
+        }
 
     }
 

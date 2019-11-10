@@ -23,7 +23,6 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
-import com.colt.settings.utils.Utils;
 
 import com.android.internal.logging.nano.MetricsProto;
 
@@ -37,15 +36,8 @@ public class System extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-    final String KEY_DEVICE_PART = "device_part";
-    final String KEY_DEVICE_PART_PACKAGE_NAME = "org.omnirom.device";
-
         addPreferencesFromResource(R.xml.system_tab);
 
-    // DeviceParts
-      if (!Utils.isPackageInstalled(getActivity(), KEY_DEVICE_PART_PACKAGE_NAME)) {
-            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_PART));
-        }
     }
 
     @Override
