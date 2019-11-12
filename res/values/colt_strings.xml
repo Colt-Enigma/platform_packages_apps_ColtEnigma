@@ -1288,4 +1288,20 @@
     <string name="accent_preset_36">XboxGreen</string>
     <string name="accent_preset_37">XiaomiOrange</string>
     <string name="accent_preset_title">Accent preset</string>
+
+    <!-- StatusBar weather settings -->
+    <string name="sb_weather_title">Weather</string>
+    <string name="sb_weather_summary">Config statusBar and QS Header weather</string>
+    <string name="status_bar_weather_location_title">Weather Placement</string>
+    <string name="statusbar_weather_title">Status bar weather</string>
+    <string name="statusbar_weather_summary">Configure from QS settings/Weather</string>
+    <string name="statusbar_weather_dialog_title">Status bar weather style</string>
+    <string name="weather_shown_statusbar">Statusbar</string>
+    <string name="weather_shown_qs_header">QS Header</string>
+    <string name="status_bar_weather_hidden">Hide weather</string>
+    <string name="status_bar_temperature_image_show_scale">Show temp with scale and image</string>
+    <string name="status_bar_temperature_image_hide_scale">Show temp with image without scale</string>
+    <string name="status_bar_temperature_show_scale_hide_image">Show temp with scale</string>
+    <string name="status_bar_temperature_hide_scale_hide_image">Show temp without scale</string>
+    <string name="status_bar_show_image">Show image</string>
 </resources>

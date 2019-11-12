@@ -1181,4 +1181,34 @@
         <item>ff6700</item>
     </string-array>
 
+    <!-- Statusbar & QS Header weather Location -->
+    <string-array name="weather_location_entries" translatable="false">
+        <item>@string/weather_shown_statusbar</item>
+        <item>@string/weather_shown_qs_header</item>
+    </string-array>
+
+    <string-array name="weather_location_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+    </string-array>
+
+    <!-- Statusbar & QS Header weather settings -->
+    <string-array name="status_bar_weather_entries" translatable="false">
+        <item>@string/status_bar_weather_hidden</item>
+        <item>@string/status_bar_temperature_image_show_scale</item>
+        <item>@string/status_bar_temperature_image_hide_scale</item>
+        <item>@string/status_bar_temperature_show_scale_hide_image</item>
+        <item>@string/status_bar_temperature_hide_scale_hide_image</item>
+        <item>@string/status_bar_show_image</item>
+    </string-array>
+
+    <string-array name="status_bar_weather_values" translatable="false">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
 </resources>
