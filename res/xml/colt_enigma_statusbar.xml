@@ -45,6 +45,13 @@
             android:summary="@string/status_bar_logo_category_summary"
             android:fragment="com.colt.enigma.fragments.StatusBarLogo" />
 
+        <!-- Status Bar Weather -->
+        <Preference
+            android:key="status_bar_weather"
+            android:title="@string/sb_weather_title"
+            android:summary="@string/sb_weather_summary"
+            android:fragment="com.colt.enigma.fragments.SBWeather" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
