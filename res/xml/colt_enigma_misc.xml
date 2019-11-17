@@ -34,6 +34,12 @@
 
     </PreferenceCategory>
 
+        <Preference
+            android:key="gaming_mode"
+            android:fragment="com.colt.enigma.fragments.GamingMode"
+            android:title="@string/gaming_mode_title"
+            android:summary="@string/gaming_mode_summary" />
+
         <com.colt.enigma.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
             android:title="@string/wakeup_when_plugged_unplugged_title"
