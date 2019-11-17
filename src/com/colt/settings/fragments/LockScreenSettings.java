@@ -40,11 +40,20 @@ import com.android.settings.R;
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
+   private static final String KEY_AMBIENT_DISPLAY_CUSTOM = "ambient_display_custom";
+
+    private Preference mCustomDoze;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.lockscreen_settings);
+    
+    mCustomDoze = (Preference) findPreference(KEY_AMBIENT_DISPLAY_CUSTOM);
+        if (!getResources().getBoolean(com.android.internal.R.bool.config_alt_ambient_display)) {
+            getPreferenceScreen().removePreference(mCustomDoze);
+        }
 
 	ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();

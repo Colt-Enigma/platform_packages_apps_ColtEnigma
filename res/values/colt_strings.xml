@@ -616,4 +616,7 @@
     <string name="file_header_provider_title">Single image</string>
     <string name="file_header_provider" translatable="false">file</string>
     
+    <!-- Custom Doze -->
+    <string name="ambient_display_custom_title">Ambient Display</string>
+
 </resources>
