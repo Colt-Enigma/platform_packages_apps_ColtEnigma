@@ -34,6 +34,8 @@ import java.util.List;
 
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.colt.settings.preference.SystemSettingMasterSwitchPreference;
+
 public class MiscSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
@@ -41,6 +43,10 @@ public class MiscSettings extends SettingsPreferenceFragment implements
     private static final String KEY_ASPECT_RATIO_APPS_LIST = "aspect_ratio_apps_list";
     private static final String KEY_ASPECT_RATIO_CATEGORY = "aspect_ratio_category";
     private static final String KEY_ASPECT_RATIO_APPS_LIST_SCROLLER = "aspect_ratio_apps_list_scroller";
+
+    private static final String GAMING_MODE_ENABLED = "gaming_mode_enabled";
+
+    private SystemSettingMasterSwitchPreference mGamingMode;
 
     private AppMultiSelectListPreference mAspectRatioAppsSelect;
     private ScrollAppsViewPreference mAspectRatioApps;
@@ -53,6 +59,11 @@ public class MiscSettings extends SettingsPreferenceFragment implements
         final String KEY_DEVICE_PART_PACKAGE_NAME = "com.oneplus.shit.settings";
 
         addPreferencesFromResource(R.xml.colt_settings_misc);
+
+	mGamingMode = (SystemSettingMasterSwitchPreference) findPreference(GAMING_MODE_ENABLED);
+        mGamingMode.setChecked((Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.GAMING_MODE_ENABLED, 0) == 1));
+        mGamingMode.setOnPreferenceChangeListener(this);
 
       final PreferenceCategory aspectRatioCategory =
           (PreferenceCategory) getPreferenceScreen().findPreference(KEY_ASPECT_RATIO_CATEGORY);
@@ -109,7 +120,12 @@ public class MiscSettings extends SettingsPreferenceFragment implements
               Settings.System.OMNI_ASPECT_RATIO_APPS_LIST, "");
         }
         return true;
-      }
+        } else if (preference == mGamingMode) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.GAMING_MODE_ENABLED, value ? 1 : 0);
+            return true;
+        }
         return false;
     }
 
