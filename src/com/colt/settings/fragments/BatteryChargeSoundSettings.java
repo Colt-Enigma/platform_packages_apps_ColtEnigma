@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.android.settings.fuelgauge;
+package com.colt.settings.fragments;
 
 import android.app.Activity;
 import android.content.Context;
