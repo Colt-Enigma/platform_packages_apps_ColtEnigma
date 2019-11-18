@@ -73,4 +73,10 @@
             android:defaultValue="true"
             android:disableDependentsState="true" />
     </PreferenceCategory>
+
+    <PreferenceScreen
+        android:key="battery_charge_sound"
+        android:title="@string/notification_sound_battery_charge_title"
+        android:summary="@string/notification_sound_battery_charge_summary"
+        android:fragment="com.colt.settings.fragments.BatteryChargeSoundSettings" />
 </PreferenceScreen>
