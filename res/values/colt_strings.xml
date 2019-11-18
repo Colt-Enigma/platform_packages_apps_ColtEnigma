@@ -551,4 +551,14 @@
     <string name="notification_battery_charge_level_seek_bar">Battery Level</string>
     <string name="notification_battery_charge_level_ringtone">Ringtone</string>
     <string name="notification_battery_charge_level_silent">Silent</string>
+
+    <!-- Animations Tab -->
+    <string name="animations_title">Animations</string>
+    <string name="animations_summary">Animations Stuff </string>
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_fade">Simple fade</string>
+    <string name="screen_off_animation_color">Color fade</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+    <string name="screen_off_animation_title">Screen off animation</string>
 </resources>
