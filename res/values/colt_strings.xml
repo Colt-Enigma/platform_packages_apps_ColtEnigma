@@ -417,6 +417,7 @@
     <string name="battery_percentage_next">Enabled</string>
     <string name="battery_percentage_inside">Enabled (inside icon)</string>
     <string name="battery_percentage_estimate">Enabled (estimate)</string>
+    <string name="battery_percentage_percentage_estimate">Enabled (percent | estimate)</string>
 
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_style_title">SB Battery style</string>
@@ -577,4 +578,5 @@
     <!-- Show statusbar on lockscreen -->
     <string name="lockscreen_show_status_bar_title">Statusbar</string>
     <string name="lockscreen_show_status_bar_summary">Show statusbar on the lockscreen</string>
+
 </resources>
