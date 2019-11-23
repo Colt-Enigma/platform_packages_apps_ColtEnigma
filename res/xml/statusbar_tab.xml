@@ -25,26 +25,33 @@
             android:fragment="com.colt.settings.fragments.StatusBarSettings"
 	    android:summary="@string/statusbar_summary" />
 
+	<!-- Carrier Label -->
+        <com.colt.settings.preference.CategoryColtPreference
+            android:key="carrier_label"
+            android:title="@string/carrier_label_settings_title"
+            android:summary="@string/carrier_label_settings_summary"
+            android:fragment="com.colt.settings.fragments.CustomCarrierLabel" />
+
+	<!-- Status Bar Clock -->
+        <com.colt.settings.preference.CategoryColtPreference
+            android:key="clock_settings"
+            android:title="@string/clock_style_category_title"
+            android:summary="@string/clock_style_category_summary"
+            android:fragment="com.colt.settings.fragments.ClockSettings" />
+
+        <!-- Status Bar Battery -->
+        <com.colt.settings.preference.CategoryColtPreference
+            android:key="battery_mode"
+            android:title="@string/battery_mode_title"
+            android:summary="@string/battery_mode_summary"
+            android:fragment="com.colt.settings.fragments.BatteryMode" />
+
 	<!-- Quick Settings panel -->
 	<com.colt.settings.preference.CategoryColtPreference
             android:key="quicksettings_category"
             android:title="@string/quicksettings_title"
 	    android:summary="@string/quicksettings_summary"
             android:fragment="com.colt.settings.fragments.QuickSettings" />
-
-	<!-- Status Bar Clock -->
-        <com.colt.settings.preference.CategoryColtPreference
-	    android:key="clock_settings"
-            android:title="@string/clock_style_category_title"
-            android:summary="@string/clock_style_category_summary"
-            android:fragment="com.colt.settings.fragments.ClockSettings" />
-
-	<!-- Status Bar Battery -->
-        <com.colt.settings.preference.CategoryColtPreference
-            android:key="battery_mode"
-            android:title="@string/battery_mode_title"
-            android:summary="@string/battery_mode_summary"
-            android:fragment="com.colt.settings.fragments.BatteryMode" />
 
 </PreferenceScreen>
 
