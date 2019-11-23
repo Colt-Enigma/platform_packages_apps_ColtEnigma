@@ -34,6 +34,18 @@
         android:title="@string/battery_title" />
 
     <PreferenceCategory
+        android:key="carrier_label"
+        android:title="@string/carrier_label_settings_title">
+
+    <Preference
+        android:key="carrier_label"
+        android:fragment="com.colt.enigma.fragments.CarrierLabel"
+        android:title="@string/carrier_label_settings_title" 
+	android:summary="@string/Customize the carrier label" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="misc_icons_category"
         android:title="@string/icons_category">
 
