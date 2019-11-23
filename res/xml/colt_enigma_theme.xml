@@ -114,4 +114,17 @@
 
     </PreferenceCategory>
 
+    <!-- Rounded Corners -->
+    <PreferenceCategory 
+         android:key="rounded_corners_category"
+         android:title="@string/corners_category_title">
+
+        <PreferenceScreen
+            android:key="rounded_corners"
+            android:title="@string/corners_title"
+            android:summary="@string/corners_category_summary"
+            android:fragment="com.colt.enigma.fragments.RoundedCorners" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
