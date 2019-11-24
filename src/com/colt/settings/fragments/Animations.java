@@ -45,7 +45,7 @@ public class Animations extends SettingsPreferenceFragment
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.ion_settings_animations);
+        addPreferencesFromResource(R.xml.colt_settings_animations);
 
         ContentResolver resolver = getActivity().getContentResolver();
         PreferenceScreen prefs = getPreferenceScreen();
