@@ -1089,4 +1089,8 @@
     <string name="pulse_solid_units_rounded_title">Solid lines rounded</string>
     <string name="pulse_solid_units_rounded_summary">Round the solid lines</string>
 
+
+    <!-- QS panel opacity -->
+    <string name="qs_panel_alpha_title">Background opacity</string>
+
 </resources>
