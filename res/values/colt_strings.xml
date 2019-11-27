@@ -999,4 +999,13 @@
     <string name="notification_headers_title">Show notification headers</string>
     <string name="notification_headers_summary">Whether to show R style notification headers (Requires a SystemUI restart)</string>
 
+    <!-- Rounded corners -->
+    <string name="screen_title">Screen</string>
+    <string name="screen_summary">Screen customisations</string>
+    <string name="corners_category_title">Corners</string>
+    <string name="corner_radius">Rounded corner radius</string>
+    <string name="content_padding">Corner content padding</string>
+    <string name="corner_fwvals_title">Use framework values</string>
+    <string name="corner_fwvals_summary">Use the default values for your device</string>
+
 </resources>

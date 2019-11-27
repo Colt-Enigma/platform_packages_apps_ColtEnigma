@@ -43,7 +43,14 @@
             android:title="@string/system_colors"
 	    android:summary="@string/system_colors_summary"
 	    android:fragment="com.colt.settings.fragments.Themes" />
-	
+
+	<!-- Screen -->
+	<com.colt.settings.preference.CategoryColtPreference
+            android:key="screen_category"
+            android:title="@string/screen_title"
+	    android:summary="@string/screen_summary"
+            android:fragment="com.colt.settings.fragments.Screen" />
+
 	<!-- Misc -->
 	<com.colt.settings.preference.CategoryColtPreference
             android:key="misc_category"
