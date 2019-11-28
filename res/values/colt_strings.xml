@@ -996,4 +996,8 @@
     <string name="notification_headers_title">Notification headers</string>
     <string name="notification_headers_summary">Show headers in the notification shade</string>
 
+    <!-- QS Footer Text -->
+    <string name="qs_footer_text_title">QS footer text</string>
+    <string name="qs_footer_text_summary">Display text at bottom of QS panel</string>
+
 </resources>

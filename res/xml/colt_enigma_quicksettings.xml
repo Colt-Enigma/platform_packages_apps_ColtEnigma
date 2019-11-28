@@ -52,6 +52,12 @@
             android:summary="@string/lockscreen_qs_disabled_summary"
             android:defaultValue="false" />
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="footer_text_show"
+        android:title="@string/qs_footer_text_title"
+        android:summary="@string/qs_footer_text_summary"
+        android:defaultValue="false"/>
+
     </PreferenceCategory>
 
     <PreferenceCategory 
