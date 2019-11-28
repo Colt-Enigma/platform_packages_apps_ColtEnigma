@@ -97,4 +97,10 @@
 
     </PreferenceCategory>
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="omni_footer_text_show"
+        android:title="@string/qs_footer_text_title"
+        android:summary="@string/qs_footer_text_summary"
+        android:defaultValue="false"/>
+
 </PreferenceScreen>
