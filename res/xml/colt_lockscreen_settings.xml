@@ -31,11 +31,24 @@
                 android:targetClass="com.custom.ambient.display.DozeSettings" />
         </Preference>
 
-<com.colt.settings.preference.SystemSettingSwitchPreference
+    <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
+
+    <com.colt.settings.preference.SecureSettingSwitchPreference
+        android:key="sysui_keyguard_show_battery_bar"
+        android:title="@string/tuner_keyguard_show_battery_bar_title"
+        android:summary="@string/tuner_keyguard_show_battery_bar_summary"
+        android:defaultValue="true" />
+
+    <com.colt.settings.preference.SecureSettingSwitchPreference
+        android:key="sysui_keyguard_show_battery_bar_always"
+        android:title="@string/tuner_keyguard_show_battery_bar_always_title"
+        android:summary="@string/tuner_keyguard_show_battery_bar_always_summary"
+        android:dependency="sysui_keyguard_show_battery_bar"
+        android:defaultValue="false" />
 
         <Preference
             android:key="omnijaws_settings"
