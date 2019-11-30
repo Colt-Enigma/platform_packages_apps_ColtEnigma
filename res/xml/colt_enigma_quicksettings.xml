@@ -58,6 +58,13 @@
         android:summary="@string/qs_footer_text_summary"
         android:defaultValue="false"/>
 
+    <com.colt.enigma.preference.SystemSettingEditTextPreference
+        android:key="footer_text_string"
+        android:title="@string/qs_footer_text_string_title"
+        android:summary="@string/qs_footer_text_string_summary"
+        android:dependency="footer_text_show"
+        android:defaultValue="#Get_Colt-ify" />
+
     </PreferenceCategory>
 
     <PreferenceCategory 

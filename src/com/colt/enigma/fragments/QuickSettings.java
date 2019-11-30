@@ -46,6 +46,9 @@ import android.view.View;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 import android.provider.SearchIndexableResource;
+
+import com.colt.enigma.preference.SystemSettingEditTextPreference;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -53,9 +56,11 @@ import java.util.ArrayList;
 public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+    private static final String FOOTER_TEXT_STRING = "footer_text_string";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
 
     private ListPreference mSmartPulldown;
+    private SystemSettingEditTextPreference mFooterString;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -72,7 +77,19 @@ public class QuickSettings extends SettingsPreferenceFragment implements
                 Settings.System.QS_SMART_PULLDOWN, 0);
         mSmartPulldown.setValue(String.valueOf(smartPulldown));
         updateSmartPulldownSummary(smartPulldown);
+
+        mFooterString = (SystemSettingEditTextPreference) findPreference(FOOTER_TEXT_STRING);
+        mFooterString.setOnPreferenceChangeListener(this);
+        String footerString = Settings.System.getString(getContentResolver(),
+                FOOTER_TEXT_STRING);
+        if (footerString != null && footerString != "")
+            mFooterString.setText(footerString);
+        else {
+            mFooterString.setText("#Get_Colt-ify");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.FOOTER_TEXT_STRING, "#Get_Colt-ify");
         }
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -81,6 +98,17 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             int smartPulldown = Integer.valueOf((String) newValue);
             Settings.System.putInt(resolver, Settings.System.QS_SMART_PULLDOWN, smartPulldown);
             updateSmartPulldownSummary(smartPulldown);
+            return true;
+        } else if (preference == mFooterString) {
+            String value = (String) newValue;
+            if (value != "" && value != null)
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.FOOTER_TEXT_STRING, value);
+            else {
+                mFooterString.setText("#Get_Colt-ify");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.FOOTER_TEXT_STRING, "#Get_Colt-ify");
+            }
             return true;
         }
         return false;
