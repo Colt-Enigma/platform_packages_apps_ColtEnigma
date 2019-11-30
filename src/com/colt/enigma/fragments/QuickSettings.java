@@ -37,12 +37,17 @@ import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
 
+import com.colt.enigma.preference.SystemSettingEditTextPreference;
+
 import java.util.List;
 import java.util.ArrayList;
 
 public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
+    private static final String X_FOOTER_TEXT_STRING = "x_footer_text_string";
+
+    private SystemSettingEditTextPreference mFooterString;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -50,16 +55,40 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
         addPreferencesFromResource(R.xml.colt_enigma_quicksettings);
 
-        PreferenceScreen prefScreen = getPreferenceScreen();
+	PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
+        mFooterString = (SystemSettingEditTextPreference) findPreference(X_FOOTER_TEXT_STRING);
+        mFooterString.setOnPreferenceChangeListener(this);
+        String footerString = Settings.System.getString(getContentResolver(),
+                X_FOOTER_TEXT_STRING);
+        if (footerString != null && footerString != "")
+            mFooterString.setText(footerString);
+        else {
+            mFooterString.setText("ColtOS");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.X_FOOTER_TEXT_STRING, "ColtOs");
         }
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mFooterString) {
+            String value = (String) newValue;
+            if (value != "" && value != null)
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.X_FOOTER_TEXT_STRING, value);
+            else {
+                mFooterString.setText("ColtOS");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.X_FOOTER_TEXT_STRING, "ColtOS");
+            }
+            return true;
+        }
         return false;
     }
+
 
     @Override
     public int getMetricsCategory() {
