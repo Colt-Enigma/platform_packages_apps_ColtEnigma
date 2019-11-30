@@ -28,6 +28,13 @@
         android:summary="@string/qs_footer_text_summary"
         android:defaultValue="false"/>
 
+    <!-- QS footer text string -->
+    <com.colt.settings.preference.SystemSettingEditTextPreference
+        android:key="x_footer_text_string"
+        android:title="@string/qs_footer_text_string_title"
+        android:summary="@string/qs_footer_text_string_summary"
+        android:dependency="omni_footer_text_show"
+        android:defaultValue="ColtOS" />
 
     <Preference
          android:key="category_custom_header"

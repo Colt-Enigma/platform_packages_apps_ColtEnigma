@@ -26,6 +26,7 @@ import java.util.ArrayList;
 
 import com.colt.settings.preference.CustomSeekBarPreference;
 import com.colt.settings.preference.SystemSettingSeekBarPreference;
+import com.colt.settings.preference.SystemSettingEditTextPreference;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
@@ -35,12 +36,14 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String QS_PANEL_COLOR = "qs_panel_color";
     private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
+    private static final String X_FOOTER_TEXT_STRING = "x_footer_text_string";
 
     static final int DEFAULT_QS_PANEL_COLOR = 0xffffffff;
 
     private ColorPickerPreference mQsPanelColor;
     private SystemSettingSeekBarPreference mQsPanelAlpha;
     private CustomSeekBarPreference mQsBlurIntensity;
+    private SystemSettingEditTextPreference mFooterString;
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
@@ -82,6 +85,18 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mQsBlurIntensity.setValue(qsBlurIntensity);
         mQsBlurIntensity.setOnPreferenceChangeListener(this);
 
+	mFooterString = (SystemSettingEditTextPreference) findPreference(X_FOOTER_TEXT_STRING);
+        mFooterString.setOnPreferenceChangeListener(this);
+        String footerString = Settings.System.getString(getContentResolver(),
+                X_FOOTER_TEXT_STRING);
+        if (footerString != null && footerString != "")
+            mFooterString.setText(footerString);
+        else {
+            mFooterString.setText("ColtOS");
+            Settings.System.putString(getActivity().getContentResolver(),
+                    Settings.System.X_FOOTER_TEXT_STRING, "ColtOS");
+        }
+
         }
 
     @Override
@@ -111,6 +126,17 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             int valueInt = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),
                     Settings.System.QS_BLUR_INTENSITY, valueInt);
+            return true;
+	} else if (preference == mFooterString) {
+            String value = (String) newValue;
+            if (value != "" && value != null)
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.X_FOOTER_TEXT_STRING, value);
+            else {
+                mFooterString.setText("MSM-Xtended");
+                Settings.System.putString(getActivity().getContentResolver(),
+                        Settings.System.X_FOOTER_TEXT_STRING, "MSM-Xtended");
+            }
             return true;
 	}
         return false;
