@@ -9,6 +9,7 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.SettingsPreferenceFragment;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import com.colt.settings.preference.AmbientLightSettingsPreview;
 import android.provider.Settings;
 import com.colt.settings.preference.CustomSeekBarPreference;
 
@@ -38,6 +39,7 @@ public class NotificationSettings extends SettingsPreferenceFragment
 	mEdgeLightColorPreference = (ColorPickerPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR);
         int edgeLightColor = Settings.System.getInt(getContentResolver(),
                 Settings.System.PULSE_AMBIENT_LIGHT_COLOR, 0xFF3980FF);
+	AmbientLightSettingsPreview.setAmbientLightPreviewColor(edgeLightColor);
         mEdgeLightColorPreference.setNewPreviewColor(edgeLightColor);
 	String edgeLightColorHex = ColorPickerPreference.convertToRGB(edgeLightColor);
         if (edgeLightColorHex.equals("#3980ff")) {
@@ -68,6 +70,7 @@ public class NotificationSettings extends SettingsPreferenceFragment
             } else {
                 preference.setSummary(hex);
             }
+	    AmbientLightSettingsPreview.setAmbientLightPreviewColor(Integer.valueOf(String.valueOf(newValue)));
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getContentResolver(),
                     Settings.System.PULSE_AMBIENT_LIGHT_COLOR, intHex);
