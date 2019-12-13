@@ -51,6 +51,12 @@
         android:summary="@string/notification_sound_vib_screen_on_summary"
         android:defaultValue="true" />
 
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+        android:key="hide_smart_replies"
+        android:title="@string/hide_smart_replies_title"
+        android:summary="@string/hide_smart_replies_summary"
+        android:defaultValue="false"/>
+  
     <PreferenceCategory
         android:key="incall_vib_options"
         android:title="@string/incall_vibration_category" >
