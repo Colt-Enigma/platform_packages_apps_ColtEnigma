@@ -27,5 +27,4 @@
         <attr name="value_popup_view_fg" format="color" />
         <attr name="value_popup_view_bg" format="color" />
     </declare-styleable>
-
 </resources>
