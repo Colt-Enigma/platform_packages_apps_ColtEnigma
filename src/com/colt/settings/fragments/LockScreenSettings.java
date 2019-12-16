@@ -24,6 +24,7 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
@@ -44,9 +45,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
    private static final String KEY_AMBIENT_DISPLAY_CUSTOM = "ambient_display_custom";
    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+   private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
+    private Preference mFODIconPicker;
 
     private Preference mCustomDoze;
     private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
@@ -83,7 +86,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
         }
-
+        
+        mFODIconPicker = (Preference) findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPicker != null
+                && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
+            prefScreen.removePreference(mFODIconPicker);
+        }
 	}
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
