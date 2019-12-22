@@ -48,10 +48,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
     private static final String KEY_NETWORK_TRAFFIC = "network_traffic_location";
     private static final String KEY_NETWORK_TRAFFIC_ARROW = "network_traffic_arrow";
     private static final String KEY_NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide_threshold";
+    private static final String KEY_USE_OLD_MOBILETYPE = "use_old_mobiletype";
 
     private ListPreference mNetworkTraffic;
     private SystemSettingSwitchPreference mNetworkTrafficArrow;
     private SystemSettingSeekBarPreference mNetworkTrafficAutohide;
+    private SwitchPreference mUseOldMobileType;
+    private boolean mConfigUseOldMobileType;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -82,6 +85,12 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
 	mNetworkTrafficAutohide = (SystemSettingSeekBarPreference) findPreference(KEY_NETWORK_TRAFFIC_AUTOHIDE);
         updateNetworkTrafficPrefs(networkTraffic);
 
+	mConfigUseOldMobileType = getResources().getBoolean(com.android.internal.R.bool.config_useOldMobileIcons);
+        int useOldMobileIcons = (!mConfigUseOldMobileType ? 1 : 0);
+        mUseOldMobileType = (SwitchPreference) findPreference(KEY_USE_OLD_MOBILETYPE);
+        mUseOldMobileType.setChecked((Settings.System.getInt(resolver,
+                Settings.System.USE_OLD_MOBILETYPE, useOldMobileIcons) == 1));
+        mUseOldMobileType.setOnPreferenceChangeListener(this);
    }
 
  @Override
@@ -94,6 +103,11 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
                     Settings.System.NETWORK_TRAFFIC_LOCATION, networkTraffic);
             mNetworkTraffic.setSummary(mNetworkTraffic.getEntries()[index]);
             updateNetworkTrafficPrefs(networkTraffic);
+            return true;
+	} else if (preference == mUseOldMobileType) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.USE_OLD_MOBILETYPE, value ? 1 : 0);
             return true;
         }
         return false;
