@@ -95,7 +95,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
 
  @Override
     public boolean onPreferenceChange(Preference preference, Object objValue) {
-	AlertDialog dialog;
 	if (preference == mNetworkTraffic) {
             int networkTraffic = Integer.valueOf((String) objValue);
             int index = mNetworkTraffic.findIndexOfValue((String) objValue);
@@ -105,7 +104,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements OnP
             updateNetworkTrafficPrefs(networkTraffic);
             return true;
 	} else if (preference == mUseOldMobileType) {
-            boolean value = (Boolean) newValue;
+            boolean value = (Boolean) objValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.USE_OLD_MOBILETYPE, value ? 1 : 0);
             return true;

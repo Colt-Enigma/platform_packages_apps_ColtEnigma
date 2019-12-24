@@ -9,6 +9,8 @@ import androidx.preference.PreferenceScreen;
 
 import com.android.settings.SettingsPreferenceFragment;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
+import android.provider.Settings;
+import com.colt.settings.preference.CustomSeekBarPreference;
 
 import com.colt.settings.utils.Utils;
 
