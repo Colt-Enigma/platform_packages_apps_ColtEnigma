@@ -59,7 +59,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             getPreferenceScreen().removePreference(mCustomDoze);
         }
 
-	ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
         Resources resources = getResources();
