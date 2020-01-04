@@ -25,6 +25,12 @@
 	    android:summary="@string/lockscreen_summary"	    
             android:title="@string/lockscreen_settings_title"/>
 
+	<!-- LockScreen UI -->
+	<com.colt.settings.preference.CategoryColtPreference
+	    android:key="lockscreen_ui"
+            android:title="@string/lockscreen_ui_title"
+            android:summary="@string/lockscreen_ui_summary"
+            android:fragment="com.colt.settings.fragments.LockscreenUi" />
 </PreferenceScreen>
 
 
