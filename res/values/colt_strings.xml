@@ -699,4 +699,8 @@
     <!-- Navbar options -->
     <string name="nav_bar_tuner_title">Navigation bar options</string>
     <string name="nav_bar_tuner_summary">Reorder and change navbar buttons</string>
+
+    <!-- QS battery -->
+    <string name="lockscreen_lock_icon_title">Lock icon</string>
+    <string name="lockscreen_lock_icon_summary">Display lock icon on the lockscreen</string>
 </resources>
