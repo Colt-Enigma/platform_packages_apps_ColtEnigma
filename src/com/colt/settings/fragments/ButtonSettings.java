@@ -41,7 +41,6 @@ import com.android.internal.util.hwkeys.ActionUtils;
 
 import com.colt.settings.preference.CustomSeekBarPreference;
 import com.colt.settings.preference.ActionFragment;
-
 import com.colt.settings.preference.SystemSettingSwitchPreference;
 
 public class ButtonSettings extends ActionFragment implements OnPreferenceChangeListener {
@@ -53,6 +52,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private static final String HWKEY_DISABLE = "hardware_keys_disable";
     private static final String KEY_BUTTON_SWAP_KEYS = "swap_navigation_keys";
     private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
+    private static final String ANBI_ENABLED_OPTION = "anbi_enabled_option";
 
     // category keys
     private static final String CATEGORY_HWKEY = "hardware_keys";
@@ -80,6 +80,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private SwitchPreference mHwKeyDisable;
     private SystemSettingSwitchPreference mSwapKeysPreference;
     private SwitchPreference mDisableNavigationKeys;
+    private SystemSettingSwitchPreference mAnbiEnable;
     private boolean mIsNavSwitchingMode = false;
     private Handler mHandler;
 
@@ -91,6 +92,9 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
         final Resources res = getResources();
         final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
+
+	mAnbiEnable = (SystemSettingSwitchPreference) findPreference(ANBI_ENABLED_OPTION);
+        mAnbiEnable.setOnPreferenceChangeListener(this);
 
         // Force Navigation bar related options
         mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
@@ -158,6 +162,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
                     }
                 }
         } else {
+	    mAnbiEnable.setChecked(false);
             prefScreen.removePreference(hwkeyCat);
         }
 
@@ -210,6 +215,8 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
             prefScreen.removePreference(assistCategory);
         }
 
+	mAnbiEnable.setEnabled(keysDisabled == 0);
+
         // let super know we can load ActionPreferences
         onPreferenceScreenLoaded(ActionConstants.getDefaults(ActionConstants.HWKEYS));
 
@@ -245,6 +252,13 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
             Settings.Secure.putInt(getContentResolver(), Settings.Secure.HARDWARE_KEYS_DISABLE,
                     value ? 1 : 0);
             setActionPreferencesEnabled(!value);
+	    mAnbiEnable.setEnabled(!value);
+            mAnbiEnable.setChecked(!value);
+            return true;
+        } else if (preference == mAnbiEnable) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(), Settings.System.ANBI_ENABLED_OPTION,
+                    value ? 1 : 0);
             return true;
         } else if (preference == mDisableNavigationKeys) {
             if (mIsNavSwitchingMode) {
