@@ -32,6 +32,13 @@
 	    android:summary="@string/animations_summary"
             android:fragment="com.colt.settings.fragments.Animations" />
 
+	<!-- Colt Decorations -->
+	<com.colt.settings.preference.CategoryColtPreference
+	    android:key="system_colors"
+            android:title="@string/system_colors"
+	    android:summary="@string/system_colors_summary"
+	    android:fragment="com.colt.settings.fragments.Themes" />
+	
 	<!-- Misc -->
 	<com.colt.settings.preference.CategoryColtPreference
             android:key="misc_category"
