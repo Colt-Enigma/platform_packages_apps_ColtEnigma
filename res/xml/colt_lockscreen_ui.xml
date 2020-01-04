@@ -72,4 +72,11 @@
         android:defaultValue="18"
         android:persistent="false" />
 
+    <com.colt.settings.preference.SecureSettingListPreference
+        android:key="lockscreen_clock_selection"
+        android:title="@string/lockscreen_clock_title"
+        android:dialogTitle="@string/lockscreen_clock_dialog_title"
+        android:entries="@array/lockscreen_clock_titles"
+        android:entryValues="@array/lockscreen_clock_values"
+        android:defaultValue="2" />
 </PreferenceScreen>
