@@ -77,7 +77,6 @@
 
 	<com.colt.settings.preference.SystemSettingSwitchPreference
 	    android:key="lockscreen_lock_icon"
-            android:icon="@drawable/ic_lock_outline"
             android:title="@string/lockscreen_lock_icon_title"
             android:summary="@string/lockscreen_lock_icon_summary"
             android:defaultValue="true" />
