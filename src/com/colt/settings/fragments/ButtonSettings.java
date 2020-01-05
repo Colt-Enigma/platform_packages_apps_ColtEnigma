@@ -51,7 +51,6 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
     private static final String HWKEY_DISABLE = "hardware_keys_disable";
     private static final String KEY_BUTTON_SWAP_KEYS = "swap_navigation_keys";
-    private static final String DISABLE_NAV_KEYS = "disable_nav_keys";
     private static final String ANBI_ENABLED_OPTION = "anbi_enabled_option";
 
     // category keys
@@ -79,10 +78,7 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
     private SwitchPreference mButtonBrightness_sw;
     private SwitchPreference mHwKeyDisable;
     private SystemSettingSwitchPreference mSwapKeysPreference;
-    private SwitchPreference mDisableNavigationKeys;
     private SystemSettingSwitchPreference mAnbiEnable;
-    private boolean mIsNavSwitchingMode = false;
-    private Handler mHandler;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -95,20 +91,6 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
 
 	mAnbiEnable = (SystemSettingSwitchPreference) findPreference(ANBI_ENABLED_OPTION);
         mAnbiEnable.setOnPreferenceChangeListener(this);
-
-        // Force Navigation bar related options
-        mDisableNavigationKeys = (SwitchPreference) findPreference(DISABLE_NAV_KEYS);
-
-        // Only visible on devices that does not have a navigation bar already
-        if (ActionUtils.isHWKeysSupported(getActivity())) {
-            mDisableNavigationKeys.setOnPreferenceChangeListener(this);
-            mHandler = new Handler();
-            // Remove keys that can be provided by the navbar
-            updateDisableNavkeysOption();
-            updateDisableNavkeysCategories(mDisableNavigationKeys.isChecked());
-        } else {
-            prefScreen.removePreference(mDisableNavigationKeys);
-        }
 
         final boolean needsNavbar = ActionUtils.hasNavbarByDefault(getActivity());
         final PreferenceCategory hwkeyCat = (PreferenceCategory) prefScreen
@@ -260,69 +242,8 @@ public class ButtonSettings extends ActionFragment implements OnPreferenceChange
             Settings.Secure.putInt(getContentResolver(), Settings.System.ANBI_ENABLED_OPTION,
                     value ? 1 : 0);
             return true;
-        } else if (preference == mDisableNavigationKeys) {
-            if (mIsNavSwitchingMode) {
-                return false;
-            }
-            mIsNavSwitchingMode = true;
-            boolean isChecked = ((Boolean) newValue);
-            mDisableNavigationKeys.setEnabled(false);
-            writeDisableNavkeysOption(isChecked);
-            updateDisableNavkeysOption();
-            updateDisableNavkeysCategories(true);
-            mHandler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    mIsNavSwitchingMode = false;
-                }
-            }, 1500);
-            return true;
         }
         return false;
-    }
-
-    private void writeDisableNavkeysOption(boolean enabled) {
-        Settings.System.putIntForUser(getActivity().getContentResolver(),
-                Settings.System.FORCE_SHOW_NAVBAR, enabled ? 1 : 0, UserHandle.USER_CURRENT);
-    }
-
-    private void updateDisableNavkeysOption() {
-        boolean enabled = Settings.System.getIntForUser(getActivity().getContentResolver(),
-                Settings.System.FORCE_SHOW_NAVBAR, 0, UserHandle.USER_CURRENT) != 0;
-
-        mDisableNavigationKeys.setChecked(enabled);
-    }
-
-    private void updateDisableNavkeysCategories(boolean navbarEnabled) {
-        final PreferenceScreen prefScreen = getPreferenceScreen();
-
-        /* Disable hw-key options if they're disabled */
-        final PreferenceCategory homeCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_HOME);
-        final PreferenceCategory backCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_BACK);
-        final PreferenceCategory menuCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_MENU);
-        final PreferenceCategory assistCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_ASSIST);
-        final PreferenceCategory appSwitchCategory =
-                (PreferenceCategory) prefScreen.findPreference(CATEGORY_APPSWITCH);
-
-        if (homeCategory != null) {
-            homeCategory.setEnabled(!navbarEnabled);
-        }
-        if (backCategory != null) {
-            backCategory.setEnabled(!navbarEnabled);
-        }
-        if (menuCategory != null) {
-            menuCategory.setEnabled(!navbarEnabled);
-        }
-        if (assistCategory != null) {
-            assistCategory.setEnabled(!navbarEnabled);
-        }
-        if (appSwitchCategory != null) {
-            appSwitchCategory.setEnabled(!navbarEnabled);
-        }
     }
 
     @Override
