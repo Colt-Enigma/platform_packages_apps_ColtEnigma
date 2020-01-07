@@ -44,8 +44,10 @@ import com.android.settings.R;
 public class NavbarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
     private static final String ENABLE_NAV_BAR = "enable_nav_bar";
+    private static final String NAV_BAR_TUNER = "nav_bar_tuner";
 
     private SwitchPreference mEnableNavigationBar;
+     private Preference mNavBarTuner;
     private boolean mIsNavSwitchingMode = false;
     private Handler mHandler;
 
@@ -57,6 +59,7 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
 
         // Navigation bar related options
         mEnableNavigationBar = (SwitchPreference) findPreference(ENABLE_NAV_BAR);
+	mNavBarTuner = (Preference) findPreference(NAV_BAR_TUNER);
 
 	mEnableNavigationBar.setOnPreferenceChangeListener(this);
         mHandler = new Handler();
@@ -81,7 +84,8 @@ public class NavbarSettings extends SettingsPreferenceFragment implements OnPref
                 public void run() {
                     mIsNavSwitchingMode = false;
                 }
-            }, 500);
+            }, 1000);
+	    mNavBarTuner.setEnabled(isNavBarChecked);
             return true;
         }
         return false;
