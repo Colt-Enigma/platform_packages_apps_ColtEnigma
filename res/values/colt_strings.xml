@@ -995,6 +995,7 @@
     <string name="static_header_provider_title">Static image</string>
     <string name="status_bar_custom_header_shadow_summary">For better visibility on bright images</string>
     <string name="status_bar_custom_header_shadow_title">Header image shadow</string>
+    <string name="status_bar_custom_header_height_title">Image height offset</string>
     <string name="unit_percent">\u0025</string>
 
     <!-- Notification Vibration -->
