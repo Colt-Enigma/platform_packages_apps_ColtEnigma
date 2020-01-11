@@ -606,7 +606,8 @@
     <string name="file_header_select_summary">Select image from storage</string>
     <string name="file_header_provider_title">Single image</string>
     <string name="file_header_provider" translatable="false">file</string>
-    
+    <string name="status_bar_custom_header_height_title">Image height offset</string>
+
     <!-- Custom Doze -->
     <string name="ambient_display_custom_title">Ambient Display</string>
 
