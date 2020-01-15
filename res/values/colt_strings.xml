@@ -736,4 +736,8 @@
     <string name="qs_bg_use_fw_summary">Disable custom QS styles for external theme engines</string>
     <string name="qs_bg_accent_title">Use Accent color</string>
     <string name="qs_bg_accent_summary">Set QS background color from System Accent</string>
+
+    <!-- Screenshot animation -->
+    <string name="new_screenshotui_title">Refreshed screenshot animation (alpha!)</string>
+    <string name="new_screenshotui_subtitle">Shows slide in/out animation instead of aosp one + notification</string>
 </resources>
