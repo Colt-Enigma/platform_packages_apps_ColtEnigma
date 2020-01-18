@@ -134,8 +134,8 @@ public class AboutTeam extends SettingsPreferenceFragment {
                                 "",
                                 "https://avatars3.githubusercontent.com/rakeshbatra",
                                 "https://forum.xda-developers.com/oneplus-3/oneplus-3--3t-cross-device-development/rom-coltos-t3808635",
-                                "",
-                                "https://t.me/RakeshBatra"
+                                "https://github.com/rakeshbatra",
+                                ""
                         )
                 )
         );
@@ -147,6 +147,66 @@ public class AboutTeam extends SettingsPreferenceFragment {
                                 "https://avatars3.githubusercontent.com/nitin1438",
                                 "https://forum.xda-developers.com/pixel-2-xl/development/rom-colt-os-enigma-taimen-t3911826",
                                 "https://github.com/nitin1438",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Xiaomi MI A2 (Jasmine_Sprout)",
+                        new AboutTeamAdapter.Dev(
+                                "Siddharth Bharadwaj",
+                                "",
+                                "https://avatars3.githubusercontent.com/SiddharthBharadwaj",
+                                "https://forum.xda-developers.com/mi-a2/development/rom-colt-enigma-v5-3-ten-t4005401",
+                                "https://github.com/SiddharthBharadwaj",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Oneplus 5t (Dumpling)",
+                        new AboutTeamAdapter.Dev(
+                                "mukesh22584",
+                                "",
+                                "https://avatars3.githubusercontent.com/mukesh22584",
+                                "https://forum.xda-developers.com/oneplus-5t/development/rom-colt-enigma-v5-3-t4005957",
+                                "https://github.com/mukesh22584",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Asus Zenfone Max Pro M2 (X01BD)",
+                        new AboutTeamAdapter.Dev(
+                                "Sonal Singh",
+                                "",
+                                "https://avatars3.githubusercontent.com/SonalSingh18",
+                                "https://forum.xda-developers.com/max-pro-m2/development/rom-colt-enigmav4-4-t3951353",
+                                "https://github.com/SonalSingh18",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Xiaomi Pocophone F1 (Beryllium)",
+                        new AboutTeamAdapter.Dev(
+                                "Mani-Madhuri",
+                                "",
+                                "https://avatars3.githubusercontent.com/Joker-commits",
+                                "",
+                                "https://github.com/Joker-commits",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Redmi Note 5 Pro (Whyred)",
+                        new AboutTeamAdapter.Dev(
+                                "Ayush Kakkar",
+                                "",
+                                "https://avatars3.githubusercontent.com/Ayush12ka",
+                                "",
+                                "https://github.com/Ayush12ka",
                                 ""
                         )
                 )
