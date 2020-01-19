@@ -25,13 +25,14 @@ import java.util.List;
 import java.util.ArrayList;
 
 import com.colt.settings.preference.CustomSeekBarPreference;
+import com.colt.settings.preference.SystemSettingSeekBarPreference;
 
 public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
 
-    private CustomSeekBarPreference mQsPanelAlpha;
+    private SystemSettingSeekBarPreference mQsPanelAlpha;
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
@@ -46,7 +47,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
 
-	mQsPanelAlpha = (CustomSeekBarPreference) findPreference(KEY_QS_PANEL_ALPHA);
+	mQsPanelAlpha = (SystemSettingSeekBarPreference) findPreference(KEY_QS_PANEL_ALPHA);
         int qsPanelAlpha = Settings.System.getInt(getContentResolver(),
                 Settings.System.OMNI_QS_PANEL_BG_ALPHA, 225);
         mQsPanelAlpha.setValue((int)(((double) qsPanelAlpha / 255) * 100));
