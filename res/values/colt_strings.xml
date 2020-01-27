@@ -625,6 +625,8 @@
     <string name="enable_clear_all_button_summary">Show clear all notifications button in quick settings instead of default text one</string>
     <string name="blur_quicksettings">Blur behind quick settings</string>
     <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
+    <string name="qs_blur_alpha_title">Blur alpha</string>
+    <string name="qs_blur_alpha_summary">Sets the blur transparency</string>
 
     <!-- VoLTE Icon Styles -->
     <string name="volte_icon_style_title">Select VoLTE/HD Icon</string>
