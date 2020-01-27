@@ -53,8 +53,15 @@
             android:title="@string/fod_icon_picker_title"
             android:summary="@string/fod_icon_picker_summary"
             android:fragment="com.colt.settings.fragments.FODIconPickerFragment" />
+        
+        <!-- FOD recognizing animation -->
+        <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="fod_recognizing_animation"
+            android:title="@string/fod_recog_animation"
+            android:summary="@string/fod_recog_animation_summary"
+            android:defaultValue="false" />
 
-        <com.msm.xtended.preferences.SystemSettingListPreference
+        <com.colt.settings.preference.SystemSettingListPreference
             android:key="fod_pressed_state"
             android:dialogTitle="@string/fod_pressed_state_title"
             android:title="@string/fod_pressed_state_title"
