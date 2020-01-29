@@ -20,46 +20,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/logotext"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <ImageView
-            android:id="@+id/logo"
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:paddingTop="10dp"
-            android:background="#33CFCFCF"
-            android:src="@drawable/colt_logo"
-            android:adjustViewBounds="true"
-            android:scaleType="centerInside" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/logo"
-            android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
-            android:layout_gravity="center_vertical"
-            android:paddingBottom="10dp"
-            android:background="@drawable/logobuttonshape"
-            android:gravity="center"
-            android:paddingTop="8dp"
-            android:text="It's Colt OS"
-            android:textColor="@*android:color/accent_device_default_light"
-            android:textSize="18dp"
-            android:textStyle="bold|italic" />
-
-    </RelativeLayout>
-
-
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-	android:layout_below="@+id/logotext"
         android:layout_above="@+id/tabs"/>
 
     <com.colt.settings.customtab.IconTitleIndicator
