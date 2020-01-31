@@ -28,6 +28,11 @@
         android:fragment="com.colt.enigma.fragments.Traffic"
         android:title="@string/traffic_title" />
 
+    <Preference
+        android:key="battery"
+        android:fragment="com.colt.enigma.fragments.Battery"
+        android:title="@string/battery_title" />
+
     <PreferenceCategory
         android:key="misc_icons_category"
         android:title="@string/icons_category">
