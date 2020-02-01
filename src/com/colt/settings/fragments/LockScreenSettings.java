@@ -37,6 +37,8 @@ import android.net.Uri;
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 import com.android.settings.R;
 import com.colt.settings.preference.CustomSeekBarPreference;
 import com.colt.settings.preference.SecureSettingMasterSwitchPreference;
@@ -49,12 +51,16 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
     private static final String FOD_ANIMATION = "fod_anim";
+    private static final String KEY_BATT_BAR_COLOR = "sysui_keyguard_battery_bar_color";
+
+    private static final int DEFAULT_COLOR = 0xffffffff;
 
     private CustomSeekBarPreference mMaxKeyguardNotifConfig;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private PreferenceCategory mFODIconPickerCategory;
     private Preference mFODAnimation;
+    private ColorPickerPreference mBatteryBarColor;
 
     private Preference mCustomDoze;
     private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
@@ -88,6 +94,14 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         int visualizerEnabled = Settings.Secure.getInt(resolver,
                 LOCKSCREEN_VISUALIZER_ENABLED, 0);
         mVisualizerEnabled.setChecked(visualizerEnabled != 0);
+
+	mBatteryBarColor = (ColorPickerPreference) findPreference(KEY_BATT_BAR_COLOR);
+        mBatteryBarColor.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getContentResolver(),
+                Settings.System.SYSUI_KEYGUARD_BATTERY_BAR_COLOR, DEFAULT_COLOR);
+	String hexColor = String.format("#%08x", (DEFAULT_COLOR & intColor));
+        mBatteryBarColor.setSummary(hexColor);
+        mBatteryBarColor.setNewPreviewColor(intColor);
 
 	mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
         mFingerprintVib = (SwitchPreference) findPreference(FINGERPRINT_VIB);
@@ -131,6 +145,14 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.FINGERPRINT_SUCCESS_VIB, value ? 1 : 0);
+            return true;
+	} else if (preference == mBatteryBarColor) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(newValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(resolver,
+                    Settings.System.SYSUI_KEYGUARD_BATTERY_BAR_COLOR, intHex);
             return true;
         }
         return false;

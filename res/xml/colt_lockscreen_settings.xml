@@ -50,6 +50,12 @@
         android:dependency="sysui_keyguard_show_battery_bar"
         android:defaultValue="false" />
 
+    <net.margaritov.preference.colorpicker.ColorPickerPreference
+        android:key="sysui_keyguard_battery_bar_color"
+        android:title="@string/tuner_keyguard_battery_bar_color_title"
+        android:dependency="sysui_keyguard_show_battery_bar"
+        android:defaultValue="0xffffffff" />
+
         <Preference
             android:key="omnijaws_settings"
             android:title="@string/lockscreen_weather_settings_title"
