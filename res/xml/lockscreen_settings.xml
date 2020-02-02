@@ -80,12 +80,6 @@
             android:summary="@string/lockscreen_show_status_bar_summary"
             android:defaultValue="true" />
 
-	<com.colt.settings.preference.SecureSettingSwitchPreference
-            android:key="hide_lock_shortcuts"
-            android:title="@string/lockscreen_hide_shortcuts_title"
-            android:summary="@string/lockscreen_hide_shortcuts_summary"
-            android:defaultValue="false" />
-
 	<com.colt.settings.preference.SystemSettingSwitchPreference
             android:key="fp_unlock_keystore"
             android:title="@string/fp_unlock_keystore_title"
