@@ -474,25 +474,6 @@
         <item>@string/file_header_provider</item>
     </string-array>
 
-    <!-- VoLTE Icon Type -->
-    <string-array name="volte_icon_type_entries" translatable="false">
-        <item>@string/volte_icon_android1hd</item>
-        <item>@string/volte_icon_hd</item>
-        <item>@string/volte_icon_oos</item>
-        <item>@string/volte_icon_coltP</item>
-        <item>@string/volte_icon_asus</item>
-        <item>@string/volte_icon_coltQ</item>
-    </string-array>
-
-    <string-array name="volte_icon_type_values" translatable="false">
-        <item>5</item>
-        <item>4</item>
-        <item>3</item>
-        <item>2</item>
-        <item>1</item>
-        <item>0</item>
-    </string-array>
-
     <string-array name="lockscreen_cover_filter_entries">
         <item>@string/lockscreen_cover_filter_none</item>
         <item>@string/lockscreen_cover_filter_grayscale</item>

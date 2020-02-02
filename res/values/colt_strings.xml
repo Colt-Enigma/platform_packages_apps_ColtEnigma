@@ -630,15 +630,6 @@
     <string name="qs_blur_intensity_title">Blur intensity</string>
     <string name="qs_blur_intensity_summary">Sets the blur intensity/radius</string>
 
-    <!-- VoLTE Icon Styles -->
-    <string name="volte_icon_style_title">Select VoLTE/HD Icon</string>
-    <string name="volte_icon_asus">Asus VoLTE Icon</string>
-    <string name="volte_icon_coltQ">Default VoLTE Icon</string>
-    <string name="volte_icon_coltP"> Colt-Pie VoLTE Icon</string>
-    <string name="volte_icon_hd">HD Icon</string>
-    <string name="volte_icon_android1hd">Android One HD Icon</string>
-    <string name="volte_icon_oos">OOS VoLTE Icon</string>
-
     <!-- Lock screen visualizer -->
     <string name="lockscreen_visualizer_enable">Music Visualizer</string>
     <string name="lockscreen_visualizer_enable_summary">Show visualizer bars while playing music</string>
