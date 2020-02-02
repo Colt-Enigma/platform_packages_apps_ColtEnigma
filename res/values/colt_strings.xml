@@ -742,4 +742,13 @@
     <!-- Screenshot animation -->
     <string name="new_screenshotui_title">Refreshed screenshot animation (alpha!)</string>
     <string name="new_screenshotui_subtitle">Shows slide in/out animation instead of aosp one + notification</string>
+
+    <!-- Themes -->
+    <string name="theme_type_title">ColtOS themes</string>
+    <string name="theme_type_summary">Select theme</string>
+    <string name="theme_type_light">Light</string>
+    <string name="theme_type_pitch_black">Pitch black</string>
+    <string name="theme_type_solarized_dark">Solarized dark</string>
+    <string name="theme_type_baked_green">Baked Green</string>
+    <string name="theme_type_choco_x">Choco Colt</string>
 </resources>
