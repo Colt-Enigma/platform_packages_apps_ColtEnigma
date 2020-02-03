@@ -34,11 +34,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String QS_PANEL_COLOR = "qs_panel_color";
+    private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
 
     static final int DEFAULT_QS_PANEL_COLOR = 0xffffffff;
 
     private ColorPickerPreference mQsPanelColor;
     private SystemSettingSeekBarPreference mQsPanelAlpha;
+    private CustomSeekBarPreference mQsBlurIntensity;
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
@@ -74,6 +76,12 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         mQuickPulldown.setValue(String.valueOf(quickPulldownValue));
         updatePulldownSummary(quickPulldownValue);
 
+	mQsBlurIntensity = (CustomSeekBarPreference) findPreference(QS_BLUR_INTENSITY);
+        int qsBlurIntensity = Settings.System.getIntForUser(resolver,
+                Settings.System.QS_BLUR_INTENSITY, 100, UserHandle.USER_CURRENT);
+        mQsBlurIntensity.setValue(qsBlurIntensity);
+        mQsBlurIntensity.setOnPreferenceChangeListener(this);
+
         }
 
     @Override
@@ -98,6 +106,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.QS_PANEL_BG_COLOR, intHex, UserHandle.USER_CURRENT);
+            return true;
+	} else if (preference == mQsBlurIntensity) {
+            int valueInt = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.QS_BLUR_INTENSITY, valueInt);
             return true;
 	}
         return false;

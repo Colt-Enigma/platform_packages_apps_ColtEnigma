@@ -627,6 +627,8 @@
     <string name="blur_quicksettings_subtitle">blurs darkened background behind quick settings</string>
     <string name="qs_blur_alpha_title">Blur alpha</string>
     <string name="qs_blur_alpha_summary">Sets the blur transparency</string>
+    <string name="qs_blur_intensity_title">Blur intensity</string>
+    <string name="qs_blur_intensity_summary">Sets the blur intensity/radius</string>
 
     <!-- VoLTE Icon Styles -->
     <string name="volte_icon_style_title">Select VoLTE/HD Icon</string>
@@ -751,4 +753,6 @@
     <string name="theme_type_solarized_dark">Solarized dark</string>
     <string name="theme_type_baked_green">Baked Green</string>
     <string name="theme_type_choco_x">Choco Colt</string>
+
+    
 </resources>
