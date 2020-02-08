@@ -28,6 +28,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import android.provider.Settings;
 import com.colt.settings.preference.CustomSeekBarPreference;
+import com.colt.settings.preference.SystemSettingSeekBarPreference;
 
 import com.android.settings.SettingsPreferenceFragment;
 
@@ -38,9 +39,11 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
 
     private ColorPickerPreference mEdgeLightColorPreference;
     private CustomSeekBarPreference mEdgeLightDurationPreference;
+    private SystemSettingSeekBarPreference mEdgeLightRepeatCountPreference;
 
     private static final String PULSE_AMBIENT_LIGHT_COLOR = "pulse_ambient_light_color";
     private static final String PULSE_AMBIENT_LIGHT_DURATION = "pulse_ambient_light_duration";
+    private static final String PULSE_AMBIENT_LIGHT_REPEAT_COUNT = "pulse_ambient_light_repeat_count";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -58,6 +61,12 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
             mEdgeLightColorPreference.setSummary(edgeLightColorHex);
         }
         mEdgeLightColorPreference.setOnPreferenceChangeListener(this);
+
+        mEdgeLightRepeatCountPreference = (SystemSettingSeekBarPreference) findPreference(PULSE_AMBIENT_LIGHT_REPEAT_COUNT);
+        mEdgeLightRepeatCountPreference.setOnPreferenceChangeListener(this);
+        int rCount = Settings.System.getInt(getContentResolver(),
+                Settings.System.PULSE_AMBIENT_LIGHT_REPEAT_COUNT, 0);
+        mEdgeLightRepeatCountPreference.setValue(rCount);
 
 	mEdgeLightDurationPreference = (CustomSeekBarPreference) findPreference(PULSE_AMBIENT_LIGHT_DURATION);
         int lightDuration = Settings.System.getIntForUser(getContentResolver(),
@@ -85,11 +94,16 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
             Settings.System.putInt(getContentResolver(),
                     Settings.System.PULSE_AMBIENT_LIGHT_COLOR, intHex);
             return true;
-	} else if (preference == mEdgeLightDurationPreference) {
-            int value = (Integer) newValue;
-            Settings.System.putIntForUser(getContentResolver(),
-                    Settings.System.PULSE_AMBIENT_LIGHT_DURATION, value, UserHandle.USER_CURRENT);
-            return true;
+            } else if (preference == mEdgeLightRepeatCountPreference) {
+                int value = (Integer) newValue;
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.PULSE_AMBIENT_LIGHT_REPEAT_COUNT, value);
+                return true;
+            } else if (preference == mEdgeLightDurationPreference) {
+                int value = (Integer) newValue;
+                Settings.System.putIntForUser(getContentResolver(),
+                        Settings.System.PULSE_AMBIENT_LIGHT_DURATION, value, UserHandle.USER_CURRENT);
+                return true;
         }
         return false;
     }
@@ -98,4 +112,4 @@ public class AmbientLight extends SettingsPreferenceFragment implements Preferen
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
     }
-}  
+}
