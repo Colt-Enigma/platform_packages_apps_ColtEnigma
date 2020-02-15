@@ -211,5 +211,30 @@ public class AboutTeam extends SettingsPreferenceFragment {
                         )
                 )
         );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Redmi Note 7 Pro (Violet)",
+                        new AboutTeamAdapter.Dev(
+                                "Athul Dinesan",
+                                "",
+                                "https://avatars3.githubusercontent.com/athul05",
+                                "",
+                                "https://github.com/athul05",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Santoni (Redmi 4x)",
+                        new AboutTeamAdapter.Dev(
+                                "Aman Dwivedi",
+                                "",
+                                "https://avatars3.githubusercontent.com/amandwivedi0",
+                                "https://forum.xda-developers.com/xiaomi-redmi-4x/development/rom-coltos-5-6-t4049845",
+                                "https://github.com/amandwivedi0",
+                                ""
+                        )
+                )
+        );
+
     }
 }
