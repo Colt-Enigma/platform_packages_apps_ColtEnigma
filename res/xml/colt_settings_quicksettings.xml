@@ -22,7 +22,7 @@
         android:entryValues="@array/quick_pulldown_values"
         android:persistent="false" />
 
-    <com.colt.settings.preference.SystemSettingSeekBarPreference
+    <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="omni_footer_text_show"
         android:title="@string/qs_footer_text_title"
         android:summary="@string/qs_footer_text_summary"
