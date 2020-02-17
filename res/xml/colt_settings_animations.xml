@@ -24,9 +24,4 @@
         android:persistent="false"
         android:defaultValue="0" />
 
-    <com.colt.settings.preference.SystemSettingSwitchPreference
-        android:key="new_screenshotui"
-        android:title="@string/new_screenshotui_title"
-        android:summary="@string/new_screenshotui_subtitle"
-        android:defaultValue="false" />
 </PreferenceScreen>
