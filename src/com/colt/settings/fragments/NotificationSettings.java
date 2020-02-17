@@ -5,6 +5,7 @@ import com.android.settings.R;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
 
 import com.android.settings.SettingsPreferenceFragment;
 import com.colt.settings.preference.AmbientLightSettingsPreview;
