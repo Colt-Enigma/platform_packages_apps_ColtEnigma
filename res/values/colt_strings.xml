@@ -719,6 +719,8 @@
     <string name="qs_bg_use_fw_summary">Disable custom QS styles for external theme engines</string>
     <string name="qs_bg_accent_title">Use Accent color</string>
     <string name="qs_bg_accent_summary">Set QS background color from System Accent</string>
+    <string name="qs_bg_use_new_tint">Tint</string>
+    <string name="qs_bg_use_new_tint_summary">Enable QS tiles tint style</string>
 
     <!-- Themes -->
     <string name="theme_type_title">ColtOS themes</string>
