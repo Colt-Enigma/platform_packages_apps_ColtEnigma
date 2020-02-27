@@ -27,6 +27,7 @@ import androidx.preference.SwitchPreference;
 import androidx.preference.PreferenceScreen;
 import android.content.Context;
 import android.content.ContentResolver;
+import android.content.res.Resources;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -47,8 +48,10 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String INCALL_VIB_OPTIONS = "incall_vib_options";
+    private static final String ALERT_SLIDER_PREF = "alert_slider_notifications";
 
     private Preference mChargingLeds;
+    private Preference mAlertSlider;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -57,6 +60,7 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.colt_enigma_notifications);
 
         final PreferenceScreen prefScreen = getPreferenceScreen();
+        final Resources res = getResources();
 
         mChargingLeds = (Preference) findPreference("charging_light");
         if (mChargingLeds != null
@@ -69,6 +73,12 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
         if (!ColtUtils.isVoiceCapable(getActivity())) {
             prefScreen.removePreference(incallVibCategory);
         }
+
+        mAlertSlider = (Preference) prefScreen.findPreference(ALERT_SLIDER_PREF);
+        boolean mAlertSliderAvailable = res.getBoolean(
+                com.android.internal.R.bool.config_hasAlertSlider);
+        if (!mAlertSliderAvailable)
+            prefScreen.removePreference(mAlertSlider);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -102,6 +112,11 @@ public class NotificationSettings extends SettingsPreferenceFragment implements
            @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
+                    final Resources res = context.getResources();
+                    boolean mAlertSliderAvailable = res.getBoolean(
+                            com.android.internal.R.bool.config_hasAlertSlider);
+                    if (!mAlertSliderAvailable)
+                        keys.add(ALERT_SLIDER_PREF);
                     return keys;
                 }
     };
