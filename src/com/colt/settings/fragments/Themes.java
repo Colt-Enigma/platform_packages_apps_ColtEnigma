@@ -44,6 +44,10 @@ public class Themes extends SettingsPreferenceFragment implements
     private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
     private static final String PREF_THEME_SWITCH = "theme_switch";
 
+    private static final String CUSTOM_THEME_BROWSE = "theme_select_activity";
+
+    private Preference mThemeBrowse;
+
     private IOverlayManager mOverlayService;
     private UiModeManager mUiModeManager;
 
@@ -54,6 +58,9 @@ public class Themes extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.colt_settings_themes);
+
+    mThemeBrowse = findPreference(CUSTOM_THEME_BROWSE);
+    mThemeBrowse.setEnabled(isBrowseThemesAvailable());
 
     mUiModeManager = getContext().getSystemService(UiModeManager.class);
 
@@ -125,6 +132,13 @@ public class Themes extends SettingsPreferenceFragment implements
              }
         }
         return true;
+    }
+
+   private boolean isBrowseThemesAvailable() {
+        PackageManager pm = getPackageManager();
+        Intent browse = new Intent();
+        browse.setClassName("com.android.customization", "com.android.customization.picker.CustomizationPickerActivity");
+        return pm.resolveActivity(browse, 0) != null;
     }
 
    private void setupAccentPref() {

@@ -740,6 +740,10 @@
     <string name="theme_type_choco_x">Choco Colt</string>
     <string name="theme_type_dark_grey">Dark Grey</string>
 
+    <!-- Themes -->
+    <string name="theme_select_title">Themes</string>
+    <string name="theme_select_summary">Browse and select installed themes</string>
+
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_switch_title">VoLTE icon</string>
     <string name="volte_switch_summary">Display VoLTE icon</string>
@@ -797,4 +801,5 @@
     <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
     <string name="fprint_sucess_vib_summary">Vibrate on successful fingerprint authentication</string>
 
+    
 </resources>
