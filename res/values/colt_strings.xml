@@ -1227,5 +1227,10 @@
     <string name="switch_oneplus">OnePlus</string>
     <string name="switch_narrow">Narrow</string>
     <string name="switch_contained">Contained</string>
+
+    <!-- Theme Reset Option -->
+    <string name="theme_option_reset_title">Reset Theme Options</string>
+    <string name="theme_option_reset_message">Are you sure you want to reset themes-accent to default?</string>
+
 </resources>
 
