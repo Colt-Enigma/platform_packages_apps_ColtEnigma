@@ -831,4 +831,8 @@
     <string name="lockscreen_solid_fudge_factor_title">Sanity level</string>
     <string name="lockscreen_solid_units_opacity_title">Lines opacity</string>
 
+    <!-- Theme Reset Option -->
+    <string name="theme_option_reset_title">Reset</string>
+    <string name="theme_option_reset_message">Are you sure you want to reset?</string>
+
 </resources>
