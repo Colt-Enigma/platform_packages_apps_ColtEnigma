@@ -796,4 +796,29 @@
     <!-- Smart replies -->
     <string name="hide_smart_replies_title">Hide smart replies</string>
     <string name="hide_smart_replies_summary">Hide smart replies to save screen space with peeking notifications</string>    
+
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Network Traffic</string>
+    <string name="traffic_summary">TNet traffic indicators</string>
+    <string name="network_traffic_state_title">Network Traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_type">Select net activity type</string>
+    <string name="show_network_traffic_up">Uplink</string>
+    <string name="show_network_traffic_down">Downlink</string>
+    <string name="show_network_traffic_all">Uplink and Downlink</string>
+    <string name="show_network_traffic_dynamic">Dynamic</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+    <string name="network_traffic_hidearrow">Hide arrows</string>
+    <string name="network_traffic_hidearrow_summary">Hide the network traffic indicator arrows</string>
+    <string name="nettraf_font_size">Single Net Font size</string>
+    <string name="network_traffic_statusbar">Status bar</string>
+    <string name="network_traffic_header">Expanded header</string>
+    <string name="network_traffic_layout">Activity layout</string>
+    <string name="network_traffic_layout_h">Horizontal</string>
+    <string name="network_traffic_layout_v">Vertical</string>
+
+    <!-- Network Traffic Location -->
+    <string name="network_traffic_location_title">Traffic indicator placement</string>
+    <string name="network_traffic_location_summary">Place indicator in either status bar or expanded header (recommended for displays with notch cutouts)</string>
+
 </resources>
