@@ -235,6 +235,17 @@ public class AboutTeam extends SettingsPreferenceFragment {
                         )
                 )
         );
-
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Onclite (Redmi 7)",
+                        new AboutTeamAdapter.Dev(
+                                "Gagan Malvi",
+                                "",
+                                "https://avatars3.githubusercontent.com/TheCynicalDev",
+                                "https://forum.xda-developers.com/redmi-7/development/rom-coltos-t4063441",
+                                "https://github.com/TheCynicalDev",
+                                ""
+                        )
+                )
+        );
     }
 }
