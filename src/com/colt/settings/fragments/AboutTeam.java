@@ -152,6 +152,18 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
+                        "Xiaomi Redmi K20 Pro (Raphael)",
+                        new AboutTeamAdapter.Dev(
+                                "Ritzz",
+                                "",
+                                "https://i.postimg.cc/wB7mT1mT/photo1527457720019560381.jpg",
+                                "https://forum.xda-developers.com/k20-pro/development/rom-coltos-v5-3-t4016411",
+                                "https://github.com/riteshm321",
+                                ""
+                        )
+                )
+        );
+        list.add(new AboutTeamAdapter.Maintainer(
                         "Xiaomi MI A2 (Jasmine_Sprout)",
                         new AboutTeamAdapter.Dev(
                                 "Siddharth Bharadwaj",
