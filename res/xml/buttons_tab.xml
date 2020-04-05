@@ -18,6 +18,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+	<!-- Colt Logo Header -->
+        <Preference 
+           android:key="colt_header_about"
+           android:layout="@layout/colt_header_about" />
+
 	<!-- Buttons -->
 	<com.colt.settings.preference.CategoryColtPreference
             android:key="buttonsettings_category"
