@@ -29,6 +29,7 @@ import com.android.settings.R;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
+import java.util.List;
 
 import com.android.settings.SettingsPreferenceFragment;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
@@ -103,7 +104,7 @@ public class Themes extends SettingsPreferenceFragment implements
             } catch (RemoteException ignored) {
             }
         } else if (preference == mAccentPreset) {
-            String value = (String) newValue;
+            String value = (String) objValue;
             int index = mAccentPreset.findIndexOfValue(value);
             mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
             SystemProperties.set(ACCENT_COLOR_PROP, value);
