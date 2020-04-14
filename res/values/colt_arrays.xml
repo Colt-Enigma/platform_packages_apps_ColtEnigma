@@ -695,12 +695,6 @@
         <item>15</item>
     </string-array>
 
-    <string-array name="battery_bar_style_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-    </string-array>
-
     <!-- Gaming mode -->
     <string-array name="gaming_mode_ringer_entries">
         <item>@string/gaming_mode_ringer_off_title</item>
