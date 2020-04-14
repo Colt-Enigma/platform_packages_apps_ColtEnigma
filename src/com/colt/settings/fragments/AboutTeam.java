@@ -259,5 +259,17 @@ public class AboutTeam extends SettingsPreferenceFragment {
                         )
                 )
         );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Tulip (Redmi Note 6 Pro)",
+                        new AboutTeamAdapter.Dev(
+                                "Mahi Pawar",
+                                "",
+                                "https://avatars3.githubusercontent.com/pawar-mahesh",
+                                "https://forum.xda-developers.com/redmi-note-6-pro/development/rom-coltos-v5-7-t4063293",
+                                "https://github.com/pawar-mahesh",
+                                ""
+                        )
+                )
+        );
     }
 }
