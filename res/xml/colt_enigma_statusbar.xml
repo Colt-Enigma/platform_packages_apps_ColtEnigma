@@ -16,6 +16,24 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <PreferenceCategory
+        android:title="@string/status_bar_items_category_title">
+
+        <!--Network traffic -->
+        <Preference 
+            android:key="network_traffic"
+            android:fragment="com.colt.enigma.fragments.NetworkTraffic"
+            android:title="@string/traffic_title"
+            android:summary="@string/traffic_summary" />
+
+        <Preference
+            android:key="statusbar_battery"
+            android:title="@string/battery_percent_title"
+            android:summary="@string/battery_percent_summary"
+            android:fragment="com.colt.enigma.fragments.StatusbarBatterySettings"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/sb_special_icon_cat">
 
         <Preference
@@ -33,12 +51,5 @@
             android:defaultValue="false" />
 
     </PreferenceCategory>
-
-    <!--Network traffic -->
-    <Preference 
-        android:key="network_traffic"
-        android:fragment="com.colt.enigma.fragments.NetworkTraffic"
-        android:title="@string/traffic_title"
-        android:summary="@string/traffic_summary" />
 
 </PreferenceScreen>
