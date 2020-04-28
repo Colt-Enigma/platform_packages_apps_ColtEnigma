@@ -271,5 +271,17 @@ public class AboutTeam extends SettingsPreferenceFragment {
                         )
                 )
         );
+	list.add(new AboutTeamAdapter.Maintainer(
+                        "Ginkgo (Redmi Note 8/8T)",
+                        new AboutTeamAdapter.Dev(
+                                "Mrinal Ghosh",
+                                "https://forum.xda-developers.com/redmi-note-8/development/rom-coltos-redmi-note-8-8t-t4090029",
+                                "https://avatars3.githubusercontent.com/mg712702",
+                                "",
+                                "https://github.com/mg712702",
+                                ""
+                        )
+                )
+        );
     }
 }
