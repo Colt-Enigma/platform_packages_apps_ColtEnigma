@@ -15,6 +15,7 @@
 
 <resources>
 
-
+    <!-- FOD recognizing animation -->
+    <bool name="showFODAnimationPicker">false</bool>
 
 </resources>

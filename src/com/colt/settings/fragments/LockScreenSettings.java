@@ -43,13 +43,15 @@ import com.colt.settings.preference.SecureSettingMasterSwitchPreference;
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
-   private static final String KEY_AMBIENT_DISPLAY_CUSTOM = "ambient_display_custom";
-   private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
-   private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
+    private static final String KEY_AMBIENT_DISPLAY_CUSTOM = "ambient_display_custom";
+    private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
+    private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
+    private static final String FOD_ANIMATION = "fod_anim";
 
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
-    private Preference mFODIconPicker;
+    private PreferenceCategory mFODIconPickerCategory;
+    private Preference mFODAnimation;
 
     private Preference mCustomDoze;
     private static final String LOCKSCREEN_VISUALIZER_ENABLED = "lockscreen_visualizer_enabled";
@@ -61,7 +63,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         super.onCreate(icicle);
 
         addPreferencesFromResource(R.xml.lockscreen_settings);
-    
+
         mCustomDoze = (Preference) findPreference(KEY_AMBIENT_DISPLAY_CUSTOM);
         if (!getResources().getBoolean(com.android.internal.R.bool.config_alt_ambient_display)) {
             getPreferenceScreen().removePreference(mCustomDoze);
@@ -70,6 +72,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
         Resources resources = getResources();
+        Context mContext = getContext();
 
 	mVisualizerEnabled = (SecureSettingMasterSwitchPreference) findPreference(LOCKSCREEN_VISUALIZER_ENABLED);
         mVisualizerEnabled.setOnPreferenceChangeListener(this);
@@ -86,13 +89,21 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
                 Settings.System.FINGERPRINT_SUCCESS_VIB, 1) == 1));
             mFingerprintVib.setOnPreferenceChangeListener(this);
         }
-        
-        mFODIconPicker = (Preference) findPreference(FOD_ICON_PICKER_CATEGORY);
-        if (mFODIconPicker != null
+
+        mFODIconPickerCategory = (PreferenceCategory) findPreference(FOD_ICON_PICKER_CATEGORY);
+        if (mFODIconPickerCategory != null
                 && !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) {
-            prefScreen.removePreference(mFODIconPicker);
+           prefScreen.removePreference(mFODIconPickerCategory);
         }
+
+        boolean showFODAnimationPicker = mContext.getResources().getBoolean(R.bool.showFODAnimationPicker);
+        mFODAnimation = (Preference) findPreference(FOD_ANIMATION);
+        if ((mFODIconPickerCategory != null && mFODAnimation != null &&
+             !getResources().getBoolean(com.android.internal.R.bool.config_needCustomFODView)) ||
+                (mFODIconPickerCategory != null && mFODAnimation != null && !showFODAnimationPicker)) {
+            mFODIconPickerCategory.removePreference(mFODAnimation);
 	}
+    }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
