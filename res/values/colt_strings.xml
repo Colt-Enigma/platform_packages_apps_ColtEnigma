@@ -431,10 +431,24 @@
 
     <!-- Power Menu -->
     <string name="hardware_keys_power_category">Power Button</string>
+    <string name="power_menu_items_title">Power Menu Items</string>
     <string name="powermenu_reboot_title">Reboot</string>
     <string name="powermenu_advanced_reboot_title">Advanced Reboot</string>
     <string name="powermenu_lockdown">Lockdown</string>
     <string name="powermenu_screenshot_title">Screenshot</string>
+
+    <!-- Powermenu background filters -->
+    <string name="power_menu_bg_filter_none">None</string>
+    <string name="power_menu_bg_filter_grayscale">Grayscale</string>
+    <string name="power_menu_bg_filter_tint">Accent tinted</string>
+    <string name="power_menu_bg_filter_blur">Blur</string>
+    <string name="power_menu_bg_filter_grayblur">Grayscale and blurred</string>
+    <string name="power_menu_bg_filter_tinted_blur">Accent Tinted and blurred</string>
+
+    <!-- Powermunu Background -->
+    <string name="power_menu_bg_title">Background Filter</string>
+    <string name="power_menu_bg_summary">Enables Custom filter when powermenu is active</string>
+    <string name="power_menu_bg_style_title">Filter Type</string>
 
     <!-- Volume Steps Fragment -->
     <string name="volume_steps_title">Volume steps</string>

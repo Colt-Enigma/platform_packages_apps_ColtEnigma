@@ -15,6 +15,30 @@
     android:title="@string/powermenu_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="bg_filters"
+        android:title="@string/power_menu_bg_title">
+
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+       android:key="power_menu_bg"
+       android:title="@string/power_menu_bg_title"
+       android:summary="@string/power_menu_bg_summary"
+       android:defaultValue="false" />
+
+    <com.colt.settings.preference.SystemSettingListPreference
+        android:key="power_menu_bg_style"
+        android:title="@string/power_menu_bg_style_title"
+        android:entries="@array/power_menu_bg_style_entries"
+        android:entryValues="@array/power_menu_bg_style_values"
+        android:dependency="power_menu_bg"
+        android:defaultValue="0" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="powermenu_items"
+        android:title="@string/power_menu_items_title">
+
     <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="powermenu_reboot"
         android:title="@string/powermenu_reboot_title"
@@ -40,6 +64,8 @@
         android:key="powermenu_torch"
         android:title="@string/powermenu_torch"
         android:persistent="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="powermenu_category_visibility"
