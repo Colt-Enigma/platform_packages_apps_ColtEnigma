@@ -15,6 +15,29 @@
     android:title="@string/notifications_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="notification_lights"
+        android:title="@string/notification_lights">
+
+        <com.colt.settings.preference.SystemSettingMasterSwitchPreference
+            android:key="battery_light_enabled"
+            android:fragment="com.colt.settings.fragments.BatteryLightSettings"
+            android:title="@string/battery_light_settings"
+            android:summary="@string/battery_light_settings_summary"
+            android:defaultValue="true" />
+
+        <Preference
+            android:key="notification_light"
+            android:fragment="com.android.settings.applications.manageapplications.ManageApplications"
+            android:title="@string/notification_light_settings"
+            android:summary="@string/notification_light_settings_summary" >
+            <extra
+                android:name="classname"
+                android:value="com.android.settings.Settings$NotificationAppListActivity" />
+        </Preference>
+
+    </PreferenceCategory>
+
     <!-- Heads up -->
     <Preference
         android:key="heads_up_notifications"
