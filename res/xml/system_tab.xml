@@ -52,11 +52,11 @@
             android:fragment="com.colt.settings.fragments.Screen" />
 
 	<!-- Recents -->
-        <com.colt.settings.preference.CategoryColtPreference
+<!--        <com.colt.settings.preference.CategoryColtPreference
 	    android:key="recents_category"
             android:title="@string/recents_title"
 	    android:summary="@string/recents_summary"
-            android:fragment="com.colt.settings.fragments.RecentsSettings" />
+            android:fragment="com.colt.settings.fragments.RecentsSettings" /> -->
 
 	<!-- Misc -->
 	<com.colt.settings.preference.CategoryColtPreference
