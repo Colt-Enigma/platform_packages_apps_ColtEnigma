@@ -72,7 +72,7 @@
             android:key="notification_headers"
             android:title="@string/notification_headers_title"
             android:summary="@string/notification_headers_summary"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
 
    <com.colt.settings.preference.SystemSettingSwitchPreference
             android:key="force_expanded_notifications"
