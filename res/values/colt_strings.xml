@@ -805,7 +805,7 @@
 
     <!-- Statusbar net monitor -->
     <string name="traffic_title">Network Traffic</string>
-    <string name="traffic_summary">TNet traffic indicators</string>
+    <string name="traffic_summary">Internet traffic indicators</string>
     <string name="network_traffic_state_title">Network Traffic</string>
     <string name="network_traffic_state_summary">Show net activity in statusbar</string>
     <string name="network_traffic_type">Select net activity type</string>
