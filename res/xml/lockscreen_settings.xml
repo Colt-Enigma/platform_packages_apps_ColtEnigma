@@ -37,6 +37,13 @@
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
 
+        <!-- FOD icon picker -->
+        <Preference
+        android:key="fod_icon_picker_category"
+        android:title="@string/fod_icon_picker_title"
+        android:summary="@string/fod_icon_picker_summary"
+        android:fragment="com.colt.settings.fragments.FODIconPickerFragment" />
+
         <Preference
             android:key="omnijaws_settings"
             android:title="@string/lockscreen_weather_settings_title"
@@ -45,11 +52,11 @@
 
         <!-- FOD customization options -->
         <PreferenceCategory
-        android:key="fod_icon_picker"
+        android:key="fod_icon_picker_category"
         android:title="@string/fod_icon_picker_category_title">
 
         <Preference
-            android:key="fod_icon_picker_category"
+            android:key="fod_icon_picker"
             android:title="@string/fod_icon_picker_title"
             android:summary="@string/fod_icon_picker_summary"
             android:fragment="com.colt.settings.fragments.FODIconPickerFragment" />
@@ -70,20 +77,8 @@
             android:defaultValue="0"
             android:dependency="fod_recognizing_animation" />
 
-        <com.colt.settings.preference.SystemSettingListPreference
-            android:key="fod_pressed_state"
-            android:dialogTitle="@string/fod_pressed_state_title"
-            android:title="@string/fod_pressed_state_title"
-            android:summary="%s"
-            android:entries="@array/fod_pressed_state_entries"
-            android:entryValues="@array/fod_pressed_state_values"
-            android:defaultValue="0" />
-
-        <Preference
-            android:summary="@string/fod_pressed_state_footer" />
-
     </PreferenceCategory>
-        
+
 <PreferenceCategory
         android:key="lockscreen_media_category"
         android:title="@string/lockscreen_media_category" >
