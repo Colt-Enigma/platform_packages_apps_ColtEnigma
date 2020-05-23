@@ -104,11 +104,12 @@
             android:defaultValue="false" />
     </PreferenceCategory>
 
-    <com.colt.settings.preference.SystemSettingSwitchPreference
+    <com.colt.settings.preference.SystemSettingListPreference
         android:key="qs_datausage"
         android:title="@string/qs_datausage_title"
-        android:summary="@string/qs_datausage_subtitle"
-        android:defaultValue="false" />
+        android:entries="@array/qs_datausage_entries"
+        android:entryValues="@array/qs_datausage_values"
+        android:defaultValue="0" />
 
     <com.colt.settings.preference.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
