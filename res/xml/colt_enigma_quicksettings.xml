@@ -45,4 +45,10 @@
 
     </PreferenceCategory>
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="qs_footer_warnings"
+        android:title="@string/qs_footer_warnings_title"
+        android:summary="@string/qs_footer_warnings_summary"
+        android:defaultValue="true" />
+
 </PreferenceScreen>
