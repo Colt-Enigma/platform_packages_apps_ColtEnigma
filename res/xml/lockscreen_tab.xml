@@ -35,8 +35,5 @@
 	    android:key="lockscreen_ui"
             android:title="@string/lockscreen_ui_title"
             android:summary="@string/lockscreen_ui_summary"
-            android:fragment="com.colt.settings.fragments.LockscreenUi" />
+            android:fragment="com.colt.settings.fragments.LockScreenUi" />
 </PreferenceScreen>
-
-
-

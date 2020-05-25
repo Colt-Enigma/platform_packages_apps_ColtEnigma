@@ -38,16 +38,19 @@ import com.android.internal.logging.nano.MetricsProto;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.settings.R;
+import com.colt.settings.preference.CustomSeekBarPreference;
 import com.colt.settings.preference.SecureSettingMasterSwitchPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_AMBIENT_DISPLAY_CUSTOM = "ambient_display_custom";
+    private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
     private static final String FOD_ANIMATION = "fod_anim";
 
+    private CustomSeekBarPreference mMaxKeyguardNotifConfig;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintVib;
     private PreferenceCategory mFODIconPickerCategory;
@@ -62,7 +65,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-        addPreferencesFromResource(R.xml.lockscreen_settings);
+        addPreferencesFromResource(R.xml.colt_lockscreen_settings);
 
         mCustomDoze = (Preference) findPreference(KEY_AMBIENT_DISPLAY_CUSTOM);
         if (!getResources().getBoolean(com.android.internal.R.bool.config_alt_ambient_display)) {
@@ -73,6 +76,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
         Resources resources = getResources();
         Context mContext = getContext();
+
+        mMaxKeyguardNotifConfig = (CustomSeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
+        int kgconf = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 3);
+        mMaxKeyguardNotifConfig.setValue(kgconf);
+        mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
 
 	mVisualizerEnabled = (SecureSettingMasterSwitchPreference) findPreference(LOCKSCREEN_VISUALIZER_ENABLED);
         mVisualizerEnabled.setOnPreferenceChangeListener(this);
@@ -107,7 +116,13 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-	if (preference == mVisualizerEnabled) {
+
+        if (preference == mMaxKeyguardNotifConfig) {
+            int kgconf = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
+            return true;
+       } else if (preference == mVisualizerEnabled) {
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getContentResolver(),
                     LOCKSCREEN_VISUALIZER_ENABLED, value ? 1 : 0);

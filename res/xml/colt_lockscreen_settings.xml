@@ -109,6 +109,31 @@
 
 	</PreferenceCategory>
 
+        <com.colt.settings.preference.SystemSettingListPreference
+            android:key="lockscreen_charging_animation"
+            android:dialogTitle="@string/lockscreen_charging_animation_title"
+            android:title="@string/lockscreen_charging_animation_title"
+            android:entries="@array/lockscreen_charging_animation_entries"
+            android:entryValues="@array/lockscreen_charging_animation_values"
+            android:summary="%s"
+            android:defaultValue="1" />
+
+        <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="lock_screen_custom_notif"
+            android:title="@string/lockscreen_maxnotif_title"
+            android:summary="@string/lockscreen_maxnotif_sumary"
+            android:defaultValue="false" />
+
+        <com.colt.settings.preference.CustomSeekBarPreference
+            android:key="lockscreen_max_notif_cofig"
+            android:title="@string/lockscreen_maxnotif_config"
+            android:max="6"
+            settings:min="1"
+            settings:unitsLeft=""
+            settings:unitsRight=""
+            android:persistent="false"
+            android:dependency="lock_screen_custom_notif" />
+
 	<com.colt.settings.preference.SecureSettingSwitchPreference
             android:key="hide_lock_shortcuts"
             android:title="@string/lockscreen_hide_shortcuts_title"
@@ -138,4 +163,5 @@
             android:title="@string/fprint_sucess_vib_title"
             android:summary="@string/fprint_sucess_vib_summary"
             android:persistent="false" />
+
 </PreferenceScreen>
