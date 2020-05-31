@@ -167,6 +167,13 @@
     <PreferenceCategory
         android:title="@string/various_toggles">
 
+    <!-- QS footer brightness slider -->
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+        android:key="brightness_slider_qs_unexpanded"
+        android:title="@string/qs_brightness_slider_footer_title"
+        android:summary="@string/qs_brightness_slider_footer_summary"
+        android:defaultValue="false" />
+
     <com.colt.settings.preference.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
         android:title="@string/qs_show_brightness_title"
