@@ -164,7 +164,7 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
         list.add(new AboutTeamAdapter.Maintainer(
-                        "Xiaomi MI A2 (Jasmine_Sprout)",
+                        "Xiaomi Mi A2 (Jasmine_Sprout)",
                         new AboutTeamAdapter.Dev(
                                 "Siddharth Bharadwaj",
                                 "",
@@ -176,7 +176,7 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Oneplus 5t (Dumpling)",
+                        "OnePlus 5T (Dumpling)",
                         new AboutTeamAdapter.Dev(
                                 "mukesh22584",
                                 "",
@@ -212,7 +212,7 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Redmi Note 5 Pro (Whyred)",
+                        "Xiaomi Redmi Note 5 Pro (Whyred)",
                         new AboutTeamAdapter.Dev(
                                 "Ayush Kakkar",
                                 "",
@@ -224,7 +224,7 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Redmi Note 7 Pro (Violet)",
+                        "Xiaomi Redmi Note 7 Pro (Violet)",
                         new AboutTeamAdapter.Dev(
                                 "Athul Dinesan",
                                 "",
@@ -236,7 +236,7 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Santoni (Redmi 4x)",
+                        "Xiaomi Redmi 4X (Santoni)",
                         new AboutTeamAdapter.Dev(
                                 "Aman Dwivedi",
                                 "",
@@ -248,19 +248,19 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Onclite (Redmi 7)",
+                        "Xiaomi Redmi 7 (Onclite)",
                         new AboutTeamAdapter.Dev(
                                 "Gagan Malvi",
                                 "",
                                 "https://avatars3.githubusercontent.com/TheCynicalDev",
                                 "https://forum.xda-developers.com/redmi-7/development/rom-coltos-t4063441",
-                                "https://github.com/TheCynicalDev",
+                                "https://github.com/TheAcanthite",
                                 ""
                         )
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Tulip (Redmi Note 6 Pro)",
+                        "Xiaomi Redmi Note 6 Pro (Tulip)",
                         new AboutTeamAdapter.Dev(
                                 "Mahi Pawar",
                                 "",
@@ -272,7 +272,7 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Ginkgo (Redmi Note 8/8T)",
+                        "Xiaomi Redmi Note 8/8T (Ginkgo)",
                         new AboutTeamAdapter.Dev(
                                 "Mrinal Ghosh",
                                 "https://forum.xda-developers.com/redmi-note-8/development/rom-coltos-redmi-note-8-8t-t4090029",
