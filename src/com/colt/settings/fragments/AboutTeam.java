@@ -248,6 +248,18 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
+                        "Xiaomi Redmi Note 4/X (Mido)",
+                        new AboutTeamAdapter.Dev(
+                                "Sagar Rokade",
+                                "",
+                                "https://avatars3.githubusercontent.com/sagarrokade006",
+                                "https://forum.xda-developers.com/redmi-note-4/xiaomi-redmi-note-4-snapdragon-roms-kernels-recoveries--other-development/rom-colt-os-4-6-enigma-mido-t3973461",
+                                "https://github.com/sagarrokade006",
+                                ""
+                        )
+                )
+        );
+	list.add(new AboutTeamAdapter.Maintainer(
                         "Xiaomi Redmi 7 (Onclite)",
                         new AboutTeamAdapter.Dev(
                                 "Gagan Malvi",
@@ -260,25 +272,25 @@ public class AboutTeam extends SettingsPreferenceFragment {
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Xiaomi Redmi Note 6 Pro (Tulip)",
+                        "Xiaomi Redmi Note 8/8T (Ginkgo)",
                         new AboutTeamAdapter.Dev(
-                                "Mahi Pawar",
+                                "Mrinal Ghosh",
                                 "",
-                                "https://avatars3.githubusercontent.com/pawar-mahesh",
-                                "https://forum.xda-developers.com/redmi-note-6-pro/development/rom-coltos-v5-7-t4063293",
-                                "https://github.com/pawar-mahesh",
+                                "https://avatars3.githubusercontent.com/mg712702",
+                                "https://forum.xda-developers.com/redmi-note-8/development/rom-coltos-redmi-note-8-8t-t4090029",
+                                "https://github.com/mg712702",
                                 ""
                         )
                 )
         );
 	list.add(new AboutTeamAdapter.Maintainer(
-                        "Xiaomi Redmi Note 8/8T (Ginkgo)",
+                        "Moto G5s Plus (Sanders)",
                         new AboutTeamAdapter.Dev(
-                                "Mrinal Ghosh",
-                                "https://forum.xda-developers.com/redmi-note-8/development/rom-coltos-redmi-note-8-8t-t4090029",
-                                "https://avatars3.githubusercontent.com/mg712702",
+                                "Ashwathama",
                                 "",
-                                "https://github.com/mg712702",
+                                "https://avatars3.githubusercontent.com/sai4041412",
+                                "https://forum.xda-developers.com/moto-g5s-plus/development/rom-colt-os-5-6-official-stable-t4048301",
+                                "https://github.com/sai4041412",
                                 ""
                         )
                 )
