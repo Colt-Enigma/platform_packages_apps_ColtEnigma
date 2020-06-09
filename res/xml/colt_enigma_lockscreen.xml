@@ -104,6 +104,12 @@
             android:defaultValue="100"
             android:dependency="lockscreen_media_metadata" />
 
+    <Preference
+        android:key="pulse_category"
+        android:fragment="com.colt.enigma.fragments.PulseSettings"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary" />
+
     </PreferenceCategory>
 
     <!-- FOD icon picker -->
