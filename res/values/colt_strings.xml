@@ -1209,4 +1209,10 @@
     <string name="heads_up_snooze_15min">15 minutes</string>
     <string name="heads_up_snooze_20min">20 minutes</string>
 
+    <!-- QS Battery Location -->
+    <string name="qs_battery_header_title">QS Battery Location</string>
+    <string name="qs_battery_off">Off</string>
+    <string name="qs_battery_on_signal">Qs Signal Group</string>
+    <string name="qs_battery_on_header">Qs Header</string>
+
 </resources>
