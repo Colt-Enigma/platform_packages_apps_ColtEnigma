@@ -13,6 +13,9 @@
         </Preference>
 
     <ListPreference
+	android:layout="@layout/base_preview" />
+
+    <ListPreference
         android:key="theme_switch"
         android:title="@string/theme_type_title"
 	android:summary="%s"
@@ -37,6 +40,13 @@
             android:persistent="false" />
    
     <ListPreference
+        android:layout="@layout/font_preview" />
+
+    <PreferenceCategory
+        android:key="theme_customization_category"
+        android:title="@string/themes_ui">
+
+    <ListPreference
         android:key="android.theme.customization.font"
         android:title="@string/theme_customization_font_title"/>
 
@@ -47,6 +57,8 @@
     <ListPreference
         android:key="android.theme.customization.icon_pack.android"
         android:title="@string/theme_customization_sysui_icon_title"/>
+
+    </PreferenceCategory>
 
     <com.colt.settings.preference.SystemSettingSwitchPreference 
             android:key="qs_new_bg_enabled" 
