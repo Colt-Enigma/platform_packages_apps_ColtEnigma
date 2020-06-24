@@ -1144,4 +1144,7 @@
     <string name="navbar_visibility">Navigation bar</string>
     <string name="navbar_summary">Toggle navigation bar on-off</string>
 
+    <!-- Customization titles -->
+    <string name="themes_ui">ColtOS Themes UI</string>
+    <string name="theme_customization_sysui_icon_title">Statusbar icon</string>
 </resources>
