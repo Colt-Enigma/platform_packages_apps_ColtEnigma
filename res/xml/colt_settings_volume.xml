@@ -14,6 +14,19 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="volume_panel_stuff"
+        android:title="@string/volume_panel">
+
+        <com.colt.settings.preference.SystemSettingListPreference
+            android:key="systemui_plugin_volume"
+            android:title="@string/volume_panel"
+            android:entries="@array/volume_panel_entries"
+            android:entryValues="@array/volume_panel_values"
+            android:defaultValue="@string/volume_panel_aosp_val" />
+
+    </PreferenceCategory>
+
     <Preference
         android:key="vol_steps"
         android:title="@string/volume_steps_title"
