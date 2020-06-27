@@ -1,6 +1,6 @@
 ColtOS Project
 ==============================
-![ColtOS](https://github.com/Colt-Enigma/platform_packages_apps_ColtCenter/blob/test/Banner.png)
+![ColtOS](https://github.com/Colt-Enigma/platform_packages_apps_ColtCenter/blob/c10/Banner.png)
 ==============================
 
 ## Android10
