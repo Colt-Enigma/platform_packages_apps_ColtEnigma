@@ -34,6 +34,12 @@
 	    android:summary="@string/accent_summary"
             android:defaultValue="0x4285F4"
             android:persistent="false" />
+   
+    <com.colt.settings.preference.SystemSettingSwitchPreference 
+            android:key="qs_new_bg_enabled" 
+            android:title="@string/qs_new_bg_enabled_title" 
+            android:summary="@string/qs_new_bg_enabled_summary"
+            android:defaultValue="false" />
 
     <ListPreference
         android:key="switch_style"

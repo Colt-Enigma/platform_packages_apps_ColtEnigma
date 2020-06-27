@@ -1215,4 +1215,7 @@
     <string name="qs_battery_on_signal">Qs Signal Group</string>
     <string name="qs_battery_on_header">Qs Header</string>
 
+    <!--Qs Backgroumd Primary -->
+    <string name="qs_new_bg_enabled_title">QS Border</string>
+    <string name="qs_new_bg_enabled_summary">Enable Qs Border Accent dependent</string>
 </resources>
