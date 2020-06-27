@@ -81,6 +81,13 @@
             android:summary="@string/notification_headers_summary"
             android:defaultValue="false" />
 
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="synthos_center_notification_headers"
+            android:title="@string/synthos_center_notification_headers_title"
+            android:summary="@string/synthos_center_notification_headers_summary"
+            android:dependency="notification_headers"
+            android:defaultValue="true" />
+
    <com.colt.settings.preference.SystemSettingSwitchPreference
             android:key="force_expanded_notifications"
             android:title="@string/force_expanded_notifications_title"
