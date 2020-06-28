@@ -75,7 +75,7 @@
 
     </PreferenceCategory>
 
-  <com.colt.settings.preference.SystemSettingSwitchPreference
+   <com.colt.settings.preference.SystemSettingSwitchPreference
             android:key="notification_headers"
             android:title="@string/notification_headers_title"
             android:summary="@string/notification_headers_summary"
@@ -86,6 +86,14 @@
             android:title="@string/force_expanded_notifications_title"
             android:summary="@string/force_expanded_notifications_summary"
             android:defaultValue="false" />
+
+    <com.colt.settings.preference.GlobalSettingListPreference
+        android:key="ringtone_focus_mode"
+        android:title="@string/ringtone_focus_mode_title"
+        android:entries="@array/ringtone_focus_mode_entries"
+        android:entryValues="@array/ringtone_focus_mode_values"
+        android:summary="%s"
+        android:defaultValue="1" />
 
     <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="notification_sound_vib_screen_on"

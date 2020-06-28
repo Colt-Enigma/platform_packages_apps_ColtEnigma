@@ -1249,5 +1249,9 @@
     <string name="flashlight_on_call_ringer">Only in ringer mode</string>
     <string name="flashlight_on_call_silent">Only when ringer is silent</string>
     <string name="flashlight_on_call_always">Always</string>
-
+    
+    <!-- Headset ringtone audio focus -->
+    <string name="ringtone_focus_mode_title">Ringtone audio focus</string>
+    <string name="ringtone_focus_mode_dynamic">Headset only if music is active</string>
+    <string name="ringtone_focus_mode_stock">Both speaker and headset</string>
 </resources>
