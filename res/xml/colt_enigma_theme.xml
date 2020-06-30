@@ -111,6 +111,13 @@
             android:persistent="false"
             android:dependency="sysui_colors_active" />
 
+	<com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_tile_icon_primary"
+	    settings:iconSpaceReserved="false"
+            android:title="@string/qs_icon_primary_title"
+            android:summary="@string/qs_icon_primary_summary"
+            android:defaultValue="false" />
+
 </PreferenceCategory>
 
         <ListPreference
@@ -263,13 +270,6 @@
             android:entryValues="@array/qs_tint_values"
             android:summary="%s"
             android:defaultValue="1" />
-
-        <com.colt.enigma.preference.SystemSettingSwitchPreference
-            android:key="qs_tile_icon_primary"
-            settings:iconSpaceReserved="false"
-            android:title="@string/qs_icon_primary_title"
-            android:summary="@string/qs_icon_primary_summary"
-            android:defaultValue="false" />
 
 <!--        <com.colt.enigma.preference.SystemSettingListPreference
             android:key="qs_label_use_new_tint"

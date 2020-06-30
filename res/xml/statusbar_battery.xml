@@ -41,6 +41,7 @@
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="do_left_battery_text"
+        settings:iconSpaceReserved="false"
         android:title="@string/left_battery_text_title"
         android:summary="@string/left_battery_text_summary" 
         android:defaultValue="false"/>
