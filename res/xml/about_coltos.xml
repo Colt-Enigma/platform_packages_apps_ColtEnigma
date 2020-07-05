@@ -14,6 +14,11 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+	<!-- Colt Logo Header -->
+        <Preference 
+           android:key="colt_header_about"
+           android:layout="@layout/colt_header_about" />
+
         <com.android.settings.applications.LayoutPreference
             android:key="about_coltos"
             android:layout="@layout/about_coltos" />
@@ -23,13 +28,6 @@
           android:fragment="com.colt.settings.fragments.AboutTeam"
           android:icon="@drawable/ic_about_team"
           android:key="about_team"
-          android:summary="@string/about_team_summary"
-          android:title="@string/about_team_title" />
-
-
-        <!-- ColtOS Header -->
-        <Preference android:key="cos_logo"
-            android:layout="@layout/colt_logo" />
-
+          android:summary="@string/about_team_summary" />
 
 </PreferenceScreen>
