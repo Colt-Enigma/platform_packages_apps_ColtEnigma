@@ -49,6 +49,24 @@
             android:summary="@string/qs_footer_warnings_summary"
             android:defaultValue="true" />
 
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_settings"
+            android:title="@string/qs_footer_settings_title"
+            android:summary="@string/qs_footer_settings_summary"
+            android:defaultValue="true" />
+
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_user"
+            android:title="@string/qs_footer_user_title"
+            android:summary="@string/qs_footer_user_summary"
+            android:defaultValue="true" />
+
+    <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="setting_button_toggle"
+            android:title="@string/qs_persist_setting_button_title"
+            android:summary="@string/qs_persist_setting_button_summary"
+            android:defaultValue="true" />
+
     <Preference
          android:key="category_custom_header"
          android:title="@string/statusbar_header_category_title"

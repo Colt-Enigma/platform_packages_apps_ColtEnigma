@@ -1218,4 +1218,15 @@
     <!--Qs Backgroumd Primary -->
     <string name="qs_new_bg_enabled_title">QS Border</string>
     <string name="qs_new_bg_enabled_summary">Enable Qs Border Accent dependent</string>
+
+    <!-- Persist Setting Button -->
+    <string name="qs_persist_setting_button_title">Persist Setting Button Icon</string>
+    <string name="qs_persist_setting_button_summary">Disable settings button in non exapanded panel</string>
+
+    <!-- QS Footer -->
+    <string name="qs_footer_settings_title">Settings icon</string>
+    <string name="qs_footer_settings_summary">Display Settings icon in quick settings footer</string>
+    <string name="qs_footer_user_title">User switcher icon</string>
+    <string name="qs_footer_user_summary">Display Multi-user switcher icon in quick settings footer</string>
+
 </resources>
