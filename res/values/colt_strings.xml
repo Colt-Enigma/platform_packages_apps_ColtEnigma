@@ -760,6 +760,7 @@
     <string name="theme_type_du_pitchblack">Pitch black</string>
     <string name="theme_type_material_ocean">Material Ocean</string>
     <string name="theme_type_colt_clear">Transparent Colt</string>
+    <string name="theme_type_style_mizu">Colt Mizu</string>
 
     <!-- Themes -->
     <string name="theme_select_title">Themes</string>
