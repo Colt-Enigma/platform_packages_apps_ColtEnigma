@@ -35,6 +35,9 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
     private static final String KEY_QS_PANEL_ALPHA = "qs_panel_alpha";
     private static final String QS_PANEL_COLOR = "qs_panel_color";
+    private static final String QS_HEADER_CLOCK_SIZE  = "qs_header_clock_size";
+    private static final String QS_HEADER_CLOCK_FONT_STYLE  = "qs_header_clock_font_style";
+
     private static final String QS_BLUR_INTENSITY = "qs_blur_intensity";
     private static final String X_FOOTER_TEXT_STRING = "x_footer_text_string";
     private static final String PREF_SMART_PULLDOWN = "smart_pulldown";
@@ -42,9 +45,11 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     static final int DEFAULT_QS_PANEL_COLOR = 0xffffffff;
 
     private ColorPickerPreference mQsPanelColor;
+    private ListPreference mClockFontStyle;
     private SystemSettingSeekBarPreference mQsPanelAlpha;
     private CustomSeekBarPreference mQsBlurIntensity;
     private SystemSettingEditTextPreference mFooterString;
+    private CustomSeekBarPreference mQsClockSize;
 
     private static final String QUICK_PULLDOWN = "quick_pulldown";
 
@@ -73,6 +78,18 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         String hexColor = String.format("#%08x", (0xffffffff & intColor));
         mQsPanelColor.setSummary(hexColor);
         mQsPanelColor.setNewPreviewColor(intColor);
+
+	mQsClockSize = (CustomSeekBarPreference) findPreference(QS_HEADER_CLOCK_SIZE);
+        int qsClockSize = Settings.System.getInt(resolver,
+                Settings.System.QS_HEADER_CLOCK_SIZE, 14);
+                mQsClockSize.setValue(qsClockSize / 1);
+        mQsClockSize.setOnPreferenceChangeListener(this);
+
+        mClockFontStyle = (ListPreference) findPreference(QS_HEADER_CLOCK_FONT_STYLE);
+        int showClockFont = Settings.System.getInt(resolver,
+                Settings.System.QS_HEADER_CLOCK_FONT_STYLE, 14);
+        mClockFontStyle.setValue(String.valueOf(showClockFont));
+        mClockFontStyle.setOnPreferenceChangeListener(this);
 
 	mQuickPulldown = (ListPreference) findPreference(QUICK_PULLDOWN);
         mQuickPulldown.setOnPreferenceChangeListener(this);
@@ -136,6 +153,18 @@ public class QuickSettings extends SettingsPreferenceFragment implements
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.QS_PANEL_BG_COLOR, intHex, UserHandle.USER_CURRENT);
             return true;
+	}  else if (preference == mQsClockSize) {
+                int width = ((Integer)newValue).intValue();
+                Settings.System.putInt(getContentResolver(),
+                        Settings.System.QS_HEADER_CLOCK_SIZE, width);
+                return true;
+        } else if (preference == mClockFontStyle) {
+                int showClockFont = Integer.valueOf((String) newValue);
+                int index = mClockFontStyle.findIndexOfValue((String) newValue);
+                Settings.System.putInt(getContentResolver(), Settings.System.
+                    QS_HEADER_CLOCK_FONT_STYLE, showClockFont);
+                mClockFontStyle.setSummary(mClockFontStyle.getEntries()[index]);
+                return true;
 	} else if (preference == mQsBlurIntensity) {
             int valueInt = (Integer) newValue;
             Settings.System.putInt(getContentResolver(),

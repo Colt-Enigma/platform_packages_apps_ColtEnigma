@@ -28,6 +28,23 @@
         android:entries="@array/smart_pulldown_entries"
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
+    
+    <com.colt.settings.preference.CustomSeekBarPreference
+            android:key="qs_header_clock_size"
+            android:title="@string/qs_header_clock_font_size_title"
+            android:max="28"
+            settings:min="4"
+            android:defaultValue="14"
+            settings:units="sp" />
+
+    <ListPreference
+            android:key="qs_header_clock_font_style"
+            android:dialogTitle="@string/qs_header_clock_font_style_title"
+            android:title="@string/qs_header_clock_font_style_title"
+            android:entries="@array/sb_clock_fonts_entries"
+            android:entryValues="@array/sb_clock_fonts_values"
+            android:summary="@string/qs_header_clock_font_style_summary"
+            android:defaultValue="14" />
 
     <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="omni_footer_text_show"
