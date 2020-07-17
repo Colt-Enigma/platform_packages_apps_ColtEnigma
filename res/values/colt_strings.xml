@@ -1263,4 +1263,7 @@
     <string name="vowifi_icon_title">VoWiFi Icon</string>
     <string name="vowifi_icon_summary">Show VoWiFi icon</string>
 
+   <!-- Ios like clipboard access toast notification -->
+   <string name="ios_clipboard_title">iOS-like toast notification for clipboard access</string>
+
 </resources>
