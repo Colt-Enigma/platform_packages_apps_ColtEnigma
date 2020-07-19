@@ -38,5 +38,4 @@ public class GestureSettings extends SettingsPreferenceFragment {
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.ENIGMA;
     }
-
 }
