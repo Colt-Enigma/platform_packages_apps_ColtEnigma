@@ -17,6 +17,20 @@
 
   <!-- Categories -->
   <string name="colt_interface">The PandoraBox</string>
+  <string name="status_bar_icons_category_title">Icons</string>
+  <string name="various_toggles">Various Toggles</string>
+  <string name="status_bar_carrier_title">Carrier Label</string>
+
+  <string name="qs_header_title">QS Header Settings</string>
+  <string name="qs_footer_title">QS Footer Settings</string>
+  <string name="qs_misc_title">QS Misc Settings</string>  
+
+  <!-- Lockscreen categories -->
+  <string name="lockscreen_shortcuts_category">Shortcuts</string>
+  <string name="lockscreen_interface_category">Interface</string>
+  <string name="lockscreen_misc_category">Miscellaneous</string>
+  <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
+  <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
 
   <!-- Status Bar fragment -->  
   <string name="statusbar_settings_title">Status bar</string>
@@ -186,7 +200,6 @@
     <string name="advanced_reboot_summary">Enable advanced reboot options in powermenu</string>
 
     <!-- Lockscreen weather -->
-    <string name="lockscreen_weather_category">Weather</string>
     <string name="lockscreen_weather_enabled_title">Show on lockscreen</string>
     <string name="lockscreen_weather_enabled_summary">Show weather information on lockscreen and during doze</string>
     <string name="lockscreen_weather_settings_title">Setup weather options</string>
@@ -1036,7 +1049,7 @@
     <string name="battery_light_reallyfull_color">Full battery</string>
 
     <!-- Charging animation -->
-    <string name="lockscreen_charging_animation_title">LS Charging animation</string>
+    <string name="lockscreen_charging_animation_title">LockScreen Charging animation</string>
     <string name="lockscreen_charging_animation_summary">Display a Lottie animation when the device is charging</string>
     <string name="lockscreen_charging_animation_off">Off</string>
     <string name="lockscreen_charging_animation_flash">Flash</string>

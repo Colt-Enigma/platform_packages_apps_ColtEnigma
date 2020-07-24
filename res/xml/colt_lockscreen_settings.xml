@@ -13,12 +13,32 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/lockscreen_weather_category">
+
+    <Preference
+          android:key="omnijaws_settings"
+          android:title="@string/lockscreen_weather_settings_title"
+          android:summary="@string/lockscreen_weather_settings_summary"
+          android:fragment="com.colt.settings.fragments.OmniJawsSettings" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/lockscreen_shortcuts_category">
+    
     <Preference
             android:title="@string/lockscreen_tuner_title" >
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
     </Preference>
+
+    <com.colt.settings.preference.SecureSettingSwitchPreference
+            android:key="hide_lock_shortcuts"
+            android:title="@string/lockscreen_hide_shortcuts_title"
+            android:summary="@string/lockscreen_hide_shortcuts_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
 
         <!-- Ambient Display -->
         <Preference
@@ -30,6 +50,9 @@
                 android:targetPackage="com.custom.ambient.display"
                 android:targetClass="com.custom.ambient.display.DozeSettings" />
         </Preference>
+
+    <PreferenceCategory
+        android:title="@string/lockscreen_bottom_decoration">
 
     <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
@@ -55,11 +78,16 @@
         android:dependency="sysui_keyguard_show_battery_bar"
         android:defaultValue="0xffffffff" />
 
-        <Preference
-            android:key="omnijaws_settings"
-            android:title="@string/lockscreen_weather_settings_title"
-            android:summary="@string/lockscreen_weather_settings_summary"
-            android:fragment="com.colt.settings.fragments.OmniJawsSettings" />
+    <com.colt.settings.preference.SystemSettingListPreference
+        android:key="lockscreen_charging_animation"
+        android:dialogTitle="@string/lockscreen_charging_animation_title"
+        android:title="@string/lockscreen_charging_animation_title"
+        android:entries="@array/lockscreen_charging_animation_entries"
+        android:entryValues="@array/lockscreen_charging_animation_values"
+        android:summary="%s"
+        android:defaultValue="1" />
+
+    </PreferenceCategory>
 
         <!-- FOD customization options -->
         <PreferenceCategory
@@ -147,14 +175,20 @@
 
 	</PreferenceCategory>
 
-        <com.colt.settings.preference.SystemSettingListPreference
-            android:key="lockscreen_charging_animation"
-            android:dialogTitle="@string/lockscreen_charging_animation_title"
-            android:title="@string/lockscreen_charging_animation_title"
-            android:entries="@array/lockscreen_charging_animation_entries"
-            android:entryValues="@array/lockscreen_charging_animation_values"
-            android:summary="%s"
-            android:defaultValue="1" />
+	<PreferenceCategory
+            android:title="@string/various_toggles">
+
+        <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_show_status_bar"
+            android:title="@string/lockscreen_show_status_bar_title"
+            android:summary="@string/lockscreen_show_status_bar_summary"
+            android:defaultValue="true" />
+
+        <com.colt.settings.preference.SecureSettingSwitchPreference
+            android:key="hide_lockicon"
+            android:title="@string/hide_lockicon_title"
+            android:summary="@string/hide_lockicon_summary"
+            android:defaultValue="false" />
 
         <com.colt.settings.preference.SystemSettingSwitchPreference
             android:key="lock_screen_custom_notif"
@@ -171,24 +205,6 @@
             settings:unitsRight=""
             android:persistent="false"
             android:dependency="lock_screen_custom_notif" />
-
-	<com.colt.settings.preference.SecureSettingSwitchPreference
-            android:key="hide_lock_shortcuts"
-            android:title="@string/lockscreen_hide_shortcuts_title"
-            android:summary="@string/lockscreen_hide_shortcuts_summary"
-            android:defaultValue="false" />
-
-	<com.colt.settings.preference.SecureSettingSwitchPreference
-            android:key="hide_lockicon"
-            android:title="@string/hide_lockicon_title"
-            android:summary="@string/hide_lockicon_summary"
-            android:defaultValue="false" />
-
-        <com.colt.settings.preference.SystemSettingSwitchPreference
-            android:key="lockscreen_show_status_bar"
-            android:title="@string/lockscreen_show_status_bar_title"
-            android:summary="@string/lockscreen_show_status_bar_summary"
-            android:defaultValue="true" />
 
 	<com.colt.settings.preference.SystemSettingSwitchPreference
             android:key="pocket_judge"
@@ -207,5 +223,7 @@
             android:title="@string/fprint_sucess_vib_title"
             android:summary="@string/fprint_sucess_vib_summary"
             android:persistent="false" />
+
+	</PreferenceCategory>
 
 </PreferenceScreen>

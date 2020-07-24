@@ -13,6 +13,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">	    
 
+    <PreferenceCategory
+        android:title="@string/status_bar_icons_category_title">
+
     <Preference
             android:title="@string/statusbar_items_title" >
             <intent android:action="android.intent.action.MAIN"
@@ -25,6 +28,10 @@
          android:title="@string/traffic_title"
          android:summary="@string/traffic_summary"
          android:fragment="com.colt.settings.fragments.NetworkTraffic" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/various_toggles">
 
     <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="status_bar_brightness_control"
@@ -41,7 +48,8 @@
     <SwitchPreference
         android:key="use_old_mobiletype"
         android:title="@string/use_old_mobiletype_title"
-	android:summary="@string/use_old_mobiletype_summary" />
+	android:summary="@string/use_old_mobiletype_summary"
+	android:defaultValue="false"/>
 
     <com.colt.settings.preference.SystemSettingSwitchPreference
 	android:key="show_volte_icon"
@@ -68,4 +76,7 @@
         android:title="@string/notification_guts_kill_app_button_title"
         android:summary="@string/notification_guts_kill_app_button_summary"
         android:defaultValue="false" />
+
+     </PreferenceCategory>
+
 </PreferenceScreen>

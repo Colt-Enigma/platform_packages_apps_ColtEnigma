@@ -15,6 +15,15 @@
     android:title="@string/quicksettings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:title="@string/qs_header_title">
+
+    <Preference
+         android:key="category_custom_header"
+         android:title="@string/statusbar_header_category_title"
+         android:summary="@string/statusbar_header_category_summary"
+         android:fragment="com.colt.settings.fragments.StatusbarHeader" />
+
     <ListPreference
         android:key="quick_pulldown" 
         android:title="@string/quick_pulldown_title" 
@@ -28,7 +37,14 @@
         android:entries="@array/smart_pulldown_entries"
         android:entryValues="@array/smart_pulldown_values"
         android:persistent="false" />
-    
+   
+    <com.colt.settings.preference.SystemSettingListPreference
+        android:key="qs_datausage"
+        android:title="@string/qs_datausage_title"
+        android:entries="@array/qs_datausage_entries"
+        android:entryValues="@array/qs_datausage_values"
+        android:defaultValue="0" />
+
     <com.colt.settings.preference.CustomSeekBarPreference
             android:key="qs_header_clock_size"
             android:title="@string/qs_header_clock_font_size_title"
@@ -45,6 +61,10 @@
             android:entryValues="@array/sb_clock_fonts_values"
             android:summary="@string/qs_header_clock_font_style_summary"
             android:defaultValue="14" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/qs_footer_title">
 
     <com.colt.settings.preference.SystemSettingSwitchPreference
         android:key="omni_footer_text_show"
@@ -84,11 +104,7 @@
             android:summary="@string/qs_persist_setting_button_summary"
             android:defaultValue="true" />
 
-    <Preference
-         android:key="category_custom_header"
-         android:title="@string/statusbar_header_category_title"
-         android:summary="@string/statusbar_header_category_summary"
-         android:fragment="com.colt.settings.fragments.StatusbarHeader" />
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="quick_settings_category"
@@ -142,12 +158,8 @@
             android:defaultValue="1" />
     </PreferenceCategory>
 
-    <com.colt.settings.preference.SystemSettingListPreference
-        android:key="qs_datausage"
-        android:title="@string/qs_datausage_title"
-        android:entries="@array/qs_datausage_entries"
-        android:entryValues="@array/qs_datausage_values"
-        android:defaultValue="0" />
+    <PreferenceCategory
+        android:title="@string/various_toggles">
 
     <com.colt.settings.preference.SecureSettingSwitchPreference
         android:key="qs_show_brightness"
@@ -187,8 +199,9 @@
         android:title="@string/lockscreen_qs_disabled_title"
         android:summary="@string/lockscreen_qs_disabled_summary"
         android:defaultValue="false" />
+    </PreferenceCategory>
 
-        <!-- Quick settings -->
+    <!-- Quick settings -->
     <PreferenceCategory
         android:key="qs_category"
         android:title="@string/qs_category">
