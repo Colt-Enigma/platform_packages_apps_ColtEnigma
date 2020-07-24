@@ -1254,4 +1254,9 @@
     <string name="ringtone_focus_mode_title">Ringtone audio focus</string>
     <string name="ringtone_focus_mode_dynamic">Headset only if music is active</string>
     <string name="ringtone_focus_mode_stock">Both speaker and headset</string>
+
+    <!-- Show VoWiFi icon on statusbar -->
+    <string name="vowifi_icon_title">VoWiFi Icon</string>
+    <string name="vowifi_icon_summary">Show VoWiFi icon</string>
+
 </resources>
