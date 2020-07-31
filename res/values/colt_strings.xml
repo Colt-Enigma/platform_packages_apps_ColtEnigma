@@ -92,6 +92,9 @@
     <string name="statusbar_items_title">Icons</string>
     <string name="statusbar_items_summary">Various Statubar icons</string>
 
+    <!-- Accent Picker -->
+    <string name="accent_color_summary">Choose your desired accent</string>
+
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navigation buttons</string>
     <string name="navbar_tuner_summary">Navigation buttons Options</string>
@@ -1147,5 +1150,12 @@
 
     <!-- Customization titles -->
     <string name="themes_ui">ColtOS Themes UI</string>
-    <string name="theme_customization_sysui_icon_title">Statusbar icon</string>
+
+    <string name="themes_base">System Customisation for ColtOS</string>
+    <string name="theme_customization_android_icon_title">StatusBar icons</string>
+    <string name="theme_customization_settings_icon_title">Settings icons</string>
+    <string name="theme_customization_systemui_title">Base Theme</string>
+    <string name="themes_color">Theming</string>
+    <string name="themes_summary">Theming section</string>
+
 </resources>
