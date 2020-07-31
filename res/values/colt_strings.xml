@@ -734,9 +734,7 @@
     <string name="nav_bar_tuner_summary">Reorder and change navbar buttons</string>
 
     <!-- Accent Picker -->
-    <string name="accent_color">Accent picker</string>
     <string name="accent_color_summary">Choose your desired accent</string>
-    <string name="accent_summary">System wide accent picker</string>
     
     <!-- ColtDecorators -->
     <string name="system_colors">Colt Decorations</string>
@@ -792,8 +790,8 @@
     <string name="theme_type_style_mizu">Colt Mizu</string>
 
     <!-- Themes -->
-    <string name="theme_select_title">Themes</string>
-    <string name="theme_select_summary">Browse and select installed themes</string>
+    <string name="theme_select_title">Clock Styles and Wallpapers</string>
+    <string name="theme_select_summary">Browse beautiful LS clock styles and wallpapers</string>
 
     <!-- Show VoLTE icon on statusbar -->
     <string name="volte_switch_title">VoLTE icon</string>
@@ -1312,5 +1310,15 @@
 
     <!-- Customization titles -->
     <string name="themes_ui">ColtOS Themes UI</string>
-    <string name="theme_customization_sysui_icon_title">Statusbar icon</string>
+
+    <string name="themes_base">System Customisation for ColtOS</string>
+    <string name="theme_customization_sysui_icon_title">QS icons</string>
+    <string name="theme_customization_android_icon_title">StatusBar icons</string>
+    <string name="theme_customization_settings_icon_title">Settings icons</string>
+    <string name="theme_customization_systemui_title">Base Theme</string>
+    <string name="themes_color">Theming</string>
+    <string name="themes_summary">Theming section</string>
+    <string name="accent_color">Accent color - RGB picker</string>
+    <string name="accent_summary">Choose your own accent!</string>
+
 </resources>
