@@ -36,14 +36,22 @@
             android:key="pulse_ambient_light_auto_color"
             android:title="@string/pulse_ambient_light_auto_color_title"
             android:summary="@string/pulse_ambient_light_auto_color_summary"
-            android:dependency="pulse_ambient_light"
+            android:dependency="pulse_ambient_random_color"
             android:defaultValue="false" />
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="pulse_ambient_light_color"
             android:title="@string/pulse_ambient_light_color_title"
-            android:dependency="pulse_ambient_light"
+            android:dependency="pulse_ambient_random_color"
             settings:defaultColorValue="0xFF3980FF" />
+
+        <com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="pulse_ambient_random_color"
+            android:title="@string/pulse_ambient_random_color_title"
+            android:summary="@string/pulse_ambient_random_color_summary"
+            android:dependency="pulse_ambient_light"
+            android:disableDependentsState="true"
+            android:defaultValue="true" />
 
         <com.colt.settings.preference.CustomSeekBarPreference
             android:key="pulse_ambient_light_duration"
