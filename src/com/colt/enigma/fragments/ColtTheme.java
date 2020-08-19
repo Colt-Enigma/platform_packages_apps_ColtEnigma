@@ -200,7 +200,7 @@ public class ColtTheme extends DashboardFragment implements
         int position = -1;
         for (int i = 0; i < overlays.length; i++) {
             String overlay = overlays[i];
-            if (XtendedUtils.isThemeEnabled(overlay)) {
+            if (ColtUtils.isThemeEnabled(overlay)) {
                 position = i;
             }
         }
@@ -211,7 +211,7 @@ public class ColtTheme extends DashboardFragment implements
         String overlayName = null;
         for (int i = 0; i < overlays.length; i++) {
             String overlay = overlays[i];
-            if (XtendedUtils.isThemeEnabled(overlay)) {
+            if (ColtUtils.isThemeEnabled(overlay)) {
                 overlayName = overlay;
             }
         }
