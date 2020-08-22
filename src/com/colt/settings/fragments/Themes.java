@@ -18,6 +18,7 @@ import android.os.RemoteException;
 import android.os.SystemProperties;
 import android.os.ServiceManager;
 import android.os.UserHandle;
+import androidx.fragment.app.Fragment;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
@@ -27,6 +28,7 @@ import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import com.android.settings.R;
 import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.List;
@@ -39,12 +41,22 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 
 import com.android.internal.util.colt.ThemesUtils;
 import com.android.internal.util.colt.ColtUtils;
+import com.android.settings.dashboard.DashboardFragment;
+import android.provider.SearchIndexableResource;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settings.search.Indexable;
+import com.android.settingslib.search.SearchIndexable;
+import com.android.settings.development.OverlayCategoryPreferenceController;
+import com.android.settingslib.core.AbstractPreferenceController;
+import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import static android.os.UserHandle.USER_SYSTEM;
 import android.app.UiModeManager;
 
-public class Themes extends SettingsPreferenceFragment implements
-        OnPreferenceChangeListener {
+   public class Themes extends DashboardFragment implements
+        OnPreferenceChangeListener, Indexable {
+
+    private static final String TAG = "Themes";
 
     private static final String ACCENT_PRESET = "accent_preset";
     private static final String ACCENT_COLOR = "accent_color";
@@ -68,9 +80,19 @@ public class Themes extends SettingsPreferenceFragment implements
     private ListPreference mSwitchStyle;
 
     @Override
+    protected String getLogTag() {
+        return TAG;
+    }
+
+    @Override
+    protected int getPreferenceScreenResId() {
+        return R.xml.colt_settings_themes;
+    }
+
+    @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.colt_settings_themes);
+//        addPreferencesFromResource(R.xml.colt_settings_themes);
 
     PreferenceScreen prefScreen = getPreferenceScreen();
     ContentResolver resolver = getActivity().getContentResolver();
@@ -109,6 +131,23 @@ public class Themes extends SettingsPreferenceFragment implements
 
 	setupThemeSwitchPref();
 	setHasOptionsMenu(true);
+    }
+
+   @Override
+    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+        return buildPreferenceControllers(context, getSettingsLifecycle(), this);
+    }
+
+    private static List<AbstractPreferenceController> buildPreferenceControllers(
+            Context context, Lifecycle lifecycle, Fragment fragment) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.font"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.adaptive_icon_shape"));
+        controllers.add(new OverlayCategoryPreferenceController(context,
+                "android.theme.customization.icon_pack.android"));
+        return controllers;
     }
 
     @Override
@@ -382,4 +421,25 @@ public class Themes extends SettingsPreferenceFragment implements
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
     }
+
+    public static final SearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+            new BaseSearchIndexProvider() {
+                @Override
+                public List<SearchIndexableResource> getXmlResourcesToIndex(Context context,
+                        boolean enabled) {
+                    ArrayList<SearchIndexableResource> result =
+                            new ArrayList<SearchIndexableResource>();
+
+                    SearchIndexableResource sir = new SearchIndexableResource(context);
+                    sir.xmlResId = R.xml.colt_settings_themes;
+                    result.add(sir);
+                    return result;
+                }
+
+                @Override
+                public List<String> getNonIndexableKeys(Context context) {
+                    List<String> keys = super.getNonIndexableKeys(context);
+                    return keys;
+                }
+    };
 }
