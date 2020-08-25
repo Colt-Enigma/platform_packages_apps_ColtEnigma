@@ -25,6 +25,12 @@
             android:entryValues="@array/volume_panel_values"
             android:defaultValue="@string/volume_panel_aosp_val" />
 
+	<com.colt.settings.preference.SystemSettingSwitchPreference
+            android:key="audio_panel_location"
+            android:title="@string/audio_panel_location_title"
+            android:summary="@string/audio_panel_location_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <Preference
