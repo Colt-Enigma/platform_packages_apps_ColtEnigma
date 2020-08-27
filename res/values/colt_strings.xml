@@ -15,74 +15,74 @@
  -->
  <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-  <!-- Categories -->
-  <string name="colt_interface">The PandoraBox</string>
-  <string name="status_bar_icons_category_title">Icons</string>
-  <string name="various_toggles">Various Toggles</string>
-  <string name="status_bar_carrier_title">Carrier Label</string>
+    <!-- Categories -->
+    <string name="colt_interface">The PandoraBox</string>
+    <string name="status_bar_icons_category_title">Icons</string>
+    <string name="various_toggles">Various Toggles</string>
+    <string name="status_bar_carrier_title">Carrier Label</string>
 
-  <string name="qs_header_title">QS Header Settings</string>
-  <string name="qs_footer_title">QS Footer Settings</string>
-  <string name="qs_misc_title">QS Misc Settings</string>  
+    <string name="qs_header_title">QS Header Settings</string>
+    <string name="qs_footer_title">QS Footer Settings</string>
+    <string name="qs_misc_title">QS Misc Settings</string>
 
-  <!-- Lockscreen categories -->
-  <string name="lockscreen_shortcuts_category">Shortcuts</string>
-  <string name="lockscreen_interface_category">Interface</string>
-  <string name="lockscreen_misc_category">Miscellaneous</string>
-  <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
-  <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
+    <!-- Lockscreen categories -->
+    <string name="lockscreen_shortcuts_category">Shortcuts</string>
+    <string name="lockscreen_interface_category">Interface</string>
+    <string name="lockscreen_misc_category">Miscellaneous</string>
+    <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
+    <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
 
-  <!-- Status Bar fragment -->  
-  <string name="statusbar_settings_title">Status bar</string>
+    <!-- Status Bar fragment -->  
+    <string name="statusbar_settings_title">Status bar</string>
 
-  <!-- Lockscreen Fragment -->
-  <string name="lockscreen_settings_title">Lockscreen</string>
+    <!-- Lockscreen Fragment -->
+    <string name="lockscreen_settings_title">Lockscreen</string>
 
-  <string name="notifications_title">Notifications</string>
-  <string name="button_title">Buttons</string>
-  <string name="gestures_title">Gestures</string>
-  <string name="navbar_title">Navigation bar</string>
-  <string name="powermenu_title">Power menu</string>
-  <string name="volume_title">Volume rockers</string>
-  <string name="misc_title">Miscellaneous</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="button_title">Buttons</string>
+    <string name="gestures_title">Gestures</string>
+    <string name="navbar_title">Navigation bar</string>
+    <string name="powermenu_title">Power menu</string>
+    <string name="volume_title">Volume rockers</string>
+    <string name="misc_title">Miscellaneous</string>
 
-  <!-- Colt Tabs Main  -->
-  <string name="colt_title">The PandoraBox</string>
+    <!-- Colt Tabs Main  -->
+    <string name="colt_title">The PandoraBox</string>
 
-  <!-- Colt Tabs -->
-  <string name="status_bar_tab">Statusbar</string>
-  <string name="system_tab">System</string>
-  <string name="lockscreen_tab">Lockscreen</string>
-  <string name="buttons_tab">Buttons</string>
-  <string name="about_tab">About</string>
+    <!-- Colt Tabs -->
+    <string name="status_bar_tab">Statusbar</string>
+    <string name="system_tab">System</string>
+    <string name="lockscreen_tab">Lockscreen</string>
+    <string name="buttons_tab">Buttons</string>
+    <string name="about_tab">About</string>
 
-  <!-- Colt Settings -->
-  <string name="quicksettings_title">Quick Settings</string>
-  <string name="quicksettings_summary">Quick settings Customizations</string>
-  <string name="themesettings_title">Color manager</string>
-  <string name="themesettings_summary">Change system colors with various theme combinations</string>
-  <string name="buttonsettings_title">Buttons</string>
-  <string name="buttonsettings_summary">Perform custom button actions</string>
-  <string name="statusbar_summary">Statusbar Customizations</string>
-  <string name="lockscreen_summary">Various options for lockscreen</string>
-  <string name="navbar_summary">Various options for Navbar</string>
-  <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
-  <string name="gesture_summary">Gesture Customizations</string>
-  <string name="notifications_summary">Notifications and Incall settings</string>
-  <string name="misc_summary">Miscellaneous things to be checked here</string>
+    <!-- Colt Settings -->
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="quicksettings_summary">Quick settings Customizations</string>
+    <string name="themesettings_title">Color manager</string>
+    <string name="themesettings_summary">Change system colors with various theme combinations</string>
+    <string name="buttonsettings_title">Buttons</string>
+    <string name="buttonsettings_summary">Perform custom button actions</string>
+    <string name="statusbar_summary">Statusbar Customizations</string>
+    <string name="lockscreen_summary">Various options for lockscreen</string>
+    <string name="navbar_summary">Various options for Navbar</string>
+    <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
+    <string name="gesture_summary">Gesture Customizations</string>
+    <string name="notifications_summary">Notifications and Incall settings</string>
+    <string name="misc_summary">Miscellaneous things to be checked here</string>
 
-  <!-- Device Feature -->
-  <string name="device_part_title">OnePlus Love</string>
-  <string name="device_part_summary">OnePlus Speicific Features</string>
+    <!-- Device Feature -->
+    <string name="device_part_title">OnePlus Love</string>
+    <string name="device_part_summary">OnePlus Speicific Features</string>
 
-  <!-- Lockscreen battery info indicator  -->
-  <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
-  <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Lockscreen charging info</string>
+    <string name="lockscreen_battery_info_summary">Display negociated charger max current and voltage and battery temperature on lockscreen while charging</string>
 
-  <!-- Statusbar Tuner -->
-  <string name="statusbar_items_title">Statusbar items</string>
+    <!-- Statusbar Tuner -->
+    <string name="statusbar_items_title">Statusbar items</string>
 
-  <!-- Color Picker -->
+    <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
     <string name="arrow_right">→</string>
@@ -92,7 +92,7 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
-  <!-- General strings -->
+    <!-- General strings -->
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
@@ -101,11 +101,11 @@
     <string name="unit_percent">\u0025</string>
     <string name="custom_string">Custom</string>
 
-  <!-- Incall Home button behavior-->
+    <!-- Incall Home button behavior-->
     <string name="allow_incall_home_title">Home button when ringing</string>
     <string name="allow_incall_home_summary">Allow to use Home button when device is ringing</string>
 
-  <!-- Buttons backlight timeout -->
+    <!-- Buttons backlight timeout -->
     <string name="backlight_timeout_title">Buttons backlight timeout</string>
     <string name="backlight_timeout_on">Enabled always</string>
     <string name="backlight_timeout_3s">3 sec</string>
@@ -115,10 +115,10 @@
     <string name="backlight_timeout_20s">20 sec</string>
     <string name="backlight_timeout_30s">30 sec</string>
 
-  <!-- Enable keys backlight-->
+    <!-- Enable keys backlight-->
     <string name="button_brightness_title">Backlight</string>
 
-  <!-- Enable keys backlight-->
+    <!-- Enable keys backlight-->
     <string name="button_brightness_sw_title">Enable backlight</string>
     <string name="button_backlight_on_touch_only_title">Button touch</string>
     <string name="button_backlight_on_touch_only_summary">Enable backlight with timeout only on button touch</string>
@@ -706,6 +706,10 @@
     <string name="lock_ownerinfo_font_summary">Change the default font of the lockscreen owner info</string>
     <string name="lock_ownerinfo_font_dialog_title">Select lock owner info font</string>
     <string name="lockowner_font_size_title">Owner info font size</string>
+
+    <!-- Ambient visualizer -->
+    <string name="ambient_visualizer_title">Show LS Visualizer on Ambient Display</string>
+    <string name="ambient_visualizer_summary">Shows the visualization bars also on ambient display</string>
 
     <!-- Lockscreen cover art filter -->
     <string name="lockscreen_cover_filter_title">Lockscreen album art filter</string>
