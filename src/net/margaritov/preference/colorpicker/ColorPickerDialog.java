@@ -26,13 +26,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.EditText;
-import android.view.KeyEvent;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import com.android.settings.R;
 
-public class ColorPickerDialog extends AlertDialog implements ColorPickerView.OnColorChangedListener, View.OnClickListener, View.OnKeyListener {
+public class ColorPickerDialog extends AlertDialog implements ColorPickerView.OnColorChangedListener, View.OnClickListener {
 
     private ColorPickerView mColorPicker;
     private ColorPickerPanelView mOldColor;
@@ -47,6 +46,7 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
 
     ColorPickerDialog(Context context, int initialColor) {
         super(context);
+
         init(initialColor);
     }
 
@@ -55,15 +55,6 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
             getWindow().setFormat(PixelFormat.RGBA_8888);
             requestWindowFeature(Window.FEATURE_NO_TITLE);
             setUp(color);
-        }
-    }
-
-    private void setColorFromHex() {
-        String text = mHex.getText().toString();
-        try {
-            int newColor = ColorPickerPreference.convertToColorInt(text);
-            mColorPicker.setColor(newColor, true);
-        } catch (Exception ignored) {
         }
     }
 
@@ -80,6 +71,7 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
         mNewColor = layout.findViewById(R.id.new_color_panel);
 
         mHex = layout.findViewById(R.id.hex);
+        ImageButton mSetButton = layout.findViewById(R.id.enter);
 
         ((LinearLayout) mOldColor.getParent()).setPadding(Math.round(mColorPicker.getDrawingOffset()),
                 0, Math.round(mColorPicker.getDrawingOffset()), 0);
@@ -91,8 +83,17 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
         mColorPicker.setColor(color, true);
 
         if (mHex != null) {
-            mHex.setText(ColorPickerPreference.convertToRGB(color));
-            mHex.setOnKeyListener(this);
+            mHex.setText(ColorPickerPreference.convertToARGB(color));
+        }
+        if (mSetButton != null) {
+            mSetButton.setOnClickListener(v -> {
+                String text = mHex.getText().toString();
+                try {
+                    int newColor = ColorPickerPreference.convertToColorInt(text);
+                    mColorPicker.setColor(newColor, true);
+                } catch (Exception ignored) {
+                }
+            });
         }
 
         setView(layout);
@@ -104,7 +105,7 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
         mNewColor.setColor(color);
         try {
             if (mHex != null) {
-                mHex.setText(ColorPickerPreference.convertToRGB(color));
+                mHex.setText(ColorPickerPreference.convertToARGB(color));
             }
         } catch (Exception ignored) {
         }
@@ -125,16 +126,6 @@ public class ColorPickerDialog extends AlertDialog implements ColorPickerView.On
 
     public int getColor() {
         return mColorPicker.getColor();
-    }
-
-    @Override
-    public boolean onKey(View v, int keyCode, KeyEvent event) {
-        if ((event.getAction() == KeyEvent.ACTION_DOWN) &&
-                    (keyCode == KeyEvent.KEYCODE_ENTER)) {
-            setColorFromHex();
-            return true;
-        }
-        return false;
     }
 
     @Override
