@@ -24,14 +24,81 @@
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tabs"/>
+	android:layout_above="@+id/bottom_navigation_view_constraint"/>
 
-    <com.colt.settings.customtab.IconTitleIndicator
-        android:id="@+id/tabs"
+    <com.colt.settings.bottomnav.BubbleNavigationConstraintView
+        android:id="@+id/bottom_navigation_view_constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="?android:colorPrimary"
+        android:elevation="8dp"
+        app:colt_mode="spread"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
-        android:translationY="5dp"
-        android:background="@color/dialog_background" />
+        android:padding="10dp">
+
+        <com.colt.settings.bottomnav.BubbleToggleView
+            android:id="@+id/statusbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:colt_active="true"
+            app:colt_padding="14dp"
+            app:colt_titlePadding="4dp"
+	    app:colt_colorActive="@color/green_active"
+            app:colt_colorInactive="@color/green_inactive"
+            app:colt_icon="@drawable/statusbar_tab"
+            app:colt_shape="@drawable/transition_background_drawable_system"
+            app:colt_title="@string/bottom_nav_statusbar_title" />
+
+        <com.colt.settings.bottomnav.BubbleToggleView
+            android:id="@+id/buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:colt_padding="14dp"
+            app:colt_titlePadding="4dp"
+            app:colt_colorActive="@color/red_active"
+            app:colt_colorInactive="@color/red_inactive"
+            app:colt_icon="@drawable/buttons_tab"
+            app:colt_shape="@drawable/transition_background_drawable_lockscreen"
+            app:colt_title="@string/bottom_nav_button_title" />
+
+        <com.colt.settings.bottomnav.BubbleToggleView
+            android:id="@+id/lockscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:colt_padding="14dp"
+            app:colt_titlePadding="4dp"
+            app:colt_colorActive="@color/blue_active"
+            app:colt_colorInactive="@color/blue_inactive"
+            app:colt_icon="@drawable/lockscreen_tab"
+            app:colt_shape="@drawable/transition_background_drawable_statusbar"
+            app:colt_title="@string/bottom_nav_lockscreen_title" />
+
+        <com.colt.settings.bottomnav.BubbleToggleView
+            android:id="@+id/system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:colt_padding="14dp"
+            app:colt_titlePadding="4dp"
+            app:colt_colorActive="@color/orange_active"
+            app:colt_colorInactive="@color/orange_inactive"
+            app:colt_icon="@drawable/system_tab"
+            app:colt_shape="@drawable/transition_background_drawable_hardware"
+            app:colt_title="@string/bottom_nav_system_title" />
+
+	<com.colt.settings.bottomnav.BubbleToggleView
+            android:id="@+id/aboutteam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:colt_padding="14dp"
+            app:colt_titlePadding="4dp"
+            app:colt_colorActive="@color/green_active"
+            app:colt_colorInactive="@color/green_inactive"
+            app:colt_icon="@drawable/about_tab"
+            app:colt_shape="@drawable/transition_background_drawable_hardware"
+            app:colt_title="@string/bottom_nav_about_title" />
+
+    </com.colt.settings.bottomnav.BubbleNavigationConstraintView>
 
 </RelativeLayout>

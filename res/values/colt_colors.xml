@@ -21,5 +21,35 @@
 
     <!-- FOD icon picker-->
     <color name="fod_item_background_stroke_color">#d6d6d6</color>
-    
+
+    <color name="red_bg_light">#3dcf605a</color>
+    <color name="blue_bg_light">#3d2598b9</color>
+    <color name="green_bg_light">#3d65c59a</color>
+    <color name="orange_bg_light">#3df66934</color>
+    <color name="purple_bg_light">#3dA547BB</color>
+    <color name="cyan_bg_light">#3d1EBDCD</color>
+    <color name="amber_bg_light">#3dFFBF12</color>
+    <color name="pink_bg_light">#3dF6727F</color>
+
+    <color name="red_active">#C9514D</color>
+    <color name="blue_active">#007EA7</color>
+    <color name="green_active">#52B788</color>
+    <color name="orange_active">#F4511E</color>
+    <color name="purple_active">#8E24AA</color>
+    <color name="cyan_active">#00acc1</color>
+    <color name="amber_active">#ffb300</color>
+    <color name="pink_active">#F45B69</color>
+
+    <color name="red_inactive">#cf605a</color>
+    <color name="blue_inactive">#2598b9</color>
+    <color name="green_inactive">#65c59a</color>
+    <color name="orange_inactive">#f66934</color>
+    <color name="purple_inactive">#A547BB</color>
+    <color name="cyan_inactive">#1EBDCD</color>
+    <color name="amber_inactive">#FFBF12</color>
+    <color name="pink_inactive">#F6727F</color>
+
+    <color name="default_inactive_shape_color">#e5e5e5</color>
+    <color name="default_inactive_color">#212121</color>
+    <color name="default_shape_inactive_color">#888888</color>    
 </resources> 

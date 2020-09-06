@@ -22,4 +22,28 @@
         <attr name="dependentValue" format="string"/>
     </declare-styleable>
 
+
+<declare-styleable name="BubbleToggleView">
+        <attr name="colt_icon" format="reference" />
+        <attr name="colt_iconWidth" format="dimension" />
+        <attr name="colt_iconHeight" format="dimension" />
+        <attr name="colt_shape" format="reference" />
+        <attr name="colt_shapeColor" format="color" />
+        <attr name="colt_showShapeAlways" format="boolean" />
+        <attr name="colt_title" format="string" />
+        <attr name="colt_titleSize" format="dimension" />
+        <attr name="colt_colorActive" format="color" />
+        <attr name="colt_colorInactive" format="color" />
+        <attr name="colt_active" format="boolean" />
+        <attr name="colt_duration" format="integer" />
+        <attr name="colt_padding" format="dimension" />
+        <attr name="colt_titlePadding" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="BubbleNavigationConstraintView">
+        <attr name="colt_mode">
+            <enum name="spread" value="0" />
+            <enum name="inside" value="1" />
+            <enum name="packed" value="2" />
+        </attr>
+    </declare-styleable>
 </resources>
