@@ -76,6 +76,13 @@
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
 
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="use_old_mobiletype"
+            settings:iconSpaceReserved="false"
+            android:title="@string/use_old_mobiletype_title"
+            android:summary="@string/use_old_mobiletype_summary"
+            android:defaultValue="false" />
+
         <Preference
             android:title="@string/statusbar_items_title"
             settings:iconSpaceReserved="false"
