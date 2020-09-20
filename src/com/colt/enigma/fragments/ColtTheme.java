@@ -86,6 +86,8 @@ public class ColtTheme extends DashboardFragment implements
     private static final String TAG = "ColtDecorations";
 
     private static final String ACCENT_PRESET = "accent_preset";
+
+    private static final String PREF_NAVBAR_STYLE = "theme_navbar_style";
     private static final String BRIGHTNESS_SLIDER_STYLE = "brightness_slider_style";
     private static final String SYSTEM_SLIDER_STYLE = "system_slider_style";
     private static final String ACCENT_COLOR = "accent_color";
@@ -100,8 +102,10 @@ public class ColtTheme extends DashboardFragment implements
     static final int DEFAULT = 0xff1a73e8;
 
     private ListPreference mAccentPreset;
+    private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
     private ListPreference mBrightnessSliderStyle;
+    private ListPreference mNavbarPicker;
     private ListPreference mSystemSliderStyle;
     private ColorPickerPreference mThemeColor;
     private ColorPickerPreference mGradientColor;
@@ -158,10 +162,19 @@ public class ColtTheme extends DashboardFragment implements
                 findPreference(PREF_SETTINGS_ICONS);
         mDashboardIcons.setOnPreferenceChangeListener(this);
 
+	mNavbarPicker = (ListPreference) findPreference(PREF_NAVBAR_STYLE);
+        int navbarStyleValues = getOverlayPosition(ThemesUtils.NAVBAR_STYLES);
+        if (navbarStyleValues != -1) {
+            mNavbarPicker.setValue(String.valueOf(navbarStyleValues + 2));
+        } else {
+            mNavbarPicker.setValue("1");
+        }
+        mNavbarPicker.setSummary(mNavbarPicker.getEntry());
+        mNavbarPicker.setOnPreferenceChangeListener(this);
+
         mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
         mAccentPreset.setOnPreferenceChangeListener(this);
         checkColorPreset(colorVal);
-
         setupGradientPref();
         getBrightnessSliderPref();
         setSystemSliderPref();
@@ -181,6 +194,36 @@ public class ColtTheme extends DashboardFragment implements
         mDashboardIcons.setEnabled((Settings.System.getInt(getContentResolver(),
                 Settings.System.DASHBOARD_ICONS, 0) == 1));
         mCustomIcons.setOnPreferenceChangeListener(this);
+    }
+
+    private int getOverlayPosition(String[] overlays) {
+        int position = -1;
+        for (int i = 0; i < overlays.length; i++) {
+            String overlay = overlays[i];
+            if (XtendedUtils.isThemeEnabled(overlay)) {
+                position = i;
+            }
+        }
+        return position;
+    }
+
+    private String getOverlayName(String[] overlays) {
+        String overlayName = null;
+        for (int i = 0; i < overlays.length; i++) {
+            String overlay = overlays[i];
+            if (XtendedUtils.isThemeEnabled(overlay)) {
+                overlayName = overlay;
+            }
+        }
+        return overlayName;
+    }
+
+    public void handleOverlays(String packagename, Boolean state, IOverlayManager mOverlayManager) {
+        try {
+            mOverlayService.setEnabled(packagename, state, USER_SYSTEM);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -240,6 +283,20 @@ public class ColtTheme extends DashboardFragment implements
                  mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
              } catch (RemoteException ignored) {
              }
+        } else if (preference == mNavbarPicker) {
+            String navbarStyle = (String) newValue;
+            int navbarStyleValue = Integer.parseInt(navbarStyle);
+            mNavbarPicker.setValue(String.valueOf(navbarStyleValue));
+            String overlayName = getOverlayName(ThemesUtils.NAVBAR_STYLES);
+                if (overlayName != null) {
+                    handleOverlays(overlayName, false, mOverlayManager);
+                }
+                if (navbarStyleValue > 1) {
+                    handleOverlays(ThemesUtils.NAVBAR_STYLES[navbarStyleValue - 2],
+                            true, mOverlayManager);
+            }
+            mNavbarPicker.setSummary(mNavbarPicker.getEntry());
+            return true;
         } else if (preference == mBrightnessSliderStyle) {
             String brightness_style = (String) newValue;
             final Context context = getContext();

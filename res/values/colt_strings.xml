@@ -1341,4 +1341,14 @@
     <!-- Show Statusbar on Lockscreen -->
     <string name="lockscreen_status_bar_title">Status bar</string>
     <string name="lockscreen_status_bar_summary">Display status bar on the lockscreen</string>    
+
+    <!-- Navbar Picker -->
+    <string name="theme_navbar_picker_title">Navbar style (for 3-button nav)</string>
+    <string name="theme_navbar_picker_summary">Select navbar style</string>
+    <string name="theme_navbar_picker_default">Default</string>
+    <string name="theme_navbar_picker_oneplus">OnePlus</string>
+    <string name="theme_navbar_picker_oneui">One UI</string>
+    <string name="theme_navbar_picker_tecno">Tecno Camon</string>
+    <string name="theme_navbar_picker_asus">ASUS</string>
+
 </resources>
