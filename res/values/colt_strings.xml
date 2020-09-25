@@ -227,4 +227,19 @@
     <string name="show_carrier_statusbar">Statusbar only</string>
     <string name="show_carrier_enabled">Lockscreen &amp; statusbar</string>
 
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">When restarting also show options for recovery and bootloader</string>
+    <string name="global_actions_airplane">Airplane</string>
+    <string name="global_actions_settings">Settings</string>
+    <string name="global_actions_lockdown">Lock Down</string>
+    <!--<string name="global_actions_soundpanel">Sound Panel</string>-->
+    <string name="global_actions_users">Users</string>
+    <string name="global_actions_screenshot">Screenshot</string>
+    <string name="global_actions_screenrecord">Screenrecord</string>
+    <string name="global_actions_flashlight">Flashlight</string>
+    <string name="global_actions_emergency">Emergency</string>
+    <string name="global_actions_max_columns_title">Max actions to show</string>
+    <string name="global_actions_max_columns_summary">Set how many actions to show before buttons move to overflow menu</string>
+
 </resources>
