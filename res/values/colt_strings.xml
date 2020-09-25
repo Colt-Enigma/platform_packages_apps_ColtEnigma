@@ -1056,4 +1056,8 @@
     <string name="status_bar_custom_header_shadow_title">Header image shadow</string>
     <string name="unit_percent">\u0025</string>
 
+    <!-- Notification Vibration -->
+    <string name="vibrate_on_notifications_title">Vibrate for notifications</string>
+    <string name="vibrate_on_notifications_summary">Vibrate when receive notification</string>
+
 </resources>
