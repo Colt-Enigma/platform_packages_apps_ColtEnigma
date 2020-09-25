@@ -90,4 +90,9 @@
             android:title="@string/powermenu_torch"
             android:persistent="false" />
 
+         <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_onthego"
+            android:title="@string/global_actions_onthego_title"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
