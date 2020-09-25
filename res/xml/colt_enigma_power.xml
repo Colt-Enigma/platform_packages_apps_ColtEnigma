@@ -66,6 +66,11 @@
         android:title="@string/global_actions_soundpanel"
         android:defaultValue="false" /-->
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="global_actions_onthego"
+        android:title="@string/global_actions_onthego_title"
+        android:defaultValue="false" />
+
     <com.colt.enigma.preference.SystemSettingSeekBarPreference
         android:key="global_actions_max_columns"
         android:title="@string/global_actions_max_columns_title"
