@@ -22,4 +22,19 @@
         android:fragment="com.android.settings.gestures.GestureSettings"
         settings:controller="com.android.settings.gestures.GesturesSettingPreferenceController"/>
 
+     <PreferenceCategory
+        android:key="double_tap_gestures_category"
+        android:title="@string/double_tap_gestures_category_title">
+
+	<com.colt.enigma.preference.SystemSettingSwitchPreference
+	    android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_sleep_gesture_title"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_lockscreen"
+            android:title="@string/double_tap_sleep_lockscreen_title"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
