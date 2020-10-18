@@ -71,6 +71,8 @@ import com.android.internal.util.colt.ThemesUtils;
 import com.android.internal.util.colt.ColtUtils;
 import com.colt.enigma.preference.SystemSettingListPreference;
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
+import com.colt.enigma.preference.CustomSeekBarPreference;
+import com.colt.enigma.preference.QsColorPreferenceController;
 
 import com.android.settings.display.FontPickerPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -240,6 +242,7 @@ public class ColtTheme extends DashboardFragment implements
                 "android.theme.customization.adaptive_icon_shape"));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack.android"));
+	controllers.add(new QsColorPreferenceController(context));
         controllers.add(new QsTileStylePreferenceController(context));
 	controllers.add(new SwitchStylePreferenceController(context));
         controllers.add(new OverlayCategoryPreferenceController(context,

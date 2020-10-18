@@ -131,6 +131,31 @@
             android:summary="@string/qs_bg_use_disco_summary"
             android:defaultValue="false" />
 
+	 <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_panel_bg_use_fw"
+            android:title="@string/qs_panel_bg_use_fw_title"
+            android:summary="@string/qs_panel_bg_use_fw_summary"
+            android:defaultValue="true"
+            settings:iconSpaceReserved="false"
+            android:disableDependentsState="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="sysui_colors_active"
+            android:title="@string/sysui_colors_active_title"
+            android:summary="@string/sysui_colors_active_summary"
+            android:defaultValue="false"
+            android:dependency="qs_panel_bg_use_fw"
+	    settings:iconSpaceReserved="false"
+            android:disableDependentsState="true" />
+
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="qs_panel_color"
+            android:title="@string/qs_panel_bg_color_title"
+            android:defaultValue="0xFFFFFFFF"
+            android:persistent="false"
+	    settings:iconSpaceReserved="false"
+            android:dependency="sysui_colors_active" />
+
         <ListPreference
             android:layout="@layout/themes_font_preview"
             android:selectable="false" />
@@ -153,6 +178,15 @@
                 android:targetPackage="com.android.wallpaper"
                 android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
         </Preference>
+
+	<com.colt.enigma.preference.SystemSettingSeekBarPreference
+	    android:key="qs_panel_bg_alpha"
+	    settings:iconSpaceReserved="false"
+            android:title="@string/qs_panel_bg_alpha_title"
+            android:defaultValue="255"
+            android:max="255"
+            android:min="0"
+	    settings:units="" />	    
 
 	<com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="custom_icons"
