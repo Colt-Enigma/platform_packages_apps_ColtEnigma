@@ -87,18 +87,6 @@
             app:colt_shape="@drawable/transition_background_drawable_hardware"
             app:colt_title="@string/bottom_nav_system_title" />
 
-	<com.colt.enigma.bottomnav.BubbleToggleView
-            android:id="@+id/aboutteam"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:colt_padding="14dp"
-            app:colt_titlePadding="4dp"
-            app:colt_colorActive="@color/green_active"
-            app:colt_colorInactive="@color/green_inactive"
-            app:colt_icon="@drawable/about_tab"
-            app:colt_shape="@drawable/transition_background_drawable_hardware"
-            app:colt_title="@string/bottom_nav_about_title" />
-
     </com.colt.enigma.bottomnav.BubbleNavigationConstraintView>
 
 </RelativeLayout>

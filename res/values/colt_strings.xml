@@ -32,9 +32,6 @@
     <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
     <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
 
-    <!-- Colt Tabs Main  -->
-    <string name="colt_title">The PandoraBox</string>
-
     <!-- Colt Tabs -->
     <string name="status_bar_tab">Statusbar</string>
     <string name="system_tab">System</string>
@@ -80,7 +77,7 @@
     <string name="colt_team_title">Meet Our ColtOS Team</string>
     <string name="about_coltos_screen_title">About ColtOS</string>
     <string name="about_coltos_title">So From Where ColtOS Arrived...</string>
-    <string name="coltos_about_summary">ColtOS was started by me (Rakesh Batra), Nitin, Nikhil and Debojit in early 2017 and it was a small but an effective group also and we all were in learning stage that\'s why Colt as a name arrived means a Learner. To start with ColtOS was based on LOS but now we have moved to aosp base and now in ColtOS Team we still have a team with some new members also and is just like a family to me, i would still like to mention the name of each and every member in ColtOS Team, 1. Rakesh Batra 2. Nitinkumar Chobhe 3. Roger.T 4.Debojit Deb, 5. Vinoth, 6. Santosh (SuperdroidBond), 7. Mukesh, 8. Athul, 9. Nikhil, 10. Meet Gohil, 11. Saurabh Hooda and 12. Anupam D Moran, that\'s the wonderfull team we have!!</string>
+    <string name="coltos_about_summary">ColtOS ~ We are based on AOSP with some dependency on LOS, enriched with the useful features only from all over the Android development community. We are a small yet efficient team of working professionals and Our main moto is Quality and stability.!!</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
@@ -98,4 +95,22 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- About colt -->
+    <string name="colt_about_title">All About ColtOS</string>
+    <string name="colt_about_summary">A little info about the team</string>
+    <string name="colt_telegram_title">ColtOS Telegram Community</string>
+    <string name="colt_telegram_summary"><a href="https://t.me/ColtEnigma">Join ColtOS community here!</a></string>
+    <string name="colt_github_title">ColtOS Github</string>
+    <string name="colt_github_summary"><a href="https://www.github.com/Colt-Enigma">See the ColtOS source code here!</a></string>
+    <string name="colt_about_info_summary">ColtOS was started by a group of Android enthusiasts and learners lead by Rakesh in early 2017. Initial members were Nitin, Nikhil and Debojit. It was a small but effective group of like minded people. We started with supporting only 3 devices initially but then expanded the number of devices as the team members grew.As the time passed, the group was like a family. In initial days, ColtOS was based on LOS but then we moved to aosp. As any good OS, our top priorities are quality, stability and useful features</string>
+    <string name="colt_about_team">Team ColtOS</string>
+    <string name="colt_about_rakesh" translatable="false">Rakesh Batra</string>
+    <string name="colt_about_rakesh_summary" translatable="false">Founder and Lead Developer</string>
+    <string name="colt_about_nitin" translatable="false">Nitin Chobe</string>
+    <string name="colt_about_nitin_summary" translatable="false">Core Member and a Backbone</string>
+    <string name="colt_about_mrinal" translatable="false">Mrinal Ghosh</string>
+    <string name="colt_about_mrinal_summary" translatable="false">Young and Passionate Core Developer</string>
+    <string name="about_maintainer">Maintainer</string>
+    <string name="colt_about_maintainer">The maintainer for your device is</string>
+    <string name="colt_about_maintainer_summary" translatable="false">Feel the Enigma</string>
 </resources>

@@ -29,6 +29,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.android.settings.R;
@@ -39,7 +40,6 @@ import com.colt.enigma.tabs.Statusbar;
 import com.colt.enigma.tabs.Buttons;
 import com.colt.enigma.tabs.Lockscreen;
 import com.colt.enigma.tabs.System;
-import com.colt.enigma.fragments.AboutTeam;
 
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -80,8 +80,6 @@ public class ColtEnigma extends SettingsPreferenceFragment {
 		viewPager.setCurrentItem(position, true);
 		} else if (id == R.id.system){
 		viewPager.setCurrentItem(position, true);
-		} else if (id == R.id.aboutteam){
-		viewPager.setCurrentItem(position, true);
 		}
                }
            });
@@ -116,7 +114,6 @@ public class ColtEnigma extends SettingsPreferenceFragment {
             frags[1] = new Buttons();
             frags[2] = new Lockscreen();
             frags[3] = new System();
-            frags[4] = new AboutTeam();
         }
 
         @Override
@@ -141,8 +138,7 @@ public class ColtEnigma extends SettingsPreferenceFragment {
             getString(R.string.status_bar_tab),
             getString(R.string.button_title),
 	    getString(R.string.lockscreen_tab),
-            getString(R.string.system_tab),
-            getString(R.string.about_tab)};
+            getString(R.string.system_tab)};
 
         return titleString;
     }
@@ -154,5 +150,18 @@ public class ColtEnigma extends SettingsPreferenceFragment {
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        menu.add(0, 0, 0, R.string.colt_about_title);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == 0) {
+            FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+
+    AboutColt newFragment = AboutColt .newInstance();
+            newFragment.show(ft, "AboutColt");
+            return true;
+        }
+        return false;
     }
 }
