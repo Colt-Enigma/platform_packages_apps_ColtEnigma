@@ -23,4 +23,11 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
         </Preference>
 
+        <!--Network traffic -->
+        <Preference 
+            android:key="network_traffic"
+            android:fragment="com.colt.enigma.fragments.NetworkTraffic"
+            android:title="@string/traffic_title"
+            android:summary="@string/traffic_summary" />
+
 </PreferenceScreen>

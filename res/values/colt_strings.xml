@@ -294,4 +294,12 @@
     <string name="missed_call_breath_summary">Will give your missed call notifications a breathing effect in the statusbar</string>
     <string name="voicemail_breath_title">Breathing Voicemail</string>
     <string name="voicemail_breath_summary">Will give your voicemail notifications a breathing effect in the statusbar</string>
+
+    <!-- Statusbar net monitor -->
+    <string name="traffic_title">Traffic indicators</string>
+    <string name="traffic_summary">Show current network traffic levels in the status bar</string>
+    <string name="network_traffic_state_title">Network traffic</string>
+    <string name="network_traffic_state_summary">Show net activity in statusbar</string>
+    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
+
 </resources>
