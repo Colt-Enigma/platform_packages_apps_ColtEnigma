@@ -103,6 +103,11 @@
     <string name="lockscreen_battery_info_title">Charging info</string>
     <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lock screen while charging</string>
 
+    <!-- Lockscreen charge temperature unit -->
+    <string name="lockscreen_charge_temp_unit_title">Temperature unit</string>
+    <string name="lockscreen_charge_temp_unit_farhenheit">Farhenheit</string>
+    <string name="lockscreen_charge_temp_unit_celsius">Celsius</string>
+
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
     <string name="quick_settings_vibrate_summary">Vibrate when touching QS tiles</string>

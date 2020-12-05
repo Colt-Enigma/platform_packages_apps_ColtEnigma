@@ -26,6 +26,14 @@
             android:defaultValue="true" />
 
         <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="lockscreen_charge_temp_unit"
+            android:title="@string/lockscreen_charge_temp_unit_title"
+            android:entries="@array/lockscreen_charge_temp_unit_entries"
+            android:entryValues="@array/lockscreen_charge_temp_unit_values"
+            android:defaultValue="0"
+            android:dependency="lockscreen_battery_info" />
+
+        <com.colt.enigma.preference.SystemSettingListPreference
             android:key="lockscreen_charging_animation_style"
             android:title="@string/lockscreen_charging_animation_title"
             android:summary="%s"
