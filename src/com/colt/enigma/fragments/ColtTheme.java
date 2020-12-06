@@ -96,6 +96,8 @@ public class ColtTheme extends DashboardFragment implements
     private static final String PREF_CUSTOM_ICONS = "custom_icons";
     private static final String PREF_SETTINGS_ICONS = "theming_settings_dashboard_icons";
 
+    private static final String PREF_PANEL_BG = "panel_bg";
+
     static final int DEFAULT = 0xff1a73e8;
 
     private Context mContext;
@@ -109,6 +111,7 @@ public class ColtTheme extends DashboardFragment implements
     private SystemSettingListPreference mDashboardIcons;
     private SystemSettingSwitchPreference mCustomIcons;
 
+    private ListPreference mPanelBg;
     private IntentFilter mIntentFilter;
     private static FontPickerPreferenceController mFontPickerPreference;
 
@@ -157,6 +160,16 @@ public class ColtTheme extends DashboardFragment implements
         }
         mNavbarPicker.setSummary(mNavbarPicker.getEntry());
         mNavbarPicker.setOnPreferenceChangeListener(this);
+
+	mPanelBg = (ListPreference) findPreference(PREF_PANEL_BG);
+        int mPanelValue = getOverlayPosition(ThemesUtils.PANEL_BG_STYLE);
+        if (mPanelValue != -1) {
+                mPanelBg.setValue(String.valueOf(mPanelValue + 2));
+        } else {
+                mPanelBg.setValue("1");
+              }
+        mPanelBg.setSummary(mPanelBg.getEntry());
+        mPanelBg.setOnPreferenceChangeListener(this);
 
         getBrightnessSliderPref();
         setSystemSliderPref();
@@ -425,7 +438,22 @@ public class ColtTheme extends DashboardFragment implements
             Settings.System.putInt(getContentResolver(),
                     Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, value);
             return true;
-        }
+	} else if (preference == mPanelBg) {
+                String panelbg = (String) newValue;
+                int panelBgValue = Integer.parseInt(panelbg);
+                mPanelBg.setValue(String.valueOf(panelBgValue));
+                String overlayName = getOverlayName(ThemesUtils.PANEL_BG_STYLE);
+                    if (overlayName != null) {
+                        handleOverlays(overlayName, false, mOverlayService);
+                    }
+                    if (panelBgValue > 1) {
+                        ColtUtils.showSystemUiRestartDialog(getContext());
+                        handleOverlays(ThemesUtils.PANEL_BG_STYLE[panelBgValue -2],
+                                true, mOverlayService);
+
+                }
+                mPanelBg.setSummary(mPanelBg.getEntry());
+	}
         return false;
     }
 

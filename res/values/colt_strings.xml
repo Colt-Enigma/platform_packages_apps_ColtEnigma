@@ -1386,4 +1386,11 @@
     <string name="sleep_mode_aggressive_battery_title">Enable Aggressive Battery</string>
     <string name="sleep_mode_aggressive_battery_summary">Enable Aggressive Battery Idle and Standby when Sleep mode is turned on</string>
 
+    <!-- Panel Background style -->
+    <string name="panel_bg_title">Panel background style</string>
+    <string name="panel_bg_dialog_title">Select panel background model</string>
+    <string name="panel_default">Default</string>
+    <string name="panel_batik">Batik</string>
+    <string name="panel_kece">Kece</string>
+    <string name="panel_outline">Outline</string>
 </resources>
