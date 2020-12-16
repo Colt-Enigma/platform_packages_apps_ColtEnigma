@@ -66,6 +66,9 @@ public class AmbientDecorSettings extends SettingsPreferenceFragment
 
     private static final String CATEG_DOZE_SENSOR = "doze_sensor";
 
+    private static final String KEY_PULSE_BRIGHTNESS = "ambient_pulse_brightness";
+    private static final String KEY_DOZE_BRIGHTNESS = "ambient_doze_brightness";
+
     private static final String KEY_DOZE_TILT_GESTURE = "doze_tilt_gesture";
     private static final String KEY_DOZE_PICK_UP_GESTURE = "doze_pick_up_gesture";
     private static final String KEY_DOZE_HANDWAVE_GESTURE = "doze_handwave_gesture";
@@ -80,6 +83,8 @@ public class AmbientDecorSettings extends SettingsPreferenceFragment
 
     private SwitchPreference mDozeAlwaysOnPreference;
     private SecureSettingSwitchPreference mDozeOnChargePreference;
+    private CustomSeekBarPreference mPulseBrightness;
+    private CustomSeekBarPreference mDozeBrightness;
     private SwitchPreference mTiltPreference;
     private SwitchPreference mPickUpPreference;
     private SwitchPreference mHandwavePreference;
@@ -171,6 +176,26 @@ public class AmbientDecorSettings extends SettingsPreferenceFragment
                 Settings.System.NOTIFICATION_PULSE_REPEATS, 0, UserHandle.USER_CURRENT);
         mEdgeLightRepeatCount.setValue(edgeLightRepeatCount);
         mEdgeLightRepeatCount.setOnPreferenceChangeListener(this);
+
+        int defaultDoze = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessDoze);
+        int defaultPulse = getResources().getInteger(
+                com.android.internal.R.integer.config_screenBrightnessPulse);
+        if (defaultPulse == -1) {
+            defaultPulse = defaultDoze;
+        }
+
+        mPulseBrightness = (CustomSeekBarPreference) findPreference(KEY_PULSE_BRIGHTNESS);
+        int value = Settings.System.getInt(getContentResolver(),
+                Settings.System.PULSE_BRIGHTNESS, defaultPulse);
+        mPulseBrightness.setValue(value);
+        mPulseBrightness.setOnPreferenceChangeListener(this);
+
+        mDozeBrightness = (CustomSeekBarPreference) findPreference(KEY_DOZE_BRIGHTNESS);
+        value = Settings.System.getInt(getContentResolver(),
+                Settings.System.DOZE_BRIGHTNESS, defaultDoze);
+        mDozeBrightness.setValue(value);
+        mDozeBrightness.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -242,6 +267,16 @@ public class AmbientDecorSettings extends SettingsPreferenceFragment
             int value = (Integer) newValue;
             Settings.System.putIntForUser(getContentResolver(),
                     Settings.System.NOTIFICATION_PULSE_REPEATS, value, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mPulseBrightness) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.PULSE_BRIGHTNESS, value);
+            return true;
+        } else if (preference == mDozeBrightness) {
+            int value = (Integer) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DOZE_BRIGHTNESS, value);
             return true;
          }
          return false;

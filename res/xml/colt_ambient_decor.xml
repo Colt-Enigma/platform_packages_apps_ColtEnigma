@@ -39,6 +39,36 @@
         android:summary="@string/doze_on_charge_summary" />
 
     </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/doze_brightness_category">
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="doze_brightness_force"
+            android:title="@string/doze_brightness_force_title"
+            android:summary="@string/doze_brightness_force_summary"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.CustomSeekBarPreference
+            android:key="ambient_doze_brightness"
+            android:title="@string/ambient_doze_brightness_title"
+            android:summary="@string/ambient_doze_brightness_summary"
+            android:max="100"
+            settings:min="1"
+            settings:units="%"
+            android:persistent="false" />
+
+        <com.colt.enigma.preference.CustomSeekBarPreference
+            android:key="ambient_pulse_brightness"
+            android:title="@string/ambient_pulse_brightness_title"
+            android:summary="@string/ambient_pulse_brightness_summary"
+            android:max="100"
+            settings:min="1"
+            settings:units="%"
+            android:persistent="false" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
         android:key="doze_sensor"
         android:title="@string/doze_sensor_title" >
