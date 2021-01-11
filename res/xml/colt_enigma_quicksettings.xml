@@ -39,7 +39,7 @@
             android:summary="%s"
             android:entries="@array/quick_pulldown_entries"
             android:entryValues="@array/quick_pulldown_values"
-            android:defaultValue="1" />
+            android:defaultValue="0" />
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_tile_title_visibility"
