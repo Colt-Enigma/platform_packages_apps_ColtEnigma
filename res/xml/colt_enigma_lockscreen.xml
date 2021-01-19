@@ -23,6 +23,12 @@
 
         android:title="@string/general_category_title">
 
+	<com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="lockscreen_status_bar"
+            android:title="@string/lockscreen_status_bar_title"
+            android:summary="@string/lockscreen_status_bar_summary"
+            android:defaultValue="true" />
+
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="lockscreen_battery_info"
             android:title="@string/lockscreen_battery_info_title"
