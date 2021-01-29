@@ -679,6 +679,9 @@
     <string name="lockscreen_albumart_filter_blur">Blur</string>
     <string name="lockscreen_albumart_filter_grayblur">Grayscale and blurred</string>
 
+    <!-- Lock screen media blur -->
+    <string name="lockscreen_media_blur_title">Media artwork blur level</string>
+
     <!-- Charging animation -->
     <string name="lockscreen_charging_animation_title">Charging animation</string>
     <string name="lockscreen_charging_animation_flash">Flash</string>
