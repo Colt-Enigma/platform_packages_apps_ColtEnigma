@@ -60,6 +60,8 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String PULSE_RENDER_CATEGORY_SOLID = "pulse_2";
     private static final String PULSE_RENDER_CATEGORY_FADING = "pulse_fading_bars_category";
     private static final String PULSE_RENDER_MODE_KEY = "pulse_render_style";
+    private static final String PULSE_CUSTOM_GRAVITY = "pulse_custom_gravity";
+    private static final String VISUALIZER_CENTER_MIRRORED = "visualizer_center_mirrored";
     private static final int RENDER_STYLE_FADING_BARS = 0;
     private static final int RENDER_STYLE_SOLID_LINES = 1;
     private static final int COLOR_TYPE_ACCENT = 0;
@@ -72,9 +74,11 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mQsPulse;
     private SwitchPreference mAmbientPulse;
     private SwitchPreference mPulseSmoothing;
+    private SwitchPreference mPulseCenterMirrored;
     private Preference mRenderMode;
     private ListPreference mColorModePref;
     private ColorPickerPreference mColorPickerPref;
+    private ListPreference mPulseGravity;
     private Preference mLavaSpeedPref;
 
     private PreferenceCategory mFadingBarsCat;
@@ -128,6 +132,10 @@ public class PulseSettings extends SettingsPreferenceFragment implements
                 PULSE_RENDER_CATEGORY_SOLID);
 
         mPulseSmoothing = (SwitchPreference) findPreference(PULSE_SMOOTHING_KEY);
+
+        mPulseCenterMirrored = (SwitchPreference) findPreference(VISUALIZER_CENTER_MIRRORED);
+
+        mPulseGravity = (ListPreference) findPreference(PULSE_CUSTOM_GRAVITY);
 
         updateAllPrefs();
     }
@@ -189,6 +197,9 @@ public class PulseSettings extends SettingsPreferenceFragment implements
 
         mPulseSmoothing.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
 
+        mPulseCenterMirrored.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
+
+        mPulseGravity.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
 
         mColorModePref.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
         if (navbarPulse || lockscreenPulse || qsPulse) {

@@ -51,10 +51,25 @@
         android:defaultValue="1"/>
 
     <com.colt.enigma.preference.SecureSettingSwitchPreference
+        android:key="pulse_custom_gravity"
+	settings:iconSpaceReserved="false"
+        android:title="@string/pulse_custom_gravity_title"
+        android:entries="@array/pulse_custom_gravity_entries"
+        android:entryValues="@array/pulse_custom_gravity_values"
+        android:defaultValue="0"/>
+
+    <com.colt.enigma.preference.SecureSettingSwitchPreference
         android:key="pulse_smoothing_enabled"
         settings:iconSpaceReserved="false"
         android:title="@string/smoothing_enabled_title"
         android:summary="@string/smoothing_enabled_summary"
+        android:defaultValue="false"/>
+        
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="visualizer_center_mirrored"
+	settings:iconSpaceReserved="false"
+        android:title="@string/visualizer_center_mirrored_title"
+        android:summary="@string/visualizer_center_mirrored_summary"
         android:defaultValue="false"/>
 
     <PreferenceCategory
