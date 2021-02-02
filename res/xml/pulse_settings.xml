@@ -72,6 +72,13 @@
         android:summary="@string/visualizer_center_mirrored_summary"
         android:defaultValue="false"/>
 
+    <com.colt.enigma.preference.SecureSettingSwitchPreference
+        android:key="pulse_vertical_mirror"
+	settings:iconSpaceReserved="false"
+        android:title="@string/pulse_vertical_mirror_title"
+        android:summary="@string/pulse_vertical_mirror_summary"
+        android:defaultValue="false"/>
+
     <PreferenceCategory
         android:key="pulse_color_category"
         android:title="@string/pulse_color">

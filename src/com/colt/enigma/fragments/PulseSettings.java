@@ -62,6 +62,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private static final String PULSE_RENDER_MODE_KEY = "pulse_render_style";
     private static final String PULSE_CUSTOM_GRAVITY = "pulse_custom_gravity";
     private static final String VISUALIZER_CENTER_MIRRORED = "visualizer_center_mirrored";
+    private static final String PULSE_VERTICAL_MIRROR = "pulse_vertical_mirror";
     private static final int RENDER_STYLE_FADING_BARS = 0;
     private static final int RENDER_STYLE_SOLID_LINES = 1;
     private static final int COLOR_TYPE_ACCENT = 0;
@@ -75,6 +76,7 @@ public class PulseSettings extends SettingsPreferenceFragment implements
     private SwitchPreference mAmbientPulse;
     private SwitchPreference mPulseSmoothing;
     private SwitchPreference mPulseCenterMirrored;
+    private SwitchPreference mPulseVerticalMirror;
     private Preference mRenderMode;
     private ListPreference mColorModePref;
     private ColorPickerPreference mColorPickerPref;
@@ -134,6 +136,8 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mPulseSmoothing = (SwitchPreference) findPreference(PULSE_SMOOTHING_KEY);
 
         mPulseCenterMirrored = (SwitchPreference) findPreference(VISUALIZER_CENTER_MIRRORED);
+
+        mPulseVerticalMirror = (SwitchPreference) findPreference(PULSE_VERTICAL_MIRROR);
 
         mPulseGravity = (ListPreference) findPreference(PULSE_CUSTOM_GRAVITY);
 
@@ -198,6 +202,8 @@ public class PulseSettings extends SettingsPreferenceFragment implements
         mPulseSmoothing.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
 
         mPulseCenterMirrored.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
+
+        mPulseVerticalMirror.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
 
         mPulseGravity.setEnabled(navbarPulse || lockscreenPulse || qsPulse || ambientPulse);
 
