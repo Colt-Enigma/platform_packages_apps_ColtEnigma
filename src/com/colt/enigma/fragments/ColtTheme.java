@@ -63,6 +63,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.colt.enigma.display.QsTileStylePreferenceController;
+import com.colt.enigma.display.SwitchStylePreferenceController;
 
 import com.android.settings.display.FontPickerPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -151,6 +152,7 @@ public class ColtTheme extends DashboardFragment implements
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.icon_pack.android"));
         controllers.add(new QsTileStylePreferenceController(context));
+	controllers.add(new SwitchStylePreferenceController(context));
         return controllers;
     }
 
