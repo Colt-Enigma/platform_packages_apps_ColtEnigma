@@ -455,8 +455,19 @@
     <string name="use_old_mobiletype_title">Use old style mobile data icons</string>
     <string name="use_old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>    
 
-     <!-- Show LTE/4G switch -->
+    <!-- Show LTE/4G switch -->
     <string name="icons_category">Icons</string>
     <string name="show_fourg_icon_title">Show 4G instead of LTE</string>
     <string name="show_fourg_icon_summary">Replace LTE indicator with 4G</string>
+
+    <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Sensor block per-package</string>
+    <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery</string>
+    <string name="sensor_block_master_switch_title">Use Sensor Block per-package</string>
+    <string name="sensor_block_app_picker_title">Block sensors for these apps</string>
+    <string name="add_sensor_block_package_title">Add apps for Sensor block</string>
+    <string name="add_sensor_block_package_summary">Significant motion, accelerometer, linear acceleration sensors will be blocked for these apps</string>
+    <string name="profile_choose_app">Choose app</string>
+    <string name="dialog_delete_title">Delete</string>
+    <string name="dialog_delete_message">Remove selected item?</string>
 </resources>

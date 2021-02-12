@@ -15,4 +15,10 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+<Preference
+          android:key="sensor_block_settings"
+          android:title="@string/sensor_block_title"
+          android:summary="@string/sensor_block_summary"
+          android:fragment="com.colt.enigma.fragments.SensorBlockSettings"/>
+
 </PreferenceScreen>
