@@ -20,8 +20,13 @@
         android:layout="@layout/misc_header" />
 
     <PreferenceCategory
-
         android:title="@string/general_category_title">
+
+        <Preference
+            android:key="gaming_category"
+            android:title="@string/gaming_title"
+            android:summary="@string/gaming_title_summary"
+            android:fragment="com.colt.enigma.fragments.GamingModeSettings" />
 
         <com.colt.enigma.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
