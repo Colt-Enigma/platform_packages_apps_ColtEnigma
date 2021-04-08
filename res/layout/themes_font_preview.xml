@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2020-2021 ProjectFluid
+    
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+         http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/themes_preview_background"
+    android:gravity="center"
+    android:padding="42dp"
+    android:layout_marginTop="32dp"
+    android:layout_marginBottom="32dp">
+
+    <TextView
+        android:id="@+id/font_preview_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/preview_text"
+        android:text="ColtOS : Fonts Testing."/>
+
+    <TextView
+        android:id="@+id/font_preview_subheading"
+        android:layout_below="@id/font_preview_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:textStyle="italic"
+        android:textColor="@color/preview_text"
+        android:text="This is how font will look like"/>
+
+    <TextView
+        android:id="@+id/font_preview"
+        android:layout_below="@id/font_preview_subheading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="12sp"
+        android:lineSpacingExtra="1sp"
+        android:text="The best way to predict the future is to create it. – Abraham Lincoln, You are never too old to set another goal or to dream a new dream. – C.S.Lewis"/>
+</RelativeLayout>

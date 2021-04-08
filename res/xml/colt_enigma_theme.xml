@@ -23,8 +23,8 @@
         android:key="theme_customization_category"
         android:title="@string/theme_customization_category">
 
-       <ListPreference
-            android:layout="@layout/accents_shapes_base_preview"
+	<ListPreference
+            android:layout="@layout/themes_accent_preview"
             android:selectable="false" />
 
         <Preference
@@ -49,7 +49,7 @@
             android:persistent="false" />
 
 	<ListPreference
-            android:layout="@layout/fonts_base_preview"
+            android:layout="@layout/themes_font_preview"
             android:selectable="false" />
 
         <com.android.settings.display.FontDialogPreference
