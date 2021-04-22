@@ -24,6 +24,8 @@
     <string name="bottom_nav_about_title">AboutTeam</string>
 
     <!-- Categories -->
+    <string name="animations_title">Animations</string>
+    <string name="animations_summary">Animations options</string>
     <string name="button_title">Buttons</string>
     <string name="buttonsettings_summary">Perform custom button actions</string>
     <string name="gestures_title">Gestures</string>

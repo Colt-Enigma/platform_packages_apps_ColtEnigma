@@ -20,6 +20,14 @@
            android:key="colt_header_about"
            android:layout="@layout/colt_header_about" />
 
+        <!-- Animations -->
+        <com.colt.enigma.preference.CategoryColtPreference
+            android:key="animations_category"
+            android:title="@string/animations_title"
+            android:summary="@string/animations_summary"
+            android:fragment="com.colt.enigma.fragments.AnimationSettings"
+            android:icon="@drawable/ic_animations_background" />
+
         <!-- Notifications -->
 	<com.colt.enigma.preference.CategoryColtPreference
             android:key="notifications_category"
