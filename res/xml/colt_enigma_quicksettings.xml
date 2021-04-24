@@ -173,12 +173,12 @@
             android:defaultValue="0" />
 
         <!-- QS status bar opacity -->
-        <com.colt.enigma.preference.CustomSystemSeekBarPreference
+        <com.colt.enigma.preference.SystemSettingSeekBarPreference
             android:key="qs_sb_bg_alpha"
             android:title="@string/qs_sb_bg_alpha_title"
             android:defaultValue="255"
             android:max="255"
-            android:min="0"
+            settings:min="0"
             settings:units="" />
 
         <!-- QS panel gradient below status bar -->
@@ -189,12 +189,12 @@
             android:defaultValue="false" />
 
         <!-- QS panel opacity -->
-        <com.colt.enigma.preference.CustomSystemSeekBarPreference
+        <com.colt.enigma.preference.SystemSettingSeekBarPreference
             android:key="qs_panel_bg_alpha"
             android:title="@string/qs_panel_alpha_title"
             android:defaultValue="255"
             android:max="255"
-            android:min="0"
+            settings:min="0"
             settings:units="" />
 
     </PreferenceCategory>

@@ -1128,5 +1128,8 @@
     <string name="lockscreen_weather_pixel_style_title">Pixel style</string>
     <string name="lock_screen_weather_style_title">Show weather with Pixel style</string>
     <string name="lock_screen_weather_style_summary">Instead of using the big widget, it\'ll show next to the date</string>
+
+    <!-- Notification background opacity -->
+    <string name="notification_alpha_title">Notification background alpha</string>
     
 </resources>
