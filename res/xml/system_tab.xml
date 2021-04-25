@@ -28,13 +28,13 @@
             android:fragment="com.colt.enigma.fragments.NotificationSettings"
 	    android:summary="@string/notifications_summary" />
 
-	<!-- Colt Decorations
-	<com.colt.enigma.preference.CategoryColtPreference
-	    android:key="system_colors"
-            android:title="@string/system_colors"
-	    android:summary="@string/system_colors_summary"
-	    android:icon="@drawable/ic_themer_background"
-	    android:fragment="com.colt.enigma.fragments.Themes" /> -->
+        <!-- Colt Decorations -->
+        <com.colt.enigma.preference.CategoryColtPreference
+            android:key="ColtDecorations"
+            android:title="@string/theme_title"
+            android:summary="@string/theme_summary"
+            android:fragment="com.colt.enigma.fragments.ColtTheme"
+            android:icon="@drawable/ic_themer_background" />
 
 	<!-- Misc -->
 	<com.colt.enigma.preference.CategoryColtPreference
