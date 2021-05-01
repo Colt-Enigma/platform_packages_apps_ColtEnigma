@@ -38,6 +38,12 @@
             android:defaultValue="false" />
 
        <com.colt.enigma.preference.SystemSettingSwitchPreference
+           android:key="statusbar_icons_style"
+           android:title="@string/statusbar_icons_style"
+           android:summary="@string/statusbar_icons_style_summary"
+           android:defaultValue="true" />
+
+       <com.colt.enigma.preference.SystemSettingSwitchPreference
            android:key="notification_guts_kill_app_button"
            android:title="@string/notification_guts_kill_app_button_title"
            android:summary="@string/notification_guts_kill_app_button_summary"
