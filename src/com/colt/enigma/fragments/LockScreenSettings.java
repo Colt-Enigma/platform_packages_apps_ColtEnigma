@@ -44,6 +44,8 @@ import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.widget.LockPatternUtils;
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
+import com.colt.enigma.preference.SystemSettingSeekBarPreference;
+import com.colt.enigma.utils.Utils;
 
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
@@ -59,12 +61,14 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     private static final String FINGERPRINT_ERROR_VIB = "fingerprint_error_vib";
     private static final String FINGERPRINT_VIB = "fingerprint_success_vib";
     private static final String FOD_ICON_PICKER_CATEGORY = "fod_icon_picker_category";
+    private static final String KEY_LOCKSCREEN_BLUR = "lockscreen_blur";
 
     private SystemSettingSwitchPreference mFingerprintUnlock;
     private FingerprintManager mFingerprintManager;
     private SwitchPreference mFingerprintErrorVib;
     private SwitchPreference mFingerprintVib;
     private Preference mFODIconPicker;
+    private SystemSettingSeekBarPreference mLockscreenBlur;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -107,6 +111,11 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         } else {
             prefScreen.removePreference(mFingerprintErrorVib);
             prefScreen.removePreference(mFingerprintVib);
+        }
+
+        mLockscreenBlur = (SystemSettingSeekBarPreference) findPreference(KEY_LOCKSCREEN_BLUR);
+        if (!Utils.isBlurSupported()) {
+            prefScreen.removePreference(mLockscreenBlur);
         }
 
         mFODIconPicker = (Preference) findPreference(FOD_ICON_PICKER_CATEGORY);

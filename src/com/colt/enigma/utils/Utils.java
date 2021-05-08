@@ -17,6 +17,7 @@
 package com.colt.enigma.utils;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
@@ -36,6 +37,7 @@ import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.view.DisplayInfo;
 import android.view.Surface;
+import android.os.SystemProperties;
 import android.view.WindowManager;
 
 public final class Utils {
@@ -204,5 +206,13 @@ public final class Utils {
             // Ignore
         }
         return false;
+    }
+
+    public static boolean isBlurSupported() {
+        boolean blurSupportedSysProp = SystemProperties
+            .getBoolean("ro.surface_flinger.supports_background_blur", false);
+        boolean blurDisabledSysProp = SystemProperties
+            .getBoolean("persist.sys.sf.disable_blurs", false);
+        return blurSupportedSysProp && !blurDisabledSysProp && ActivityManager.isHighEndGfx();
     }
 }
