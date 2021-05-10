@@ -40,7 +40,7 @@ public class System extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.COLT;
+        return MetricsProto.MetricsEvent.ENIGMA;
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {

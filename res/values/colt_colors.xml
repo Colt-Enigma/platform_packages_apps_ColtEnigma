@@ -15,12 +15,8 @@
 <resources>
 
     <!-- Tab & About Colors -->
-    <color name="BottomBarBackgroundColor">@*android:color/BottomBarBackground</color>
     <color name="bottom_nav_text_icon_active">@*android:color/accent_device_default_light</color>
     <color name="bottom_nav_text_icon_inactive">#9c9c9c</color>
-
-    <!-- FOD icon picker-->
-    <color name="fod_item_background_stroke_color">#d6d6d6</color>
 
     <color name="red_bg_light">#3dcf605a</color>
     <color name="blue_bg_light">#3d2598b9</color>

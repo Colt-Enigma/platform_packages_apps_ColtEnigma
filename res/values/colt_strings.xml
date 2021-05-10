@@ -15,32 +15,8 @@
  -->
  <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Categories -->
-    <string name="colt_interface">The PandoraBox</string>
-    <string name="status_bar_icons_category_title">Icons</string>
-    <string name="various_toggles">Various Toggles</string>
-    <string name="status_bar_carrier_title">Carrier Label</string>
-
-    <string name="qs_header_title">QS Header Settings</string>
-    <string name="qs_footer_title">QS Footer Settings</string>
-    <string name="qs_misc_title">QS Misc Settings</string>
-
-    <!-- Lockscreen categories -->
-    <string name="lockscreen_shortcuts_category">Shortcuts</string>
-    <string name="lockscreen_interface_category">Interface</string>
-    <string name="lockscreen_misc_category">Miscellaneous</string>
-    <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
-    <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
-
     <!-- Colt Tabs -->
-    <string name="status_bar_tab">Statusbar</string>
-    <string name="system_tab">System</string>
-    <string name="lockscreen_tab">Lockscreen</string>
-    <string name="buttons_tab">Buttons</string>
-    <string name="about_tab">About</string>
-
-    <!-- Bottom navigation -->
-    <string name="coltos_title">ColtEnigma</string>
+    <string name="colt_title">ColtEnigma</string>
     <string name="bottom_nav_system_title">System</string>
     <string name="bottom_nav_lockscreen_title">Lockscreen</string>
     <string name="bottom_nav_statusbar_title">Statusbar</string>
@@ -49,51 +25,25 @@
 
     <!-- Categories -->
     <string name="button_title">Buttons</string>
-    <string name="gestures_title">Gestures</string>
-    <string name="lockscreen_title">Lock screen</string>
-    <string name="misc_title">Miscellaneous</string>
-    <string name="navbar_title">Navigation bar</string>
-    <string name="powermenu_title">Power menu</string>
-    <string name="quicksettings_title">Quick Settings</string>
-    <string name="recents_title">Recents apps</string>
-    <string name="statusbar_title">Status bar</string>
-    <string name="volume_title">Volume rockers</string>
-    <string name="notifications_title">Notifications</string>
-
-    <!-- Summaries -->
-    <string name="quicksettings_summary">Quick settings Customizations</string>
     <string name="buttonsettings_summary">Perform custom button actions</string>
-    <string name="lockscreen_summary">Various options for lockscreen</string>
-    <string name="statusbar_summary">Statusbar Customizations</string>
-    <string name="navbar_summary">Various options for Navbar</string>
-    <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
+    <string name="gestures_title">Gestures</string>
     <string name="gesture_summary">Gesture Customizations</string>
-    <string name="notifications_summary">Notifications and Incall settings</string>
+    <string name="lockscreen_title">LockScreen</string>
+    <string name="lockscreen_summary">Various options for lockscreen</string>
+    <string name="misc_title">Miscellaneous</string>
     <string name="misc_summary">Miscellaneous things to be checked here</string>
-    
-    <!-- Team Info -->
-    <string name="about_team_title">About ColtOS Team</string>
-    <string name="about_team_summary">Lets see who all are there :)</string>
-    <string name="colt_team_title">Meet Our ColtOS Team</string>
-    <string name="about_coltos_screen_title">About ColtOS</string>
-    <string name="about_coltos_title">So From Where ColtOS Arrived...</string>
-    <string name="coltos_about_summary">ColtOS ~ We are based on AOSP with some dependency on LOS, enriched with the useful features only from all over the Android development community. We are a small yet efficient team of working professionals and Our main moto is Quality and stability.!!</string>
+    <string name="navbar_title">Navigation Bar</string>
+    <string name="navbar_summary">Various options for Navbar</string>
+    <string name="powermenu_title">Power Menu</string>
+    <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
+    <string name="quicksettings_title">Quick Settings</string>
+    <string name="quicksettings_summary">Quick settings Customizations</string>
+    <string name="statusbar_title">StatusBar</string>
+    <string name="statusbar_summary">Statusbar Customizations</string>
+    <string name="notifications_title">Notifications</string>
+    <string name="notifications_summary">Notifications and Incall settings</string>
 
-    <!-- General strings -->
-    <string name="ok">OK</string>
-    <string name="reset">Reset</string>
-    <string name="cancel">Cancel</string>
-    <string name="save">Save</string>
-
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
-    <string name="set">Set</string>
-    <string name="color_default">Default</string>
+    <string name="recents_title">Recents apps</string>
 
     <!-- About colt -->
     <string name="colt_about_title">All About ColtOS</string>
@@ -113,4 +63,35 @@
     <string name="about_maintainer">Maintainer</string>
     <string name="colt_about_maintainer">The maintainer for your device is</string>
     <string name="colt_about_maintainer_summary" translatable="false">Feel the Enigma</string>
+
+    <!-- Sub Categories -->
+    <string name="lockscreen_shortcuts_category">LockScreen Shortcuts</string>
+    <string name="lockscreen_interface_category">LockScreen Interface</string>
+    <string name="lockscreen_misc_category">LockScreen Miscs</string>
+    <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
+    <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
+    <string name="qs_header_title">QS Header Settings</string>
+    <string name="qs_footer_title">QS Footer Settings</string>
+    <string name="qs_misc_title">QS Misc Settings</string>
+    <string name="status_bar_icons_category_title">Statusbar Icons</string>
+    <string name="status_bar_carrier_title">Carrier Label</string>
+    <string name="various_toggles">Various Toggles</string>
+    <string name="volume_title">Volume rockers</string>
+
+    <!-- General strings -->
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+
+    <!-- Color Picker -->
+    <string name="dialog_color_picker">Color Picker</string>
+    <string name="press_color_to_apply">Press on color below to apply</string>
+    <string name="arrow_right">→</string>
+    <string name="arrow_down">↓</string>
+    <string name="hex">Hex:</string>
+    <string name="hex_hint">#ff000000</string>
+    <string name="set">Set</string>
+    <string name="color_default">Default</string>
+
 </resources>
