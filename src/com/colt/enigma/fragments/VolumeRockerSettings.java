@@ -48,6 +48,6 @@ public class VolumeRockerSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.COLT;
+        return MetricsProto.MetricsEvent.ENIGMA;
     }
 }
