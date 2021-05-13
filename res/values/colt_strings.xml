@@ -88,7 +88,6 @@
     <string name="status_bar_icons_category_title">Statusbar Icons</string>
     <string name="status_bar_carrier_title">Carrier Label</string>
     <string name="various_toggles">Various Toggles</string>
-    <string name="volume_title">Volume rockers</string>
 
     <!-- General strings -->
     <string name="ok">OK</string>
