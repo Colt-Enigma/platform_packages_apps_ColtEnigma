@@ -28,4 +28,10 @@
 	    android:icon="@drawable/ic_lockscreen_general_background"
 	    android:fragment="com.colt.enigma.fragments.LockScreenSettings" />
 
+	<!-- Ambient Decor -->
+	<com.colt.enigma.preference.CategoryColtPreference
+            android:key="ambient_category"
+            android:title="@string/ambient_decor_title"
+            android:fragment="com.colt.enigma.fragments.XAmbientDecorSettings"
+            android:icon="@drawable/ic_x_animations" />
 </PreferenceScreen>

@@ -38,14 +38,15 @@
     <string name="navbar_summary">Various options for Navbar</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary">Notifications and Incall settings</string>
-    <string name="powermenu_title">Power Menu</string>
+    <string name="powermenu_title">PowerMenu</string>
     <string name="powermenu_summary">Customize elements to be displayed in power menu</string>
-    <string name="quicksettings_title">Quick Settings</string>
+    <string name="quicksettings_title">QuickSettings</string>
     <string name="quicksettings_summary">Quick settings Customizations</string>
     <string name="statusbar_title">StatusBar</string>
     <string name="statusbar_summary">Statusbar Customizations</string>
     <string name="theme_title">Colt Decorations</string>
     <string name="theme_summary">Our theming customizations</string>
+    <string name="ambient_decor_title">AmbientDecor</string>
 
     <!-- Team Info -->
     <string name="about_team_title">About ColtOS Team</string>
@@ -94,6 +95,7 @@
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
+    <string name="default_string">Default</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
