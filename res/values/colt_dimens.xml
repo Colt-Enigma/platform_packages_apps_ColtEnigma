@@ -26,5 +26,5 @@
     <dimen name="default_icon_size">24dp</dimen>
 
     <!-- Where the category icon will start (from the left) -->
-    <dimen name="owlsnest_cat_icon_image_inset">6dp</dimen>
+    <dimen name="colt_cat_icon_image_inset">6dp</dimen>
 </resources>
