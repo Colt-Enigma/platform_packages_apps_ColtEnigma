@@ -17,13 +17,13 @@
         <com.android.settingslib.widget.AdaptiveIconShapeDrawable
             android:width="@dimen/dashboard_tile_image_size"
             android:height="@dimen/dashboard_tile_image_size"
-            android:color="@color/owlsnest_notifications_general_background" />
+            android:color="@color/colt_icons_background" />
     </item>
 
     <item
         android:width="@dimen/dashboard_tile_foreground_image_size"
         android:height="@dimen/dashboard_tile_foreground_image_size"
-        android:start="@dimen/owlsnest_cat_icon_image_inset"
+        android:start="@dimen/colt_cat_icon_image_inset"
         android:top="@dimen/dashboard_tile_foreground_image_inset"
         android:drawable="@drawable/ic_notifications_general_image" />
 </layer-list>
