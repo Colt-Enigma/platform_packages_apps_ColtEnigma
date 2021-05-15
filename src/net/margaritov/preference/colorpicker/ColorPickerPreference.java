@@ -60,8 +60,7 @@ public class ColorPickerPreference extends Preference implements
     boolean mUsesDefaultButton = false;
     int mDefValue = -1;
 
-    private boolean mShowReset;
-    private boolean mShowPreview;
+    private boolean mShowLedPreview;
 
     private EditText mEditText;
 
@@ -100,8 +99,7 @@ public class ColorPickerPreference extends Preference implements
                 mUsesDefaultButton =  true;
                 mDefValue = defVal;
             }
-            mShowReset = attrs.getAttributeBooleanValue(SETTINGS_NS, "showReset", false);
-            mShowPreview = attrs.getAttributeBooleanValue(SETTINGS_NS, "showPreview", true);
+            mShowLedPreview = attrs.getAttributeBooleanValue(null, "ledPreview", false);
         }
     }
 
@@ -134,7 +132,7 @@ public class ColorPickerPreference extends Preference implements
      * @author Randall Rushing aka Bigrushdog
      */
     private void setDefaultButton() {
-        if (!mShowReset || mView == null)
+        if (mView == null)
             return;
 
         LinearLayout widgetFrameView = ((LinearLayout) mView
@@ -183,7 +181,7 @@ public class ColorPickerPreference extends Preference implements
     }
 
     private void setPreviewColor() {
-        if (!mShowPreview || mView == null)
+        if (mView == null)
             return;
 
         ImageView iView = new ImageView(getContext());
@@ -239,7 +237,7 @@ public class ColorPickerPreference extends Preference implements
     }
 
     protected void showDialog(Bundle state) {
-        mDialog = new ColorPickerDialog(getContext(), mValue);
+        mDialog = new ColorPickerDialog(getContext(), mValue, mShowLedPreview);
         mDialog.setOnColorChangedListener(this);
         if (mAlphaSliderEnabled) {
             mDialog.setAlphaSliderVisible(true);
