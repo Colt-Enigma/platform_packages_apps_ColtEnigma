@@ -1155,4 +1155,25 @@
     <string name="switch_retro">Retro</string>
     <string name="switch_oos">OxygenOS 11</string>
     <string name="switch_android12">Android 12</string>
+
+    <!-- ColtOS buttons-->
+    <string name="buttons_title">Hardware buttons</string>
+    <string name="buttons_summary">Tweak the actions of your devices physical buttons</string>
+    <string name="power_button_category">Power</string>
+    <string name="volume_category">Volume</string>
+
+    <!-- Volume Panel Plugin -->
+    <string name="volume_panel">Volume Panel Style</string>
+    <string name="volume_panel_stock">Default</string>
+    <string name="volume_panel_aosp">AOSP Expanded</string>
+    <string name="volume_panel_compact">Compact</string>
+    <string name="volume_panel_oreo">Oreo</string>
+    <string name="volume_panel_tiled">Tiled</string>
+
+    <!-- Volume Panel Plugin Values -->
+    <string name="volume_panel_stock_val" translatable="false">com.android.systemui.volume</string>
+    <string name="volume_panel_aosp_val">co.potatoproject.plugin.volume.aosp</string>
+    <string name="volume_panel_compact_val">co.potatoproject.plugin.volume.compact</string>
+    <string name="volume_panel_oreo_val">co.potatoproject.plugin.volume.oreo</string>
+    <string name="volume_panel_tiled_val">co.potatoproject.plugin.volume.tiled</string>
 </resources>
