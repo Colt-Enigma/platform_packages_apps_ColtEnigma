@@ -24,6 +24,8 @@
     <string name="bottom_nav_about_title">AboutTeam</string>
 
     <!-- Categories -->
+    <string name="ambient_decor_title">Ambient Display</string>
+    <string name="ambient_decor_summary">Ambient display customizations</string>
     <string name="animations_title">Animations</string>
     <string name="animations_summary">Animations options</string>
     <string name="button_title">Buttons</string>
