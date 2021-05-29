@@ -178,36 +178,23 @@
                 android:textSize="14sp" />
 
             <TextView
-                android:id="@+id/maintainerCat"
+                android:id="@+id/saurabhTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginStart="25dp"
-                android:text="@string/about_maintainer"
-                android:textAllCaps="true"
-                android:textColor="@color/theme_accent"
-                android:textSize="12sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/maintainerTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                android:layout_marginTop="12dp"
-                android:text="@string/colt_about_maintainer"
+                android:text="@string/colt_about_saurabh"
                 android:textAppearance="@style/TextAppearance.AppCompat.Title"
                 android:textSize="15sp" />
 
             <TextView
-                android:id="@+id/maintainerSummary"
+                android:id="@+id/saurabhSummary"
                 android:layout_width="260dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:text="@string/colt_about_maintainer_summary"
+                android:text="@string/colt_about_saurabh_summary"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textSize="14sp"
-                android:layout_marginBottom="20dp"/>
+                android:textSize="14sp" />
 
         </LinearLayout>
     </ScrollView>

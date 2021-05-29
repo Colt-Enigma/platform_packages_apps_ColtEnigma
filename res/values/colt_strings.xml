@@ -66,9 +66,8 @@
     <string name="colt_about_nitin_summary" translatable="false">Core Member and a Backbone</string>
     <string name="colt_about_mrinal" translatable="false">Mrinal Ghosh</string>
     <string name="colt_about_mrinal_summary" translatable="false">Young and Passionate Core Developer</string>
-    <string name="about_maintainer">Maintainer</string>
-    <string name="colt_about_maintainer">The maintainer for your device is</string>
-    <string name="colt_about_maintainer_summary" translatable="false">Feel the Enigma</string>
+    <string name="colt_about_saurabh" translatable="false">Saurabh</string>
+    <string name="colt_about_saurabh_summary" translatable="false">Moderator and Core Developer</string>
 
     <!-- Sub Categories -->
     <string name="lockscreen_shortcuts_category">LockScreen Shortcuts</string>
