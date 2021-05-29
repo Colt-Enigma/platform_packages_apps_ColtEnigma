@@ -389,10 +389,6 @@
     <string name="lockscreen_hide_shortcuts_title">Hide bottom shortcuts</string>
     <string name="lockscreen_hide_shortcuts_summary">Hide left-right shortcuts on secure lock screens</string>
 
-    <!-- SmartSpace -->
-    <string name="smart_space_title">SmartSpace</string>
-    <string name="smart_space_summary">Display conditional info such as weather and events on lockscreen\nRequires a SystemUI restart</string>
-
     <!-- RGB Accent Picker -->
     <string name="accent_color">Accent picker</string>
     <string name="accent_summary">System wide accent picker</string>
