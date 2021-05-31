@@ -29,6 +29,13 @@
             android:summary="@string/gaming_title_summary"
             android:fragment="com.colt.enigma.fragments.GamingModeSettings" />
 
+        <Preference
+    	    android:key="sleep_mode"
+            settings:iconSpaceReserved="false"
+	    android:title="@string/sleep_mode_title"
+            android:summary="@string/sleep_mode_title_summary"
+            android:fragment="com.colt.enigma.fragments.SleepMode" />
+
         <com.colt.enigma.preference.GlobalSettingSwitchPreference
             android:key="wake_when_plugged_or_unplugged"
 	    settings:iconSpaceReserved="false"
