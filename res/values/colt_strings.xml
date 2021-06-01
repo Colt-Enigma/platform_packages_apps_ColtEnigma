@@ -36,8 +36,8 @@
     <string name="lockscreen_summary">Various options for lockscreen</string>
     <string name="misc_title">Miscellaneous</string>
     <string name="misc_summary">Miscellaneous things to be checked here</string>
-    <string name="navbar_title">Navigation Bar</string>
-    <string name="navbar_summary">Various options for Navbar</string>
+    <string name="navigationbar_title">Navigation Bar</string>
+    <string name="navigationbar_summary">Various options for Navbar</string>
     <string name="notifications_title">Notifications</string>
     <string name="notifications_summary">Notifications and Incall settings</string>
     <string name="powermenu_title">Power Menu</string>
@@ -1144,4 +1144,8 @@
     <!-- Power menu background opacity -->
     <string name="power_menu_alpha_title">Power menu opacity</string>
     
+    <!-- Navbar Visibility-->
+    <string name="navbar_visibility">Navigation bar</string>
+    <string name="navbar_summary">Toggle navigation bar on-off</string>
+
 </resources>

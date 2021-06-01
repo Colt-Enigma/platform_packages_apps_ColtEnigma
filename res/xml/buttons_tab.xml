@@ -31,8 +31,8 @@
 	<!-- Navigation Bar -->
 	<com.colt.enigma.preference.CategoryColtPreference
             android:key="navigationbar_category"
-            android:title="@string/navbar_title" 
-	    android:summary="@string/navbar_summary"
+            android:title="@string/navigationbar_title" 
+	    android:summary="@string/navigationbar_summary"
 	    android:icon="@drawable/ic_navigation_background"
             android:fragment="com.colt.enigma.fragments.NavbarSettings" />
 
