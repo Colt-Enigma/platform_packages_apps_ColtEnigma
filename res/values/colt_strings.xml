@@ -106,10 +106,6 @@
     <string name="navbar_tuner_title">Navigation buttons</string>
     <string name="navbar_tuner_summary">Navigation buttons Options</string>
 
-    <!-- Lockscreen icons -->
-    <string name="lockscreen_tuner_title">Lockscreen shortcuts</string>
-    <string name="lockscreen_tuner_summary">Lockscreen shortcuts customization</string>
-
     <!-- Lock screen info category -->
     <string name="lock_screen_info_category_title">Lock screen info</string>
 
@@ -383,10 +379,6 @@
 
     <!-- Lockscreen elements category -->
     <string name="lock_screen_elements_category_title">Lock screen elements</string>
-
-    <!-- Hide Lockscreen shortcuts on secure Lockscreen -->
-    <string name="lockscreen_hide_shortcuts_title">Hide bottom shortcuts</string>
-    <string name="lockscreen_hide_shortcuts_summary">Hide left-right shortcuts on secure lock screens</string>
 
     <!-- RGB Accent Picker -->
     <string name="accent_color">Accent picker</string>
