@@ -24,9 +24,12 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.ContentResolver;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.res.Resources;
 import android.content.om.IOverlayManager;
 import android.content.om.OverlayInfo;
@@ -61,6 +64,7 @@ import com.android.settingslib.core.lifecycle.Lifecycle;
 import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.colt.enigma.display.QsTileStylePreferenceController;
 
+import com.android.settings.display.FontPickerPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 import android.provider.SearchIndexableResource;
@@ -86,6 +90,19 @@ public class ColtTheme extends DashboardFragment implements
     private ColorPickerPreference mThemeColor;
     private ColorPickerPreference mGradientColor;
 
+    private IntentFilter mIntentFilter;
+    private static FontPickerPreferenceController mFontPickerPreference;
+
+    private BroadcastReceiver mIntentReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String action = intent.getAction();
+            if (action.equals("com.android.server.ACTION_FONT_CHANGED")) {
+                mFontPickerPreference.stopProgress();
+            }
+        }
+    };
+
     @Override
     protected String getLogTag() {
         return TAG;
@@ -102,6 +119,10 @@ public class ColtTheme extends DashboardFragment implements
 
         mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
+
+        mIntentFilter = new IntentFilter();
+        mIntentFilter.addAction("com.android.server.ACTION_FONT_CHANGED");
+
         setupAccentPref();
         setupGradientPref();
         setHasOptionsMenu(true);
@@ -124,8 +145,7 @@ public class ColtTheme extends DashboardFragment implements
             Context context, Lifecycle lifecycle, Fragment fragment) {
 
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.font"));
+        controllers.add(mFontPickerPreference = new FontPickerPreferenceController(context, lifecycle));
         controllers.add(new OverlayCategoryPreferenceController(context,
                 "android.theme.customization.adaptive_icon_shape"));
         controllers.add(new OverlayCategoryPreferenceController(context,
@@ -224,6 +244,16 @@ public class ColtTheme extends DashboardFragment implements
     @Override
     public void onResume() {
         super.onResume();
+        final Context context = getActivity();
+        context.registerReceiver(mIntentReceiver, mIntentFilter);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        final Context context = getActivity();
+        context.unregisterReceiver(mIntentReceiver);
+        mFontPickerPreference.stopProgress();
     }
 
     @Override
