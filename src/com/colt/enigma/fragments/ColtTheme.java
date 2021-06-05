@@ -48,6 +48,7 @@ import com.android.settings.R;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuInflater;
+import android.text.TextUtils;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -77,6 +78,7 @@ public class ColtTheme extends DashboardFragment implements
     private static final String GRADIENT_COLOR = "gradient_color";
     private static final String GRADIENT_COLOR_PROP = "persist.sys.theme.gradientcolor";
     private static final int MENU_RESET = Menu.FIRST;
+    private static final String PREF_KEY_CUTOUT = "cutout_settings";
 
     static final int DEFAULT = 0xff1a73e8;
 
@@ -103,6 +105,14 @@ public class ColtTheme extends DashboardFragment implements
         setupAccentPref();
         setupGradientPref();
         setHasOptionsMenu(true);
+
+        Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
+
+        String hasDisplayCutout = getResources().getString(com.android.internal.R.string.config_mainBuiltInDisplayCutout);
+
+        if (TextUtils.isEmpty(hasDisplayCutout)) {
+            getPreferenceScreen().removePreference(mCutoutPref);
+        }
     }
 
     @Override
