@@ -17,7 +17,13 @@
 
     <PreferenceCategory
 
-        android:title="@string/quick_settings_general_category_title">
+        android:title="@string/general_category_title">
+
+        <Preference
+            android:key="custom_header"
+            android:fragment="com.colt.enigma.fragments.QsCustomHeaderSettings"
+            android:title="@string/custom_header_title"
+            android:summary="@string/custom_header_summary" />
 
         <ListPreference
             android:key="smart_pulldown"
@@ -165,13 +171,6 @@
             android:entryValues="@array/qs_datausage_values"
             android:summary="%s"
             android:defaultValue="0" />
-
-        <!-- Custom QS header image -->
-        <Preference
-            android:key="custom_header"
-            android:fragment="com.colt.enigma.fragments.QsCustomHeaderSettings"
-            android:title="@string/custom_header_title"
-            android:summary="@string/custom_header_summary" />
 
     </PreferenceCategory>
 

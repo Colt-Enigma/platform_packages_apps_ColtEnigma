@@ -69,19 +69,6 @@
     <string name="colt_about_saurabh" translatable="false">Saurabh</string>
     <string name="colt_about_saurabh_summary" translatable="false">Moderator and Core Developer</string>
 
-    <!-- Sub Categories -->
-    <string name="lockscreen_shortcuts_category">LockScreen Shortcuts</string>
-    <string name="lockscreen_interface_category">LockScreen Interface</string>
-    <string name="lockscreen_misc_category">LockScreen Miscs</string>
-    <string name="lockscreen_bottom_decoration">LockScreen Bottom Decorations</string>
-    <string name="lockscreen_weather_category">LockScreen Weather Styling</string>
-    <string name="qs_header_title">QS Header Settings</string>
-    <string name="qs_footer_title">QS Footer Settings</string>
-    <string name="qs_misc_title">QS Misc Settings</string>
-    <string name="status_bar_icons_category_title">Statusbar Icons</string>
-    <string name="status_bar_carrier_title">Carrier Label</string>
-    <string name="various_toggles">Various Toggles</string>
-
     <!-- General strings -->
     <string name="cancel">Cancel</string>
     <string name="default_string">Default</string>
@@ -99,23 +86,19 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <string name="general_category_title">General</string>
+
     <!-- Statusbar Tuner -->
-    <string name="statusbar_items_title">Statusbar items</string>
+    <string name="statusbar_items_title">Icons</string>
     <string name="statusbar_items_summary">Various Statubar icons</string>
 
     <!-- Navbar tuner -->
     <string name="navbar_tuner_title">Navigation buttons</string>
     <string name="navbar_tuner_summary">Navigation buttons Options</string>
 
-    <!-- Lock screen info category -->
-    <string name="lock_screen_info_category_title">Lock screen info</string>
-
     <!-- Lockscreen charging info -->
     <string name="lockscreen_battery_info_title">Charging info</string>
     <string name="lockscreen_battery_info_summary">Show charging current, voltage, wattage and battery temperature on lock screen while charging</string>
-
-    <!-- QuickSettings general category -->
-    <string name="quick_settings_general_category_title">General</string>
 
     <!-- QuickSettings haptic feedback -->
     <string name="quick_settings_vibrate_title">Vibrate on touch</string>
@@ -378,9 +361,6 @@
     <string name="power_menu_animation_translucent_top">Translucent (top)</string>
     <string name="power_menu_animation_translucent_bottom">Translucent (bottom)</string>
 
-    <!-- Lockscreen elements category -->
-    <string name="lock_screen_elements_category_title">Lock screen elements</string>
-
     <!-- RGB Accent Picker -->
     <string name="accent_color">Accent picker</string>
     <string name="accent_summary">System wide accent picker</string>
@@ -543,9 +523,6 @@
     <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot or lockdown</string>
     <string name="fp_encrypt_warning">Unlock device with fingerprint after reboot without PIN/Password/Pattern\nNote: You are encrypted so you can\'t use this feature.</string>
 
-    <!-- Notifications general category -->
-    <string name="notifications_general_category_title">General</string>
-
     <!-- Notification count -->
     <string name="status_bar_notif_count_title">Show notifications count</string>
     <string name="status_bar_notif_count_summary">Display the number of pending notifications</string>
@@ -563,7 +540,7 @@
     <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
 
     <!-- Dev options category -->
-    <string name="dev_options_category_title">Dev options</string>
+    <string name="advance_category_title">Advance settings</string>
 
     <!-- Wakelock blocker -->
     <string name="wakelock_blocker_title">Wakelock Blocker</string>
@@ -788,7 +765,7 @@
     <string name="fod_night_light_summary">Disable night light on lockscreen if FOD is active. Disabling this option might affect your fingerprint accuracy with night light on.</string>
 
     <!-- Battery Styles -->
-    <string name="battery_percent_title">Statusbar battery indicator</string>
+    <string name="battery_percent_title">Battery indicator</string>
     <string name="battery_percent_summary">Configure icon and text styles for the statusbar battery indicator</string>
     <string name="status_bar_battery_style_title">Battery style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
