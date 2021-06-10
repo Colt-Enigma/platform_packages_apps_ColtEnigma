@@ -20,6 +20,8 @@ package com.colt.enigma.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import static android.os.UserHandle.USER_SYSTEM;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -65,6 +67,9 @@ import net.margaritov.preference.colorpicker.ColorPickerPreference;
 import com.colt.enigma.display.QsTileStylePreferenceController;
 import com.colt.enigma.display.SwitchStylePreferenceController;
 
+import com.android.internal.util.colt.ThemesUtils;
+import com.android.internal.util.colt.ColtUtils;
+
 import com.android.settings.display.FontPickerPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
@@ -78,6 +83,8 @@ public class ColtTheme extends DashboardFragment implements
 
     private static final String TAG = "ColtDecorations";
 
+
+    private static final String BRIGHTNESS_SLIDER_STYLE = "brightness_slider_style";
     private static final String ACCENT_COLOR = "accent_color";
     private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
     private static final String GRADIENT_COLOR = "gradient_color";
@@ -88,6 +95,7 @@ public class ColtTheme extends DashboardFragment implements
     static final int DEFAULT = 0xff1a73e8;
 
     private IOverlayManager mOverlayService;
+    private ListPreference mBrightnessSliderStyle;
     private ColorPickerPreference mThemeColor;
     private ColorPickerPreference mGradientColor;
 
@@ -126,6 +134,7 @@ public class ColtTheme extends DashboardFragment implements
 
         setupAccentPref();
         setupGradientPref();
+        getBrightnessSliderPref();
         setHasOptionsMenu(true);
 
         Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
@@ -178,6 +187,54 @@ public class ColtTheme extends DashboardFragment implements
                  mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
              } catch (RemoteException ignored) {
              }
+        } else if (preference == mBrightnessSliderStyle) {
+            String brightness_style = (String) newValue;
+            final Context context = getContext();
+            switch (brightness_style) {
+                case "1":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                   break;
+                case "2":
+                    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                   break;
+                case "3":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                   break;
+                case "4":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                   break;
+                case "5":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                   break;
+                case "6":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                   break;
+            }
+            return true;
         }
         return true;
     }
@@ -200,6 +257,38 @@ public class ColtTheme extends DashboardFragment implements
                 : Color.parseColor("#" + colorVal);
         mGradientColor.setNewPreviewColor(color);
         mGradientColor.setOnPreferenceChangeListener(this);
+    }
+
+    private void getBrightnessSliderPref() {
+        mBrightnessSliderStyle = (ListPreference) findPreference(BRIGHTNESS_SLIDER_STYLE);
+        mBrightnessSliderStyle.setOnPreferenceChangeListener(this);
+        if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.memestroke")) {
+            mBrightnessSliderStyle.setValue("6");
+        } else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.memeroundstroke")) {
+            mBrightnessSliderStyle.setValue("5");
+        } else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.memeround")) {
+            mBrightnessSliderStyle.setValue("4");
+        } else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.mememini")) {
+            mBrightnessSliderStyle.setValue("3");
+        } else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.daniel")) {
+            mBrightnessSliderStyle.setValue("2");
+        } else {
+            mBrightnessSliderStyle.setValue("1");
+        }
+    }
+
+    private void handleOverlays(Boolean state, Context context, String[] overlays) {
+        if (context == null) {
+            return;
+        }
+        for (int i = 0; i < overlays.length; i++) {
+            String xui = overlays[i];
+            try {
+                mOverlayService.setEnabled(xui, state, USER_SYSTEM);
+            } catch (RemoteException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     @Override
