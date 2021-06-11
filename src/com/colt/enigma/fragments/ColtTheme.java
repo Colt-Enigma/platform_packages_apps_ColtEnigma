@@ -85,6 +85,7 @@ public class ColtTheme extends DashboardFragment implements
 
 
     private static final String BRIGHTNESS_SLIDER_STYLE = "brightness_slider_style";
+    private static final String SYSTEM_SLIDER_STYLE = "system_slider_style";
     private static final String ACCENT_COLOR = "accent_color";
     private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
     private static final String GRADIENT_COLOR = "gradient_color";
@@ -96,6 +97,7 @@ public class ColtTheme extends DashboardFragment implements
 
     private IOverlayManager mOverlayService;
     private ListPreference mBrightnessSliderStyle;
+    private ListPreference mSystemSliderStyle;
     private ColorPickerPreference mThemeColor;
     private ColorPickerPreference mGradientColor;
 
@@ -135,6 +137,7 @@ public class ColtTheme extends DashboardFragment implements
         setupAccentPref();
         setupGradientPref();
         getBrightnessSliderPref();
+        setSystemSliderPref();
         setHasOptionsMenu(true);
 
         Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
@@ -235,8 +238,56 @@ public class ColtTheme extends DashboardFragment implements
                    break;
             }
             return true;
+        } else if (preference == mSystemSliderStyle) {
+            String slider_style = (String) newValue;
+            final Context context = getContext();
+            switch (slider_style) {
+                case "1":
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
+                   break;
+                case "2":
+                    handleOverlays(true, context, ThemesUtils.SYSTEM_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
+                   break;
+                case "3":
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_DANIEL);
+                    handleOverlays(true, context, ThemesUtils.SYSTEM_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
+                   break;
+                case "4":
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEMINII);
+                    handleOverlays(true, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
+                   break;
+                case "5":
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUND);
+                    handleOverlays(true, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
+                   break;
+                case "6":
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.SYSTEM_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(true, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
+                   break;
+            }
+            return true;
         }
-        return true;
+        return false;
     }
 
     private void setupAccentPref() {
@@ -274,6 +325,24 @@ public class ColtTheme extends DashboardFragment implements
             mBrightnessSliderStyle.setValue("2");
         } else {
             mBrightnessSliderStyle.setValue("1");
+        }
+    }
+
+    private void setSystemSliderPref() {
+        mSystemSliderStyle = (ListPreference) findPreference(SYSTEM_SLIDER_STYLE);
+        mSystemSliderStyle.setOnPreferenceChangeListener(this);
+        if (ColtUtils.isThemeEnabled("com.android.system.slider.memestroke")) {
+            mSystemSliderStyle.setValue("6");
+        } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memeroundstroke")) {
+            mSystemSliderStyle.setValue("5");
+        } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memeround")) {
+            mSystemSliderStyle.setValue("4");
+        } else if (ColtUtils.isThemeEnabled("com.android.system.slider.mememini")) {
+            mSystemSliderStyle.setValue("3");
+        } else if (ColtUtils.isThemeEnabled("com.android.system.slider.daniel")) {
+            mSystemSliderStyle.setValue("2");
+        } else {
+            mSystemSliderStyle.setValue("1");
         }
     }
 
