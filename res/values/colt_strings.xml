@@ -590,6 +590,7 @@
     <string name="theming_settings_dashboard_icons_accent">Accent background / Transparent foreground</string>
     <string name="theming_settings_dashboard_icons_plain">Transparent background / Plain foreground</string>
     <string name="theming_settings_dashboard_icons_plain_accent">Transparent background / Accent foreground</string>
+    <string name="theming_settings_dashboard_icons_summary">Change the look of Settings Dashboard icons</string>
 
     <!-- QS tile styles -->
     <string name="qs_tile_style_title">QS tile style</string>
