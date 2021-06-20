@@ -63,6 +63,10 @@
             android:key="android.theme.customization.icon_pack.android"
             android:title="@string/theme_customization_sysui_icon_title"/>
 
+	<ListPreference
+            android:layout="@layout/themes_lock_clock_preview"
+            android:selectable="false" />
+
         <Preference
             android:key="clock_style"
             android:title="@string/clock_style_title"

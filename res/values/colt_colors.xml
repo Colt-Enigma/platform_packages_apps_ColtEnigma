@@ -66,4 +66,12 @@
     <!-- FOD icon picker-->
     <color name="fod_item_background_stroke_color">#d6d6d6</color>
 
+    <color name="themes_preview_background">#F5F5F5</color>
+    <color name="themes_preview_card">#FFFFFF</color>
+    <color name="preview_text">#000000</color>
+    <color name="themes_preview_holder">#F3F3F3</color>
+    <color name="preview_accent">?android:attr/colorAccent</color>
+
+    <color name="colt_preview_icon_color">#000000</color>
+
 </resources>
