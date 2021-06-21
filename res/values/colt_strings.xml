@@ -1235,4 +1235,15 @@
     <string name="system_slider_style_memeroundstroke">Meme round stroke</string>
     <string name="system_slider_style_memestroke">Meme stroke</string>
 
+    <!-- Wallpaper based accent -->
+    <string name="use_wall_accent_string">Wallpaper based accent</string>
+    <string name="use_wall_accent_summary">(BETA) Auto sets an accent color based on your wallpaper</string>
+
+    <!-- Auto Accent Picker -->
+    <string name="auto_accent_picker_title">Accent generation algorithm</string>
+    <string name="auto_accent_picker_vibrant">Vibrant</string>
+    <string name="auto_accent_picker_vibrant_light">Vibrant Light</string>
+    <string name="auto_accent_picker_dominant">Dominant</string>
+    <string name="auto_accent_picker_dominant_bright">Dominant Bright</string>
+    <string name="auto_accent_picker_avg">Average</string>
 </resources>
