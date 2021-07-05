@@ -881,6 +881,29 @@
         <item>4</item>
     </string-array>
 
+    <!--  Volume Panel  -->
+    <string-array name="volume_panel_entries">
+        <item>@string/volume_panel_stock</item>
+        <item>@string/volume_panel_aosp</item>
+        <item>@string/volume_panel_compact</item>
+        <item>@string/volume_panel_oreo</item>
+        <item>@string/volume_panel_tiled</item>
+        <item>@string/volume_panel_miui</item>
+        <item>@string/volume_panel_oos</item>
+        <item>@string/volume_panel_p404</item>
+    </string-array>
+
+    <string-array name="volume_panel_values" translatable="false">
+        <item>@string/volume_panel_stock_val</item>
+        <item>@string/volume_panel_aosp_val</item>
+        <item>@string/volume_panel_compact_val</item>
+        <item>@string/volume_panel_oreo_val</item>
+        <item>@string/volume_panel_tiled_val</item>
+        <item>@string/volume_panel_miui_val</item>
+        <item>@string/volume_panel_oos_val</item>
+        <item>@string/volume_panel_p404_val</item>
+    </string-array>
+
     <string-array name="display_cutout_style_entries" translatable="false">
         <item>@string/display_cutout_style_normal</item>
         <item>@string/display_cutout_style_immerse</item>
@@ -958,27 +981,6 @@
         <item>4</item>
         <item>5</item>
 	<item>6</item>
-    </string-array>
-
-    <!--  Volume Panel  -->
-    <string-array name="volume_panel_entries">
-        <item>@string/volume_panel_stock</item>
-        <item>@string/volume_panel_aosp</item>
-        <item>@string/volume_panel_compact</item>
-        <item>@string/volume_panel_oreo</item>
-        <item>@string/volume_panel_tiled</item>
-        <item>@string/volume_panel_miui</item>
-	<item>@string/volume_panel_oos</item>
-    </string-array>
-
-    <string-array name="volume_panel_values" translatable="false">
-        <item>@string/volume_panel_stock_val</item>
-        <item>@string/volume_panel_aosp_val</item>
-        <item>@string/volume_panel_compact_val</item>
-        <item>@string/volume_panel_oreo_val</item>
-        <item>@string/volume_panel_tiled_val</item>
-        <item>@string/volume_panel_miui_val</item>
-	<item>@string/volume_panel_oos_val</item>
     </string-array>
 
 </resources>
