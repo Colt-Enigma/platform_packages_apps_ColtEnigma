@@ -229,6 +229,7 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
                    break;
                 case "2":
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -236,6 +237,7 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
                    break;
                 case "3":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -243,6 +245,7 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
                    break;
                 case "4":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -250,6 +253,7 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
                    break;
                 case "5":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -257,6 +261,7 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
                    break;
                 case "6":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -264,6 +269,15 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+                   break;
+		case "7":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+		    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
                    break;
             }
             return true;
@@ -364,7 +378,9 @@ public class ColtTheme extends DashboardFragment implements
     private void setSystemSliderPref() {
         mSystemSliderStyle = (ListPreference) findPreference(SYSTEM_SLIDER_STYLE);
         mSystemSliderStyle.setOnPreferenceChangeListener(this);
-        if (ColtUtils.isThemeEnabled("com.android.system.slider.memestroke")) {
+	if (ColtUtils.isThemeEnabled("com.android.system.slider.a12")) {
+            mSystemSliderStyle.setValue("7");
+        } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memestroke")) {
             mSystemSliderStyle.setValue("6");
         } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memeroundstroke")) {
             mSystemSliderStyle.setValue("5");

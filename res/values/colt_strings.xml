@@ -1229,6 +1229,7 @@
     <string name="brightness_slider_style_memeround">Meme round</string>
     <string name="brightness_slider_style_memeroundstroke">Meme round stroke</string>
     <string name="brightness_slider_style_memestroke">Meme stroke</string>
+    <string name="brightness_slider_style_a12">A12 style</string>
 
     <!-- System-wide Slider Styles -->
     <string name="system_slider_style_title">System Slider styles</string>

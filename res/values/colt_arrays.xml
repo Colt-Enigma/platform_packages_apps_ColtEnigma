@@ -1050,6 +1050,7 @@
         <item>@string/brightness_slider_style_memeround</item>
         <item>@string/brightness_slider_style_memeroundstroke</item>
         <item>@string/brightness_slider_style_memestroke</item>
+	<item>@string/brightness_slider_style_a12</item>
     </string-array>
 
     <string-array name="brightness_slider_style_selector_values" translatable="false">
@@ -1059,6 +1060,7 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+	<item>7</item>
     </string-array>
 
     <!-- System-wide Sliders Styles -->
