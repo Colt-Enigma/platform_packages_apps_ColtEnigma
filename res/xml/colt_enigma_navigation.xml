@@ -16,6 +16,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/navigationbar_title">
 
+    <Preference
+        android:key="navbar_header"
+        android:layout="@layout/navbar_header" />
+
     <PreferenceCategory
 
         android:title="@string/nav_bar_category_title">

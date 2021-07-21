@@ -15,6 +15,10 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="misc_header"
+        android:layout="@layout/misc_header" />
+
     <PreferenceCategory
 
         android:title="@string/general_category_title">

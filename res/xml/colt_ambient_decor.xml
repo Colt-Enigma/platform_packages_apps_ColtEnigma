@@ -16,6 +16,10 @@
     android:title="@string/ambient_decor_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <Preference
+        android:key="ambient_header"
+        android:layout="@layout/ambient_header" />
+
     <PreferenceCategory
 
         android:title="@string/general_category_title">

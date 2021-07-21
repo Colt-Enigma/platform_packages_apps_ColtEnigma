@@ -18,6 +18,10 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/animations_title" >
 
+    <Preference
+        android:key="animation_header"
+        android:layout="@layout/animation_header" />
+
     <PreferenceCategory
 
         android:title="@string/general_category_title">
