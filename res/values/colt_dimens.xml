@@ -27,4 +27,13 @@
 
     <!-- Where the category icon will start (from the left) -->
     <dimen name="owlsnest_cat_icon_image_inset">6dp</dimen>
+
+    <!-- Cardview Preference -->
+    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_corner_radius">15dp</dimen>
+    <dimen name="card_margin_top">6dp</dimen>
+    <dimen name="card_margin_bottom">30dp</dimen>
+    <dimen name="card_margin_right">20dp</dimen>
+    <dimen name="card_margin_left">20dp</dimen>
+    <dimen name="card_stroke">1.5dp</dimen>
 </resources>
