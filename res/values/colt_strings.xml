@@ -1175,7 +1175,7 @@
     <string name="volume_panel_oreo">Oreo</string>
     <string name="volume_panel_tiled">Tiled</string>
     <string name="volume_panel_miui">MIUI Compact</string>
-    <string name="volume_panel_oos">OOS</string>
+    <string name="volume_panel_nez">Nezuko</string>
     <string name="volume_panel_p404">P404</string>
     <string name="volume_panel_ssos">ShapeShift</string>
 
@@ -1185,7 +1185,7 @@
     <string name="volume_panel_oreo_val">co.potatoproject.plugin.volume.oreo</string>
     <string name="volume_panel_tiled_val">co.potatoproject.plugin.volume.tiled</string>
     <string name="volume_panel_miui_val" translatable="false">co.potatoproject.plugin.volume.miui</string>
-    <string name="volume_panel_oos_val" translatable="false">co.potatoproject.plugin.volume.oos</string>
+    <string name="volume_panel_nez_val" translatable="false">co.potatoproject.plugin.volume.nez</string>
     <string name="volume_panel_p404_val" translatable="false">co.potatoproject.plugin.volume.p404</string>
     <string name="volume_panel_ssos_val" translatable="false">co.potatoproject.plugin.volume.ssos</string>
 
