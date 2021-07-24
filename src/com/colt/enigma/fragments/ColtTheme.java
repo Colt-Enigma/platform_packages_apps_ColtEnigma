@@ -83,7 +83,7 @@ public class ColtTheme extends DashboardFragment implements
 
     private static final String TAG = "ColtDecorations";
 
-
+    private static final String ACCENT_PRESET = "accent_preset";
     private static final String BRIGHTNESS_SLIDER_STYLE = "brightness_slider_style";
     private static final String SYSTEM_SLIDER_STYLE = "system_slider_style";
     private static final String ACCENT_COLOR = "accent_color";
@@ -95,6 +95,7 @@ public class ColtTheme extends DashboardFragment implements
 
     static final int DEFAULT = 0xff1a73e8;
 
+    private ListPreference mAccentPreset;
     private IOverlayManager mOverlayService;
     private ListPreference mBrightnessSliderStyle;
     private ListPreference mSystemSliderStyle;
@@ -134,7 +135,23 @@ public class ColtTheme extends DashboardFragment implements
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction("com.android.server.ACTION_FONT_CHANGED");
 
-        setupAccentPref();
+	mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
+        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
+        try {
+            int color = "-1".equals(colorVal)
+                    ? Color.WHITE
+                    : Color.parseColor("#" + colorVal);
+            mThemeColor.setNewPreviewColor(color);
+        }
+        catch (Exception e) {
+            mThemeColor.setNewPreviewColor(Color.WHITE);
+        }
+        mThemeColor.setOnPreferenceChangeListener(this);
+
+        mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
+        mAccentPreset.setOnPreferenceChangeListener(this);
+        checkColorPreset(colorVal);
+
         setupGradientPref();
         getBrightnessSliderPref();
         setSystemSliderPref();
@@ -174,6 +191,18 @@ public class ColtTheme extends DashboardFragment implements
             int color = (Integer) newValue;
             String hexColor = String.format("%08X", (0xFFFFFFFF & color));
             SystemProperties.set(ACCENT_COLOR_PROP, hexColor);
+	    checkColorPreset(hexColor);
+            try {
+                 mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+            } catch (RemoteException ignored) {
+            }
+        } else if (preference == mAccentPreset) {
+            String value = (String) newValue;
+            int index = mAccentPreset.findIndexOfValue(value);
+            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
+            SystemProperties.set(ACCENT_COLOR_PROP, value);
             try {
                  mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
                  mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
@@ -290,14 +319,18 @@ public class ColtTheme extends DashboardFragment implements
         return false;
     }
 
-    private void setupAccentPref() {
-        mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
-        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
-        int color = "-1".equals(colorVal)
-                ? DEFAULT
-                : Color.parseColor("#" + colorVal);
-        mThemeColor.setNewPreviewColor(color);
-        mThemeColor.setOnPreferenceChangeListener(this);
+   private void checkColorPreset(String colorValue) {
+        List<String> colorPresets = Arrays.asList(
+                getResources().getStringArray(R.array.accent_presets_values));
+        if (colorPresets.contains(colorValue)) {
+            mAccentPreset.setValue(colorValue);
+            int index = mAccentPreset.findIndexOfValue(colorValue);
+            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
+        }
+        else {
+            mAccentPreset.setSummary(
+                    getResources().getString(R.string.custom_string));
+        }
     }
 
     private void setupGradientPref() {

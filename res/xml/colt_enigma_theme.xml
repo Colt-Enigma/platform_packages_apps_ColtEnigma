@@ -74,6 +74,13 @@
             android:defaultValue="0"
             android:entryValues="@array/auto_accent_picker_values" />
 
+	<ListPreference
+            android:key="accent_preset"
+            android:title="@string/accent_preset_title"
+            android:persistent="false"
+            android:entries="@array/accent_presets_entries"
+            android:entryValues="@array/accent_presets_values" />  
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="gradient_color"
             android:title="@string/gradient_color"
