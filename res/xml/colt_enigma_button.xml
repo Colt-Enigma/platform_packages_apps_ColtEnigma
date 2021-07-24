@@ -50,6 +50,7 @@
 	<com.colt.enigma.preference.SystemSettingListPreference
             android:key="systemui_plugin_volume"
             android:title="@string/volume_panel"
+	    android:summary="Checkout different volume panel styles"
             android:entries="@array/volume_panel_entries"
             android:entryValues="@array/volume_panel_values"
 	    android:defaultValue="@string/volume_panel_stock_val" />
