@@ -280,7 +280,7 @@ public class GvisualSettings extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.COLT;
+        return MetricsEvent.ENIGMA;
     }
 
     /**
