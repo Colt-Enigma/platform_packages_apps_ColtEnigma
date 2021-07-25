@@ -52,6 +52,7 @@ import com.android.settingslib.search.SearchIndexable;
 import com.android.settings.Utils;
 
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
+import com.colt.enigma.preference.CustomSeekBarPreference;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -74,6 +75,8 @@ public class StatusbarClockDateSettings extends SettingsPreferenceFragment
     private static final int CUSTOM_CLOCK_DATE_FORMAT_INDEX = 18;
     private static final String STATUS_BAR_CLOCK_DATE_POSITION = "statusbar_clock_date_position";
 
+    private static final String STATUS_BAR_CLOCK_SIZE  = "status_bar_clock_size";
+    private static final String QS_HEADER_CLOCK_SIZE  = "qs_header_clock_size";
     private SystemSettingSwitchPreference mStatusBarClockShow;
     private SystemSettingSwitchPreference mStatusBarSecondsShow;
     private ListPreference mStatusBarClock;
@@ -82,6 +85,8 @@ public class StatusbarClockDateSettings extends SettingsPreferenceFragment
     private ListPreference mClockDateStyle;
     private ListPreference mClockDateFormat;
     private ListPreference mClockDatePosition;
+    private CustomSeekBarPreference mClockSize;
+    private CustomSeekBarPreference mQsClockSize;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -165,6 +170,18 @@ public class StatusbarClockDateSettings extends SettingsPreferenceFragment
         mClockDatePosition.setValue(String.valueOf(clockDatePosition));
         mClockDatePosition.setSummary(mClockDatePosition.getEntry());
         mClockDatePosition.setOnPreferenceChangeListener(this);
+
+	mClockSize = (CustomSeekBarPreference) findPreference(STATUS_BAR_CLOCK_SIZE);
+        int clockSize = Settings.System.getInt(resolver,
+                Settings.System.STATUS_BAR_CLOCK_SIZE, 14);
+        mClockSize.setValue(clockSize / 1);
+        mClockSize.setOnPreferenceChangeListener(this);
+
+	mQsClockSize = (CustomSeekBarPreference) findPreference(QS_HEADER_CLOCK_SIZE);
+        int qsClockSize = Settings.System.getInt(resolver,
+                Settings.System.QS_HEADER_CLOCK_SIZE, 14);
+                mQsClockSize.setValue(qsClockSize / 1);
+        mQsClockSize.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -280,7 +297,17 @@ public class StatusbarClockDateSettings extends SettingsPreferenceFragment
             mClockDatePosition.setSummary(mClockDatePosition.getEntries()[index]);
             parseClockDateFormats();
             return true;
-      }
+	 } else if (preference == mClockSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.STATUS_BAR_CLOCK_SIZE, width);
+            return true;
+         } else if (preference == mQsClockSize) {
+            int width = ((Integer)newValue).intValue();
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.QS_HEADER_CLOCK_SIZE, width);
+            return true;
+         }
       return false;
     }
 
