@@ -38,6 +38,29 @@
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             settings:controller="com.android.settings.display.DarkUIPreferenceController" />
 
+	<com.colt.enigma.preference.SecureSettingSwitchPreference
+            android:key="monet_engine"
+            android:title="@string/monet_title"
+            android:summary="@string/monet_summary"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SecureSettingListPreference
+            android:key="monet_palette"
+            android:title="@string/monet_pallete_title"
+            android:summary="@string/monet_pallete_summary"
+            android:entries="@array/monet_color_mode_entries"
+            android:entryValues="@array/monet_color_mode_values"
+            android:defaultValue="0"/>
+
+        <com.colt.enigma.preference.SecureSettingSeekBarPreference
+            android:key="monet_color_gen"
+            android:title="@string/monet_accuracy"
+            android:summary="@string/monet_accuracy_summary"
+            android:max="100"
+            settings:min="1"
+            android:defaultValue="16"
+            settings:interval="1"/>
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="accent_color"
             android:title="@string/accent_color"
