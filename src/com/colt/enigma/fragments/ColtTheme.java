@@ -234,6 +234,8 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
                 case "2":
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -242,6 +244,8 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
                 case "3":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -250,6 +254,8 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
                 case "4":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -258,6 +264,8 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
                 case "5":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -266,6 +274,8 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
                 case "6":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -274,6 +284,8 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
 		case "7":
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
@@ -282,6 +294,28 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
                     handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
 		    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
+                   break;
+		case "8":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
+                   break;
+		case "9":
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_DANIEL);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEMINII);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUND);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMEROUNDSTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MEMESTROKE);
+                    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_A12);
+		    handleOverlays(false, context, ThemesUtils.BRIGHTNESS_SLIDER_MINIHALF);
+                    handleOverlays(true, context, ThemesUtils.BRIGHTNESS_SLIDER_HALF);
                    break;
             }
             return true;
@@ -364,7 +398,13 @@ public class ColtTheme extends DashboardFragment implements
     private void getBrightnessSliderPref() {
         mBrightnessSliderStyle = (ListPreference) findPreference(BRIGHTNESS_SLIDER_STYLE);
         mBrightnessSliderStyle.setOnPreferenceChangeListener(this);
-        if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.memestroke")) {
+        if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.half")) {
+            mBrightnessSliderStyle.setValue("9");
+	} else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.minihalf")) {
+            mBrightnessSliderStyle.setValue("8");
+	} else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.a12")) {
+            mBrightnessSliderStyle.setValue("7");
+	} else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.memestroke")) {
             mBrightnessSliderStyle.setValue("6");
         } else if (ColtUtils.isThemeEnabled("com.android.systemui.brightness.slider.memeroundstroke")) {
             mBrightnessSliderStyle.setValue("5");
@@ -382,10 +422,8 @@ public class ColtTheme extends DashboardFragment implements
     private void setSystemSliderPref() {
         mSystemSliderStyle = (ListPreference) findPreference(SYSTEM_SLIDER_STYLE);
         mSystemSliderStyle.setOnPreferenceChangeListener(this);
-	if (ColtUtils.isThemeEnabled("com.android.system.slider.a12")) {
-            mSystemSliderStyle.setValue("7");
-        } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memestroke")) {
-            mSystemSliderStyle.setValue("6");
+	if (ColtUtils.isThemeEnabled("com.android.system.slider.memestroke")) {
+	    mSystemSliderStyle.setValue("6");
         } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memeroundstroke")) {
             mSystemSliderStyle.setValue("5");
         } else if (ColtUtils.isThemeEnabled("com.android.system.slider.memeround")) {
