@@ -14,7 +14,7 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/navigationbar_title">
+    android:title=" ">
 
     <Preference
         android:key="navbar_header"
