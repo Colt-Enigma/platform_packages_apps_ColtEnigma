@@ -69,6 +69,8 @@ import com.colt.enigma.display.SwitchStylePreferenceController;
 
 import com.android.internal.util.colt.ThemesUtils;
 import com.android.internal.util.colt.ColtUtils;
+import com.colt.enigma.preference.SystemSettingListPreference;
+import com.colt.enigma.preference.SystemSettingSwitchPreference;
 
 import com.android.settings.display.FontPickerPreferenceController;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -92,6 +94,8 @@ public class ColtTheme extends DashboardFragment implements
     private static final String GRADIENT_COLOR_PROP = "persist.sys.theme.gradientcolor";
     private static final int MENU_RESET = Menu.FIRST;
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
+    private static final String PREF_CUSTOM_ICONS = "custom_icons";
+    private static final String PREF_SETTINGS_ICONS = "theming_settings_dashboard_icons";
 
     static final int DEFAULT = 0xff1a73e8;
 
@@ -101,6 +105,8 @@ public class ColtTheme extends DashboardFragment implements
     private ListPreference mSystemSliderStyle;
     private ColorPickerPreference mThemeColor;
     private ColorPickerPreference mGradientColor;
+    private SystemSettingListPreference mDashboardIcons;
+    private SystemSettingSwitchPreference mCustomIcons;
 
     private IntentFilter mIntentFilter;
     private static FontPickerPreferenceController mFontPickerPreference;
@@ -148,6 +154,10 @@ public class ColtTheme extends DashboardFragment implements
         }
         mThemeColor.setOnPreferenceChangeListener(this);
 
+	mDashboardIcons = (SystemSettingListPreference)
+                findPreference(PREF_SETTINGS_ICONS);
+        mDashboardIcons.setOnPreferenceChangeListener(this);
+
         mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
         mAccentPreset.setOnPreferenceChangeListener(this);
         checkColorPreset(colorVal);
@@ -164,6 +174,13 @@ public class ColtTheme extends DashboardFragment implements
         if (TextUtils.isEmpty(hasDisplayCutout)) {
             getPreferenceScreen().removePreference(mCutoutPref);
         }
+
+	mCustomIcons = (SystemSettingSwitchPreference) findPreference(PREF_CUSTOM_ICONS);
+        mCustomIcons.setChecked((Settings.System.getInt(getContentResolver(),
+                Settings.System.DASHBOARD_ICONS, 0) == 1));
+        mDashboardIcons.setEnabled((Settings.System.getInt(getContentResolver(),
+                Settings.System.DASHBOARD_ICONS, 0) == 1));
+        mCustomIcons.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -366,6 +383,17 @@ public class ColtTheme extends DashboardFragment implements
                     handleOverlays(true, context, ThemesUtils.SYSTEM_SLIDER_MEMESTROKE);
                    break;
             }
+            return true;
+	     } else if (preference == mCustomIcons) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.DASHBOARD_ICONS, value ? 1 : 0);
+            mDashboardIcons.setEnabled(value);
+            return true;
+        } else if (preference == mDashboardIcons) {
+            int value = Integer.parseInt((String) newValue);
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.THEMING_SETTINGS_DASHBOARD_ICONS, value);
             return true;
         }
         return false;
