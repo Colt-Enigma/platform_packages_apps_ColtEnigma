@@ -401,9 +401,10 @@
     <!-- QS BG Tint -->
     <string name="qs_bg_use_new_tint">Tint QS tiles</string>
     <string name="qs_bg_use_new_tint_summary">Use accent color for qs tile icons and background</string>
-    <string name="qs_tint_off">Gradient effect</string>
-    <string name="qs_tint_random">Random color</string>
-    <string name="qs_tint_accent">Accent color</string>
+    <string name="qs_tint_off">Default</string>
+    <string name="qs_tint_accent">Accent Color</string>
+    <string name="qs_tint_oos">OxygenOS 11</string>
+    <string name="qs_tint_twelve">Android 12</string>
 
     <!-- QS Label Tint -->
     <string name="qs_label_use_new_tint">QS label tint</string>
@@ -1356,4 +1357,7 @@
     <string name="monet_pallete_summary">Color Modes.  \n(After Choosing you need to reapply the wallpaper for the changes to take affect).</string>
     <string name="monet_accuracy">Monet Accuracy</string>
     <string name="monet_accuracy_summary">The More Accurate the slower (Def 16)</string>
+
+    <string name="qs_bg_use_disco">QS tile disco</string>
+    <string name="qs_bg_use_disco_summary">Make your QS Tiles colorful!</string>
 </resources>
