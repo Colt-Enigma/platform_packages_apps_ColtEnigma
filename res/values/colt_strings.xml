@@ -1326,4 +1326,8 @@
     <string name="qs_panel_bg_alpha_title">Background alpha</string>
     <string name="sysui_colors_active_title">Colored SystemUI</string>
     <string name="sysui_colors_active_summary">Wallpaper colored scrims and QS</string>
+
+    <string name="monet_category">Monet Theming</string>
+    <string name="system_color_category">System Colors</string>
+    <string name="system_ui_category">System UI</string>
 </resources>

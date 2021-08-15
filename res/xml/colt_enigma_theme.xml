@@ -38,6 +38,18 @@
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
             settings:controller="com.android.settings.display.DarkUIPreferenceController" />
 
+        <net.margaritov.preference.colorpicker.ColorPickerPreference
+            android:key="rgb_accent_picker_dark"
+            android:title="@string/rgb_accent_picker_title_dark"
+            android:summary="@string/rgb_accent_picker_summary"
+            android:persistent="false" />
+
+</PreferenceCategory>
+
+	<PreferenceCategory
+            android:key="monet_category"
+            android:title="@string/monet_category">
+
 	<com.colt.enigma.preference.SecureSettingSwitchPreference
             android:key="monet_engine"
             android:title="@string/monet_title"
@@ -61,11 +73,52 @@
             android:defaultValue="16"
             settings:interval="1"/>
 
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_panel_bg_use_fw"
+            android:title="@string/qs_panel_bg_use_fw_title"
+            android:summary="@string/qs_panel_bg_use_fw_summary"
+            android:defaultValue="true"
+            android:disableDependentsState="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="sysui_colors_active"
+            android:title="@string/sysui_colors_active_title"
+            android:summary="@string/sysui_colors_active_summary"
+            android:defaultValue="false"
+            android:dependency="qs_panel_bg_use_fw"
+            android:disableDependentsState="true" />
+
         <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="rgb_accent_picker_dark"
-            android:title="@string/rgb_accent_picker_title_dark"
-            android:summary="@string/rgb_accent_picker_summary"
+            android:key="qs_panel_color"
+            android:title="@string/qs_panel_bg_color_title"
+            android:defaultValue="0xFFFFFFFF"
+            android:persistent="false"
+            android:dependency="sysui_colors_active" />
+
+</PreferenceCategory>
+
+        <ListPreference
+            android:layout="@layout/themes_font_preview"
+            android:selectable="false" />
+
+        <com.android.settings.display.FontDialogPreference
+            android:key="custom_font"
+            android:title="@string/font_picker_title"
             android:persistent="false" />
+
+        <ListPreference
+            android:layout="@layout/themes_lock_clock_preview"
+            android:selectable="false" />
+
+        <Preference
+            android:key="clock_style"
+            android:title="@string/clock_style_title"
+            android:summary="@string/clock_style_summary">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.android.wallpaper"
+                android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
+        </Preference>
 
         <ListPreference
             android:key="android.theme.customization.wifi_icon"
@@ -83,7 +136,10 @@
             android:key="android.theme.customization.icon_pack.android"
             android:title="@string/theme_customization_sysui_icon_title"/>
 
-	
+     <PreferenceCategory
+        android:key="system_ui_category"
+        android:title="@string/system_ui_category">
+
         <ListPreference
             android:key="switch_style"
             android:title="@string/switch_style_title"
@@ -108,70 +164,6 @@
            android:entryValues="@array/brightness_slider_style_selector_values"
            android:summary="%s"
            android:defaultValue="1" />
-
-	<com.colt.enigma.preference.SystemSettingSwitchPreference
-            android:key="qs_tiles_bg_disco"
-	    settings:iconSpaceReserved="false"
-            android:title="@string/qs_bg_use_disco"
-            android:summary="@string/qs_bg_use_disco_summary"
-            android:defaultValue="false" />
-
-	 <com.colt.enigma.preference.SystemSettingSwitchPreference
-            android:key="qs_panel_bg_use_fw"
-            android:title="@string/qs_panel_bg_use_fw_title"
-            android:summary="@string/qs_panel_bg_use_fw_summary"
-            android:defaultValue="true"
-            settings:iconSpaceReserved="false"
-            android:disableDependentsState="true" />
-
-        <com.colt.enigma.preference.SystemSettingSwitchPreference
-            android:key="sysui_colors_active"
-            android:title="@string/sysui_colors_active_title"
-            android:summary="@string/sysui_colors_active_summary"
-            android:defaultValue="false"
-            android:dependency="qs_panel_bg_use_fw"
-	    settings:iconSpaceReserved="false"
-            android:disableDependentsState="true" />
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="qs_panel_color"
-            android:title="@string/qs_panel_bg_color_title"
-            android:defaultValue="0xFFFFFFFF"
-            android:persistent="false"
-	    settings:iconSpaceReserved="false"
-            android:dependency="sysui_colors_active" />
-
-        <ListPreference
-            android:layout="@layout/themes_font_preview"
-            android:selectable="false" />
-
-        <com.android.settings.display.FontDialogPreference
-            android:key="custom_font"
-            android:title="@string/font_picker_title"
-            android:persistent="false" />
-
-	<ListPreference
-            android:layout="@layout/themes_lock_clock_preview"
-            android:selectable="false" />
-
-        <Preference
-            android:key="clock_style"
-            android:title="@string/clock_style_title"
-            android:summary="@string/clock_style_summary">
-            <intent
-                android:action="android.intent.action.VIEW"
-                android:targetPackage="com.android.wallpaper"
-                android:targetClass="com.android.customization.picker.LockClockPickerActivity" />
-        </Preference>
-
-	<com.colt.enigma.preference.SystemSettingSeekBarPreference
-	    android:key="qs_panel_bg_alpha"
-	    settings:iconSpaceReserved="false"
-            android:title="@string/qs_panel_bg_alpha_title"
-            android:defaultValue="255"
-            android:max="255"
-            android:min="0"
-	    settings:units="" />	    
 
 	<com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="custom_icons"
@@ -246,6 +238,21 @@
             android:entryValues="@array/qs_label_tint_values"
             android:summary="%s"
             android:defaultValue="1" />
+
+	
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_tiles_bg_disco"
+            android:title="@string/qs_bg_use_disco"
+            android:summary="@string/qs_bg_use_disco_summary"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.SystemSettingSeekBarPreference
+            android:key="qs_panel_bg_alpha"
+            android:title="@string/qs_panel_bg_alpha_title"
+            android:defaultValue="255"
+            android:max="255"
+            android:min="0"
+            settings:units="" />
 
     </PreferenceCategory>
 
