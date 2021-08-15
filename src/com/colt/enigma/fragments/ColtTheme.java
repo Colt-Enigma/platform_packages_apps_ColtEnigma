@@ -87,15 +87,10 @@ public class ColtTheme extends DashboardFragment implements
 
     private static final String TAG = "ColtDecorations";
 
-    private static final String ACCENT_PRESET = "accent_preset";
-
     private static final String PREF_NAVBAR_STYLE = "theme_navbar_style";
     private static final String BRIGHTNESS_SLIDER_STYLE = "brightness_slider_style";
     private static final String SYSTEM_SLIDER_STYLE = "system_slider_style";
-    private static final String ACCENT_COLOR = "accent_color";
-    private static final String ACCENT_COLOR_PROP = "persist.sys.theme.accentcolor";
-    private static final String GRADIENT_COLOR = "gradient_color";
-    private static final String GRADIENT_COLOR_PROP = "persist.sys.theme.gradientcolor";
+    private static final String PREF_RGB_ACCENT_PICKER_DARK = "rgb_accent_picker_dark";
     private static final int MENU_RESET = Menu.FIRST;
     private static final String PREF_KEY_CUTOUT = "cutout_settings";
     private static final String PREF_CUSTOM_ICONS = "custom_icons";
@@ -103,14 +98,14 @@ public class ColtTheme extends DashboardFragment implements
 
     static final int DEFAULT = 0xff1a73e8;
 
-    private ListPreference mAccentPreset;
+    private Context mContext;
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
+    private ColorPickerPreference rgbAccentPickerDark;
     private ListPreference mBrightnessSliderStyle;
     private ListPreference mNavbarPicker;
     private ListPreference mSystemSliderStyle;
-    private ColorPickerPreference mThemeColor;
-    private ColorPickerPreference mGradientColor;
+    private CustomSeekBarPreference mQsPanelAlpha;
     private SystemSettingListPreference mDashboardIcons;
     private SystemSettingSwitchPreference mCustomIcons;
 
@@ -141,24 +136,13 @@ public class ColtTheme extends DashboardFragment implements
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
+	mContext =  getActivity();
+
         mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
 
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction("com.android.server.ACTION_FONT_CHANGED");
-
-	mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
-        String colorVal = SystemProperties.get(ACCENT_COLOR_PROP, "-1");
-        try {
-            int color = "-1".equals(colorVal)
-                    ? Color.WHITE
-                    : Color.parseColor("#" + colorVal);
-            mThemeColor.setNewPreviewColor(color);
-        }
-        catch (Exception e) {
-            mThemeColor.setNewPreviewColor(Color.WHITE);
-        }
-        mThemeColor.setOnPreferenceChangeListener(this);
 
 	mDashboardIcons = (SystemSettingListPreference)
                 findPreference(PREF_SETTINGS_ICONS);
@@ -174,12 +158,18 @@ public class ColtTheme extends DashboardFragment implements
         mNavbarPicker.setSummary(mNavbarPicker.getEntry());
         mNavbarPicker.setOnPreferenceChangeListener(this);
 
-        mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
-        mAccentPreset.setOnPreferenceChangeListener(this);
-        checkColorPreset(colorVal);
-        setupGradientPref();
         getBrightnessSliderPref();
         setSystemSliderPref();
+
+	rgbAccentPickerDark = (ColorPickerPreference) findPreference(PREF_RGB_ACCENT_PICKER_DARK);
+        String colorValDark = Settings.Secure.getStringForUser(mContext.getContentResolver(),
+                Settings.Secure.ACCENT_DARK, UserHandle.USER_CURRENT);
+        int colorDark = (colorValDark == null)
+                ? DEFAULT
+                : Color.parseColor("#" + colorValDark);
+        rgbAccentPickerDark.setNewPreviewColor(colorDark);
+        rgbAccentPickerDark.setOnPreferenceChangeListener(this);
+
         setHasOptionsMenu(true);
 
         Preference mCutoutPref = (Preference) findPreference(PREF_KEY_CUTOUT);
@@ -254,32 +244,12 @@ public class ColtTheme extends DashboardFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mThemeColor) {
-            int color = (Integer) newValue;
-            String hexColor = String.format("%08X", (0xFFFFFFFF & color));
-            SystemProperties.set(ACCENT_COLOR_PROP, hexColor);
-	    checkColorPreset(hexColor);
-            try {
-                 mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
-                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
-                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
-            } catch (RemoteException ignored) {
-            }
-        } else if (preference == mAccentPreset) {
-            String value = (String) newValue;
-            int index = mAccentPreset.findIndexOfValue(value);
-            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
-            SystemProperties.set(ACCENT_COLOR_PROP, value);
-            try {
-                 mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
-                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
-                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
-             } catch (RemoteException ignored) {
-             }
-        } else if (preference == mGradientColor) {
-            int color = (Integer) newValue;
-            String hexColor = String.format("%08X", (0xFFFFFFFF & color));
-            SystemProperties.set(GRADIENT_COLOR_PROP, hexColor);
+	if (preference == rgbAccentPickerDark) {
+            int colorDark = (Integer) newValue;
+            String hexColor = String.format("%08X", (0xFFFFFFFF & colorDark));
+            Settings.Secure.putStringForUser(mContext.getContentResolver(),
+                        Settings.Secure.ACCENT_DARK,
+                        hexColor, UserHandle.USER_CURRENT);
             try {
                  mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
                  mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
@@ -459,30 +429,6 @@ public class ColtTheme extends DashboardFragment implements
         return false;
     }
 
-   private void checkColorPreset(String colorValue) {
-        List<String> colorPresets = Arrays.asList(
-                getResources().getStringArray(R.array.accent_presets_values));
-        if (colorPresets.contains(colorValue)) {
-            mAccentPreset.setValue(colorValue);
-            int index = mAccentPreset.findIndexOfValue(colorValue);
-            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
-        }
-        else {
-            mAccentPreset.setSummary(
-                    getResources().getString(R.string.custom_string));
-        }
-    }
-
-    private void setupGradientPref() {
-        mGradientColor = (ColorPickerPreference) findPreference(GRADIENT_COLOR);
-        String colorVal = SystemProperties.get(GRADIENT_COLOR_PROP, "-1");
-        int color = "-1".equals(colorVal)
-                ? DEFAULT
-                : Color.parseColor("#" + colorVal);
-        mGradientColor.setNewPreviewColor(color);
-        mGradientColor.setOnPreferenceChangeListener(this);
-    }
-
     private void getBrightnessSliderPref() {
         mBrightnessSliderStyle = (ListPreference) findPreference(BRIGHTNESS_SLIDER_STYLE);
         mBrightnessSliderStyle.setOnPreferenceChangeListener(this);
@@ -572,12 +518,8 @@ public class ColtTheme extends DashboardFragment implements
 
     private void resetValues() {
         final Context context = getContext();
-        mGradientColor = (ColorPickerPreference) findPreference(GRADIENT_COLOR);
-        SystemProperties.set(GRADIENT_COLOR_PROP, "-1");
-        mGradientColor.setNewPreviewColor(DEFAULT);
-        mThemeColor = (ColorPickerPreference) findPreference(ACCENT_COLOR);
-        SystemProperties.set(ACCENT_COLOR_PROP, "-1");
-        mThemeColor.setNewPreviewColor(DEFAULT);
+	rgbAccentPickerDark = (ColorPickerPreference) findPreference(PREF_RGB_ACCENT_PICKER_DARK);
+        rgbAccentPickerDark.setNewPreviewColor(DEFAULT);
     }
 
     @Override

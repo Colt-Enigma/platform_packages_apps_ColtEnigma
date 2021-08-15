@@ -62,24 +62,9 @@
             settings:interval="1"/>
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="accent_color"
-            android:title="@string/accent_color"
-            android:summary="@string/accent_summary"
-            android:defaultValue="0xffffff"
-            android:persistent="false" />
-
-	<ListPreference
-            android:key="accent_preset"
-            android:title="@string/accent_preset_title"
-            android:persistent="false"
-            android:entries="@array/accent_presets_entries"
-            android:entryValues="@array/accent_presets_values" />  
-
-        <net.margaritov.preference.colorpicker.ColorPickerPreference
-            android:key="gradient_color"
-            android:title="@string/gradient_color"
-            android:summary="@string/gradient_summary"
-            android:defaultValue="0xffffff"
+            android:key="rgb_accent_picker_dark"
+            android:title="@string/rgb_accent_picker_title_dark"
+            android:summary="@string/rgb_accent_picker_summary"
             android:persistent="false" />
 
         <ListPreference
