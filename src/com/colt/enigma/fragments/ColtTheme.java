@@ -58,6 +58,7 @@ import android.text.TextUtils;
 import java.util.Arrays;
 import java.util.HashSet;
 
+import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.development.OverlayCategoryPreferenceController;
 import com.android.settingslib.core.AbstractPreferenceController;
@@ -97,6 +98,7 @@ public class ColtTheme extends DashboardFragment implements
     private static final String PREF_SETTINGS_ICONS = "theming_settings_dashboard_icons";
 
     private static final String PREF_PANEL_BG = "panel_bg";
+    private static final String ACCENT_PRESET = "accent_preset";
 
     static final int DEFAULT = 0xff1a73e8;
 
@@ -106,6 +108,7 @@ public class ColtTheme extends DashboardFragment implements
     private ColorPickerPreference rgbAccentPickerDark;
     private ListPreference mBrightnessSliderStyle;
     private ListPreference mNavbarPicker;
+    private ListPreference mAccentPreset;
     private ListPreference mSystemSliderStyle;
     private CustomSeekBarPreference mQsPanelAlpha;
     private SystemSettingListPreference mDashboardIcons;
@@ -182,6 +185,10 @@ public class ColtTheme extends DashboardFragment implements
                 : Color.parseColor("#" + colorValDark);
         rgbAccentPickerDark.setNewPreviewColor(colorDark);
         rgbAccentPickerDark.setOnPreferenceChangeListener(this);
+
+	mAccentPreset = (ListPreference) findPreference(ACCENT_PRESET);
+        mAccentPreset.setOnPreferenceChangeListener(this);
+        checkColorPreset(colorValDark);
 
         setHasOptionsMenu(true);
 
@@ -263,6 +270,7 @@ public class ColtTheme extends DashboardFragment implements
             Settings.Secure.putStringForUser(mContext.getContentResolver(),
                         Settings.Secure.ACCENT_DARK,
                         hexColor, UserHandle.USER_CURRENT);
+	     checkColorPreset(hexColor);
             try {
                  mOverlayService.reloadAndroidAssets(UserHandle.USER_CURRENT);
                  mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
@@ -433,6 +441,19 @@ public class ColtTheme extends DashboardFragment implements
                     Settings.System.DASHBOARD_ICONS, value ? 1 : 0);
             mDashboardIcons.setEnabled(value);
             return true;
+            } else if (preference == mAccentPreset) {
+            String value = (String) newValue;
+            int index = mAccentPreset.findIndexOfValue(value);
+            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
+            Settings.Secure.putStringForUser(mContext.getContentResolver(),
+                        Settings.Secure.ACCENT_DARK,
+                        value, UserHandle.USER_CURRENT);
+            try {
+                 mOverlayService.reloadAssets("com.android.settings", UserHandle.USER_CURRENT);
+                 mOverlayService.reloadAssets("com.android.systemui", UserHandle.USER_CURRENT);
+             } catch (RemoteException ignored) {
+             }
+            return true;
         } else if (preference == mDashboardIcons) {
             int value = Integer.parseInt((String) newValue);
             Settings.System.putInt(getContentResolver(),
@@ -510,6 +531,20 @@ public class ColtTheme extends DashboardFragment implements
             } catch (RemoteException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+    private void checkColorPreset(String colorValue) {
+        List<String> colorPresets = Arrays.asList(
+                getResources().getStringArray(R.array.accent_presets_values));
+        if (colorPresets.contains(colorValue)) {
+            mAccentPreset.setValue(colorValue);
+            int index = mAccentPreset.findIndexOfValue(colorValue);
+            mAccentPreset.setSummary(mAccentPreset.getEntries()[index]);
+        }
+        else {
+            mAccentPreset.setSummary(
+                    getResources().getString(R.string.custom_string));
         }
     }
 
