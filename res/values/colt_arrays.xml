@@ -336,18 +336,14 @@
     <!-- QS Tile Tint -->
     <string-array name="qs_tint_entries" translatable="false">
         <item>@string/qs_tint_off</item>
-        <item>@string/qs_tint_oos</item>
-        <item>@string/qs_tint_accent</item>
-        <item>@string/qs_tint_a12</item>
         <item>@string/qs_tint_random</item> 
+        <item>@string/qs_tint_accent</item>
     </string-array>
 
     <string-array name="qs_tint_values" translatable="false">
         <item>0</item>
-        <item>3</item>
-        <item>2</item>
-        <item>4</item>
         <item>1</item>
+        <item>2</item>
     </string-array>
 
     <!-- QS Label Tint -->
@@ -1092,23 +1088,6 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
-    </string-array>
-
-    <!-- Auto Accent Picker -->
-    <string-array name="auto_accent_picker_entries" translatable="false">
-        <item>@string/auto_accent_picker_vibrant</item>
-        <item>@string/auto_accent_picker_vibrant_light</item>
-        <item>@string/auto_accent_picker_dominant</item>
-        <item>@string/auto_accent_picker_dominant_bright</item>
-        <item>@string/auto_accent_picker_avg</item>
-    </string-array>
-
-    <string-array name="auto_accent_picker_values" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
     </string-array>
 
     <string-array name="accent_presets_entries" translatable="false">

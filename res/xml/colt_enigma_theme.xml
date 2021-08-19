@@ -42,37 +42,8 @@
             android:key="accent_color"
             android:title="@string/accent_color"
             android:summary="@string/accent_summary"
-	    android:dependency="use_wall_accent"
             android:defaultValue="0xffffff"
             android:persistent="false" />
-	
-        <ListPreference
-            android:key="accent_preset"
-            android:title="@string/accent_preset_title"
-            android:persistent="false"
-	    android:dependency="use_wall_accent"   
-            android:entries="@array/accent_presets_entries"
-            android:entryValues="@array/accent_presets_values" />
-
-	<com.colt.enigma.preference.SystemSettingSwitchPreference
-            android:key="use_wall_accent"
-            android:disableDependentsState="true"
-            android:title="@string/use_wall_accent_string"
-            android:summary="@string/use_wall_accent_summary"
-            android:defaultValue="false" />
-
-         <com.colt.enigma.display.WallAc
-            android:key="wall"
-            android:layout="@layout/wallacpreview"
-            android:selectable="false"/>
-
-        <com.colt.enigma.preference.SystemSettingListPreference
-            android:key="auto_accent_type"
-            android:title="@string/auto_accent_picker_title"
-            android:entries="@array/auto_accent_picker_entries"
-            android:summary="%s"
-            android:defaultValue="0"
-            android:entryValues="@array/auto_accent_picker_values" />
 
 	<ListPreference
             android:key="accent_preset"

@@ -404,8 +404,6 @@
     <string name="qs_tint_off">Gradient effect</string>
     <string name="qs_tint_random">Random color</string>
     <string name="qs_tint_accent">Accent color</string>
-    <string name="qs_tint_oos">Oxygen OS Style</string>
-    <string name="qs_tint_a12">Android S Style</string>
 
     <!-- QS Label Tint -->
     <string name="qs_label_use_new_tint">QS label tint</string>
@@ -1246,18 +1244,6 @@
     <string name="system_slider_style_memeround">Meme round</string>
     <string name="system_slider_style_memeroundstroke">Meme round stroke</string>
     <string name="system_slider_style_memestroke">Meme stroke</string>
-
-    <!-- Wallpaper based accent -->
-    <string name="use_wall_accent_string">Wallpaper based accent</string>
-    <string name="use_wall_accent_summary">(BETA) Auto sets an accent color based on your wallpaper</string>
-
-    <!-- Auto Accent Picker -->
-    <string name="auto_accent_picker_title">Accent generation algorithm</string>
-    <string name="auto_accent_picker_vibrant">Vibrant</string>
-    <string name="auto_accent_picker_vibrant_light">Vibrant Light</string>
-    <string name="auto_accent_picker_dominant">Dominant</string>
-    <string name="auto_accent_picker_dominant_bright">Dominant Bright</string>
-    <string name="auto_accent_picker_avg">Average</string>
 
     <!-- Accent presets -->
     <string name="accent_preset_0">AOSP Cinnamon</string>
