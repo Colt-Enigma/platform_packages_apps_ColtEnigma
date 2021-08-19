@@ -1231,6 +1231,8 @@
     <string name="media_category">Media Notification options</string>
     <string name="artwork_media_background_title">Artwork media background</string>
     <string name="artwork_media_background_summary">Set media artwork as notification media background</string>
+    <string name="artwork_media_fade_level_title">Artwork fade level</string>
+    <string name="artwork_media_fade_level_summary">Fading the media artwork image</string>
 
     <!-- Qs Clock -->
     <string name="oos_qsclock">Qs clock</string>
@@ -1287,7 +1289,6 @@
 
     <!-- QuickSettings Panel Transparency -->
     <string name="qs_panel_alpha_summary">Configure opacity of background</string>
-
     <string name="qs_panel_bg_use_fw_title">Framework defaults</string>
     <string name="qs_panel_bg_use_fw_summary">Disable QS and scrim color customizations</string>
     <string name="qs_panel_bg_color_title">Background color</string>
