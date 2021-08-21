@@ -25,29 +25,34 @@
 
         <Preference
             android:title="@string/status_bar_clock_date_title"
+	    settings:iconSpaceReserved="false"
             android:summary="@string/status_bar_clock_date_summary"
             android:fragment="com.colt.enigma.fragments.StatusbarClockDateSettings" />
 
         <Preference
             android:key="statusbar_battery"
+            settings:iconSpaceReserved="false"
             android:title="@string/battery_percent_title"
             android:summary="@string/battery_percent_summary"
             android:fragment="com.colt.enigma.fragments.StatusbarBatterySettings"/>
 
         <Preference
             android:key="battery_bar_category"
+            settings:iconSpaceReserved="false"
             android:title="@string/battery_bar_title"
             android:summary="@string/battery_bar_summary"
             android:fragment="com.colt.enigma.fragments.BatteryBarSettings" />
 
         <Preference
             android:key="network_traffic"
+            settings:iconSpaceReserved="false"
             android:fragment="com.colt.enigma.fragments.NetworkTraffic"
             android:title="@string/traffic_title"
             android:summary="@string/traffic_summary" />
 
         <Preference
             android:title="@string/status_bar_carrier_label_title"
+            settings:iconSpaceReserved="false"
             android:summary="@string/status_bar_carrier_label_summary"
             android:fragment="com.colt.enigma.fragments.StatusbarCarrierLabelSettings" />
 
@@ -59,18 +64,21 @@
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference 
             android:key="show_fourg"
+            settings:iconSpaceReserved="false"
             android:title="@string/show_fourg_title"
             android:summary="@string/show_fourg_summary"
             android:defaultValue="false" />
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="roaming_indicator_icon"
+            settings:iconSpaceReserved="false"
             android:title="@string/roaming_indicator_icon_title"
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
 
         <Preference
             android:title="@string/statusbar_items_title"
+            settings:iconSpaceReserved="false"
             android:summary="@string/statusbar_items_summary" >
             <intent android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"

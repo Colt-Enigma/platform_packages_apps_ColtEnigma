@@ -22,6 +22,7 @@
 
     <com.colt.enigma.preference.GlobalSettingSwitchPreference
         android:key="heads_up_notifications_enabled"
+	settings:iconSpaceReserved="false"
         android:title="@string/heads_up_notifications"
         android:summaryOn="@string/summary_heads_up_enabled"
         android:summaryOff="@string/summary_heads_up_disabled"
@@ -29,17 +30,20 @@
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="less_boring_heads_up"
+        settings:iconSpaceReserved="false"
         android:title="@string/less_boring_heads_up_title"
         android:summary="@string/less_boring_heads_up_summary"
         android:defaultValue="false" />
 
     <PreferenceCategory
         android:title="@string/heads_up_stoplist_title"
+        settings:iconSpaceReserved="false"
         android:key="stoplist_applications"
         android:dependency="heads_up_notifications_enabled">
 
         <Preference
             android:key="add_stoplist_packages"
+        settings:iconSpaceReserved="false"
             android:icon="@drawable/ic_menu_add_white"
             android:title="@string/add_heads_up_package"
             android:summary="@string/add_heads_up_stoplist_summary" />
@@ -49,10 +53,12 @@
     <PreferenceCategory
         android:title="@string/heads_up_blacklist_title"
         android:key="blacklist_applications"
+        settings:iconSpaceReserved="false"
         android:dependency="heads_up_notifications_enabled">
 
         <Preference
             android:key="add_blacklist_packages"
+        settings:iconSpaceReserved="false"
             android:icon="@drawable/ic_menu_add_activated_tint"
             android:title="@string/add_heads_up_package"
             android:summary="@string/add_heads_up_blacklist_summary" />

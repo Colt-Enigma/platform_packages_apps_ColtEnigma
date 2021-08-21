@@ -22,6 +22,7 @@
 
     <com.colt.enigma.preference.SystemSettingListPreference
         android:key="fod_color"
+	settings:iconSpaceReserved="false"
         android:dialogTitle="@string/fod_pressed_color_title"
         android:title="@string/fod_pressed_color_title"
         android:summary="%s"
@@ -32,12 +33,14 @@
     <!-- FOD recognizing animation -->
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="fod_recognizing_animation"
+        settings:iconSpaceReserved="false"
         android:title="@string/fod_recog_animation"
         android:summary="@string/fod_recog_animation_summary"
         android:defaultValue="false" />
 
     <com.colt.enigma.preference.SystemSettingListPreference 
         android:key="fod_anim"
+        settings:iconSpaceReserved="false"
         android:title="@string/fod_recog_animation_effect_title" 
         android:summary="%s" 
         android:entries="@array/fod_recog_animation_entries" 
@@ -48,6 +51,7 @@
      <!-- FOD Nightlight -->
      <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="fod_night_light"
+        settings:iconSpaceReserved="false"
         android:title="@string/fod_night_light_title"
         android:summary="@string/fod_night_light_summary"
         android:defaultValue="@*android:bool/disable_fod_night_light"  />
@@ -55,6 +59,7 @@
     <!-- Preview -->
     <com.colt.enigma.preference.FODIconPicker
         android:key="fod_icon"
+        settings:iconSpaceReserved="false"
         android:layout="@layout/fod_picker_preference"
         android:selectable="false"/>
 

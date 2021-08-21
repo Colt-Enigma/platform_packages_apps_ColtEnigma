@@ -27,6 +27,7 @@
 
         <ListPreference
             android:key="statusbar_height"
+	    settings:iconSpaceReserved="false"
             android:title="@string/statusbar_height_title"
             android:summary="%s"
             android:dialogTitle="@string/statusbar_height_dialog_title"
@@ -35,6 +36,7 @@
 
         <ListPreference
             android:key="header_size"
+            settings:iconSpaceReserved="false"
             android:title="@string/header_title"
             android:summary="%s"
             android:dialogTitle="@string/header_dialog_title"
@@ -44,6 +46,7 @@
 
         <ListPreference
             android:key="rounded_ui"
+            settings:iconSpaceReserved="false"
             android:title="@string/rounded_ui_title"
             android:summary="%s"
             android:dialogTitle="@string/rounded_ui_dialog_title"
@@ -52,6 +55,7 @@
 
         <ListPreference
             android:key="navbar_color"
+            settings:iconSpaceReserved="false"
             android:title="@string/navbar_color_title"
             android:summary="%s"
             android:dialogTitle="@string/navbar_color_dialog_title"

@@ -17,42 +17,49 @@
 
         <ListPreference
                 android:key="volume_steps_alarm"
+		settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_alarm_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_dtmf"
+                settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_dtmf_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_music"
+                settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_music_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_notification"
+                settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_notification_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_ring"
+                settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_ring_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_system"
+                settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_system_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />
 
         <ListPreference
                 android:key="volume_steps_voice_call"
+                settings:iconSpaceReserved="false"
                 android:title="@string/volume_steps_voice_call_title"
                 android:entries="@array/volume_steps_entries"
                 android:entryValues="@array/volume_steps_entries" />

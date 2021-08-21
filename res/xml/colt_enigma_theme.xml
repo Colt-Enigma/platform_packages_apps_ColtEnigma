@@ -33,6 +33,7 @@
 
         <Preference
             android:key="dark_ui_mode"
+	    settings:iconSpaceReserved="false"
             android:title="@string/dark_ui_mode"
             android:summary="@string/dark_ui_mode_summary"
             android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
@@ -40,6 +41,7 @@
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="rgb_accent_picker_dark"
+            settings:iconSpaceReserved="false"
             android:title="@string/rgb_accent_picker_title_dark"
             android:summary="@string/rgb_accent_picker_summary"
             android:persistent="false" />
@@ -52,12 +54,14 @@
 
 	<com.colt.enigma.preference.SecureSettingSwitchPreference
             android:key="monet_engine"
+            settings:iconSpaceReserved="false"
             android:title="@string/monet_title"
             android:summary="@string/monet_summary"
             android:defaultValue="true" />
 
         <com.colt.enigma.preference.SecureSettingListPreference
             android:key="monet_palette"
+            settings:iconSpaceReserved="false"
             android:title="@string/monet_pallete_title"
             android:summary="@string/monet_pallete_summary"
             android:entries="@array/monet_color_mode_entries"
@@ -66,6 +70,7 @@
 
         <com.colt.enigma.preference.SecureSettingSeekBarPreference
             android:key="monet_color_gen"
+            settings:iconSpaceReserved="false"
             android:title="@string/monet_accuracy"
             android:summary="@string/monet_accuracy_summary"
             android:max="100"
@@ -75,6 +80,7 @@
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_panel_bg_use_fw"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_panel_bg_use_fw_title"
             android:summary="@string/qs_panel_bg_use_fw_summary"
             android:defaultValue="true"
@@ -82,6 +88,7 @@
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="sysui_colors_active"
+            settings:iconSpaceReserved="false"
             android:title="@string/sysui_colors_active_title"
             android:summary="@string/sysui_colors_active_summary"
             android:defaultValue="false"
@@ -90,6 +97,7 @@
 
         <net.margaritov.preference.colorpicker.ColorPickerPreference
             android:key="qs_panel_color"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_panel_bg_color_title"
             android:defaultValue="0xFFFFFFFF"
             android:persistent="false"
@@ -103,6 +111,7 @@
 
         <com.android.settings.display.FontDialogPreference
             android:key="custom_font"
+            settings:iconSpaceReserved="false"
             android:title="@string/font_picker_title"
             android:persistent="false" />
 
@@ -112,6 +121,7 @@
 
         <Preference
             android:key="clock_style"
+            settings:iconSpaceReserved="false"
             android:title="@string/clock_style_title"
             android:summary="@string/clock_style_summary">
             <intent
@@ -122,18 +132,22 @@
 
         <ListPreference
             android:key="android.theme.customization.wifi_icon"
+            settings:iconSpaceReserved="false"
             android:title="@string/custom_wifi_bar_title"/>
 
         <ListPreference
             android:key="android.theme.customization.signal_icon"
+            settings:iconSpaceReserved="false"
             android:title="@string/custom_signal_bar_title"/>
 
         <ListPreference
             android:key="android.theme.customization.adaptive_icon_shape"
+            settings:iconSpaceReserved="false"
             android:title="@string/theme_customization_icon_shape_title"/>
 
         <ListPreference
             android:key="android.theme.customization.icon_pack.android"
+            settings:iconSpaceReserved="false"
             android:title="@string/theme_customization_sysui_icon_title"/>
 
      <PreferenceCategory
@@ -142,6 +156,7 @@
 
         <ListPreference
             android:key="switch_style"
+            settings:iconSpaceReserved="false"
             android:title="@string/switch_style_title"
             android:persistent="false"
             android:entries="@array/switch_style_entries"
@@ -150,6 +165,7 @@
         <!-- System-wide Slider Styles -->
         <ListPreference
             android:key="system_slider_style"
+            settings:iconSpaceReserved="false"
             android:title="@string/system_slider_style_title"
             android:entries="@array/system_slider_style_entries"
             android:entryValues="@array/system_slider_style_values"
@@ -159,6 +175,7 @@
         <!-- Brightness Slider Styles -->
         <ListPreference
            android:key="brightness_slider_style"
+            settings:iconSpaceReserved="false"
            android:title="@string/brightness_slider_style_title"
            android:entries="@array/brightness_slider_style_selector_entries"
            android:entryValues="@array/brightness_slider_style_selector_values"
@@ -167,6 +184,7 @@
 
 	<com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="custom_icons"
+            settings:iconSpaceReserved="false"
             android:title="@string/dashboard_icons_title"
             android:summary="@string/dashboard_icons_summary"
             android:defaultValue="false" />
@@ -174,6 +192,7 @@
         <!-- Settings dashboard icon style --> 
         <com.colt.enigma.preference.SystemSettingIntListPreference
             android:key="theming_settings_dashboard_icons"
+            settings:iconSpaceReserved="false"
             android:title="@string/theming_settings_dashboard_icons_title"
             android:entries="@array/theming_settings_dashboard_icons_entries"
             android:entryValues="@array/theming_settings_dashboard_icons_values"
@@ -182,6 +201,7 @@
         <!-- Navbar styles -->
         <ListPreference
             android:key="theme_navbar_style"
+            settings:iconSpaceReserved="false"
             android:title="@string/theme_navbar_picker_title"
             android:dialogTitle="@string/theme_navbar_picker_summary"
             android:summary="%s"
@@ -197,6 +217,7 @@
 
         <PreferenceScreen
             android:key="gvisual"
+            settings:iconSpaceReserved="false"
             android:title="@string/gvisual_title"
             android:summary="@string/gvisual_summary"
             android:fragment="com.colt.enigma.fragments.GvisualSettings" />
@@ -206,10 +227,12 @@
     <PreferenceCategory
 
         android:key="qs_category"
+            settings:iconSpaceReserved="false"
         android:title="@string/qs_themes_category_title" >
 
         <ListPreference
             android:key="qs_tile_style"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_tile_style_title"
             android:persistent="false"
             android:entries="@array/qs_selector_entries"
@@ -217,6 +240,7 @@
 
         <com.colt.enigma.preference.SystemSettingListPreference
             android:key="qs_panel_bg_use_new_tint"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_bg_use_new_tint"
             android:dialogTitle="@string/qs_bg_use_new_tint"
             android:entries="@array/qs_tint_entries"
@@ -226,6 +250,7 @@
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_tile_icon_primary"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_icon_primary_title"
             android:summary="@string/qs_icon_primary_summary"
             android:defaultValue="false" />
@@ -242,12 +267,14 @@
 	
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_tiles_bg_disco"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_bg_use_disco"
             android:summary="@string/qs_bg_use_disco_summary"
             android:defaultValue="false" />
 
         <com.colt.enigma.preference.SystemSettingSeekBarPreference
             android:key="qs_panel_bg_alpha"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_panel_bg_alpha_title"
             android:defaultValue="255"
             android:max="255"
@@ -261,6 +288,7 @@
 
         <com.colt.enigma.preference.SystemSettingListPreference
             android:key="status_bar_show_weather_temp"
+            settings:iconSpaceReserved="false"
             android:title="@string/statusbar_weather_title"
             android:dialogTitle="@string/statusbar_weather_dialog_title"
             android:entries="@array/status_bar_weather_entries"
@@ -270,6 +298,7 @@
 
         <com.colt.enigma.preference.SystemSettingListPreference
             android:key="status_bar_show_weather_location"
+            settings:iconSpaceReserved="false"
             android:title="@string/status_bar_weather_location_title"
             android:entries="@array/weather_location_entries"
             android:entryValues="@array/weather_location_values"
@@ -286,12 +315,14 @@
 
         <Preference
             android:key="rounded_corners"
+            settings:iconSpaceReserved="false"
             android:title="@string/corners_title"
             android:summary="@string/corners_category_summary"
             android:fragment="com.colt.enigma.fragments.RoundedCorners" />
 
         <Preference
             android:key="cutout_settings"
+            settings:iconSpaceReserved="false"
             android:title="@string/cutout_main"
             android:summary="@string/cutout_main_summary"
             android:fragment="com.colt.enigma.fragments.CutoutFragment" />

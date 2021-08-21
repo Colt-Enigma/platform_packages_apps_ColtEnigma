@@ -25,6 +25,7 @@
 
     <Preference
         android:key="gesture_settings"
+	settings:iconSpaceReserved="false"
         android:title="@string/aosp_gesture_preference"
         android:summary="@string/aosp_gesture_summary"
         android:fragment="com.android.settings.gestures.GestureSettings"
@@ -32,18 +33,21 @@
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="three_finger_gesture"
+        settings:iconSpaceReserved="false"
         android:title="@string/three_finger_gesture"
         android:summary="@string/three_finger_gesture_summary"
         android:defaultValue="false" /> 
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="status_bar_brightness_control"
+        settings:iconSpaceReserved="false"
         android:title="@string/status_bar_toggle_brightness"
         android:summary="@string/status_bar_toggle_brightness_summary"
         android:defaultValue="false" />
 
     <Preference
         android:key="power_button_torch_screen"
+        settings:iconSpaceReserved="false"
         android:title="@string/power_button_torch_title"
         android:summary="@string/power_button_torch_summary"
         android:fragment="com.colt.enigma.fragments.PowerButtonTorchSettings" />
@@ -55,12 +59,14 @@
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_lockscreen"
+        settings:iconSpaceReserved="false"
         android:title="@string/double_tap_to_sleep_lockscreen_title"
         android:summary="@string/double_tap_to_sleep_lockscreen_summary"
         android:defaultValue="true" />
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="double_tap_sleep_gesture"
+        settings:iconSpaceReserved="false"
         android:title="@string/double_tap_to_sleep_statusbar_title"
         android:summary="@string/double_tap_to_sleep_statusbar_summary"
         android:defaultValue="true" />

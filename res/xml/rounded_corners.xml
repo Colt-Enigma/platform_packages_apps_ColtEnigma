@@ -21,12 +21,14 @@
 
     <com.colt.enigma.preference.SecureSettingSwitchPreference
         android:key="sysui_rounded_fwvals"
+	settings:iconSpaceReserved="false"
         android:title="@string/corner_fwvals"
         android:defaultValue="true"
         android:disableDependentsState="true" />
 
     <com.colt.enigma.preference.CustomSeekBarPreference
         android:key="sysui_rounded_size"
+        settings:iconSpaceReserved="false"
         android:title="@string/corner_radius"
         android:max="60"
         settings:min="0"

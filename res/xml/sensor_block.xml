@@ -23,6 +23,7 @@
     <!-- Master switch -->
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
+	settings:iconSpaceReserved="false"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
@@ -30,17 +31,20 @@
     <!-- App picker activity for sensor block -->
     <PreferenceCategory
         android:title="@string/sensor_block_app_picker_title"
+        settings:iconSpaceReserved="false"
         android:dependency="sensor_block"
         android:key="sensor_block_applications">
 
         <Preference
             android:key="add_sensor_block_packages"
+        settings:iconSpaceReserved="false"
             android:icon="@drawable/ic_menu_add_white"
             android:title="@string/add_sensor_block_package_title" />
     </PreferenceCategory>
 
     <com.android.settingslib.widget.FooterPreference
         android:key="sensor_block_footer"
+        settings:iconSpaceReserved="false"
         android:selectable="false"
         settings:searchable="false"
         android:dependency="sensor_block" />

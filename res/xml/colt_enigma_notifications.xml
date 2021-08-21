@@ -21,6 +21,7 @@
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="alert_slider_notifications"
+        settings:iconSpaceReserved="false"
         android:title="@string/alert_slider_notifications_title"
         android:summary="@string/alert_slider_notifications_summary"
         android:defaultValue="true" />
@@ -31,23 +32,27 @@
 
        <Preference
             android:title="@string/heads_up_notifications"
+            settings:iconSpaceReserved="false"
             android:summary="@string/heads_up_notifications_summary"
             android:fragment="com.colt.enigma.fragments.HeadsUpSettings" />
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="notification_headers"
+            settings:iconSpaceReserved="false"
             android:title="@string/notification_headers_title"
             android:summary="@string/notification_headers_summary"
             android:defaultValue="true" />
 
        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="hide_smart_replies"
+            settings:iconSpaceReserved="false"
             android:title="@string/hide_smart_replies_title"
             android:summary="@string/hide_smart_replies_summary"
             android:defaultValue="false"/>
 
        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="status_bar_notif_count"
+            settings:iconSpaceReserved="false"
             android:title="@string/status_bar_notif_count_title"
             android:summary="@string/status_bar_notif_count_summary"
             android:defaultValue="false" />
@@ -60,6 +65,7 @@
 
        <com.colt.enigma.preference.SystemSettingSeekBarPreference
            android:key="notification_bg_alpha"
+            settings:iconSpaceReserved="false"
            android:title="@string/notification_alpha_title"
            android:defaultValue="255"
            android:max="255"
@@ -68,24 +74,28 @@
 
        <com.colt.enigma.preference.SystemSettingSwitchPreference
            android:key="notification_guts_kill_app_button"
+            settings:iconSpaceReserved="false"
            android:title="@string/notification_guts_kill_app_button_title"
            android:summary="@string/notification_guts_kill_app_button_summary"
            android:defaultValue="false" />
 
        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="force_expanded_notifications"
+            settings:iconSpaceReserved="false"
             android:title="@string/force_expanded_notifications_title"
             android:summary="@string/force_expanded_notifications_summary"
             android:defaultValue="false" />
 
        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="notification_sound_vib_screen_on"
+            settings:iconSpaceReserved="false"
             android:title="@string/notification_sound_vib_screen_on_title"
             android:summary="@string/notification_sound_vib_screen_on_summary"
             android:defaultValue="true" />
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_notifications"
+            settings:iconSpaceReserved="false"
             android:title="@string/vibrate_on_notifications_title"
             android:summary="@string/vibrate_on_notifications_summary"
             android:defaultValue="true"/>
@@ -98,6 +108,7 @@
 
       <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="artwork_media_background"
+            settings:iconSpaceReserved="false"
             android:title="@string/artwork_media_background_title"
             android:summary="@string/artwork_media_background_summary"
             android:defaultValue="true" />
@@ -109,6 +120,7 @@
 
         <Preference
             android:key="notification_light"
+            settings:iconSpaceReserved="false"
             android:title="@string/notification_light_settings"  
             android:summary="@string/notification_light_summary"  
             android:fragment="com.android.settings.applications.manageapplications.ManageApplications" >         
@@ -119,6 +131,7 @@
 
         <Preference
             android:key="charging_light"
+            settings:iconSpaceReserved="false"
             android:title="@string/battery_light_settings"
             android:summary="@string/battery_light_summary"
             android:fragment="com.colt.enigma.fragments.BatteryLightSettings" />
@@ -132,22 +145,26 @@
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_connect"
+            settings:iconSpaceReserved="false"
             android:title="@string/incall_vibrate_connect_title"
             android:defaultValue="true" />
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_callwaiting"
+            settings:iconSpaceReserved="false"
             android:title="@string/incall_vibrate_call_wait_title"
             android:defaultValue="true" />
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="vibrate_on_disconnect"
+            settings:iconSpaceReserved="false"
             android:title="@string/incall_vibrate_disconnect_title"
             android:defaultValue="true" />
 
 	 <!-- Flashlight on incoming calls -->
         <ListPreference
             android:key="flashlight_on_call"
+            settings:iconSpaceReserved="false"
             android:title="@string/flashlight_on_call_title"
             android:entries="@array/flashlight_on_call_entries"
             android:entryValues="@array/flashlight_on_call_values"
