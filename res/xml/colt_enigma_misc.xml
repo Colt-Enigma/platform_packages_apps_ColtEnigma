@@ -60,13 +60,6 @@
             android:entries="@array/ringtone_focus_mode_entries"
             android:entryValues="@array/ringtone_focus_mode_values" />
 
-        <Preference
-            android:key="gaming_mode"
-            settings:iconSpaceReserved="false"
-            android:fragment="com.colt.enigma.fragments.GamingMode"
-            android:title="@string/gaming_mode_title"
-            android:summary="@string/gaming_mode_summary" />
-
     </PreferenceCategory>
     <PreferenceCategory
 
