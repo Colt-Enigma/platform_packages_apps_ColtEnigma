@@ -62,6 +62,14 @@
 
         android:title="@string/statusbar_icons_category_title">
 
+	<com.colt.enigma.preference.SystemSettingListPreference 
+            android:key="volte_icon_style" 
+            android:title="@string/volte_icon_style_title" 
+            android:entries="@array/volte_icon_type_entries" 
+            android:entryValues="@array/volte_icon_type_values" 
+            android:summary="%s"
+            android:defaultValue="0"/>
+
         <com.colt.enigma.preference.SystemSettingSwitchPreference 
             android:key="show_fourg"
             settings:iconSpaceReserved="false"
