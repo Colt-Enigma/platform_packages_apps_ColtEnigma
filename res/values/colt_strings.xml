@@ -1405,10 +1405,6 @@
     <string name="aggressive_battery_saver_title">Auto-enable on battery saver</string>
     <string name="aggressive_battery_saver_summary">Enable Aggressive Battery automatically when using battery saver</string>
 
-    <string name="monet_category">Monet Theming</string>
-    <string name="system_color_category">System Colors</string>
-    <string name="system_ui_category">System UI</string>    
-
     <!-- Charging animation style -->
     <string name="charging_animation_style_title">System Charging Animation</string>
     <string name="default_charging_animation">Android Default</string>
