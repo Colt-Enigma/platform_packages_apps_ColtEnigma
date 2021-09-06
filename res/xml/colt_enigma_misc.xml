@@ -56,4 +56,24 @@
             android:defaultValue="false"/>
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="corners_category"
+        android:title="@string/corners_category" >
+
+        <com.colt.enigma.preference.SystemSettingSeekBarPreference
+            android:key="statusbar_left_padding"
+            android:title="@string/statusbar_left_padding"
+            android:max="50"
+            android:min="-5"
+            android:defaultValue="8"/>
+
+         <com.colt.enigma.preference.SystemSettingSeekBarPreference
+            android:key="statusbar_right_padding"
+            android:title="@string/statusbar_right_padding"
+            android:max="50"
+            android:min="-5"
+            android:defaultValue="8"/>
+
+    </PreferenceCategory>
+
 </PreferenceScreen>
