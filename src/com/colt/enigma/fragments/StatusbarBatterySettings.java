@@ -37,6 +37,8 @@ import com.android.settings.Utils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 
+import com.colt.enigma.preference.SystemSettingSwitchPreference;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,15 +48,18 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
 
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
+    private static final String LEFT_BATTERY_TEXT = "do_left_battery_text";
 
     private ListPreference mBatteryPercent;
     private ListPreference mBatteryStyle;
 
     private int mBatteryPercentValue;
 
+    private SystemSettingSwitchPreference mLeftBatteryText;
+
     private static final int BATTERY_STYLE_PORTRAIT = 0;
-    private static final int BATTERY_STYLE_TEXT = 4;
-    private static final int BATTERY_STYLE_HIDDEN = 5;
+    private static final int BATTERY_STYLE_TEXT = 6;
+    private static final int BATTERY_STYLE_HIDDEN = 7;
     private static final int BATTERY_PERCENT_HIDDEN = 0;
     //private static final int BATTERY_PERCENT_SHOW_INSIDE = 1;
     //private static final int BATTERY_PERCENT_SHOW_OUTSIDE = 2;
@@ -63,6 +68,7 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.statusbar_battery);
+	final ContentResolver resolver = getActivity().getContentResolver();
 
         int batterystyle = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.STATUS_BAR_BATTERY_STYLE, BATTERY_STYLE_PORTRAIT, UserHandle.USER_CURRENT);
@@ -70,6 +76,11 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
         mBatteryStyle.setValue(String.valueOf(batterystyle));
         mBatteryStyle.setSummary(mBatteryStyle.getEntry());
         mBatteryStyle.setOnPreferenceChangeListener(this);
+
+	mLeftBatteryText = (SystemSettingSwitchPreference) findPreference(LEFT_BATTERY_TEXT);
+        mLeftBatteryText.setChecked((Settings.System.getInt(resolver,
+                Settings.System.DO_LEFT_BATTERY_TEXT, 0) == 1));
+        mLeftBatteryText.setOnPreferenceChangeListener(this);
 
         mBatteryPercentValue = Settings.System.getIntForUser(getContentResolver(),
                 Settings.System.STATUS_BAR_SHOW_BATTERY_PERCENT, BATTERY_PERCENT_HIDDEN, UserHandle.USER_CURRENT);
@@ -93,6 +104,8 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
             mBatteryStyle.setSummary(mBatteryStyle.getEntries()[index]);
             mBatteryPercent.setEnabled(
                     batterystyle != BATTERY_STYLE_TEXT && batterystyle != BATTERY_STYLE_HIDDEN);
+	    mLeftBatteryText.setEnabled(
+                    batterystyle != BATTERY_STYLE_TEXT && batterystyle != BATTERY_STYLE_HIDDEN);
             return true;
         } else if (preference == mBatteryPercent) {
             mBatteryPercentValue = Integer.parseInt((String) newValue);
@@ -101,6 +114,11 @@ public class StatusbarBatterySettings extends SettingsPreferenceFragment impleme
                     UserHandle.USER_CURRENT);
             int index = mBatteryPercent.findIndexOfValue((String) newValue);
             mBatteryPercent.setSummary(mBatteryPercent.getEntries()[index]);
+            return true;
+	} else if (preference == mLeftBatteryText) {
+            boolean value = (Boolean) newValue;
+            Settings.System.putInt(resolver,
+                    Settings.System.DO_LEFT_BATTERY_TEXT, value ? 1 : 0);
             return true;
         }
         return false;

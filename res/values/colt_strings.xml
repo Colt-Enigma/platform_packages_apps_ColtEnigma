@@ -783,8 +783,10 @@
     <string name="battery_percent_summary">Configure icon and text styles for the statusbar battery indicator</string>
     <string name="status_bar_battery_style_title">Battery style</string>
     <string name="status_bar_battery_style_icon_portrait">Icon portrait</string>
-    <string name="status_bar_battery_style_circle">Circle</string>
-    <string name="status_bar_battery_style_dotted_circle">Dotted circle</string>
+    <string name="status_bar_battery_style_icon_rlandscape">Icon landscape R</string>
+    <string name="status_bar_battery_style_icon_landscape">Icon landscape L</string>
+    <string name="status_bar_battery_style_circle">Circle (Dotted)</string>
+    <string name="status_bar_battery_style_dotted_circle">Circle</string>
     <string name="status_bar_battery_style_filled_circle">Filled circle</string>
     <string name="status_bar_battery_style_text">Text</string>
     <string name="status_bar_battery_style_hidden">Hidden</string>
@@ -793,7 +795,7 @@
     <string name="battery_percentage_title">Battery percentage</string>
     <string name="battery_percentage_default">Hidden (default)</string>
     <string name="battery_percentage_text_inside">Inside the icon</string>
-    <string name="battery_percentage_text_next">Next to the icon</string>
+    <string name="battery_percentage_text_next">Outside the icon</string>
     <string name="battery_text_charging_title">Battery percentage when charging</string>
     <string name="battery_text_charging_summary">Always display battery percentage when charging</string>
 
@@ -803,6 +805,8 @@
     <!-- Battery estimate -->
     <string name="battery_estimate_title">Battery estimate</string>
     <string name="battery_estimate_summary">Display estimated remaining battery life when available</string>
+    <string name="left_battery_text_title">Left battery text</string>
+    <string name="left_battery_text_summary">Put the battery text on left of battery icon</string>
 
     <!-- Statusbar net monitor -->
     <string name="traffic_title">Traffic indicators</string>
