@@ -125,6 +125,13 @@
             android:summary="@string/qs_icon_primary_in_summary"
             android:defaultValue="false" />
 
+	<com.colt.enigma.preference.SystemSettingSwitchPreference
+	    android:key="qs_primary_label"
+            settings:iconSpaceReserved="false"
+            android:title="@string/qs_label_primary_title"
+            android:summary="@string/qs_label_primary_summary"
+            android:defaultValue="false" />
+
 </PreferenceCategory>
 
         <ListPreference

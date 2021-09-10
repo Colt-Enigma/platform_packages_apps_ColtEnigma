@@ -416,6 +416,9 @@
     <string name="qs_icon_primary_in_title">Inactive Qs tile icon bright|dark</string>
     <string name="qs_icon_primary_in_summary">Make Inactive Qs icon bright-dark if default tint enabled</string>
 
+    <string name="qs_label_primary_title">Qs Label bright|dark</string>
+    <string name="qs_label_primary_summary">Make Qs label accent-light bright-dark </string>
+
     <!-- AOSP Gestures -->
     <string name="aosp_gesture_preference">System settings</string>
     <string name="aosp_gesture_summary">Stock gestures included with AOSP</string>
