@@ -1557,4 +1557,13 @@
     <string name="allow_signature_fake">Allow signature spoofing</string>
     <string name="allow_signature_fake_summary">Allow apps to bypass security systems by pretending to be a different app.</string>
        
+    <!-- SB Color Options -->
+    <string name="status_bar_color_title">StatusBar Colors</string>
+    <string name="status_bar_color_summary">Options to colorize status bar icons n Texts</string>
+    <string name="colors_general_title">Colors For Dark Mode</string>
+    <string name="colors_general_dark_mode_title">Colors for Light Mode</string>
+    <string name="text_title">Battery &amp; Text Colors</string>
+    <string name="icon_title">Notification Icon Colors</string>
+    <string name="lockscreen_colors_reset_title">Reset lockscreen colors</string>
+    <string name="lockscreen_colors_reset_message">Are you sure you want to reset these colors to default?</string>
 </resources>
