@@ -1253,10 +1253,6 @@
     <string name="artwork_media_fade_level_title">Artwork fade level</string>
     <string name="artwork_media_fade_level_summary">Fading the media artwork image</string>
 
-    <!-- Qs Clock -->
-    <string name="oos_qsclock">Qs clock</string>
-    <string name="oos_qsclock_summary">Display an oos like clock on qs</string>
-
     <!-- Custom Signal bar icons -->
     <string name="custom_signal_bar_title">Signal icons</string>
 

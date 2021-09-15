@@ -23,13 +23,6 @@
 
         android:title="@string/general_category_title">
 
-	<com.colt.enigma.preference.SystemSettingSwitchPreference
-           android:key="oos_qsclock"
-	   settings:iconSpaceReserved="false"
-           android:title="@string/oos_qsclock"
-           android:summary="@string/oos_qsclock_summary"
-           android:defaultValue="true" />
-
         <Preference
             android:key="custom_header"
            settings:iconSpaceReserved="false"
