@@ -846,12 +846,6 @@
     <string name="theme_option_reset_title">Reset</string>
     <string name="theme_option_reset_message">Are you sure you want to reset?</string>
 
-    <!-- QS Header DataUsage -->
-    <string name="qs_datausage_title">Data usage visibility</string>
-    <string name="qs_datausage_disabled">Disabled</string>
-    <string name="qs_datausage_daily">Daily usage</string>
-    <string name="qs_datausage_monthly">Monthly usage</string>
-
     <!-- X Ambient Doze -->
     <string name="doze_sensor_title">Sensor based</string>
     <string name="tilt_title">Tilt</string>
