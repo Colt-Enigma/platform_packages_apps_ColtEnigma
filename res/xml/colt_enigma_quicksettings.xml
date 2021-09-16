@@ -19,6 +19,26 @@
         android:key="quicksettings_header"
         android:layout="@layout/quicksettings_header" />
 
+     <PreferenceCategory
+        android:key="clock_header"
+        android:title="@string/clock_header_title">
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_clock_location"
+            android:title="@string/qs_clock_location_title"
+            android:summary="@string/qs_clock_location_summary"
+            android:defaultValue="false"/>
+
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="clock_gravity"
+            android:title="@string/colt_clock_gravity_title"
+            android:entries="@array/colt_clock_gravity_entries"
+            android:entryValues="@array/colt_clock_gravity_values"
+            android:summary="%s"
+            android:defaultValue="0" />
+
+    </PreferenceCategory>
+
     <PreferenceCategory
 
         android:title="@string/general_category_title">
