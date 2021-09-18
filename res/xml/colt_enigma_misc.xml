@@ -80,6 +80,12 @@
             android:summary="@string/wakeup_when_plugged_unplugged_summary"
             android:defaultValue="true" />
 
+        <com.colt.enigma.preference.GlobalSettingSwitchPreference
+            android:key="allow_signature_fake"
+            android:title="@string/allow_signature_fake"
+            android:summary="@string/allow_signature_fake_summary"
+            android:defaultValue="false" />
+
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="charging_animation"
             settings:iconSpaceReserved="false"
