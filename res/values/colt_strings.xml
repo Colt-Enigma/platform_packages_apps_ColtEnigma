@@ -1541,4 +1541,8 @@
 
     <string name="qs_running_service_title">Running service icon</string>
     <string name="qs_running_service_summary">Enable or disable running service icon</string>
+
+    <!-- Clear all button -->
+    <string name="enable_clear_all_button">Notification clear all button</string>
+    <string name="enable_clear_all_button_summary">Show button to clear all notifications instead of just plain text</string>
 </resources>
