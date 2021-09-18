@@ -25,12 +25,14 @@
 
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_clock_location"
+            settings:iconSpaceReserved="false"
             android:title="@string/qs_clock_location_title"
             android:summary="@string/qs_clock_location_summary"
             android:defaultValue="false"/>
 
         <com.colt.enigma.preference.SystemSettingListPreference
             android:key="clock_gravity"
+            settings:iconSpaceReserved="false"
             android:title="@string/colt_clock_gravity_title"
             android:entries="@array/colt_clock_gravity_entries"
             android:entryValues="@array/colt_clock_gravity_values"
@@ -109,6 +111,34 @@
         android:summary="@string/qs_footer_text_string_summary"
         android:dependency="footer_text_show"
         android:defaultValue="#Get_Colt-ify" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_edit"
+            settings:iconSpaceReserved="false"
+            android:title="@string/qs_edit_title"
+            android:summary="@string/qs_edit_summary"
+            android:defaultValue="true" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_settings"
+            settings:iconSpaceReserved="false"
+            android:title="@string/qs_settings_title"
+            android:summary="@string/qs_settings_summary"
+            android:defaultValue="true" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_services"
+            settings:iconSpaceReserved="false"
+            android:title="@string/qs_running_service_title"
+            android:summary="@string/qs_running_service_summary"
+            android:defaultValue="false" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_footer_show_user"
+            settings:iconSpaceReserved="false"
+            android:title="@string/qs_user_title"
+            android:summary="@string/qs_user_summary"
+            android:defaultValue="true" />
 
     </PreferenceCategory>
 
