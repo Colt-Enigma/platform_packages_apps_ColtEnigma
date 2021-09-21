@@ -1548,4 +1548,8 @@
     <!-- Clear all button -->
     <string name="enable_clear_all_button">Notification clear all button</string>
     <string name="enable_clear_all_button_summary">Show button to clear all notifications instead of just plain text</string>
+
+    <!-- Statusbar left_right padding -->
+    <string name="statusbar_left_padding">SB left padding</string>
+    <string name="statusbar_right_padding">SB right padding</string>
 </resources>
