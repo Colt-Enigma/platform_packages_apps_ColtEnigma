@@ -94,7 +94,7 @@
             android:summary="@string/roaming_indicator_icon_summary"
             android:defaultValue="true"/>
 
-        <com.colt.enigma.preference.SystemSettingSwitchPreference
+        <com.colt.enigma.preference.SecureSettingSwitchPreference
             android:key="use_old_mobiletype"
             settings:iconSpaceReserved="false"
             android:title="@string/use_old_mobiletype_title"
