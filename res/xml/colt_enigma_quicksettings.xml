@@ -39,6 +39,12 @@
             android:defaultValue="false" /> -->
 
     <com.colt.enigma.preference.SecureSettingSwitchPreference
+            android:key="quick_settings_vibrate"
+            android:title="@string/quick_settings_vibrate_title"
+            android:summary="@string/quick_settings_vibrate_summary"
+            android:defaultValue="false"/>
+
+    <com.colt.enigma.preference.SecureSettingSwitchPreference
             android:key="show_media_squiggle_animation"
             android:title="@string/show_squiggle_animation_title"
             android:summary="@string/show_squiggle_animation_summary"
