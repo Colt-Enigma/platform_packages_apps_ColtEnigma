@@ -320,6 +320,7 @@
     <string name="show_network_traffic_up">Uplink</string>
     <string name="show_network_traffic_down">Downlink</string>
     <string name="show_network_traffic_all">Uplink and Downlink</string>
+    <string name="nettraf_font_size">Single net font size</string>
 
     <!-- Power menu on secure lockscreen -->
     <string name="lockscreen_power_menu_disabled_title">No power menu when locked</string>
