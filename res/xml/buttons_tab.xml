@@ -17,8 +17,8 @@
 
 	<!-- Colt Logo Header -->
         <Preference 
-           android:key="colt_logo"
-           android:layout="@layout/colt_logo" />
+           android:key="colt_branding"
+           android:layout="@layout/colt_branding" />
 
 	<!-- Buttons -->
 	<com.colt.enigma.preference.CategoryColtPreference

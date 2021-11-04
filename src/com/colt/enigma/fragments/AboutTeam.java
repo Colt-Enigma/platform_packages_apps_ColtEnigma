@@ -39,6 +39,8 @@ public class AboutTeam extends SettingsPreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+    addPreferencesFromResource(R.xml.colt_enigma_aboutteam);
+
     }
 
     @Override
