@@ -144,7 +144,7 @@ public class ColtEnigma extends SettingsPreferenceFragment {
 
     @Override
     public int getMetricsCategory() {
-        return MetricsProto.MetricsEvent.ENIGMA;
+        return MetricsProto.MetricsEvent.COLT;
     }
 
     @Override

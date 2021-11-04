@@ -15,10 +15,10 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <!-- Colt Logo Header -->
+	<!-- Colt Logo Header -->
         <Preference 
-           android:key="colt_header_about"
-           android:layout="@layout/colt_header_about" />
+           android:key="colt_logo"
+           android:layout="@layout/colt_logo" />
 
         <!-- Notifications -->
 	<com.colt.enigma.preference.CategoryColtPreference
