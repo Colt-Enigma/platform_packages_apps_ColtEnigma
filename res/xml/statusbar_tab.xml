@@ -28,6 +28,14 @@
             android:fragment="com.colt.enigma.fragments.StatusBarSettings"
 	    android:summary="@string/statusbar_summary" />
 
+	<!-- Status Bar Clock & Date -->
+        <com.colt.enigma.preference.CategoryColtPreference	
+            android:key="status_bar_clock"
+            android:fragment="com.colt.enigma.fragments.ClockDateSettings"
+	    android:icon="@drawable/ic_miscellaneous_background"
+            android:title="@string/status_bar_clock_title" />
+
+
         <!-- Quick Settings -->
         <com.colt.enigma.preference.CategoryColtPreference
 	    android:key="quicksettings_category"

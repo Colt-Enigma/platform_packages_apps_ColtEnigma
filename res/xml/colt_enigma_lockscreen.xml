@@ -19,9 +19,6 @@
          android:key="lockscreen_shortcuts"
          android:fragment="src.com.colt.enigma.fragments.LockscreenShortcuts"
          android:title="@string/lockscreen_shortcuts" />
-     </Preference>   
-
-
 
     <PreferenceCategory
         android:key="lockscreen_ui_gestures_category"
