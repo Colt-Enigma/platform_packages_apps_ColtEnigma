@@ -46,7 +46,7 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.colt_enigma_button);
 
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+	final PreferenceScreen prefScreen = getPreferenceScreen();
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
