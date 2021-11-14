@@ -18,7 +18,7 @@
     <dimen name="floating_widget_view_padding">10dp</dimen>
     <dimen name="floating_widget_window_padding">10dp</dimen>
 
-    <dimen name="default_corner_radii">56dp</dimen>
+    <dimen name="default_corner_radii">15dp</dimen>
     <dimen name="default_nav_item_padding">10dp</dimen>
     <dimen name="default_nav_item_text_size">11sp</dimen>
     <dimen name="default_nav_item_text_padding">8dp</dimen>
@@ -29,7 +29,7 @@
     <dimen name="owlsnest_cat_icon_image_inset">6dp</dimen>
 
     <!-- Cardview Preference -->
-    <dimen name="card_elevation">8dp</dimen>
+    <dimen name="card_elevation">6dp</dimen>
     <dimen name="card_corner_radius">15dp</dimen>
     <dimen name="card_margin_top">6dp</dimen>
     <dimen name="card_margin_bottom">30dp</dimen>
