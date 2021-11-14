@@ -56,6 +56,7 @@ public class ColtEnigma extends SettingsPreferenceFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		getActivity().getActionBar().hide();
 
         mContext = getActivity();
         View view = inflater.inflate(R.layout.colt, container, false);
