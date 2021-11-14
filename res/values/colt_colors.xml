@@ -17,6 +17,7 @@
     <!-- Tab & About Colors -->
     <color name="bottom_nav_text_icon_active">@*android:color/accent_device_default_light</color>
     <color name="bottom_nav_text_icon_inactive">#9c9c9c</color>
+    <color name="tab_bg">@*android:color/surface_highlight_light</color>
 
     <color name="red_bg_light">#3dcf605a</color>
     <color name="blue_bg_light">#3d2598b9</color>
