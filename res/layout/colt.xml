@@ -31,7 +31,7 @@
         android:id="@+id/bottom_navigation_view_constraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:colorPrimary"
+	android:background="@drawable/rounded_rect_floating"
 	android:layout_marginStart="12dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="18dp"
