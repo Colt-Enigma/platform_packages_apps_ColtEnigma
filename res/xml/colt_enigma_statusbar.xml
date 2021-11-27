@@ -44,7 +44,13 @@
                 android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
         </Preference>
 
-        <com.colt.enigma.preference.SystemSettingSwitchPreference 
+        <com.colt.enigma.preference.SecureSettingSwitchPreference
+            android:key="hide_qs_call_strength"
+            android:title="@string/show_qs_call_strength_icon_title"
+            android:summary="@string/show_qs_call_strength_icon_summary"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="use_old_mobiletype" 
             android:title="@string/use_old_mobiletype_title" 
             android:summary="@string/use_old_mobiletype_summary"
