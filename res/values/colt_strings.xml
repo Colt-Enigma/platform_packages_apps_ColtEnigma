@@ -716,4 +716,8 @@
     <string name="vowifi_icon_simple3">Simple3 Icon</string>
     <string name="vowifi_icon_vivo">Vivo Icon</string>
     <string name="vowifi_icon_margaritov">Margaritov Icon</string>
+
+    <!-- Sb Icon Style -->
+    <string name="statusbar_icons_style">Colored Statusbar Icons</string>
+    <string name="statusbar_icons_style_summary">Choose the style of your statusbar icons (requires SystemUI restart)</string>
 </resources>
