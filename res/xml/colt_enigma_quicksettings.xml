@@ -63,6 +63,14 @@
             android:summary="@string/qs_show_battery_estimate_summary"
             android:defaultValue="true"/>
 
+        <com.colt.enigma.preference.SystemSettingListPreference
+           android:key="qs_clock_picker"
+           android:defaultValue="0"
+           android:title="@string/qsclockpicker_title"
+           android:entries="@array/qsclock_type_entries"
+           android:entryValues="@array/qsclock_type_values"
+           android:summary="%s" />
+        
     </PreferenceCategory>
 
     <PreferenceCategory
