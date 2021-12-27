@@ -671,4 +671,9 @@
     <string name="xd_about_core_roger_role">UI and UX Designer</string>
     <string name="xd_about_core_team_cat">Core developer</string>
     <string name="xd_about">About ColtOS</string>
+
+    <!-- Notification headers -->
+    <string name="notification_headers_title">Notification Headers</string>
+    <string name="notification_headers_summary">Show headers in the notification shade</string>
+
 </resources>
