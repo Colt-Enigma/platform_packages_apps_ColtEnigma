@@ -136,11 +136,9 @@ public class ColtTheme extends DashboardFragment implements
 
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.font"));
+                "android.theme.customization.signal_icon"));
         controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.adaptive_icon_shape"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.icon_pack.android"));
+                "android.theme.customization.wifi_icon"));
         return controllers;
     }
 
