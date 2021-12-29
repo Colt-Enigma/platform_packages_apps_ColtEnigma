@@ -52,7 +52,15 @@
             android:summary="%s"
             android:defaultValue="1"/>
 
-        <com.colt.enigma.preference.SystemSettingSwitchPreference 
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="vowifi_icon_style"
+            android:title="@string/vowifi_icon_title"
+            android:entries="@array/vowifi_icon_type_entries"
+            android:entryValues="@array/vowifi_icon_type_values"
+            android:summary="%s"
+            android:defaultValue="1"/>
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="show_fourg_icon"
             android:title="@string/show_fourg_title"
             android:summary="@string/show_fourg_summary"

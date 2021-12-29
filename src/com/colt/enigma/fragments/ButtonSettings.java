@@ -41,6 +41,12 @@ import com.android.internal.logging.nano.MetricsProto;
 public class ButtonSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener{
 
+    private static final String VOLTE_ICON_STYLE = "volte_icon_style";
+    private static final String VOWIFI_ICON_STYLE = "vowifi_icon_style";
+
+    private SystemSettingListPreference mVolteIconStyle;
+    private SystemSettingListPreference mVowifiIconStyle;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
