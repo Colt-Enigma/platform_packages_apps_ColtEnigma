@@ -598,7 +598,7 @@
     <!-- QS Clock Picker -->
     <string name="qsclockpicker_title">QsCLock Picker</string>
     <string name="qsclockpicker_def">Default Aosp look</string>
-    <string name="qsclockpicker_img">ImgClock</string>
-    <string name="qsclockpicker_big">BigClock</string>
+    <string name="qsclockpicker_img">OOS inspired</string>
+    <string name="qsclockpicker_big">Minimalistic</string>
     
 </resources>
