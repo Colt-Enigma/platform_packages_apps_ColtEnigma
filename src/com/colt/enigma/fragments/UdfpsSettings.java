@@ -1,5 +1,5 @@
 /*
- *  Copyright (C) 2020 ColtOS Project
+ * Copyright (C) 2017-22 The Project-Xtended
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -8,13 +8,14 @@
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
  */
+
 package com.colt.enigma.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
@@ -28,42 +29,44 @@ import android.content.res.Resources;
 import android.hardware.fingerprint.FingerprintManager;
 import android.net.Uri;
 import android.os.Bundle;
-import androidx.preference.SwitchPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceManager;
+import androidx.preference.SwitchPreference;
 import androidx.preference.PreferenceScreen;
-
+import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.util.xtended.fod.FodUtils;
-import com.android.internal.util.xtended.XtendedUtils;
+import com.android.internal.util.colt.ColtUtils;
 
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
 
-public class LockScreenSettings extends SettingsPreferenceFragment implements
+public class UdfpsSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
-        addPreferencesFromResource(R.xml.colt_enigma_lockscreen);
+        addPreferencesFromResource(R.xml.x_settings_udfps);
 
-        ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
 
-        PreferenceCategory udfps = (PreferenceCategory) prefScreen.findPreference("udfps_category");
-        if (!FodUtils.hasFodSupport(getActivity())) {
-            prefScreen.removePreference(udfps);
+        boolean udfpsResPkgInstalled = ColtUtils.isPackageInstalled(getContext(),
+                "com.xtended.udfps.resources");
+		PreferenceCategory udfps_custom = (PreferenceCategory) prefScreen.findPreference("udfps_customization");
+        if (!udfpsResPkgInstalled) {
+            prefScreen.removePreference(udfps_custom);
         }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-
         return false;
     }
 
@@ -71,5 +74,5 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
     }
+}
 
-} 
