@@ -411,11 +411,15 @@
     <string-array name="qsclock_type_entries" translatable="false">
         <item>@string/qsclockpicker_img</item>
         <item>@string/qsclockpicker_big</item>
+        <item>@string/qsclockpicker_new</item>
+        <item>@string/qsclockpicker_new1</item>
     </string-array>
 
     <string-array name="qsclock_type_values" translatable="false">
         <item>0</item>
         <item>1</item>
+        <item>2</item>
+        <item>3</item>
     </string-array>
     
 </resources>
