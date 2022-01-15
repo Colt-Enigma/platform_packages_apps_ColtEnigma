@@ -17,7 +17,7 @@
 
      <Preference
          android:key="lockscreen_shortcuts"
-         android:fragment="src.com.colt.enigma.fragments.LockscreenShortcuts"
+         android:fragment="com.colt.enigma.fragments.LockscreenShortcuts"
          android:title="@string/lockscreen_shortcuts" />
 
     <PreferenceCategory
@@ -47,6 +47,13 @@
         android:title="@string/lockscreen_battery_info_title"
         android:summary="@string/lockscreen_battery_info_summary"
         android:defaultValue="true" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_small_clock"
+        android:title="@string/lockscreen_small_clock_title"
+        android:summary="@string/lockscreen_small_clock_summary"
+        android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
