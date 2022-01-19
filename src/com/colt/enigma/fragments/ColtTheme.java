@@ -135,10 +135,6 @@ public class ColtTheme extends DashboardFragment implements
             Context context, Lifecycle lifecycle, Fragment fragment) {
 
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.signal_icon"));
-        controllers.add(new OverlayCategoryPreferenceController(context,
-                "android.theme.customization.wifi_icon"));
         return controllers;
     }
 
