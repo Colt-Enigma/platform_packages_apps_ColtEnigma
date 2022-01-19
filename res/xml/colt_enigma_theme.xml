@@ -37,13 +37,19 @@
             android:summary="@string/monet_settings_summary"
             android:fragment="com.colt.enigma.fragments.MonetSettings" />
             
-        <ListPreference
+        <!-- Wifi Icon style -->
+        <Preference
             android:key="android.theme.customization.wifi_icon"
-            android:title="@string/custom_wifi_bar_title"/>
+            android:title="@string/custom_wifi_bar_title"
+            android:summary="@string/custom_wifi_bar_summary"
+            android:fragment="com.colt.enigma.fragments.WifiIcons"/>
 
-        <ListPreference
+        <!-- Signal icon style -->
+        <Preference
             android:key="android.theme.customization.signal_icon"
-            android:title="@string/custom_signal_bar_title"/>
+            android:title="@string/custom_signal_bar_title"
+            android:summary="@string/custom_signal_bar_summary"
+            android:fragment="com.colt.enigma.fragments.SignalIcons"/>
 
         <!-- Font style -->
         <Preference
