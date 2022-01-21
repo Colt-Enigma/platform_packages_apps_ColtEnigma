@@ -56,7 +56,7 @@
         android:title="@string/lockscreen_small_clock_title"
         android:summary="@string/lockscreen_small_clock_summary"
         android:defaultValue="false" />
-
+            
     </PreferenceCategory>
 
     <PreferenceCategory

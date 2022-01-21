@@ -652,4 +652,9 @@
     <!-- Ambient Ticker -->
     <string name="pulse_on_new_tracks_title">Music ticker</string>
     <string name="pulse_on_new_tracks_summary">Show music ticker on Ambient Display during track change</string>
+
+    <string name="screen_off_animation_title">Screen Off Animation</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
+
 </resources>
