@@ -13,5 +13,5 @@
  -->
 
 <resources>
-    <color name="tab_bg">@*android:color/primary_dark_device_default_settings</color>
+    <color name="tab_bg">@*android:color/primary_device_default_settings</color>
 </resources>
