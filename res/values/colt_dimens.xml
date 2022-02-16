@@ -18,7 +18,7 @@
     <dimen name="floating_widget_view_padding">10dp</dimen>
     <dimen name="floating_widget_window_padding">10dp</dimen>
 
-    <dimen name="default_corner_radii">56dp</dimen>
+    <dimen name="default_corner_radii">15dp</dimen>
     <dimen name="default_nav_item_padding">10dp</dimen>
     <dimen name="default_nav_item_text_size">11sp</dimen>
     <dimen name="default_nav_item_text_padding">8dp</dimen>
