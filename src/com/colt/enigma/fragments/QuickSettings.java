@@ -160,20 +160,28 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         ContentResolver resolver = getActivity().getContentResolver();
 
         boolean AospClock = Settings.System.getIntForUser(getContext().getContentResolver(),
-                Settings.System.QS_CLOCK_PICKER , 0, UserHandle.USER_CURRENT) == 5;
+                Settings.System.QS_CLOCK_PICKER , 0, UserHandle.USER_CURRENT) == 4;
         boolean ColorOsClock = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_CLOCK_PICKER , 0, UserHandle.USER_CURRENT) == 5;
+        boolean SimpleClock = Settings.System.getIntForUser(getContext().getContentResolver(),
                 Settings.System.QS_CLOCK_PICKER , 0, UserHandle.USER_CURRENT) == 6;
+        boolean RightClock = Settings.System.getIntForUser(getContext().getContentResolver(),
+                Settings.System.QS_CLOCK_PICKER , 0, UserHandle.USER_CURRENT) == 7;
 
         if (AospClock) {
             updateQsClockPicker(mOverlayManager, "com.spark.qsclockoverlays.aosp");
         } else if (ColorOsClock) {
             updateQsClockPicker(mOverlayManager, "com.spark.qsclockoverlays.coloros");
+        } else if (SimpleClock) {
+            updateQsClockPicker(mOverlayManager, "com.arcana.qsclockoverlays.simple");
+        } else if (RightClock) {
+            updateQsClockPicker(mOverlayManager, "com.arcana.qsclockoverlays.right");
         } else {
             setDefaultClock(mOverlayManager);
         }
     }
-    
-     @Override
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
         if (preference == mTileAnimationStyle) {
@@ -258,6 +266,8 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     public static final String[] CLOCKS = {
         "com.spark.qsclockoverlays.aosp",
         "com.spark.qsclockoverlays.coloros",
+        "com.arcana.qsclockoverlays.simple",
+        "com.arcana.qsclockoverlays.right",
     };
 
      private void updateTileAnimationStyleSummary(int tileAnimationStyle) {
