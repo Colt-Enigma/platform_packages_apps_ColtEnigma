@@ -65,7 +65,7 @@
 
         <com.colt.enigma.preference.SystemSettingListPreference
            android:key="qs_clock_picker"
-           android:defaultValue="0"
+           android:defaultValue="4"
            android:title="@string/qsclockpicker_title"
            android:entries="@array/qsclock_type_entries"
            android:entryValues="@array/qsclock_type_values"
