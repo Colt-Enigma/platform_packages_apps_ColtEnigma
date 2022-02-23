@@ -39,7 +39,7 @@
 	<com.colt.enigma.preference.CategoryColtPreference
            android:key="battery_bar_category"
            android:fragment="com.colt.enigma.fragments.BatterySettings"
-           android:icon="@drawable/ic_battery_bar"
+           android:icon="@drawable/ic_battery_background"
            android:title="@string/battery_settings_title" />
 
         <!-- Quick Settings -->
