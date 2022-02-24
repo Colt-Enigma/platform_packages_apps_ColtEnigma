@@ -28,4 +28,11 @@
 	    android:icon="@drawable/ic_lockscreen_general_background"
 	    android:fragment="com.colt.enigma.fragments.LockScreenSettings" />
 
+	<!-- Lock Screen Visualizer -->
+        <com.colt.enigma.preference.CategoryColtPreference
+            android:key="lockscreen_visualizer"
+            android:fragment="com.colt.enigma.fragments.Visualizer"
+            android:title="@string/lockscreen_visualizer_enable"
+	    android:icon="@drawable/ic_lockscreen_general_background" />
+
 </PreferenceScreen>

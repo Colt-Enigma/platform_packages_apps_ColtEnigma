@@ -87,16 +87,4 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="lockscreen_visualizer_options"
-        android:title="@string/lockscreen_visualizer_title" >
-
-        <Preference
-            android:key="lockscreen_visualizer"
-            android:fragment="com.colt.enigma.fragments.Visualizer"
-            android:title="@string/lockscreen_visualizer_enable"
-            android:summary="@string/lockscreen_visualizer_enable_summary" />
-
-    </PreferenceCategory>
-
 </PreferenceScreen>
