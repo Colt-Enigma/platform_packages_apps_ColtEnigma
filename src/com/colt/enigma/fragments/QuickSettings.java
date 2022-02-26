@@ -18,6 +18,8 @@ package com.colt.enigma.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import static android.os.UserHandle.USER_CURRENT;
+import static android.os.UserHandle.USER_SYSTEM;
 import android.app.ActivityManagerNative;
 import android.content.Context;
 import android.content.ContentResolver;
@@ -32,6 +34,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.UserHandle;
+import android.os.RemoteException;
 import android.content.ContentResolver;
 import android.database.ContentObserver;
 import android.content.res.Resources;
@@ -46,10 +49,11 @@ import com.android.settings.SettingsPreferenceFragment;
 import java.util.Locale;
 import android.text.TextUtils;
 import android.view.View;
+import android.os.ServiceManager;
 
 import java.util.List;
 import java.util.ArrayList;
-import com.colt.enigma..preference.SystemSettingListPreference;
+import com.colt.enigma.preference.SystemSettingListPreference;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.Utils;
@@ -128,7 +132,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
 
         mQsClockPicker = (SystemSettingListPreference) findPreference(QS_CLOCK_PICKER);
         boolean isAospClock = Settings.System.getIntForUser(resolver,
-                KEY_EDGE_LIGHTNING, 0, UserHandle.USER_CURRENT) == 5;
+		QS_CLOCK_PICKER, 0, UserHandle.USER_CURRENT) == 4;
         mQsClockPicker.setOnPreferenceChangeListener(this);
         mCustomSettingsObserver.observe();
     }

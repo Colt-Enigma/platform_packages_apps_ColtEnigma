@@ -34,6 +34,20 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+           android:key="notifications_ambient_category"
+           android:title="@string/notification_ambient_title">
+
+    <!-- Pulse notifications lightning -->
+    <com.colt.enigma.preference.SystemSettingMasterSwitchPreference
+        android:key="pulse_ambient_light"
+        android:title="@string/pulse_ambient_light_title"
+        android:summary="@string/pulse_ambient_light_summary"
+        android:fragment="com.colt.enigma.fragments.EdgeLightningSettings"
+        android:defaultValue="false" />
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory
         android:key="headsup_notifications_category"
         android:title="@string/headsup_category">
 
