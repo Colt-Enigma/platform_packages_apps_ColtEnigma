@@ -41,4 +41,23 @@
 
     <!-- Shortcut picker -->
     <dimen name="shortcut_picker_left_padding">70dip</dimen>
+
+
+    <!-- xd. Toolbar -->
+     <dimen name="xd_toolbar_height">225dp</dimen>
+     <dimen name="xd_toolbar_expanded_title_margin_start">21dp</dimen>
+     <dimen name="xd_toolbar_expanded_title_margin_end">75dp</dimen>
+
+     <!-- xd. Preference Card -->
+     <dimen name="xd_pref_card_radius">28dp</dimen>
+     <dimen name="xd_pref_card_radius-outer">5dp</dimen>
+     <dimen name="xd_pref_card_horizontal_padding">16dp</dimen>
+     <dimen name="xd_pref_card_horizontal_padding-negative">-16dp</dimen>
+
+     <!-- xd. Dashboard -->
+     <dimen name="xd_dashboard_header_height">225dp</dimen>
+
+     <!-- xd. About Phone -->
+     <dimen name="xd_about_phone_ill_height">275dp</dimen>
+     <dimen name="xd_about_phone_ill_width">125dp</dimen>
 </resources>
