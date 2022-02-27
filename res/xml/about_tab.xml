@@ -14,9 +14,17 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-        <!-- Colt Logo Header -->
+        <!-- Colt Header -->
+	<Preference
+            android:key="mnmlist_header"
+            settings:layout="@layout/mnmlist_dashboard_header"/>
+
         <Preference
-           android:key="colt_branding"
-           android:layout="@layout/colt_branding" />
+            android:title="@string/xd_tap_about"
+            android:summary="@string/xd_tap_about_summary"
+            android:icon="@drawable/xd_about"
+            android:fragment="com.colt.enigma.fragments.AboutXDFragments"
+            settings:layout="@layout/xd_pref_card_sin-accent"/>
+
 
 </PreferenceScreen>

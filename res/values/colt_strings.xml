@@ -105,4 +105,18 @@
     <string name="set">Set</string>
     <string name="color_default">Default</string>
 
+    <!-- Dashboard -->
+    <string name="mnmlist_title">ColtEnigma</string>
+    <string name="mnmlist_dashboard_title">Need to know about ColtOS ?</string>
+    <string name="xd_tap_about">About ColtOS</string>
+    <string name="xd_tap_about_summary">Tap here to know more about ColtOS</string>   
+    
+    <!-- About ColtOS -->
+    <string name="xd_about_desc">ColtOS is an AOSP-based custom ROM and focusing on robustness with necessary features while keeping the smoothness and optimization provided by AOSP.</string>
+    <string name="xd_about_core_rakesh">Rakesh Batra</string>
+    <string name="xd_about_core_rakesh_role">Founder, Lead Developer</string>
+    <string name="xd_about_core_roger">Roger.T</string>
+    <string name="xd_about_core_roger_role">UI and UX Designer</string>
+    <string name="xd_about_core_team_cat">Core developer</string>
+    <string name="xd_about">About ColtOS</string>
 </resources>
