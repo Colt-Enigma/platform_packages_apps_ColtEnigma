@@ -61,13 +61,38 @@
              android:summary="@string/show_fourg_icon_summary"
              android:defaultValue="false"/>
 
-         <com.colt.enigma.preference.SystemSettingSwitchPreference
-             android:key="volte_icon"
-             android:title="@string/volte_icon_title"
-             android:summary="@string/volte_icon_summary"
-             android:defaultValue="true"/>
-
 	 <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="show_volte_icon"
+            android:title="@string/volte_switch_title"
+            android:summary="@string/volte_switch_summary"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="volte_icon_style"
+            android:title="@string/volte_icon_style_title"
+            android:entries="@array/volte_icon_type_entries"
+            android:entryValues="@array/volte_icon_type_values"
+            android:summary="%s"
+            android:defaultValue="0"
+            android:dependency="show_volte_icon"/>
+
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="vowifi_icon"
+            android:title="@string/vowifi_icon_title"
+            android:entries="@array/vowifi_icon_entries"
+            android:entryValues="@array/vowifi_icon_values"
+            android:summary="%s"
+            android:defaultValue="0"/>
+
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="vowifi_icon_style"
+            android:title="@string/vowifi_icon_style_title"
+            android:entries="@array/vowifi_icon_style_entries"
+            android:entryValues="@array/vowifi_icon_style_values"
+            android:summary="%s"
+            android:defaultValue="0"/>
+
+	<com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="data_disabled_icon"
             android:title="@string/data_disabled_icon_title"
             android:summary="@string/data_disabled_icon_summary"
