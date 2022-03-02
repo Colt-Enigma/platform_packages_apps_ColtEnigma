@@ -30,9 +30,10 @@
 
 	<!-- Lock Screen Visualizer -->
         <com.colt.enigma.preference.CategoryColtPreference
-            android:key="lockscreen_visualizer"
-            android:fragment="com.colt.enigma.fragments.Visualizer"
-            android:title="@string/lockscreen_visualizer_enable"
-	    android:icon="@drawable/ic_lockscreen_general_background" />
+	    android:key="pulse_settings"
+	    android:icon="@drawable/ic_lockscreen_general_background"
+            android:title="@string/pulse_settings"
+            android:summary="@string/pulse_settings_summary"
+            android:fragment="com.colt.enigma.fragments.PulseSettings" />
 
 </PreferenceScreen>
