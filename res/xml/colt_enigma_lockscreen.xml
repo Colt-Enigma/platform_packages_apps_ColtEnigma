@@ -17,8 +17,11 @@
 
      <Preference
          android:key="lockscreen_shortcuts"
-         android:fragment="com.colt.enigma.fragments.LockscreenShortcuts"
-         android:title="@string/lockscreen_shortcuts" />
+	 android:title="@string/lockscreen_shortcuts">
+         <intent android:action="android.intent.action.MAIN"
+              android:targetPackage="com.android.systemui"
+              android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
+    </Preference>
 
     <PreferenceCategory
         android:key="lockscreen_ui_finterprint_category"

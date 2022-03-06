@@ -41,7 +41,7 @@
         android:key="carrier_label"
         android:fragment="com.colt.enigma.fragments.CarrierLabel"
         android:title="@string/carrier_label_settings_title" 
-	android:summary="@string/Customize the carrier label" />
+	android:summary="@string/carrier_label_settings_summary" />
 
     </PreferenceCategory>
 
