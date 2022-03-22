@@ -31,13 +31,6 @@
             android:summary="@string/charging_animation_summary"
             android:defaultValue="false" />
 
-	<!-- Gaming mode -->
-        <Preference
-           android:key="gaming_category"
-           android:title="@string/gaming_title"
-           android:summary="@string/gaming_summary"
-           android:fragment="com.android.settings.preferences.game.GamingModeSettings" />
-
     </PreferenceCategory>
 
 
