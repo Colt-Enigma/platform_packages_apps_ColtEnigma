@@ -73,4 +73,4 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         return MetricsProto.MetricsEvent.COLT;
     }
 
-} 
+}
