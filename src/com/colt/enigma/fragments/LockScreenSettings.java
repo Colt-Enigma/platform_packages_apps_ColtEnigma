@@ -63,7 +63,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         addPreferencesFromResource(R.xml.colt_enigma_lockscreen);
 
         ContentResolver resolver = getActivity().getContentResolver();
-        final PreferenceScreen prefScreen = getPreferenceScreen();
+        final PreferenceScreen prefSet = getPreferenceScreen();
         Resources resources = getResources();
 
         mUdfpsCategory = findPreference(UDFPS_CATEGORY);
@@ -72,7 +72,7 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     }
 
         mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
-        if (!FodUtils.hasFodSupport(getActivity())) {
+        if (!UdfpsUtils.hasUdfpsSupport(getActivity())) {
             prefScreen.removePreference(mUdfpsHapticFeedback);
         }
 
