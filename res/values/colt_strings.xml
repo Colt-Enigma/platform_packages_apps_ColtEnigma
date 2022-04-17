@@ -649,4 +649,11 @@
     <string name="volumebar_style_3"> Style 3</string>
     <string name="volumebar_style_4"> Style 4</string>
     <string name="volumebar_style_5"> Style 5</string>
+
+    <!-- Material dismiss all button for notifications -->
+    <string name="notification_material_dismiss_title">Clear all notification button</string>
+    <string name="notification_material_dismiss_summary">Replace clear all notification text with material style floating button</string>
+    <string name="notification_material_dismiss_style_title">Button style</string>
+    <string name="notification_material_dismiss_bgstyle_title">Button background</string>
+
 </resources>
