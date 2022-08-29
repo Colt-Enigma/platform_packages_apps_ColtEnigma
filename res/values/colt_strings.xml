@@ -1093,5 +1093,9 @@
     <string name="rui_style">Realme UI style</string>
     <string name="rising_style">Rice style</string>
     <string name="volume_style_title">Volume panel styles</string>
+    
+    <!-- Statusbar Clock background chip -->
+    <string name="statusbar_clock_chip_title">Background chip</string>
+    <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
 
 </resources>
