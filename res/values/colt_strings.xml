@@ -612,4 +612,7 @@
     <string name="qs_header_image_padding_side_title">Side padding</string>
     <string name="qs_header_image_padding_top_title">Top padding</string>
 
+    <!-- Global Actions -->
+    <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
+    <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
 </resources>

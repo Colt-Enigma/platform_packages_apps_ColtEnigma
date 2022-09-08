@@ -21,6 +21,12 @@
         android:summary="@string/lockscreen_power_menu_disabled_summary"
         android:defaultValue="true" />
 
+    <com.colt.enigma.preference.SecureSettingSwitchPreference
+        android:key="advanced_reboot"
+        android:title="@string/global_actions_advanced_reboot_title"
+        android:summary="@string/global_actions_advanced_reboot_summary"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="power_menu_animations"
         android:title="@string/power_menu_animation_title"
