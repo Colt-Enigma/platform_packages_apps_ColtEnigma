@@ -49,4 +49,14 @@
     <declare-styleable name="OverlaySwitchPreference">
         <attr name="dkey" format="string" />
     </declare-styleable>
+ 
+    <!-- Base attributes available to ProperSeekBarPreference. -->
+    <declare-styleable name="ProperSeekBarPreference">
+        <attr name="interval" format="integer" />
+        <attr name="showSign" format="boolean" />
+        <attr name="units" format="string|reference" />
+        <attr name="continuousUpdates" format="boolean" />
+        <attr name="defaultText" format="string|reference" />
+    </declare-styleable>
+
 </resources>
