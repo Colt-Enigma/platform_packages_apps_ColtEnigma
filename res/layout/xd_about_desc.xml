@@ -15,7 +15,7 @@
     android:id="@+id/xd_about_desc_header"
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    style="@style/xd_about_card_mid">
+    style="@style/xd_about_card_bot">
 
     <TextView
         android:id="@+id/xd_about_desc"
