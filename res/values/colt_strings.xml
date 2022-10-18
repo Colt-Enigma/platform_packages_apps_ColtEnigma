@@ -140,4 +140,8 @@
     <string name="status_bar_temperature_show_scale_hide_image">Show temp with scale</string>
     <string name="status_bar_temperature_hide_scale_hide_image">Show temp without scale</string>
     <string name="status_bar_show_image">Show image</string>
+
+    <!-- DT2S on statusbar-->
+    <string name="double_tap_sleep_gesture_title">Tap to sleep</string>
+    <string name="double_tap_sleep_gesture_summary">Double-tap anywhere on the status bar to put the device to sleep</string>
 </resources>

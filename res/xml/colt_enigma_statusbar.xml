@@ -15,4 +15,10 @@
     android:title="@string/statusbar_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/double_tap_sleep_gesture_title"
+            android:summary="@string/double_tap_sleep_gesture_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
