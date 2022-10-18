@@ -17,6 +17,15 @@
     android:key="monet_settings"
     android:title="@string/monet_title">
 
+    <com.colt.enigma.preference.SecureSettingListPreference
+        android:key="system_custom_theme"
+        android:title="@string/custom_theme_title"
+        android:summary="%s"
+        android:entries="@array/custom_theme_entries"
+        android:entryValues="@array/custom_theme_values"
+        android:defaultValue="0"
+        android:dependency="dark_ui_activated" />
+
     <com.colt.enigma.preference.SecureSettingSwitchPreference
         android:key="monet_engine_custom_color"
         android:title="@string/monet_engine_custom_color_title"
