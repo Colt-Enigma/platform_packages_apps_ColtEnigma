@@ -42,9 +42,14 @@ import com.android.internal.util.xtended.udfps.UdfpsUtils;
 import com.android.internal.util.colt.ColtUtils;
 
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
+import com.colt.enigma.preference.CustomSeekBarPreference;
 
 public class LockScreenSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
+
+    private static final String LOCKSCREEN_MAX_NOTIF_CONFIG = "lockscreen_max_notif_cofig";
+
+    private CustomSeekBarPreference mMaxKeyguardNotifConfig;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -59,11 +64,26 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         if (!UdfpsUtils.hasUdfpsSupport(getActivity())) {
             prefScreen.removePreference(udfps);
         }
+
+        mMaxKeyguardNotifConfig = (CustomSeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
+        int kgconf = Settings.System.getInt(getContentResolver(),
+                Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, 3);
+        mMaxKeyguardNotifConfig.setValue(kgconf);
+        mMaxKeyguardNotifConfig.setOnPreferenceChangeListener(this);
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
+<<<<<<< HEAD:src/com/colt/enigma/fragments/LockScreenSettings.java
 
+=======
+        if (preference == mMaxKeyguardNotifConfig) {
+            int kgconf = (Integer) newValue;
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
+            return true;
+        }
+>>>>>>> 9a34281 (Xtensions: Max Lockscreen Notification count [2/2]):src/com/xtended/fragments/LockScreenSettings.java
         return false;
     }
 
