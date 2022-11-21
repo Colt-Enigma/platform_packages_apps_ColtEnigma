@@ -74,16 +74,12 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-<<<<<<< HEAD:src/com/colt/enigma/fragments/LockScreenSettings.java
-
-=======
         if (preference == mMaxKeyguardNotifConfig) {
             int kgconf = (Integer) newValue;
             Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.LOCKSCREEN_MAX_NOTIF_CONFIG, kgconf);
             return true;
         }
->>>>>>> 9a34281 (Xtensions: Max Lockscreen Notification count [2/2]):src/com/xtended/fragments/LockScreenSettings.java
         return false;
     }
 

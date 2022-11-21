@@ -15,29 +15,6 @@
 	android:title="@string/notifications_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <PreferenceCategory
-        android:title="@string/breathing_notifications_category">
-
-    <com.colt.enigma.preference.SystemSettingSwitchPreference 
-        android:key="sms_breath" 
-        android:title="@string/sms_breath_title" 
-        android:summary="@string/sms_breath_summary"
-        android:persistent="true"/>
-
-    <com.colt.enigma.preference.SystemSettingSwitchPreference 
-        android:key="missed_call_breath" 
-        android:title="@string/missed_call_breath_title" 
-        android:summary="@string/missed_call_breath_summary"
-        android:persistent="true"/>
-
-    <com.colt.enigma.preference.SystemSettingSwitchPreference 
-        android:key="voicemail_breath" 
-        android:title="@string/voicemail_breath_title" 
-        android:summary="@string/voicemail_breath_summary"
-        android:persistent="true"/>
-
-   </PreferenceCategory>
-
     <!-- Heads up -->
     <Preference
         android:key="heads_up_settings"
@@ -62,4 +39,42 @@
 
     </PreferenceCategory>
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+         android:key="notif_panel_custom_notif"
+         android:title="@string/notif_panel_maxnotif_title"
+         android:summary="@string/notif_panel_maxnotif_summary"
+         android:defaultValue="false" />
+
+    <com.colt.enigma.preference.CustomSeekBarPreference
+         android:key="notif_panel_max_notif_cofig"
+         android:title="@string/notif_panel_maxnotif_config"
+         android:max="6"
+         settings:min="1"
+         settings:unitsLeft=""
+         settings:unitsRight=""
+         android:persistent="false"
+         android:dependency="notif_panel_custom_notif" />
+
+   <PreferenceCategory
+        android:title="@string/breathing_notifications_category">
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference 
+        android:key="sms_breath" 
+        android:title="@string/sms_breath_title" 
+        android:summary="@string/sms_breath_summary"
+        android:persistent="true"/>
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference 
+        android:key="missed_call_breath" 
+        android:title="@string/missed_call_breath_title" 
+        android:summary="@string/missed_call_breath_summary"
+        android:persistent="true"/>
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference 
+        android:key="voicemail_breath" 
+        android:title="@string/voicemail_breath_title" 
+        android:summary="@string/voicemail_breath_summary"
+        android:persistent="true"/>
+
+   </PreferenceCategory>
 </PreferenceScreen>
