@@ -15,7 +15,7 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-<Preference
+     <Preference
           android:key="sensor_block_settings"
           android:title="@string/sensor_block_title"
           android:summary="@string/sensor_block_summary"
@@ -26,5 +26,11 @@
             android:title="@string/toast_icon_title"
             android:summary="@string/toast_icon_summary"
             android:defaultValue="false" />
+
+     <com.colt.enigma.preference.SecureSettingSwitchPreference
+          android:key="window_ignore_secure"
+          android:title="@string/ignore_window_secure_title"
+          android:summary="@string/ignore_window_secure_summary"
+          android:defaultValue="false"/>
 
 </PreferenceScreen>
