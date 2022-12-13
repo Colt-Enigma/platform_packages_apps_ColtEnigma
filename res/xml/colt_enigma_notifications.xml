@@ -26,6 +26,17 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/notifications_category" >
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="notification_guts_kill_app_button"
+            android:title="@string/notification_guts_kill_app_button_title"
+            android:summary="@string/notification_guts_kill_app_button_summary" />
+
+    </PreferenceCategory>
+
+
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="reticker_status"
         android:defaultValue="false"
