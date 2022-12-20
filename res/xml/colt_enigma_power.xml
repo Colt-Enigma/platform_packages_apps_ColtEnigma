@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+y<?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2020 ColtOS Project
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -20,5 +20,65 @@
         android:title="@string/lockscreen_power_menu_disabled_title"
         android:summary="@string/lockscreen_power_menu_disabled_summary"
         android:defaultValue="true" />
+
+    <PreferenceCategory
+        android:title="@string/global_actions_title">
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_power"
+            android:title="@string/global_actions_power"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_restart"
+            android:title="@string/global_actions_restart"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_advanced"
+            android:title="@string/global_actions_advanced"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_screenshot"
+            android:title="@string/global_actions_screenshot"
+            android:defaultValue="true" />
+
+        <SwitchPreference
+            android:key="global_actions_flashlight"
+            android:title="@string/global_actions_flashlight"
+            android:persistent="false" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_settings"
+            android:title="@string/global_actions_settings"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_lockdown"
+            android:title="@string/global_actions_lockdown"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_emergency"
+            android:title="@string/global_actions_emergency"
+            android:defaultValue="true" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_device_controls"
+            android:title="@string/global_actions_device_controls"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_users"
+            android:title="@string/global_actions_users"
+            android:defaultValue="false" />
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="global_actions_logout"
+            android:title="@string/global_actions_logout"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
 </PreferenceScreen>
