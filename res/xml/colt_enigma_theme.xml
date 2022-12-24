@@ -18,7 +18,14 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/theme_title">
 
-<Preference
+    <PreferenceScreen
+        android:key="monet_engine"
+        android:title="@string/monet_title"
+        android:summary="@string/monet_summary"
+	settings:iconSpaceReserved="false"
+        android:fragment="com.colt.enigma.fragments.MonetSettings" />
+
+    <Preference
         android:key="dark_ui_mode"
         android:title="@string/dark_ui_mode"
         android:summary="@string/dark_ui_mode_summary"
