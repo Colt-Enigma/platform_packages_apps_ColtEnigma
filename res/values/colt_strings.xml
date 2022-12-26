@@ -532,4 +532,15 @@
     <string name="volume_media_output_toggle_title">Volume media output</string>
     <string name="volume_media_output_toggle_summary">Show media output toggle when there is an active stream</string>
     
+    <!-- Quick settings styles -->
+    <string name="qs_styles_title">QS Panel Styles</string>
+    <string name="qs_outline">Outline</string>
+    <string name="qs_two_tone">Two-Tone Accent</string>
+    <string name="qs_color_pop">Color Pop</string>
+    <string name="qs_shaded">Shaded</string>
+    <string name="qs_cyberpunk">Cyberpunk</string>
+    <string name="qs_neumorph">Neumorph</string>
+    <string name="qs_reflected">Reflected</string>
+    <string name="qs_surround">Surround</string>
+    <string name="qs_thin">ThinLine</string>
 </resources>
