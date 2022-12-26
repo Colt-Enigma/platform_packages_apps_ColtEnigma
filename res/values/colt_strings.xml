@@ -416,4 +416,8 @@
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
 
+    <!-- Volume dialog -->
+    <string name="volume_dialog_category">Volume dialog</string>
+    <string name="volume_panel_on_left_title">Show volume panel on left</string>
+    <string name="volume_panel_on_left_summary">Move volume panel to the left side of the screen</string>
 </resources>
