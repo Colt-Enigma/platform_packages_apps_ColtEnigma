@@ -15,4 +15,17 @@
 	android:title="@string/notifications_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="reticker_status"
+        android:defaultValue="false"
+        android:title="@string/reticker_title"
+        android:summary="@string/reticker_summary" />
+
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="reticker_colored"
+        android:defaultValue="false"
+        android:title="@string/reticker_colored_title"
+        android:summary="@string/reticker_colored_summary"
+        android:dependency="reticker_status" />
+
 </PreferenceScreen>
