@@ -629,4 +629,8 @@
     <string name="volume_persen_style_title">Percentage Location</string>
     <string name="volume_persen_style_top">Top</string>
     <string name="volume_persen_style_bottom">Bottom</string>
+
+    <!-- Statusbar Clock background chip -->
+    <string name="statusbar_clock_chip_title">Background chip</string>
+    <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
 </resources>
