@@ -28,6 +28,12 @@
              android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
      </Preference>
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+         android:key="statusbar_colored_icons"
+         android:title="@string/statusbar_icons_style"
+         android:summary="@string/statusbar_icons_style_summary"
+         android:defaultValue="false" />
+
      <Preference
         android:key="traffic"
         android:fragment="com.octavi.lab.fragments.Traffic"
