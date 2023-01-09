@@ -247,6 +247,8 @@
     <!-- Blink flashlight for incoming calls -->
     <string name="powermenu_torch">Flashlight</string>
     <string name="flashlight_on_call_title">Blink flashlight for call</string>
+    <string name="on_call_flashlight_category">Flashlight on call</string>
+    <string name="notification_flashlight_category">Flashlight on notifications</string>
     <string name="flashlight_on_call_disabled">Disabled</string>
     <string name="flashlight_on_call_ringer">Only in ringer mode</string>
     <string name="flashlight_on_call_silent">Only when ringer is silent</string>
@@ -254,6 +256,12 @@
     <string name="flashlight_on_call_ignore_dnd_title">Ignore DND</string>
     <string name="flashlight_on_call_ignore_dnd_summary">Whether to flash when Do Not Disturb mode is active</string>
     <string name="flashlight_on_call_rate_title">Blink rate</string>
+
+    <!-- Blink flashlight for notifications -->
+    <string name="notification_torch_title">Blink flashlight for notifications</string>
+    <string name="notification_torch_summary">By default. Per channel settings exist</string>
+    <string name="notification_torch_slider1">Times to blink</string>
+    <string name="notification_torch_slider2">Rate of blink</string>
 
     <!-- Dynamic System Bars -->
     <string name="dynamic_accent_mode_status_bar_summary">Automatically change the dark intensity to Accent Color</string>
