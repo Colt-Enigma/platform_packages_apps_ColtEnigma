@@ -15,13 +15,21 @@
     android:title="@string/lockscreen_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <Preference
-         android:title="@string/lockscreen_tuner_title"
-         android:summary="@string/lockscreen_tuner_summary" >
-         <intent android:action="android.intent.action.MAIN"
-                 android:targetPackage="com.android.systemui"
-                 android:targetClass="com.android.systemui.tuner.LockscreenActivity" />
-    </Preference>
+    <ListPreference
+        android:key="lockscreen_shortcut_start"
+        android:title="@string/lockscreen_shortcut_start_title"
+        android:summary="%s"
+        android:entries="@array/lockscreen_shortcut_entries"
+        android:entryValues="@array/lockscreen_shortcut_values"
+        android:defaultValue="home" />
+
+    <ListPreference
+        android:key="lockscreen_shortcut_end"
+        android:title="@string/lockscreen_shortcut_end_title"
+        android:summary="%s"
+        android:entries="@array/lockscreen_shortcut_entries"
+        android:entryValues="@array/lockscreen_shortcut_values"
+        android:defaultValue="wallet" />
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="lockscreen_battery_info"
