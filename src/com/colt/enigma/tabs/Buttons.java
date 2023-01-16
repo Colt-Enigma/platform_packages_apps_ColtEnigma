@@ -39,6 +39,10 @@ import com.android.internal.logging.nano.MetricsProto;
 public class Buttons extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener{
 
+    private static final String KG_CUSTOM_CLOCK_COLOR_ENABLED = "kg_custom_clock_color_enabled";
+
+    private SwitchPreference mKGCustomClockColor;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -57,5 +61,4 @@ public class Buttons extends SettingsPreferenceFragment implements
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
     }
-
 }

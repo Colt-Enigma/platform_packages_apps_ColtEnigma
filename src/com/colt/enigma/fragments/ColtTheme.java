@@ -63,6 +63,10 @@ public class ColtTheme extends DashboardFragment implements
 
     private IOverlayManager mOverlayService;
 
+    private static final String KG_CUSTOM_CLOCK_COLOR_ENABLED = "kg_custom_clock_color_enabled";
+
+    private SwitchPreference mKGCustomClockColor;
+
     @Override
     protected String getLogTag() {
         return TAG;
@@ -74,8 +78,19 @@ public class ColtTheme extends DashboardFragment implements
     }
 
     @Override
-    public void onCreate(Bundle icicle) {
-        super.onCreate(icicle);
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+	addPreferencesFromResource(R.xml.colt_enigma_theme);
+        Context mContext = getActivity().getApplicationContext();
+        ContentResolver resolver = mContext.getContentResolver();
+        final PreferenceScreen prefScreen = getPreferenceScreen();
+
+	mKGCustomClockColor = (SwitchPreference) findPreference(KG_CUSTOM_CLOCK_COLOR_ENABLED);
+        boolean mKGCustomClockColorEnabled = Settings.Secure.getIntForUser(resolver,
+                Settings.Secure.KG_CUSTOM_CLOCK_COLOR_ENABLED, 0, UserHandle.USER_CURRENT) != 0;
+        mKGCustomClockColor.setChecked(mKGCustomClockColorEnabled);
+        mKGCustomClockColor.setOnPreferenceChangeListener(this);
 
         mOverlayService = IOverlayManager.Stub
                 .asInterface(ServiceManager.getService(Context.OVERLAY_SERVICE));
@@ -83,7 +98,15 @@ public class ColtTheme extends DashboardFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        return true;
+	Context mContext = getActivity().getApplicationContext();
+        ContentResolver resolver = mContext.getContentResolver();
+        if (preference == mKGCustomClockColor) {
+            boolean val = (Boolean) newValue;
+            Settings.Secure.putIntForUser(resolver,
+                Settings.Secure.KG_CUSTOM_CLOCK_COLOR_ENABLED, val ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        }
+        return false;
     }
 
     @Override

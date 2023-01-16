@@ -66,5 +66,15 @@
         android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
         settings:controller="com.android.settings.display.DarkUIPreferenceController" />
 
+        <com.colt.enigma.preference.SecureSettingSwitchPreference
+            android:key="kg_custom_clock_color_enabled"
+            android:title="@string/kg_custom_clock_color_enabled_title"
+            android:defaultValue="false" />
+
+        <net.margaritov.preference.colorpicker.SecureSettingColorPickerPreference
+            android:key="kg_custom_clock_color"
+            android:title="@string/kg_custom_clock_color_title"
+            android:dependency="kg_custom_clock_color_enabled"
+            android:defaultValue="0xFFFFFFFF" />
 
 </PreferenceScreen>
