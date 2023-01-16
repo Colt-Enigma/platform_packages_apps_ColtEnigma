@@ -15,7 +15,18 @@
 	android:title="@string/misc_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-	<com.colt.enigma.preference.SystemSettingSwitchPreference
+   <!-- Gaming mode -->
+    <Preference
+        android:key="gaming_mode"
+        android:title="@string/gaming_mode_title"
+        android:summary="@string/gaming_mode_summary">
+        <intent
+            android:action="android.intent.action.MAIN"
+            android:targetPackage="io.chaldeaprjkt.gamespace"
+            android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
+    </Preference>
+
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="charging_animation"
             android:title="@string/charging_animation_title"
             android:summary="@string/charging_animation_summary"
