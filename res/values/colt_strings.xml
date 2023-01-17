@@ -341,4 +341,8 @@
     <!-- Colored icons -->
     <string name="statusbar_icons_style">Colored Statusbar Icons</string>
     <string name="statusbar_icons_style_summary">Choose the style of your statusbar icons</string>
+
+     <!-- Android P animation style -->
+    <string name="pie_animation_style_title">Android P animation style</string>
+    <string name="pie_animation_style_summary">Enable Android P \"Default\" animations</string>
 </resources>
