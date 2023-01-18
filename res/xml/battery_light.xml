@@ -20,6 +20,11 @@
         android:title="@string/battery_light_enable"
         android:defaultValue="true" />
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="battery_full_light_enabled"
+        android:title="@string/battery_full_light_enabled"
+        android:defaultValue="true" />
+
     <com.com.colt.preference.SystemSettingSwitchPreference
         android:key="battery_light_allow_on_dnd"
         android:title="@string/battery_light_allow_on_dnd_title"

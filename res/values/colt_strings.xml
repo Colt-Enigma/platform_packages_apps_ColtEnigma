@@ -404,6 +404,7 @@
 
     <!-- Battery light -->
     <string name="light_settings_header">Notif. Led Settings</string>
+    <string name="battery_full_light_enabled">Battery light when full charged</string>
     <string name="battery_light_settings">Battery Charging Light</string>
     <string name="battery_light_summary">Customization for Battery Light</string>
     <string name="battery_light_enable">Enable</string>
@@ -414,4 +415,5 @@
     <string name="battery_light_medium_color">Medium battery</string>
     <string name="battery_light_full_color">Almost full battery</string>
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
+
 </resources>
