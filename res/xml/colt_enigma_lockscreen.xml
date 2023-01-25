@@ -38,6 +38,14 @@
         android:title="@string/theme_customization_lock_clock_title"
         android:summary="@string/theme_customization_lock_clock_summary"
         android:fragment="com.colt.enigma.fragments.LockClockFonts"/>
+        
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="clock_use_custom_format"
+            android:title="@string/clock_use_single_line_title"
+            android:entries="@array/clock_use_single_line_entries"
+            android:entryValues="@array/clock_use_single_line_values"
+            android:summary="%s"
+            android:defaultValue="0" />
     
         <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="fingerprint_success_vib"

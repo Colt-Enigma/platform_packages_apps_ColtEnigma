@@ -514,4 +514,10 @@
     <string name="double_tap_sleep_lockscreen_title">Double tap to sleep on lockscreen</string>
 
     <string name="notifications_category">Notifications</string>
+    
+    <!-- Lockscreen Clock -->
+    <string name="clock_use_single_line_title">Lockscreen clock Format</string>
+    <string name="single_line">Single-line</string>
+    <string name="double_line">Double-line</string>
+    
 </resources>
