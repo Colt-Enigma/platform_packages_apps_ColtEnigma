@@ -44,7 +44,7 @@
         <!-- roger -->
         <Preference
             android:key="xd_about_roger"
-            android:icon="@drawable/xd_about_roger"
+            android:icon="@drawable/xd_about_rakesh"
             settings:layout="@layout/xd_about_core_pref"
             android:title="@string/xd_about_core_roger"
             android:summary="@string/xd_about_core_roger_role">
