@@ -45,8 +45,10 @@ import com.android.settings.SettingsPreferenceFragment;
 
 public class UdfpsSettings extends SettingsPreferenceFragment {
 
+    private static final String UDFPS_ICON_PICKER = "udfps_icon_picker";
     private static final String UDFPS_ANIM_PREVIEW = "udfps_recognizing_animation_preview";
 
+    private Preference mUdfpsIconPicker;
     private Preference mUdfpsAnimPreview;
     private static final String SCREEN_OFF_UDFPS_ENABLED = "screen_off_udfps_enabled";
 
@@ -62,8 +64,10 @@ public class UdfpsSettings extends SettingsPreferenceFragment {
 
         final boolean udfpsResPkgInstalled = ColtUtils.isPackageInstalled(getContext(),
                 "com.colt.udfps.resources");
+        mUdfpsIconPicker = findPreference(UDFPS_ICON_PICKER);
         mUdfpsAnimPreview = findPreference(UDFPS_ANIM_PREVIEW);
         if (!udfpsResPkgInstalled) {
+            prefSet.removePreference(mUdfpsIconPicker);
             prefSet.removePreference(mUdfpsAnimPreview);
         }
 
@@ -74,7 +78,7 @@ public class UdfpsSettings extends SettingsPreferenceFragment {
 
         if (!mScreenOffUdfpsAvailable)
             prefSet.removePreference(mScreenOffUdfps);
-            
+
     }
 
     public static void reset(Context mContext) {
