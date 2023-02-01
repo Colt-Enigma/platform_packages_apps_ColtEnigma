@@ -56,8 +56,8 @@ import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class NotificationSettings extends DashboardFragment implements
-        Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
+public class NotificationSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
 
     private static final String FLASHLIGHT_CATEGORY = "flashlight_category";
     private static final String FLASHLIGHT_CALL_PREF = "flashlight_on_call";
