@@ -38,6 +38,12 @@
             android:summary="@string/battery_estimate_summary"
             android:defaultValue="false" /> -->
 
+    <Preference
+            android:key="qs_tile_layout"
+            android:title="@string/qs_tile_layout_title"
+            android:summary="@string/qs_tile_layout_summary"
+            android:fragment="com.colt.enigma.fragments.QsTileLayoutSettings" />
+
     <com.colt.enigma.preference.SecureSettingSwitchPreference
             android:key="quick_settings_vibrate"
             android:title="@string/quick_settings_vibrate_title"
