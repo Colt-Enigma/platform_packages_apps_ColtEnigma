@@ -28,6 +28,26 @@
              android:targetClass="com.android.systemui.tuner.StatusbarItemsActivity" />
      </Preference>
 
+    <PreferenceCategory
+        android:title="@string/status_bar_clock_title">
+
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="status_bar_clock"
+            android:title="@string/status_bar_clock_position_title"
+            android:summary="%s"
+            android:dialogTitle="@string/status_bar_clock_position_title"
+            android:entries="@array/status_bar_clock_position_entries"
+            android:entryValues="@array/status_bar_clock_position_values"
+            android:defaultValue="2" />
+
+        <Preference
+            android:key="clock"
+            android:title="@string/status_bar_clock_title"
+            android:summary="@string/status_bar_clock_summary"
+            android:fragment="com.colt.enigma.fragments.Clock" />
+
+    </PreferenceCategory>
+
     <com.colt.enigma.preference.SystemSettingSwitchPreference
          android:key="statusbar_colored_icons"
          android:title="@string/statusbar_icons_style"
