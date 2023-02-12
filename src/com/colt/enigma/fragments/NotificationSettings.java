@@ -36,16 +36,27 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import androidx.preference.*;
 import androidx.preference.Preference.OnPreferenceChangeListener;
+import com.android.settings.dashboard.DashboardFragment;
 
 import com.android.internal.logging.nano.MetricsProto;
 import com.android.internal.util.colt.ColtUtils;
+import com.colt.enigma.preference.PackageListAdapter;
+import com.colt.enigma.preference.PackageListAdapter.PackageItem;
+import com.colt.enigma.preference.CustomSeekBarPreference;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+
 
 import android.os.Bundle;
 import com.android.settings.R;
 
 import com.android.settings.SettingsPreferenceFragment;
 
-public class NotificationSettings extends SettingsPreferenceFragment implements
+public class NotificationSettings extends DashboardFragment implements
         Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
 
     private static final String FLASHLIGHT_CATEGORY = "flashlight_category";

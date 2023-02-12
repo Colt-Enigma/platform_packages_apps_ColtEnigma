@@ -31,7 +31,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.colt.enigma.R;
+import com.android.settings.R;
 
 public class ProperSeekBarPreference extends Preference implements SeekBar.OnSeekBarChangeListener,
         View.OnClickListener, View.OnLongClickListener {

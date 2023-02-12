@@ -90,6 +90,7 @@
     <string name="various_toggles">Various Toggles</string>
 
     <!-- General strings -->
+    <string name="default_string">Default</string>
     <string name="ok">OK</string>
     <string name="reset">Reset</string>
     <string name="cancel">Cancel</string>
@@ -149,16 +150,6 @@
     <!-- Data usage info in QS footer -->
     <string name="qs_footer_datausage_title">Data usage</string>
     <string name="qs_footer_datausage_summary">Display data usage summary in quick settings footer</string>
-
-    <!-- Omni weather -->
-    <string name="qs_weather_settings_title">Weather updates</string>
-    <string name="qs_weather_settings_summary">Setup icon pack and weather service</string>
-    <string name="weather_title">Weather Settings</string>
-    <string name="weather_config_title">Weather service</string>
-    <string name="weather_config_summary">System service settings</string>
-    <string name="weather_icon_pack_title">Condition icon pack</string>
-    <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
-    <string name="weather_icon_pack_info_title">Condition icon pack is used in quick settings</string>
 
     <!-- Fingerprint Ripple Effect -->
     <string name="enable_fingerprint_ripple_effect_title">Ripple effect</string>
@@ -253,7 +244,8 @@
     <string name="qsweather_settings_title">QuickSettings Weather</string>
     <string name="qsweather_settings_summary">Setup quicksettings weather views</string>
 
-     <!-- Blink flashlight for incoming calls -->
+    <!-- Blink flashlight for incoming calls -->
+    <string name="powermenu_torch">Flashlight</string>
     <string name="flashlight_on_call_title">Blink flashlight for call</string>
     <string name="flashlight_on_call_disabled">Disabled</string>
     <string name="flashlight_on_call_ringer">Only in ringer mode</string>
