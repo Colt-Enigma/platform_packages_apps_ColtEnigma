@@ -25,7 +25,7 @@ import android.widget.Toast;
 import androidx.preference.Preference;
 
 import com.android.internal.logging.nano.MetricsProto;
-import com.android.internal.util.banana.BananaUtils.QSLayoutUtils;
+import com.android.internal.util.colt.ColtUtils.QSLayoutUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
