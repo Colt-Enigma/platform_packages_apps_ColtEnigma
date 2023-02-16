@@ -40,6 +40,9 @@ import android.view.View;
 import java.util.List;
 import java.util.ArrayList;
 
+import com.colt.enigma.preference.CustomSeekBarPreference;
+import com.colt.enigma.preference.SystemSettingListPreference;
+
 public class QuickSettings extends SettingsPreferenceFragment implements
         OnPreferenceChangeListener {
 
