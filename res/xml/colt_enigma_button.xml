@@ -15,17 +15,5 @@
         android:title="@string/button_title"
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-<PreferenceCategory
-        android:title="@string/navigation_title">
-
-        <!-- Pixel Nav Animation -->
-        <com.colt.enigma.preference.SystemSettingSwitchPreference
-            android:key="pixel_nav_animation"
-            android:title="@string/pixel_navbar_anim_title"
-            android:summary="@string/pixel_navbar_anim_summary"
-            android:defaultValue="true" />
-
-    </PreferenceCategory>
-
 
 </PreferenceScreen>
