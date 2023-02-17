@@ -18,6 +18,9 @@ package com.colt.enigma.fragments;
 
 import java.util.ArrayList;
 
+import android.content.ContentResolver;
+import android.content.res.Resources;
+import android.content.Context;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
