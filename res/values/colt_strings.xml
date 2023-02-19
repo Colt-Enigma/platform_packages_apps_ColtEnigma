@@ -378,10 +378,6 @@
     <string name="qs_footer_settings_icon_title">Settings shortcut</string>
     <string name="qs_footer_settings_icon_summary">Display settings icons in footer</string>
 
-    <!-- QS Transparency -->
-    <string name="qs_transparency_title">Background transparency</string>
-    <string name="qs_transparency_summary">Set transparency level for QS background</string>
-
     <!-- Battery Bar -->
     <string name="battery_bar_title">Battery Bar</string>
     <string name="battery_bar_summary">Decorate battery bar</string>
