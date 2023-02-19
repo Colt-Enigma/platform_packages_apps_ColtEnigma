@@ -18,6 +18,8 @@ package com.colt.enigma.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import android.content.ContentResolver;
+import android.content.Context;
 import android.os.Bundle;
 import android.content.Intent;
 import android.content.pm.PackageManager;
