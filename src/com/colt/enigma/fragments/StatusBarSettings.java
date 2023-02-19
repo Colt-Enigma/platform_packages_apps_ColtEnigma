@@ -102,6 +102,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
+     public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+        Settings.System.putIntForUser(resolver,
+                Settings.System.STATUSBAR_COLORED_ICONS, 0, UserHandle.USER_CURRENT);
+	Settings.System.putIntForUser(resolver,
+                Settings.System.STATUSBAR_NOTIF_COUNT, 0, UserHandle.USER_CURRENT);
+    }
+
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
