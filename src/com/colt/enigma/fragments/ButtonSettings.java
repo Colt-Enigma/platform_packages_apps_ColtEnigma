@@ -57,6 +57,12 @@ public class ButtonSettings extends SettingsPreferenceFragment implements
         return false;
     }
 
+     public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+	Settings.System.putIntForUser(resolver,
+                Settings.System.VOLUME_DIALOG_TIMEOUT, 3, UserHandle.USER_CURRENT);
+    }
+
     @Override
     public int getMetricsCategory() {
         return MetricsProto.MetricsEvent.COLT;
