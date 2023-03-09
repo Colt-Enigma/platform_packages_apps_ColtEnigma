@@ -535,4 +535,10 @@
     <!-- Volume panel -->
     <string name="volume_panel_category">Volume panel</string>
     <string name="volume_dialog_timeout_title">Volume panel timeout</string>
+
+    <!-- Volume Styles -->
+    <string name="volume_style_title">Volume panel styles</string>
+    <string name="rui_style">Realme UI style</string>
+    <string name="rice_style">Rice style</string>
+    <string name="volume_customizations_title">Volume panel customizations</string>
 </resources>
