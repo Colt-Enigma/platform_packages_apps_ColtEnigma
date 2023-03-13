@@ -44,6 +44,12 @@
             android:summary="@string/qs_tile_layout_summary"
             android:fragment="com.colt.enigma.fragments.QsTileLayoutSettings" />
             
+    <Preference
+            android:key="custom_header"
+            android:fragment="com.colt.enigma.fragments.QsHeader"
+            android:title="@string/status_bar_custom_header_title"
+            android:summary="@string/status_bar_custom_header_summary" />
+
     <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_dual_tone"
             android:title="@string/qs_dual_tone_title"
