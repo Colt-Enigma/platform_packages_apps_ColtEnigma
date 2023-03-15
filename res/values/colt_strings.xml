@@ -619,7 +619,14 @@
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
     <string name="global_actions_advanced_reboot_summary">Show options for recovery and bootloader in power menu</string>
 
-     <!-- Power menu and dialogs opacity -->
+    <!-- Power menu and dialogs opacity -->
     <string name="power_menu_transparency">Power/reboot menu opacity</string>
     <string name="power_menu_dialog_dim">Power/reboot dialog dim background amount</string>
+
+    <!-- Volume TextView -->
+    <string name="volume_persen_switch_title">Volume Percentage</string>
+    <string name="volume_persen_switch_summary">show volume panel percentage</string>
+    <string name="volume_persen_style_title">Percentage Location</string>
+    <string name="volume_persen_style_top">Top</string>
+    <string name="volume_persen_style_bottom">Bottom</string>
 </resources>
