@@ -106,6 +106,12 @@
             android:entryValues="@array/qs_brightness_slider_position_values"
             android:defaultValue="0" />
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:title="Brightness Percentage"
+            android:key="ANCIENT_TEXT_BRIGHTNESS"
+            android:summary="show hide brightness percentage text"
+            android:defaultValue="false" />
+
     <com.colt.enigma.preference.SecureSettingSwitchPreference
             android:key="qs_show_auto_brightness"
             android:title="@string/qs_auto_brightness_title"
