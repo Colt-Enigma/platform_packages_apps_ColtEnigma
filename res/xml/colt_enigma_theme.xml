@@ -18,11 +18,10 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/theme_title">
 
-    <PreferenceScreen
-        android:key="monet_engine"
-        android:title="@string/monet_title"
-        android:summary="@string/monet_summary"
-	settings:iconSpaceReserved="false"
+    <Preference
+        android:key="monet_settings"
+        android:title="@string/monet_settings_title"
+        android:summary="@string/monet_settings_summary"
         android:fragment="com.colt.enigma.fragments.MonetSettings" />
 
     <!-- Font style -->
