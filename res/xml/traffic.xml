@@ -36,8 +36,8 @@
         android:key="network_traffic_autohide_threshold"
         android:title="@string/network_traffic_autohide_threshold_title"
         android:max="10"
-        settings:min="0"
-        settings:defaultValue="1"
+        android:min="0"
+        android:defaultValue="1"
         settings:units="KB/s" />
 
     <com.colt.enigma.preference.SystemSettingSwitchPreference
@@ -51,7 +51,7 @@
         android:title="@string/nettraf_font_size"
         android:max="15"
         android:min="6"
-        settings:defaultValue="10"
+        android:defaultValue="10"
         settings:units="dp" />
 
 </PreferenceScreen>
