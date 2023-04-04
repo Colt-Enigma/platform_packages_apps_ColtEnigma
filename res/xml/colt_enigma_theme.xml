@@ -31,6 +31,12 @@
             settings:controller="com.android.settings.display.DarkUIPreferenceController"
             settings:keywords="@string/keywords_dark_ui_mode"/>
 
+        <Preference
+            android:key="monet_settings"
+            android:title="@string/monet_settings_title"
+            android:summary="@string/monet_settings_summary"
+            android:fragment="com.xtended.fragments.MonetSettings" />
+            
         <ListPreference
             android:key="android.theme.customization.wifi_icon"
             android:title="@string/custom_wifi_bar_title"/>
