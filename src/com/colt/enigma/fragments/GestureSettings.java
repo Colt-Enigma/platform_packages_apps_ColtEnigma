@@ -45,7 +45,13 @@ import com.android.settings.SettingsPreferenceFragment;
 
     private ListPreference mTorchPowerButton;
 
-    final ContentResolver resolver = getActivity().getContentResolver();
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        addPreferencesFromResource(R.xml.colt_enigma_gestures);
+
+        final ContentResolver resolver = getActivity().getContentResolver();
         final PreferenceScreen prefSet = getPreferenceScreen();
 
         // screen off torch

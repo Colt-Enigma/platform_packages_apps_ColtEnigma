@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.colt.enigmafragments;
+package com.colt.enigma.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
