@@ -35,21 +35,27 @@ import android.provider.Settings;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.colt.ColtUtils;
 import com.android.settings.R;
 
-public class NavbarSettings extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
+public class NavbarSettings extends SettingsPreferenceFragment implements
+        Preference.OnPreferenceChangeListener {
+
+    private static final String CATEGORY_3BUTTONS = "button_navigation_settings_page";
 
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.colt_enigma_navigation);
 
-    }
+        final PreferenceScreen prefScreen = getPreferenceScreen();
 
-    @Override
-    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        PreferenceCategory navBarCat = (PreferenceCategory) prefScreen
+                .findPreference(CATEGORY_3BUTTONS);
 
-        return false;
+        if (!ColtUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
+            navBarCat.setEnabled(false);
+        }
     }
 
     @Override
