@@ -19,6 +19,8 @@ package com.colt.enigma.fragments;
 import java.util.ArrayList;
 
 import android.app.AlertDialog;
+import android.content.Context;
+import android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
@@ -28,6 +30,8 @@ import androidx.preference.ListPreference;
 import androidx.preference.SwitchPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceFragment;
+import androidx.preference.PreferenceManager;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
@@ -56,6 +60,12 @@ public class NavbarSettings extends SettingsPreferenceFragment implements
         if (!ColtUtils.isThemeEnabled("com.android.internal.systemui.navbar.threebutton")) {
             navBarCat.setEnabled(false);
         }
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        return false;
     }
 
     @Override

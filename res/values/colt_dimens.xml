@@ -42,9 +42,6 @@
 
     <dimen name="colt_cat_icon_image_inset">6dp</dimen>
 
-    <!-- Shortcut picker -->
-    <dimen name="shortcut_picker_left_padding">70dip</dimen>
-
     <!-- xd. Toolbar -->
      <dimen name="xd_toolbar_height">225dp</dimen>
      <dimen name="xd_toolbar_expanded_title_margin_start">21dp</dimen>

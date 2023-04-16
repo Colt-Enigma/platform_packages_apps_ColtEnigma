@@ -212,7 +212,7 @@ public class ButtonSettings extends ActionFragment implements
                     ArrayList<SearchIndexableResource> result =
                             new ArrayList<SearchIndexableResource>();
                     SearchIndexableResource sir = new SearchIndexableResource(context);
-                    sir.xmlResId = R.xml.x_settings_buttons;
+                    sir.xmlResId = R.xml.colt_enigma_button;
                     result.add(sir);
                     return result;
                 }
