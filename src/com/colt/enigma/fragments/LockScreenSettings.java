@@ -39,7 +39,7 @@ import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
 import com.android.internal.util.xtended.udfps.UdfpsUtils;
-import com.android.internal.util.xtended.XtendedUtils;
+import com.android.internal.util.colt.ColtUtils;
 
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
 
