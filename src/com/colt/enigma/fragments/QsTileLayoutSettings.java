@@ -34,6 +34,7 @@ import com.colt.enigma.preference.SystemSettingSeekBarPreference;
 import com.android.settingslib.widget.LayoutPreference;
 
 import com.colt.enigma.preference.ProperSeekBarPreference;
+import com.colt.enigma.preference.SystemSettingSwitchPreference;
 
 public class QsTileLayoutSettings extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
