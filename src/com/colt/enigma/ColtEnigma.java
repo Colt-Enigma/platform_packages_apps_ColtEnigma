@@ -51,22 +51,18 @@ import com.colt.enigma.bottomnav.BubbleNavigationChangeListener;
 
 public class ColtEnigma extends SettingsPreferenceFragment {
 
-    private static final String TAG = "ColtEnigma";
+    private MenuItem mMenuItem;
+    private Context mContext;
 
-    Context mContext;
-//    View view;
 
     @Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		getActivity().getActionBar().hide();
 
         mContext = getActivity();
         View view = inflater.inflate(R.layout.colt, container, false);
 
-	ActionBar actionBar = getActivity().getActionBar();
-        if (actionBar != null) {
-            actionBar.setTitle(R.string.colt_title);
-        }
+	getActivity().setTitle(R.string.colt_title);
 
         final BubbleNavigationConstraintView bubbleNavigationConstraintView =  (BubbleNavigationConstraintView) view.findViewById(R.id.bottom_navigation_view_constraint);
         final ViewPager viewPager = view.findViewById(R.id.viewpager);
