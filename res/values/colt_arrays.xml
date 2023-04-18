@@ -828,10 +828,9 @@
     </string-array>
 
    <string-array name="status_bar_logo_style_entries" translatable="false">
-        <item>ColtOS</item>
-        <item>Xtended</item>
-        <item>Xtended Old</item>
-        <item>Xtended Short</item>
+        <item>ColtOS Main</item>
+        <item>ColtOS Old</item>
+        <item>ColtOS Scratch</item>
         <item>GZR Skull</item>
         <item>GZR Circle</item>
         <item>Batman</item>
