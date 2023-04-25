@@ -38,8 +38,7 @@ import android.provider.Settings;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
-import com.android.internal.util.xtended.udfps.UdfpsUtils;
-import com.android.internal.util.colt.ColtUtils;
+import com.android.internal.util.xtended.fod.FodUtils;
 
 import com.colt.enigma.preference.SystemSettingSwitchPreference;
 import com.colt.enigma.preference.CustomSeekBarPreference;
@@ -51,6 +50,10 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
     private CustomSeekBarPreference mMaxKeyguardNotifConfig;
 
+    private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
+
+    private SystemSettingSwitchPreference mUdfpsHapticFeedback;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -60,9 +63,9 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
         final PreferenceScreen prefScreen = getPreferenceScreen();
         Resources resources = getResources();
 
-        PreferenceCategory udfps = (PreferenceCategory) prefScreen.findPreference("udfps_category");
-        if (!UdfpsUtils.hasUdfpsSupport(getActivity())) {
-            prefScreen.removePreference(udfps);
+        mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
+        if (!FodUtils.hasFodSupport(getActivity())) {
+            prefScreen.removePreference(mUdfpsHapticFeedback);
         }
 
         mMaxKeyguardNotifConfig = (CustomSeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
