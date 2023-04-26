@@ -37,6 +37,12 @@
             android:summary="@string/monet_settings_summary"
             android:fragment="com.colt.enigma.fragments.MonetSettings" />
             
+        <Preference
+            android:key="ui_theme_engine"
+            android:title="@string/ui_theme_engine_title"
+            android:summary="@string/ui_theme_engine_summary"
+            android:fragment="com.colt.enigma.fragments.ThemeEngine" />
+            
         <!-- Wifi Icon style -->
         <Preference
             android:key="android.theme.customization.wifi_icon"
