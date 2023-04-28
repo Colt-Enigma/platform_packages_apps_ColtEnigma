@@ -53,10 +53,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
 
     private CustomSeekBarPreference mMaxKeyguardNotifConfig;
 
-    private static final String UDFPS_HAPTIC_FEEDBACK = "udfps_haptic_feedback";
-
-    private SystemSettingSwitchPreference mUdfpsHapticFeedback;
-
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
@@ -70,11 +66,6 @@ public class LockScreenSettings extends SettingsPreferenceFragment implements
     if (!UdfpsUtils.hasUdfpsSupport(getContext())) {
         prefSet.removePreference(mUdfpsCategory);
     }
-
-        mUdfpsHapticFeedback = (SystemSettingSwitchPreference) findPreference(UDFPS_HAPTIC_FEEDBACK);
-        if (!UdfpsUtils.hasUdfpsSupport(getActivity())) {
-            prefScreen.removePreference(mUdfpsHapticFeedback);
-        }
 
         mMaxKeyguardNotifConfig = (CustomSeekBarPreference) findPreference(LOCKSCREEN_MAX_NOTIF_CONFIG);
         int kgconf = Settings.System.getInt(getContentResolver(),

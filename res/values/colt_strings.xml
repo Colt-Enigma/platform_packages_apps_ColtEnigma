@@ -393,10 +393,6 @@
     <string name="toast_icon_title">Toast app icon</string>
     <string name="toast_icon_summary">Display the app\'s icon corresponding with the toast</string>
 
-    <!-- Udfps Haptic Feedback -->
-    <string name="udfps_haptic_feedback_title">Udfps haptic feedback</string>
-    <string name="udfps_haptic_feedback_summary">Vibrate when touching udfps icon</string>
-
     <!-- Ignore secure window -->
     <string name="developer_options_category">Developer Options</string>
     <string name="ignore_window_secure_title">Ignore window secure flags</string>
