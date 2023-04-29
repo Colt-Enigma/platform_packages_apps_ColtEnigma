@@ -54,6 +54,20 @@
                 android:data="https://t.me/gerobaksariroti"/>
 
         </Preference>
+        
+        <!-- ghosuto -->
+        <Preference
+            android:key="xd_about_ghost"
+            settings:layout="@layout/xd_about_core_pref"
+            android:icon="@drawable/xd_about_rakesh"
+            android:title="@string/xd_about_core_ghost"
+            android:summary="@string/xd_about_core_ghost_role">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://t.me/Ghosuto7"/>
+
+        </Preference>
 
     </PreferenceCategory>
 
