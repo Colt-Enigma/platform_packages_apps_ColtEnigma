@@ -51,6 +51,7 @@ import java.util.HashMap;
 import java.util.Collections;
 
 import com.colt.enigma.preference.SystemSettingListPreference;
+import com.android.internal.util.colt.ColtUtils;
 
 public class StatusBarSettings extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
@@ -69,9 +70,13 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
 
     final PreferenceScreen prefScreen = getPreferenceScreen();
 
-        mVowifiIconStyle = (SystemSettingListPreference) findPreference(VOWIFI_ICON_STYLE);
         mVolteIconStyle = (SystemSettingListPreference) findPreference(VOLTE_ICON_STYLE);
+        int volteIconStyle = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.VOLTE_ICON_STYLE, 1);
+        mVolteIconStyle.setValue(String.valueOf(volteIconStyle));
+        mVolteIconStyle.setOnPreferenceChangeListener(this);
 
+        mVowifiIconStyle = (SystemSettingListPreference) findPreference(VOWIFI_ICON_STYLE);
         int vowifiIconStyle = Settings.System.getInt(getActivity().getContentResolver(),
                 Settings.System.VOWIFI_ICON_STYLE, 1);
         mVowifiIconStyle.setValue(String.valueOf(vowifiIconStyle));
@@ -86,7 +91,14 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
-        if (preference == mVowifiIconStyle) {
+        if (preference == mVolteIconStyle) {
+            int volteIconStyle = Integer.parseInt(((String) newValue).toString());
+            Settings.System.putInt(resolver,
+                  Settings.System.VOWIFI_ICON_STYLE, volteIconStyle);
+            mVolteIconStyle.setValue(String.valueOf(volteIconStyle));
+            ColtUtils.restartSystemUi(getContext());
+            return true;
+        } else if (preference == mVowifiIconStyle) {
             int vowifiIconStyle = Integer.parseInt(((String) newValue).toString());
             Settings.System.putInt(resolver,
                   Settings.System.VOWIFI_ICON_STYLE, vowifiIconStyle);
@@ -96,6 +108,7 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             } else {
                 mVolteIconStyle.setEnabled(false);
             }
+            ColtUtils.restartSystemUi(getContext());
             return true;
         }
         return false;
