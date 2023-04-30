@@ -71,6 +71,15 @@
             android:summary="@string/theme_customization_icon_shape_summary"
             android:fragment="com.colt.enigma.fragments.IconShapes"/>
 
+	<!-- Volume Styles -->      
+        <com.colt.enigma.preference.SystemSettingListPreference
+         android:key="custom_volume_styles"
+         android:title="@string/volume_style_title"
+         android:entries="@array/volume_styles_entries"
+         android:entryValues="@array/volume_styles_values"
+         android:summary="%s"
+         android:defaultValue="0" />
+
         <!-- Clock Font style -->
         <Preference
             android:key="android.theme.customization.clock.fonts"

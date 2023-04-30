@@ -1089,4 +1089,9 @@
     <string name="about_card_style_banner_one">Centered wallpaper banner</string>
     <string name="about_card_style_banner_one_high">Centered wallpaper banner (big)</string>
 
+    <!-- Volume Styles -->
+    <string name="rui_style">Realme UI style</string>
+    <string name="rising_style">Rice style</string>
+    <string name="volume_style_title">Volume panel styles</string>
+
 </resources>
