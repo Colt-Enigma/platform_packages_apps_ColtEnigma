@@ -70,6 +70,13 @@
             android:max="17"
             android:min="0" />
 
+	<com.colt.enigma.preference.SecureSettingListPreference
+            android:key="brightness_slider_style"
+            android:title="@string/brightness_slider_style_title"
+            android:entries="@array/brightness_slider_style_entries"
+            android:entryValues="@array/brightness_slider_style_values"
+            android:defaultValue="0" />
+
         <com.colt.enigma.preference.SystemSettingSeekBarPreference
             android:key="qs_transparency"
             android:title="@string/qs_transparency_title"
