@@ -67,7 +67,7 @@
             android:title="@string/qs_header_image_title"
             android:defaultValue="0"
             settings:interval="1"
-            android:max="17"
+            android:max="74"
             android:min="0" />
 
 	<com.colt.enigma.preference.SecureSettingListPreference
