@@ -1094,6 +1094,20 @@
     <string name="brightness_slider_style_thin">Thin</string>
     <string name="brightness_slider_style_acun">Acun</string>
     <string name="brightness_slider_style_bang">Bang</string>
+    <string name="brightness_slider_style_cyberpunk">Blocky Thumb</string>
+    <string name="brightness_slider_style_gradiant">Double Layer</string>
+    <string name="brightness_slider_style_neumorph">Neumorph</string>
+    <string name="brightness_slider_style_outline">Outline</string>
+    <string name="brightness_slider_style_shaded">Shaded</string>
+    <string name="brightness_slider_style_thinoutline">Inline</string>
+    <string name="brightness_slider_style_translucent">Transparent</string>
+    <string name="brightness_slider_style_leafyoutline">Leafy Outline</string>
+    <string name="brightness_slider_style_minimalthumb">Minimal Thumb</string>
+    <string name="brightness_slider_style_oldschoolthumb">Old School Thumb</string>
+    <string name="brightness_slider_style_roundedclip">Rounded clip</string>
+    <string name="brightness_slider_style_thumbslider">Thumb Slider</string>
+    <string name="brightness_slider_style_line">Thin Outline</string>
+    <string name="brightness_slider_style_lighty">Lighty</string>
     
     <!-- Keyguard Clock Margin n Size -->
     <string name="ls_clock_category">Lockscreen Clock Options</string>
