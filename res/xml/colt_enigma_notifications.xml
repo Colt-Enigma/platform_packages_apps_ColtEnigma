@@ -22,6 +22,12 @@
         android:summary="@string/heads_up_notifications_summary"
         android:fragment="com.colt.enigma.fragments.HeadsUpSettings" />
 
+      <com.colt.enigma.preference.SystemSettingSwitchPreference
+           android:key="notification_guts_kill_app_button"
+           android:title="@string/notification_guts_kill_app_button_title"
+           android:summary="@string/notification_guts_kill_app_button_summary"
+           android:defaultValue="false" />
+            
     <PreferenceCategory
         android:title="@string/notifications_general_category_title">
 
