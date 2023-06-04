@@ -53,6 +53,12 @@
         android:key="quick_settings_general_category"
         android:title="@string/qs_general_category">
         
+        <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="qs_dual_tone"
+            android:title="@string/qs_dual_tone_title"
+            android:summary="@string/qs_dual_tone_summary"
+            android:defaultValue="false" />
+        
         <!-- QS styles -->
         <com.colt.enigma.preference.SystemSettingListPreference
             android:key="qs_panel_style"
