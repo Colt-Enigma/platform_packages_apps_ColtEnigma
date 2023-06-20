@@ -37,4 +37,24 @@
             android:title="@string/battery_estimate_title"
             android:summary="@string/battery_estimate_summary"
             android:defaultValue="false" /> -->
+
+    <com.colt.enigma.preference.SecureSettingListPreference
+            android:key="qs_show_brightness_slider"
+            android:title="@string/qs_brightness_slider_title"
+            android:entries="@array/qs_brightness_slider_entries"
+            android:entryValues="@array/qs_brightness_slider_values"
+            android:defaultValue="1" />
+
+    <com.colt.enigma.preference.SecureSettingListPreference
+            android:key="qs_brightness_slider_position"
+            android:title="@string/qs_brightness_slider_position_title"
+            android:entries="@array/qs_brightness_slider_position_entries"
+            android:entryValues="@array/qs_brightness_slider_position_values"
+            android:defaultValue="0" />
+
+    <com.colt.enigma.preference.SecureSettingSwitchPreference
+            android:key="qs_show_auto_brightness"
+            android:title="@string/qs_auto_brightness_title"
+            android:summary="@string/qs_auto_brightness_summary"
+            android:defaultValue="true" />
 </PreferenceScreen>

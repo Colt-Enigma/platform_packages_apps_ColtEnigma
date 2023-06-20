@@ -242,4 +242,17 @@
     <!-- Battery estimate -->
     <string name="battery_estimate_title">Battery estimate</string>
     <string name="battery_estimate_summary">Display estimated remaining battery life when available</string>
+
+    <!-- QS brightness slider -->
+    <string name="qs_brightness_slider_title">Brightness slider</string>
+    <string name="qs_brightness_slider_summary">Adjust brightness slider from the Quick Settings</string>
+    <string name="qs_brightness_slider_never">Never show</string>
+    <string name="qs_brightness_slider_expanded">Show when expanded</string>
+    <string name="qs_brightness_slider_always">Show always</string>
+    <string name="qs_brightness_slider_position_title">Position</string>
+    <string name="qs_brightness_slider_position_top">Top</string>
+    <string name="qs_brightness_slider_position_bottom">Bottom</string>
+    <!-- QS auto brightness icon -->
+    <string name="qs_auto_brightness_title">Auto brightness icon</string>
+    <string name="qs_auto_brightness_summary">Show toggle for adaptive brightness near the slider</string>
 </resources>
