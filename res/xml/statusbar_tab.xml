@@ -21,17 +21,19 @@
            android:layout="@layout/colt_branding" />
 
 	<!-- Status Bar -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	<Preference
 	    android:key="statusbar_category"
 	    android:title="@string/statusbar_title"
+	    settings:layout="@layout/arc_card_about_top"
 	    android:icon="@drawable/ic_status_bar_items_background"
             android:fragment="com.colt.enigma.fragments.StatusBarSettings"
 	    android:summary="@string/statusbar_summary" />
 
         <!-- Quick Settings -->
-        <com.colt.enigma.preference.CategoryColtPreference
+	<Preference
 	    android:key="quicksettings_category"
 	    android:title="@string/quicksettings_title"
+	    settings:layout="@layout/arc_card_about_bottom"
             android:fragment="com.colt.enigma.fragments.QuickSettings"
 	    android:icon="@drawable/ic_quick_settings_background"
             android:summary="@string/quicksettings_summary" />
