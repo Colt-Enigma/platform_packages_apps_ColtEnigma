@@ -25,7 +25,7 @@
            android:key="buttonsettings_category"
 	   settings:layout="@layout/arc_card_about_top"
            android:title="@string/button_title"
-	   android:icon="@drawable/ic_powerbutton_background"
+	   android:icon="@drawable/ic_powerbutton_background1"
            android:fragment="com.colt.enigma.fragments.ButtonSettings"
 	   android:summary="@string/buttonsettings_summary" />
 
