@@ -21,8 +21,9 @@
            android:layout="@layout/colt_branding" />
 
 	<!-- Lock Screen -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	<Preference
 	    android:key="lockscreen_category"
+	    settings:layout="@layout/arc_card_about_top"
 	    android:title="@string/lockscreen_title"
 	    android:summary="@string/lockscreen_summary"	    
 	    android:icon="@drawable/ic_lockscreen_general_background"

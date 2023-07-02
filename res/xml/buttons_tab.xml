@@ -21,33 +21,37 @@
            android:layout="@layout/colt_branding" />
 
 	<!-- Buttons -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	 <Preference
            android:key="buttonsettings_category"
+	   settings:layout="@layout/arc_card_about_top"
            android:title="@string/button_title"
 	   android:icon="@drawable/ic_powerbutton_background"
            android:fragment="com.colt.enigma.fragments.ButtonSettings"
 	   android:summary="@string/buttonsettings_summary" />
 
 	<!-- Navigation Bar -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	 <Preference
             android:key="navigationbar_category"
             android:title="@string/navbar_title" 
+	    settings:layout="@layout/arc_card_about_middle"
 	    android:summary="@string/navbar_summary"
 	    android:icon="@drawable/ic_navigation_background"
             android:fragment="com.colt.enigma.fragments.NavbarSettings" />
 
 	<!-- Power Menu -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	 <Preference
 	    android:key="powermenu_category"
             android:title="@string/powermenu_title"
+	    settings:layout="@layout/arc_card_about_middle"
             android:summary="@string/powermenu_summary"
 	    android:icon="@drawable/ic_powerbutton_background"
             android:fragment="com.colt.enigma.fragments.PowerMenuSettings" />
 
 	<!-- Gestures -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	 <Preference
             android:key="gestures_category"
             android:title="@string/gestures_title" 
+	    settings:layout="@layout/arc_card_about_bottom"
 	    android:summary="@string/gesture_summary"
 	    android:icon="@drawable/ic_gestures_background"
             android:fragment="com.colt.enigma.fragments.GestureSettings" />

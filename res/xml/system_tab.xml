@@ -21,32 +21,36 @@
            android:layout="@layout/colt_branding" />
 
         <!-- Animations -->
-        <com.colt.enigma.preference.CategoryColtPreference
+	<Preference
             android:key="animations_category"
+            settings:layout="@layout/arc_card_about_top"
             android:title="@string/animations_title"
             android:summary="@string/animations_summary"
             android:fragment="com.colt.enigma.fragments.AnimationSettings"
             android:icon="@drawable/ic_animations_background" />
 
         <!-- Notifications -->
-	<com.colt.enigma.preference.CategoryColtPreference
+        <Preference
             android:key="notifications_category"
+            settings:layout="@layout/arc_card_about_middle"
             android:title="@string/notifications_title"
 	    android:icon="@drawable/ic_notifications_general_background"
             android:fragment="com.colt.enigma.fragments.NotificationSettings"
 	    android:summary="@string/notifications_summary" />
 
         <!-- Colt Decorations -->
-        <com.colt.enigma.preference.CategoryColtPreference
+	<Preference
             android:key="ColtDecorations"
+	    settings:layout="@layout/arc_card_about_middle"
             android:title="@string/theme_title"
             android:summary="@string/theme_summary"
             android:fragment="com.colt.enigma.fragments.ColtTheme"
             android:icon="@drawable/ic_themer_background" />
 
 	<!-- Misc -->
-	<com.colt.enigma.preference.CategoryColtPreference
+	<Preference
             android:key="misc_category"
+	    settings:layout="@layout/arc_card_about_bottom"
             android:title="@string/misc_title" 
 	    android:summary="@string/misc_summary"
 	    android:icon="@drawable/ic_miscellaneous_background"
