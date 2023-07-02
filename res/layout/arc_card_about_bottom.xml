@@ -20,6 +20,7 @@
         <RelativeLayout
             android:layout_width="0.0dip"
             android:layout_height="wrap_content"
+	    android:elevation="8dp"
             android:layout_marginStart="6dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
