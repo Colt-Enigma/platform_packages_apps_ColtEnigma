@@ -18,4 +18,12 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/theme_title">
 
+<Preference
+        android:key="dark_ui_mode"
+        android:title="@string/dark_ui_mode"
+        android:summary="@string/dark_ui_mode_summary"
+        android:fragment="com.android.settings.display.darkmode.DarkModeSettingsFragment"
+        settings:controller="com.android.settings.display.DarkUIPreferenceController" />
+
+
 </PreferenceScreen>

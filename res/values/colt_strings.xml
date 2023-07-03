@@ -119,4 +119,14 @@
     <string name="xd_about_core_roger_role">UI and UX Designer</string>
     <string name="xd_about_core_team_cat">Core developer</string>
     <string name="xd_about">About ColtOS</string>
+
+    <!-- Custom themes -->
+    <string name="dark_ui_mode_summary">Browse the dark theme options</string>
+    <string name="default_string">Default</string>
+    <string name="custom_theme_title">Use Custom theme</string>
+    <string name="custom_theme_black">Black</string>
+    <string name="custom_theme_clear">Clear</string>
+    <string name="custom_theme_vivid">Vivid (Monet)</string>
+    <string name="custom_theme_snowpaint">Paint in the Snow</string>
+    <string name="custom_theme_espresso">Espresso</string>
 </resources>
