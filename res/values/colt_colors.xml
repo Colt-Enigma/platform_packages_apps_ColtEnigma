@@ -86,4 +86,6 @@
     <color name="oneplus_homepage_icon_background">#ffffff</color>
     <color name="oneplus_accent_color">@color/settingsHeaderColor</color>
     <color name="settings_accent_color">@color/oneplus_accent_color</color>
+
+    <color name="option_border_default">#5f6368</color>
 </resources> 

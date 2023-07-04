@@ -32,4 +32,6 @@
     <color name="oneplus_accent_color">@color/settingsHeaderColor</color>
     <color name="settings_accent_color">@color/oneplus_accent_color</color>
     <color name="settingsHeaderColor">@*android:color/accent_device_default_dark</color>
+
+    <color name="option_border_default">#ffffff</color>
 </resources>
