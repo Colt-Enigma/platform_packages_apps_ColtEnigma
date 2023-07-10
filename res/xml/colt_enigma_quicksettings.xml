@@ -16,25 +16,25 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
     <!-- Battery styles -->
-        <com.colt.enigma.preference.SystemSettingListPreference
+    <!--    <com.colt.enigma.preference.SystemSettingListPreference
             android:key="qs_battery_style"
             android:title="@string/status_bar_battery_style_title"
             android:entries="@array/qs_battery_style_entries"
             android:entryValues="@array/qs_battery_style_values"
-            android:defaultValue="-1" />
+            android:defaultValue="-1" /> -->
 
         <!-- Battery location -->
-        <com.colt.enigma.preference.SystemSettingListPreference
+<!--        <com.colt.enigma.preference.SystemSettingListPreference
             android:key="qs_show_battery_percent"
             android:title="@string/status_bar_battery_percent_title"
             android:entries="@array/status_bar_battery_percent_entries"
             android:entryValues="@array/status_bar_battery_percent_values"
-            android:defaultValue="2" />
+            android:defaultValue="2" /> -->
 
         <!-- Battery estimate -->
-        <com.colt.enigma.preference.SystemSettingSwitchPreference
+<!--        <com.colt.enigma.preference.SystemSettingSwitchPreference
             android:key="qs_show_battery_estimate"
             android:title="@string/battery_estimate_title"
             android:summary="@string/battery_estimate_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /> -->
 </PreferenceScreen>
