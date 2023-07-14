@@ -18,10 +18,27 @@ package com.colt.enigma.fragments;
 
 import com.android.internal.logging.nano.MetricsProto;
 
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.res.Resources;
+import android.os.UserHandle;
+import android.provider.Settings;
 import android.os.Bundle;
 import com.android.settings.R;
 
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.SwitchPreference;
+
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.search.BaseSearchIndexProvider;
+import com.android.settingslib.search.SearchIndexable;
+
+import java.util.List;
 
 public class NotificationSettings extends SettingsPreferenceFragment {
 
