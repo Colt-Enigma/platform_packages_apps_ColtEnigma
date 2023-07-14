@@ -56,7 +56,7 @@
 
      <Preference
         android:key="traffic"
-        android:fragment="com.octavi.lab.fragments.Traffic"
+        android:fragment="com.colt.enigma.fragments.Traffic"
         android:title="@string/traffic_title" />
 
         <com.colt.enigma.preference.SystemSettingListPreference
