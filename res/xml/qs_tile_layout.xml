@@ -5,11 +5,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/qs_tile_layout_title">
 
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
-    android:title="@string/qs_tile_layout_title">
-
     <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="qs_tile_label_hide"
         android:title="@string/qs_tile_hide_label_title"
