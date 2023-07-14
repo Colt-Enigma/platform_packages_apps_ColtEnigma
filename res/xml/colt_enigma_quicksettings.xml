@@ -98,4 +98,24 @@
             android:title="@string/qs_auto_brightness_title"
             android:summary="@string/qs_auto_brightness_summary"
             android:defaultValue="true" />
+
+     <PreferenceCategory
+       android:title="@string/qs_battery_category_title" >
+
+        <!-- Battery styles -->
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="qs_battery_style"
+            android:title="@string/status_bar_battery_style_title"
+            android:entries="@array/qs_battery_style_entries"
+            android:entryValues="@array/qs_battery_style_values"
+            android:defaultValue="-1" />
+
+        <!-- Battery location -->
+        <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="qs_show_battery_percent"
+            android:title="@string/status_bar_battery_percent_title"
+            android:entries="@array/status_bar_battery_percent_entries"
+            android:entryValues="@array/status_bar_battery_percent_values"
+            android:defaultValue="2" />
+    </PreferenceCategory>
 </PreferenceScreen>
