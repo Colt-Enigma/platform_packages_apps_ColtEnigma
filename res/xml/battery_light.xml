@@ -15,7 +15,7 @@
         xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
         android:title="@string/battery_light_settings">
 
-    <com.com.colt.preference.SystemSettingSwitchPreference
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="battery_light_enabled"
         android:title="@string/battery_light_enable"
         android:defaultValue="true" />
@@ -25,12 +25,12 @@
         android:title="@string/battery_full_light_enabled"
         android:defaultValue="true" />
 
-    <com.com.colt.preference.SystemSettingSwitchPreference
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="battery_light_allow_on_dnd"
         android:title="@string/battery_light_allow_on_dnd_title"
         android:defaultValue="false" />
 
-    <com.com.colt.preference.SystemSettingSwitchPreference
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
         android:key="battery_light_low_blinking"
         android:title="@string/battery_light_low_blinking_title"
         android:defaultValue="false" />

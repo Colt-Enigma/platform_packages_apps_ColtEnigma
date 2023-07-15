@@ -77,7 +77,7 @@ public class SensorBlockSettings extends SettingsPreferenceFragment
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Get launch-able applications
-        addPreferencesFromResource(R.xml.colt_enigma_lab_misc_sensor_block);
+        addPreferencesFromResource(R.xml.colt_enigma_misc_sensor_block);
 
         findPreference(SENSOR_BLOCK_FOOTER).setTitle(R.string.add_sensor_block_package_summary);
 
@@ -326,5 +326,5 @@ public class SensorBlockSettings extends SettingsPreferenceFragment
      */
 
     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.colt_enigma_lab_misc_sensor_block);
+            new BaseSearchIndexProvider(R.xml.colt_enigma_misc_sensor_block);
 }
