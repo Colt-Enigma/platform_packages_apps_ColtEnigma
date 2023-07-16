@@ -81,7 +81,6 @@ public class ColtTheme extends DashboardFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-	addPreferencesFromResource(R.xml.colt_enigma_theme);
         Context mContext = getActivity().getApplicationContext();
         ContentResolver resolver = mContext.getContentResolver();
         final PreferenceScreen prefScreen = getPreferenceScreen();
