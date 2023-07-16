@@ -73,11 +73,6 @@ public class ColtTheme extends DashboardFragment implements
     }
 
     @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.colt_enigma_theme;
-    }
-
-    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
