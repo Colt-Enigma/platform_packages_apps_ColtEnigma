@@ -33,7 +33,9 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
+import android.os.ServiceManager;
 import android.provider.Settings;
+import android.content.om.IOverlayManager;
 import com.android.internal.util.colt.ThemeUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -59,6 +61,7 @@ public class QuickSettings extends SettingsPreferenceFragment implements
     private ListPreference mBrightnessSliderPosition;
     private SwitchPreference mShowAutoBrightness;
     private Handler mHandler;
+    private ThemeUtils mThemeUtils;
     private IOverlayManager mOverlayManager;
     private IOverlayManager mOverlayService;
     private SystemSettingListPreference mQsStyle;

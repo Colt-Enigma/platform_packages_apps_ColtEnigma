@@ -193,6 +193,9 @@
     <string name="proper_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
     <string name="proper_seekbar_default_value_is_set">Default value is set</string>
 
+    <!-- Units -->
+    <string name="unit_pixels">dp</string>
+
     <!-- Status bar - Battery -->
     <string name="status_bar_battery_category_title">Battery customizations</string>
     <string name="status_bar_battery_style_title">Battery style</string>
