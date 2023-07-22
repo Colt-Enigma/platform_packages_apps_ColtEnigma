@@ -519,6 +519,9 @@
     <string name="clock_use_single_line_title">Lockscreen clock Format</string>
     <string name="single_line">Single-line</string>
     <string name="double_line">Double-line</string>
+    <string name="kg_custom_clock_top_margin_title">Double-line clock position</string>
+    <string name="kg_small_clock_text_size_title">Small clock size</string>
+    <string name="kg_large_clock_text_size_title">Double-line clock size</string>
     
     <!-- QS Dual Tone Colors -->
     <string name="qs_dual_tone_title">QS dual-tone</string>
