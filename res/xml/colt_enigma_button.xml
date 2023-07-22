@@ -31,6 +31,12 @@
         android:title="@string/volume_panel_on_left_title"
         android:summary="@string/volume_panel_on_left_summary"
         android:defaultValue="true" />
+        
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+        android:key="haptic_on_slider"
+        android:title="@string/haptic_on_slider_title"
+        android:summary="@string/haptic_on_slider_summary"
+        android:defaultValue="true" />
 
     <com.colt.enigma.preference.SystemSettingListPreference
         android:key="volume_key_cursor_control"

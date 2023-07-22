@@ -524,4 +524,8 @@
     <string name="qs_dual_tone_title">QS dual-tone</string>
     <string name="qs_dual_tone_summary">Use dual tone background colors</string>
     
+    <!-- Volume haptic -->
+    <string name="haptic_on_slider_title">Volume rocker haptic feedback</string>
+    <string name="haptic_on_slider_summary">Haptic feedback when adjusting volume (Requires touch feedback to be enabled)</string>
+    
 </resources>
