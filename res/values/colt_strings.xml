@@ -545,6 +545,7 @@
     
     <!-- Quick settings styles -->
     <string name="qs_styles_title">QS Panel Styles</string>
+    <string name="qs_ui_title">Quick Settings UI</string>
     <string name="qs_outline">Outline</string>
     <string name="qs_two_tone">Two-Tone Accent</string>
     <string name="qs_color_pop">Color Pop</string>
@@ -554,6 +555,7 @@
     <string name="qs_reflected">Reflected</string>
     <string name="qs_surround">Surround</string>
     <string name="qs_thin">ThinLine</string>
+    <string name="android_eleven">Android 11</string>
     
         <!-- QS Weather Options -->
     <string name="qs_weather_title">QS System weather style</string>
