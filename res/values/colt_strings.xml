@@ -556,6 +556,9 @@
     <string name="qs_surround">Surround</string>
     <string name="qs_thin">ThinLine</string>
     <string name="android_eleven">Android 11</string>
+    <string name="qs_enable_morphing">Enable Morping on qs tiles</string>
+    <string name="qs_invert_morphing">Swap Morphing on qs tiles</string>
+    <string name="qs_full_morphing">Full Rounded on qs tiles</string>
     
         <!-- QS Weather Options -->
     <string name="qs_weather_title">QS System weather style</string>
