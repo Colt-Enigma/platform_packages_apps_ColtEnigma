@@ -124,7 +124,13 @@ public class QuickSettings extends SettingsPreferenceFragment implements
         }
         return false;
     }
-    
+
+    public static void reset(Context mContext) {
+        ContentResolver resolver = mContext.getContentResolver();
+	 Settings.System.putIntForUser(resolver,
+                Settings.System.QS_HEADER_IMAGE, 0, UserHandle.USER_CURRENT);
+    }
+
     private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
     private class CustomSettingsObserver extends ContentObserver {
 
