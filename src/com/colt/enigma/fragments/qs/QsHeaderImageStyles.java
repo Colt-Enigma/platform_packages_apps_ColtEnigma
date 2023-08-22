@@ -87,7 +87,7 @@ public class QsHeaderImageStyles extends SettingsPreferenceFragment {
             @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.item_view, container, false);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
+        mRecyclerView = (RecyclerView) view.findViewById(R.id.layout);
         GridLayoutManager gridLayoutManager = new GridLayoutManager(getActivity(), 1);
         mRecyclerView.setLayoutManager(gridLayoutManager);
         Adapter mAdapter = new Adapter(getActivity());
