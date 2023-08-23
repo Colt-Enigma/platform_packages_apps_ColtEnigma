@@ -75,6 +75,15 @@
             android:entryValues="@array/volume_persen_style_values"
             android:defaultValue="0" />
 
+    <com.colt.enigma.preference.SystemSettingListPreference
+            android:key="VOLUME_BAR_STYLES"                                                    
+            android:title="@string/volumebar_style_title"
+            android:summary="%s"
+            android:dialogTitle="@string/volumebar_style_title"
+            android:entries="@array/volumebar_style_entries"
+            android:entryValues="@array/volumebar_style_values"
+            android:defaultValue="0" /> 
+
    <com.colt.enigma.preference.SystemSettingSwitchPreference
 	android:key="volume_button_music_control"
         android:summary="@string/volume_rocker_music_controls_summary"

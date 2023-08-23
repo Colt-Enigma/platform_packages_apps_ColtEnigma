@@ -645,4 +645,13 @@
     <string name="solid_gradient_light">Gradient light</string>
     <string name="solid_gradient_shape">Sharp gradient corner</string>
     <string name="solid_gradient_void_light">Gradient Void light</string>
+
+    <!-- volumebar styles -->
+    <string name="volumebar_style_title">Volume Seekbar Style</string>
+    <string name="volumebar_style_def">Default</string>
+    <string name="volumebar_style_1"> Style 1 </string>
+    <string name="volumebar_style_2"> Style 2</string>
+    <string name="volumebar_style_3"> Style 3</string>
+    <string name="volumebar_style_4"> Style 4</string>
+    <string name="volumebar_style_5"> Style 5</string>
 </resources>
