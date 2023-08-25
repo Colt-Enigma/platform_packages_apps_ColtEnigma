@@ -659,4 +659,8 @@
     <!-- Custom Data icons -->
     <string name="theme_customization_data_title">Data icon style</string>
     <string name="theme_customization_data_summary">Set custom data icon style</string>
+
+    <!-- Colorful battery icon -->
+    <string name="battery_level_colors_title">Colorful Circle battery icon</string>
+    <string name="battery_level_colors_summary">Each battery level drop is color coded</string>
 </resources>

@@ -79,6 +79,12 @@
             android:summary="@string/status_bar_battery_text_charging_summary"
             android:defaultValue="true" />
 
+	 <com.colt.enigma.preference.SystemSettingSwitchPreference
+            android:key="battery_level_colors"
+            android:title="@string/battery_level_colors_title"
+            android:summary="@string/battery_level_colors_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
