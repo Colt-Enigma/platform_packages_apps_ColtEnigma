@@ -583,11 +583,6 @@
     <string name="weather_icon_pack_note">Note\u003a you can install new icon packs from play store by searching for \"Chronus icons\"</string>
     <string name="weather_icon_pack_info_title">Tips\u003a \n\n1. Users can install new icon packs from play store by searching for \"Chronus icons\".\n\n2. Condition icon pack is used for weather icons on quick settings and sushi launcher at a glance.\n\n3. Long press the QuickSettings weather view/logo/temperature to access weather settings with ease.</string>
 
-    <!-- Volume Styles -->
-    <string name="rui_style">Realme UI style</string>
-    <string name="rice_style">Rising style</string>
-    <string name="volume_style_title">Volume panel styles</string>
-
     <string name="qs_tile_category_title">"QS tile customisations"</string>
     <string name="qs_battery_category_title">"Battery customisations"</string>
 
