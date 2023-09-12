@@ -10,6 +10,13 @@
         android:summary="@string/qs_header_image_enabled_summary"
         android:defaultValue="false" />
 
+    <com.colt.enigma.preference.SystemSettingSwitchPreference
+         android:key="qs_random_header_image"
+         android:title="@string/qs_random_header_image_title"
+         android:summary="@string/qs_random_header_image_summary"
+         android:dependency="qs_header_image_enabled"
+         android:defaultValue="false" />
+
     <Preference
         android:key="qs_header_image"
         android:title="@string/qs_header_image_title"

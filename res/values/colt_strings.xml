@@ -609,6 +609,8 @@
     <string name="qs_header_image_alpha_title">Opacity</string>
     <string name="qs_header_image_padding_side_title">Side padding</string>
     <string name="qs_header_image_padding_top_title">Top padding</string>
+    <string name="qs_random_header_image_title">Random QS Header Image</string>
+    <string name="qs_random_header_image_summary">Show random qs header images instead of static one</string>
 
     <!-- Global Actions -->
     <string name="global_actions_advanced_reboot_title">Enable advanced restart</string>
